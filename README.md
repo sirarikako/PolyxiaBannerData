@@ -1,4 +1,4 @@
-# PolyciaBannerData
+# PolyxiaBannerData
 
 原神（Genshin Impact）与崩坏：星穹铁道（Honkai: Star Rail）的公开卡池情报与 JSON Schema 数据仓库。
 
@@ -19,8 +19,8 @@ Public versioned gacha banner metadata and JSON Schemas for Genshin Impact and H
 
 可通过 GitHub Raw URL 获取公开数据：
 
-- [Manifest](https://raw.githubusercontent.com/sirarikako/PolyciaBannerData/main/public/v1/manifest.json)
-- [Genshin Impact](https://raw.githubusercontent.com/sirarikako/PolyciaBannerData/main/public/v1/genshin.json)
+- [Manifest](https://raw.githubusercontent.com/sirarikako/PolyxiaBannerData/main/public/v1/manifest.json)
+- [Genshin Impact](https://raw.githubusercontent.com/sirarikako/PolyxiaBannerData/main/public/v1/genshin.json)
 
 相关 JSON 文件及后续游戏数据请以 [Manifest](public/v1/manifest.json) 中的记录为准。
 
