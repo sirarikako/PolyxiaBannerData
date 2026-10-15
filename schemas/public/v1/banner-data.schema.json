@@ -1,0 +1,513 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CastoriceWishBannerData public v1 game data",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "game",
+    "generatedAt",
+    "banners"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1,
+      "description": "公开 JSON 接口主版本，固定为整数 1；不是游戏或 UIGF 版本。"
+    },
+    "game": {
+      "enum": [
+        "genshin",
+        "starrail"
+      ],
+      "description": "游戏名称标识：genshin=原神，starrail=崩坏：星穹铁道；一份文件只保存一个游戏。"
+    },
+    "generatedAt": {
+      "$ref": "#/$defs/time8",
+      "description": "游戏数据文件生成时间，统一使用 ISO 8601 秒精度和 +08:00 时区偏移。"
+    },
+    "banners": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/banner"
+      },
+      "description": "该游戏的卡池记录数组，保留已纳入的历史记录；卡池由其稳定 id 标识。"
+    }
+  },
+  "$defs": {
+    "time8": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\+08:00$",
+      "description": "UTC+8 时间格式 YYYY-MM-DDTHH:mm:ss+08:00，精确到秒；上游日期需换算真实时刻，而不是直接更换时区后缀。"
+    },
+    "names": {
+      "type": "object",
+      "minProperties": 1,
+      "patternProperties": {
+        "^[a-z]{2,3}(?:-[A-Z]{2})?$": {
+          "type": "string",
+          "minLength": 1,
+          "description": "该语言对应的非空本地化显示名称。"
+        }
+      },
+      "additionalProperties": false,
+      "description": "按语言代码索引的多语言名称（至少一种）；如 zh-CN、en-US、ja-JP，不得编造未核实的翻译。"
+    },
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "itemId",
+        "type",
+        "names"
+      ],
+      "properties": {
+        "itemId": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9]+$",
+              "description": "已核实的、与 UIGF item_id 可对应的数字字符串。"
+            },
+            {
+              "type": "null",
+              "description": "尚无可信的官方物品 ID。"
+            }
+          ],
+          "description": "可与 UIGF 的 item_id 对应的官方物品 ID，以数字字符串表示；未知时为 null，禁止用第三方内部 ID 冒充。"
+        },
+        "type": {
+          "enum": [
+            "character",
+            "weapon",
+            "light_cone"
+          ],
+          "description": "物品类别：character=角色，weapon=武器，light_cone=光锥。"
+        },
+        "names": {
+          "$ref": "#/$defs/names",
+          "description": "UP 物品的多语言名称，语言缺失无需虚构译名。"
+        }
+      },
+      "description": "卡池中一件已知五星 UP／可定轨目标或四星 UP 物品；本结构不等同于玩家的单次抽卡记录。"
+    },
+    "region": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "server",
+        "startAt",
+        "endAt"
+      ],
+      "properties": {
+        "server": {
+          "enum": [
+            "cn_official",
+            "cn_channel",
+            "asia",
+            "europe",
+            "america",
+            "tw_hk_mo"
+          ],
+          "description": "固定服务器标识：cn_official=国服官服、cn_channel=国服渠道服、asia=国际亚洲服、europe=国际欧洲服、america=国际美洲服、tw_hk_mo=国际港澳台服。"
+        },
+        "startAt": {
+          "$ref": "#/$defs/time8",
+          "description": "本服务器该卡池的开始时刻（包含边界）；转换为 UTC+8，不能直接复制其他服务器的时间。"
+        },
+        "endAt": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/time8",
+              "description": "已知的 +08:00 结束时刻，必须晚于 startAt。"
+            },
+            {
+              "type": "null",
+              "description": "长期池没有已确定的统一结束时刻。"
+            }
+          ],
+          "description": "本服务器该卡池的结束时刻（不包含边界）；无统一结束日期的常驻/新手池可设为 null，限时池应填写结束时间。"
+        }
+      },
+      "description": "一个服务器对应的一组卡池开放时间；每个卡池同一服务器最多一条。"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider"
+      ],
+      "properties": {
+        "provider": {
+          "type": "string",
+          "minLength": 1,
+          "description": "数据来源标识，如采集适配器来源或 manual 人工补录。"
+        },
+        "externalId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "此来源自己的记录 ID（可选）；不能当作本仓库卡池 id 或星铁官方 gacha_id。"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "description": "来源页面的 HTTPS 链接（可选），供审查和溯源使用。"
+        }
+      },
+      "description": "卡池信息的一条来源记录，用于定位采集、人工补充或修正的出处。"
+    },
+    "banner": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "gameVersion",
+        "phase",
+        "category",
+        "poolType",
+        "names",
+        "gachaTypes",
+        "featured",
+        "regions",
+        "sources"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^(gi|hsr)-[0-9]{6,}$",
+          "description": "本仓库分配的稳定唯一 ID（如 gi-000001 或 hsr-000001）；不得当作 UIGF 单次抽卡 id 或来源 externalId。"
+        },
+        "gameVersion": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "description": "已核实的非空游戏版本标识。"
+            },
+            {
+              "type": "null",
+              "description": "没有单一适用版本，或版本尚未确认。"
+            }
+          ],
+          "description": "卡池所属的游戏版本，如 \"3.7\"；不适用或尚未确认时填 null。"
+        },
+        "phase": {
+          "enum": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            null
+          ],
+          "description": "卡池在所属游戏版本中从第几期开始：1～9 的整数，例如 1=第一期、2=第二期、3=第三期；从第一期开始且持续整个版本的通期池仍为 1。常驻/新手池不适用或阶段未确认时为 null。实际开放时间以各服务器 regions 时间为准。"
+        },
+        "category": {
+          "enum": [
+            "character",
+            "weapon",
+            "light_cone",
+            "standard",
+            "beginner",
+            "chronicled",
+            "collab_character",
+            "collab_light_cone"
+          ],
+          "description": "稳定的 App 展示分类：星铁联动角色池归为 character，联动光锥池归为 light_cone。"
+        },
+        "poolType": {
+          "enum": [
+            "beginner",
+            "standard",
+            "character_event",
+            "character_event_2",
+            "weapon_event",
+            "chronicled",
+            "light_cone_event",
+            "collab_character",
+            "collab_light_cone"
+          ],
+          "description": "更精确的卡池类型，包括常驻、新手、角色活动、武器/光锥、集录与联动等类型。"
+        },
+        "variant": {
+          "type": "string",
+          "enum": [
+            "chronicled",
+            "special_recollection"
+          ],
+          "description": "原神 chronicled 池必须填写：chronicled=集录祈愿，special_recollection=溯光祈愿；其他池种禁止填写。"
+        },
+        "names": {
+          "$ref": "#/$defs/names",
+          "description": "卡池标题的多语言文本；至少一种语言，可缺少尚未核实的翻译。"
+        },
+        "gachaTypes": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "raw",
+            "uigf"
+          ],
+          "properties": {
+            "raw": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "一个官方 gacha_type 编码，使用非空字符串。"
+                  },
+                  "description": "已核实的官方原始 gacha_type；v1 一条卡池仅有一种 raw 编码。"
+                },
+                {
+                  "type": "null",
+                  "description": "尚未核实官方抽卡记录原始类型，禁止填推测值。"
+                }
+              ],
+              "description": "官方原始 gacha_type；核实后填单元素数组，未知时为 null。"
+            },
+            "uigf": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "description": "一个 UIGF 兼容的规范抽卡类型编码，使用非空字符串。"
+              },
+              "description": "UIGF 规范类别列表；原神 raw=400 应映射为 uigf=301，星铁该值通常与 raw 相同；v1 每条实际仅允许一种类型。"
+            }
+          },
+          "description": "抽卡记录类型对应关系：raw 为官方 gacha_type；uigf 为 UIGF 兼容的规范类别；均不是具体卡池唯一 ID。"
+        },
+        "gachaIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9]+$",
+            "description": "一项官方星铁 gacha_id 数字字符串；严禁填第三方数据来源的记录 ID。"
+          },
+          "description": "仅星铁可选：有已确认的官方 gacha_id 时填写非空数字字符串数组，未知则省略；原神不得填写。"
+        },
+        "featured": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "fiveStar",
+            "fourStar"
+          ],
+          "properties": {
+            "fiveStar": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/item",
+                    "description": "一件相应星级的 UP 物品，引用 item 结构。"
+                  },
+                  "description": "已核实的五星 UP 或可定轨五星候选数组；集录大类含溯光时存全部可定轨五星，不表示同时固定 UP。"
+                },
+                {
+                  "type": "null",
+                  "description": "该星级的 UP 物品信息仍未知，与 [] 不同。"
+                }
+              ],
+              "description": "五星物品：普通活动池为公告确认的五星 UP；原神集录大类（集录/溯光）为本期所有可选择定轨的五星角色或武器。null=未知；[]=确认没有；数组=名单。不能据此判定玩家所选定轨目标或抽中 UP。"
+            },
+            "fourStar": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/item",
+                    "description": "一件相应星级的 UP 物品，引用 item 结构。"
+                  },
+                  "description": "已经核实的 UP 物品数组；空数组表示确认没有对应星级 UP。"
+                },
+                {
+                  "type": "null",
+                  "description": "该星级的 UP 物品信息仍未知，与 [] 不同。"
+                }
+              ],
+              "description": "四星固定概率提升（UP）物品列表，不是可获取四星全集。null=未知；[]=确认没有固定四星 UP；数组=已核实的四星 UP。"
+            }
+          },
+          "description": "本期五星 UP/可定轨目标和四星固定 UP 名单；语义须结合 poolType 解释，不是玩家单次抽卡结果。"
+        },
+        "regions": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 6,
+          "items": {
+            "$ref": "#/$defs/region",
+            "description": "一条服务器时间记录，引用 region 结构。"
+          },
+          "description": "按服务器独立保存开放区间，最多六条且服务器不能重复；缺失表示尚未核实，不等于不存在该池。"
+        },
+        "images": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-z]{2,3}(?:-[A-Z]{2})?$": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://",
+              "description": "此语言对应的图片 HTTPS URL。"
+            }
+          },
+          "additionalProperties": false,
+          "description": "可选的多语言图片 HTTPS URL；图片下载和本地缓存由客户端负责。"
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/source",
+            "description": "一条具体的数据来源记录，引用 source 结构。"
+          },
+          "description": "至少一条数据来源记录；可包括不同采集适配器与人工补录的来源。"
+        },
+        "fatePointLimit": {
+          "enum": [
+            0,
+            1,
+            2,
+            null
+          ],
+          "description": "仅原神武器活动池或集录大类可选：0=无定轨，1或2=定轨命定值上限，null=未知；非玩家个人命定值。"
+        }
+      },
+      "description": "具体卡池条目：本仓库独立 ID、展示分类、UP 物品、游戏服务器时间与来源。"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "game": {
+            "const": "genshin"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "banners": {
+            "items": {
+              "properties": {
+                "id": {
+                  "pattern": "^gi-[0-9]{6,}$"
+                },
+                "gachaTypes": {
+                  "properties": {
+                    "raw": {
+                      "items": {
+                        "enum": [
+                          "100",
+                          "200",
+                          "301",
+                          "400",
+                          "302",
+                          "500"
+                        ]
+                      }
+                    },
+                    "uigf": {
+                      "items": {
+                        "enum": [
+                          "100",
+                          "200",
+                          "301",
+                          "302",
+                          "500"
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "not": {
+                "required": [
+                  "gachaIds"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "game": {
+            "const": "starrail"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "banners": {
+            "items": {
+              "properties": {
+                "id": {
+                  "pattern": "^hsr-[0-9]{6,}$"
+                },
+                "gachaTypes": {
+                  "properties": {
+                    "raw": {
+                      "items": {
+                        "enum": [
+                          "1",
+                          "2",
+                          "11",
+                          "12",
+                          "21",
+                          "22"
+                        ]
+                      }
+                    },
+                    "uigf": {
+                      "items": {
+                        "enum": [
+                          "1",
+                          "2",
+                          "11",
+                          "12",
+                          "21",
+                          "22"
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "not": {
+                "anyOf": [
+                  {
+                    "required": [
+                      "variant"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "fatePointLimit"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "description": "原神或崩坏：星穹铁道的公开卡池元数据文件，统一 JSON v1 格式。"
+}

@@ -1,0 +1,11 @@
+{
+  "games": {
+    "genshin": {
+      "bannerCount": 303,
+      "path": "genshin.json",
+      "sha256": "b55bc6457d2f707d5f7b9a11b054d256716c5bd9654b7cf9779fb7e1065d65fe"
+    }
+  },
+  "generatedAt": "2026-10-15T22:20:32+08:00",
+  "schemaVersion": 1
+}

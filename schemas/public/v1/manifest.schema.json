@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CastoriceWishBannerData public v1 manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "games"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1,
+      "description": "接口契约主版本，固定整数 1；不是游戏版本或数据更新时间。"
+    },
+    "generatedAt": {
+      "$ref": "#/$defs/time8",
+      "description": "Manifest 生成时间，ISO 8601 秒精度，时区偏移固定为 +08:00。"
+    },
+    "games": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "genshin": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "path",
+            "sha256",
+            "bannerCount"
+          ],
+          "properties": {
+            "path": {
+              "const": "genshin.json",
+              "description": "原神的文件路径，固定为相对路径 genshin.json，由 manifest.json 所在目录解析。"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$",
+              "description": "genshin.json 原始文件字节的 SHA-256 小写十六进制摘要；客户端在替换缓存前验证。"
+            },
+            "bannerCount": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "genshin.json 文件中 banners 的卡池记录数量（非负整数），必须与实际数组长度一致。"
+            }
+          },
+          "description": "原神发布文件的路径、完整性摘要和卡池数量。"
+        },
+        "starrail": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "path",
+            "sha256",
+            "bannerCount"
+          ],
+          "properties": {
+            "path": {
+              "const": "starrail.json",
+              "description": "星铁的文件路径，固定为相对路径 starrail.json，由 manifest.json 所在目录解析。"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$",
+              "description": "starrail.json 原始文件字节的 SHA-256 小写十六进制摘要；客户端在替换缓存前验证。"
+            },
+            "bannerCount": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "starrail.json 文件中 banners 的卡池记录数量（非负整数），必须与实际数组长度一致。"
+            }
+          },
+          "description": "星铁发布文件的路径、完整性摘要和卡池数量。"
+        }
+      },
+      "description": "已发布游戏元信息集合，至少包含一个，可只发布原神或星铁；缺席表示游戏尚未发布。",
+      "minProperties": 1
+    }
+  },
+  "$defs": {
+    "time8": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\+08:00$",
+      "description": "统一 +08:00 偏移的日期时间格式 YYYY-MM-DDTHH:mm:ss+08:00，精确到秒。"
+    }
+  },
+  "description": "v1 Manifest 支持按游戏独立发布，验证已列出游戏文件的 SHA-256 和数量。"
+}
