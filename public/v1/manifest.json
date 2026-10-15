@@ -3,9 +3,9 @@
     "genshin": {
       "bannerCount": 303,
       "path": "genshin.json",
-      "sha256": "b55bc6457d2f707d5f7b9a11b054d256716c5bd9654b7cf9779fb7e1065d65fe"
+      "sha256": "3378c11f0bfb9021fb2276baf552a45cd721a07917d4c626d2f2c7884f3e0bfb"
     }
   },
-  "generatedAt": "2026-10-15T22:20:32+08:00",
+  "generatedAt": "2026-10-15T22:45:00+08:00",
   "schemaVersion": 1
 }

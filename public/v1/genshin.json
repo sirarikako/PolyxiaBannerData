@@ -15,7 +15,7 @@
         ]
       },
       "gameVersion": null,
-      "id": "gi-000302",
+      "id": "gi-100001",
       "names": {
         "zh-CN": "奔行世间"
       },
@@ -54,7 +54,7 @@
         ]
       },
       "gameVersion": null,
-      "id": "gi-000303",
+      "id": "gi-100002",
       "names": {
         "zh-CN": "初行者推荐祈愿"
       },
@@ -24165,6 +24165,6 @@
     }
   ],
   "game": "genshin",
-  "generatedAt": "2026-10-15T22:20:32+08:00",
+  "generatedAt": "2026-10-15T22:45:00+08:00",
   "schemaVersion": 1
 }
