@@ -7,7 +7,7 @@
 | 游戏 | 服务器 | 收录范围 | 数据文件 |
 | --- | --- | --- | --- |
 | 原神（`genshin`） | 国服官服（`cn_official`） | 已录入的历史、当前和已公告卡池；含常驻与新手祈愿 | [genshin.json](./genshin.json) |
-| 崩坏：星穹铁道（`starrail`） | — | **尚未发布** | — |
+| 崩坏：星穹铁道（`starrail`） | 国服官服（`cn_official`） | 1.0～4.6；含常驻、新手、普通活动及 Fate 联动池 | [starrail.json](./starrail.json) |
 
 以 [manifest.json](./manifest.json) 的 `games` 列表为准：只有列出的游戏才代表已经发布。未出现的游戏或服务器不应视为已覆盖。
 
@@ -37,12 +37,27 @@
 
 普通活动池使用 `gi-000001`～`gi-099999`，按顺序递增；现有活动池至 `gi-000301`，今后新增活动池可从 `gi-000302`、`gi-000303` 继续使用。常驻祈愿「奔行世间」固定使用 `gi-100001`，新手祈愿「初行者推荐祈愿」固定使用 `gi-100002`。这些内部 ID 与 `gachaTypes` 无关。
 
+### 星铁已收录的卡池类型
+
+| `poolType` | 类型 | 记录数 |
+| --- | --- | ---: |
+| `character_event` | 角色活动跃迁 | 138 |
+| `light_cone_event` | 光锥活动跃迁 | 138 |
+| `collab_character` | Fate 联动角色跃迁 | 4 |
+| `collab_light_cone` | Fate 联动光锥跃迁 | 4 |
+| `standard` | 常驻跃迁 | 1 |
+| `beginner` | 新手跃迁 | 1 |
+| **合计** | | **286** |
+
+星铁的维护日 06:00 用作版本更新后开放的抽卡记录匹配边界，不表示维护完成时刻。1.0 开服使用 2023-04-26 10:00（UTC+8）。版本边界资料保存在 `../../data/bootstrap/starrail/version-starts-cn.json`（只存在于源仓库，不属于公开同步目录）。
+
 ## 发布文件
 
 | 路径 | 用途 |
 | --- | --- |
 | [manifest.json](./manifest.json) | 发布入口；包含 `schemaVersion`、`generatedAt`，以及各已发布游戏的文件路径、SHA-256 校验值和卡池记录数 |
 | [genshin.json](./genshin.json) | 原神卡池数据；包含 `game`、`schemaVersion`、`generatedAt` 和 `banners` 数组 |
+| [starrail.json](./starrail.json) | 星铁国服卡池数据；286 条含联动和基础池记录 |
 
 对应的 JSON Schema：
 - [卡池数据结构](../../schemas/public/v1/banner-data.schema.json)
