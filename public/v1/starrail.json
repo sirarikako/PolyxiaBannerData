@@ -6,6 +6,9 @@
         "fiveStar": [],
         "fourStar": []
       },
+      "gachaIds": [
+        "4001"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -30,6 +33,10 @@
         {
           "provider": "official",
           "url": "https://hsr.hoyoverse.com/en-us/news/111258"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -39,6 +46,9 @@
         "fiveStar": [],
         "fourStar": []
       },
+      "gachaIds": [
+        "1001"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -63,6 +73,10 @@
         {
           "provider": "official",
           "url": "https://hsr.hoyoverse.com/en-us/news/111258"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -102,6 +116,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2003"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -126,6 +143,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/38387897"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -165,6 +186,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3003"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -189,6 +213,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/38387900"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -228,6 +256,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2004"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -252,6 +283,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/39392377"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -291,6 +326,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3004"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -315,6 +353,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/39392380"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -354,6 +396,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2005"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -378,6 +423,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/40051321"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -417,6 +466,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3005"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -441,6 +493,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/40051427"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -480,6 +536,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2006"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -504,6 +563,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/40718238"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -543,6 +606,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3006"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -567,6 +633,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/40718320"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -606,6 +676,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2007"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -630,6 +703,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/41396059"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -669,6 +746,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3007"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -693,6 +773,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/41396244"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -732,6 +816,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2008"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -756,6 +843,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/42143850"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -795,6 +886,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3008"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -819,6 +913,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/42143977"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -858,6 +956,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2009"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -882,6 +983,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/42910469"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -921,6 +1026,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3009"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -945,6 +1053,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/42910615"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -984,6 +1096,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2010"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -1008,6 +1123,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/43547006"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -1047,6 +1166,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3010"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -1071,6 +1193,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/43547105"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -1110,6 +1236,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2011"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -1134,6 +1263,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/44330918"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -1173,6 +1306,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3011"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -1197,6 +1333,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/44331075"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -1236,6 +1376,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2012"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -1260,6 +1403,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/44857607"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -1299,6 +1446,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2013"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -1323,6 +1473,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/44857607"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -1362,6 +1516,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3012"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -1386,6 +1543,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/44857709"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -1425,6 +1586,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3013"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -1449,6 +1613,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/44857709"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -1488,6 +1656,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2014"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -1512,6 +1683,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/45483023"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -1551,6 +1726,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3014"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -1575,6 +1753,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/45483131"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -1614,6 +1796,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2015"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -1638,6 +1823,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/46219124"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -1677,6 +1866,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2016"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -1701,6 +1893,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/46219124"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -1740,6 +1936,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3015"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -1764,6 +1963,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/46219237"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -1803,6 +2006,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3016"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -1827,6 +2033,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/46219237"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -1866,6 +2076,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2017"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -1890,6 +2103,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/46955779"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -1929,6 +2146,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2018"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -1953,6 +2173,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/46955779"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -1992,6 +2216,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3017"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -2016,6 +2243,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/46955921"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -2055,6 +2286,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3018"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -2079,6 +2313,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/46955921"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -2118,6 +2356,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2019"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -2142,6 +2383,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/48007945"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -2181,6 +2426,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2020"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -2205,6 +2453,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/48007945"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -2244,6 +2496,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3019"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -2268,6 +2523,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/48008078"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -2307,6 +2566,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3020"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -2331,6 +2593,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/48008078"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -2370,6 +2636,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2021"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -2394,6 +2663,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/48812336"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -2433,6 +2706,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2022"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -2457,6 +2733,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/48812336"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -2496,6 +2776,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3021"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -2520,6 +2803,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/48812553"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -2559,6 +2846,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3022"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -2583,6 +2873,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/48812553"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -2622,6 +2916,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2023"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -2646,6 +2943,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/49782178"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -2685,6 +2986,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2024"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -2709,6 +3013,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/49782178"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -2748,6 +3056,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3023"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -2772,6 +3083,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/49782297"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -2811,6 +3126,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3024"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -2835,6 +3153,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/49782297"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -2874,6 +3196,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2025"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -2898,6 +3223,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/50703866"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -2937,6 +3266,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2026"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -2961,6 +3293,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/50703866"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -3000,6 +3336,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3025"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -3024,6 +3363,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/50703995"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -3063,6 +3406,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3026"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -3087,6 +3433,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/50703995"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -3126,6 +3476,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2027"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -3150,6 +3503,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/51562926"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -3189,6 +3546,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2028"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -3213,6 +3573,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/51562926"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -3252,6 +3616,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3027"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -3276,6 +3643,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/51563144"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -3315,6 +3686,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3028"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -3339,6 +3713,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/51563144"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -3378,6 +3756,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2029"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -3402,6 +3783,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/52494520"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -3441,6 +3826,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2030"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -3465,6 +3853,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/52494520"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -3504,6 +3896,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3029"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -3528,6 +3923,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/52494642"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -3567,6 +3966,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3030"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -3591,6 +3993,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/52494642"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -3630,6 +4036,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2031"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -3654,6 +4063,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/53257598"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -3693,6 +4106,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2032"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -3717,6 +4133,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/53257598"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -3756,6 +4176,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3031"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -3780,6 +4203,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/53257696"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -3819,6 +4246,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3032"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -3843,6 +4273,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/53257696"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -3882,6 +4316,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2033"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -3906,6 +4343,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/53923120"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -3945,6 +4386,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2034"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -3969,6 +4413,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/53923120"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -4008,6 +4456,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3033"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -4032,6 +4483,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/53923304"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -4071,6 +4526,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3034"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -4095,6 +4553,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/53923304"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -4134,6 +4596,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2035"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -4158,6 +4623,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/54894775"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -4197,6 +4666,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2036"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -4221,6 +4693,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/54894775"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -4260,6 +4736,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3035"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -4284,6 +4763,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/54894961"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -4323,6 +4806,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3036"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -4347,6 +4833,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/54894961"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -4386,6 +4876,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2037"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -4410,6 +4903,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/55960746"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -4449,6 +4946,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2038"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -4473,6 +4973,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/55960746"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -4512,6 +5016,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3037"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -4536,6 +5043,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/55960953"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -4575,6 +5086,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3038"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -4599,6 +5113,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/55960953"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -4638,6 +5156,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2039"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -4662,6 +5183,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/56798666"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -4701,6 +5226,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2040"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -4725,6 +5253,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/56798666"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -4764,6 +5296,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3039"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -4788,6 +5323,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/56798789"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -4827,6 +5366,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3040"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -4851,6 +5393,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/56798789"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -4890,6 +5436,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2041"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -4914,6 +5463,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/57174807"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -4953,6 +5506,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2044"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -4977,6 +5533,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/57174807"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -5016,6 +5576,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2043"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -5040,6 +5603,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/57174807"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -5079,6 +5646,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2042"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -5103,6 +5673,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/57174807"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -5142,6 +5716,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3041"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -5166,6 +5743,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/57175175"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -5205,6 +5786,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3044"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -5229,6 +5813,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/57175175"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -5268,6 +5856,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3043"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -5292,6 +5883,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/57175175"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -5331,6 +5926,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3042"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -5355,6 +5953,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/57175175"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -5394,6 +5996,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2045"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -5418,6 +6023,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/58100920"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -5457,6 +6066,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2046"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -5481,6 +6093,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/58100920"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -5520,6 +6136,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3045"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -5544,6 +6163,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/58101082"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -5583,6 +6206,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3046"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -5607,6 +6233,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/58101082"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -5646,6 +6276,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2047"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -5670,6 +6303,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/58761078"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -5709,6 +6346,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2048"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -5733,6 +6373,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/58761078"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -5772,6 +6416,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3047"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -5796,6 +6443,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/58761166"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -5835,6 +6486,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3048"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -5859,6 +6513,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/58761166"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -5898,6 +6556,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2049"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -5922,6 +6583,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/59320217"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -5961,6 +6626,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2050"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -5985,6 +6653,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/59320217"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -6024,6 +6696,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3049"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -6048,6 +6723,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/59320296"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -6087,6 +6766,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3050"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -6111,6 +6793,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/59320296"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -6150,6 +6836,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2051"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -6174,6 +6863,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/59863510"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -6213,6 +6906,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2052"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -6237,6 +6933,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/59863510"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -6276,6 +6976,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3051"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -6300,6 +7003,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/59863590"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -6339,6 +7046,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3052"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -6363,6 +7073,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/59863590"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -6402,6 +7116,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2053"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -6426,6 +7143,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/60458832"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -6465,6 +7186,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2054"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -6489,6 +7213,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/60458832"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -6528,6 +7256,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3053"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -6552,6 +7283,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/60459072"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -6591,6 +7326,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3054"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -6615,6 +7353,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/60459072"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -6654,6 +7396,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2055"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -6678,6 +7423,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/61039001"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -6717,6 +7466,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2056"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -6741,6 +7493,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/61039001"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -6780,6 +7536,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2057"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -6804,6 +7563,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/61039001"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -6843,6 +7606,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2058"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -6867,6 +7633,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/61039001"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -6906,6 +7676,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3055"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -6930,6 +7703,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/61039078"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -6969,6 +7746,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3056"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -6993,6 +7773,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/61039078"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -7032,6 +7816,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3057"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -7056,6 +7843,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/61039078"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -7095,6 +7886,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3058"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -7119,6 +7913,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/61039078"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -7158,6 +7956,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2059"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -7182,6 +7983,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/61729516"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -7221,6 +8026,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2060"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -7245,6 +8053,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/61729516"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -7284,6 +8096,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2061"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -7308,6 +8123,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/61729516"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -7347,6 +8166,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2062"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -7371,6 +8193,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/61729516"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -7388,13 +8214,6 @@
         ],
         "fourStar": [
           {
-            "itemId": "21051",
-            "names": {
-              "zh-CN": "天才们的问候"
-            },
-            "type": "light_cone"
-          },
-          {
             "itemId": "21017",
             "names": {
               "zh-CN": "点个关注吧！"
@@ -7402,14 +8221,24 @@
             "type": "light_cone"
           },
           {
-            "itemId": "21005",
+            "itemId": "21018",
             "names": {
-              "zh-CN": "鼹鼠党欢迎你"
+              "zh-CN": "舞！舞！舞！"
+            },
+            "type": "light_cone"
+          },
+          {
+            "itemId": "21051",
+            "names": {
+              "zh-CN": "天才们的问候"
             },
             "type": "light_cone"
           }
         ]
       },
+      "gachaIds": [
+        "3059"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -7434,6 +8263,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/61729646"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -7451,13 +8284,6 @@
         ],
         "fourStar": [
           {
-            "itemId": "21051",
-            "names": {
-              "zh-CN": "天才们的问候"
-            },
-            "type": "light_cone"
-          },
-          {
             "itemId": "21017",
             "names": {
               "zh-CN": "点个关注吧！"
@@ -7465,14 +8291,24 @@
             "type": "light_cone"
           },
           {
-            "itemId": "21005",
+            "itemId": "21018",
             "names": {
-              "zh-CN": "鼹鼠党欢迎你"
+              "zh-CN": "舞！舞！舞！"
+            },
+            "type": "light_cone"
+          },
+          {
+            "itemId": "21051",
+            "names": {
+              "zh-CN": "天才们的问候"
             },
             "type": "light_cone"
           }
         ]
       },
+      "gachaIds": [
+        "3060"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -7497,6 +8333,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/61729646"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -7514,13 +8354,6 @@
         ],
         "fourStar": [
           {
-            "itemId": "21051",
-            "names": {
-              "zh-CN": "天才们的问候"
-            },
-            "type": "light_cone"
-          },
-          {
             "itemId": "21017",
             "names": {
               "zh-CN": "点个关注吧！"
@@ -7528,14 +8361,24 @@
             "type": "light_cone"
           },
           {
-            "itemId": "21005",
+            "itemId": "21018",
             "names": {
-              "zh-CN": "鼹鼠党欢迎你"
+              "zh-CN": "舞！舞！舞！"
+            },
+            "type": "light_cone"
+          },
+          {
+            "itemId": "21051",
+            "names": {
+              "zh-CN": "天才们的问候"
             },
             "type": "light_cone"
           }
         ]
       },
+      "gachaIds": [
+        "3061"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -7560,6 +8403,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/61729646"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -7577,13 +8424,6 @@
         ],
         "fourStar": [
           {
-            "itemId": "21051",
-            "names": {
-              "zh-CN": "天才们的问候"
-            },
-            "type": "light_cone"
-          },
-          {
             "itemId": "21017",
             "names": {
               "zh-CN": "点个关注吧！"
@@ -7591,14 +8431,24 @@
             "type": "light_cone"
           },
           {
-            "itemId": "21005",
+            "itemId": "21018",
             "names": {
-              "zh-CN": "鼹鼠党欢迎你"
+              "zh-CN": "舞！舞！舞！"
+            },
+            "type": "light_cone"
+          },
+          {
+            "itemId": "21051",
+            "names": {
+              "zh-CN": "天才们的问候"
             },
             "type": "light_cone"
           }
         ]
       },
+      "gachaIds": [
+        "3062"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -7623,6 +8473,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/61729646"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -7662,6 +8516,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2063"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -7686,6 +8543,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/62249173"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -7725,6 +8586,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2064"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -7749,6 +8613,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/62249173"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -7788,6 +8656,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3063"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -7812,6 +8683,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/62249173"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -7851,6 +8726,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3064"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -7875,6 +8753,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/62249173"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -7914,6 +8796,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2065"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -7938,6 +8823,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/62755280"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -7977,6 +8866,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2066"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -8001,6 +8893,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/62755280"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -8040,6 +8936,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3065"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -8064,6 +8963,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/62755280"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -8103,6 +9006,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3066"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -8127,6 +9033,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/62755280"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -8166,6 +9076,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2067"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -8190,6 +9103,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/63312739"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -8229,6 +9146,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2068"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -8253,6 +9173,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/63312739"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -8292,6 +9216,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2069"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -8316,6 +9243,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/63312739"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -8355,6 +9286,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2070"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -8379,6 +9313,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/63312739"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -8418,6 +9356,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3067"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -8442,6 +9383,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/63312739"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -8481,6 +9426,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3068"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -8505,6 +9453,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/63312739"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -8544,6 +9496,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3069"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -8568,6 +9523,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/63312739"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -8607,6 +9566,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3070"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -8631,6 +9593,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/63312739"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -8670,6 +9636,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2071"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -8694,6 +9663,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/63997044"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -8733,6 +9706,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2072"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -8757,6 +9733,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/63997044"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -8774,28 +9754,31 @@
         ],
         "fourStar": [
           {
-            "itemId": "21014",
+            "itemId": "21005",
             "names": {
-              "zh-CN": "此时恰好"
+              "zh-CN": "鼹鼠党欢迎你"
             },
             "type": "light_cone"
           },
           {
-            "itemId": "21012",
+            "itemId": "21016",
             "names": {
-              "zh-CN": "秘密誓心"
+              "zh-CN": "宇宙市场趋势"
             },
             "type": "light_cone"
           },
           {
-            "itemId": "21004",
+            "itemId": "21045",
             "names": {
-              "zh-CN": "记忆中的模样"
+              "zh-CN": "谐乐静默之后"
             },
             "type": "light_cone"
           }
         ]
       },
+      "gachaIds": [
+        "3071"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -8820,6 +9803,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/63997044"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -8837,28 +9824,31 @@
         ],
         "fourStar": [
           {
-            "itemId": "21014",
+            "itemId": "21005",
             "names": {
-              "zh-CN": "此时恰好"
+              "zh-CN": "鼹鼠党欢迎你"
             },
             "type": "light_cone"
           },
           {
-            "itemId": "21012",
+            "itemId": "21016",
             "names": {
-              "zh-CN": "秘密誓心"
+              "zh-CN": "宇宙市场趋势"
             },
             "type": "light_cone"
           },
           {
-            "itemId": "21004",
+            "itemId": "21045",
             "names": {
-              "zh-CN": "记忆中的模样"
+              "zh-CN": "谐乐静默之后"
             },
             "type": "light_cone"
           }
         ]
       },
+      "gachaIds": [
+        "3072"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -8883,6 +9873,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/63997044"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -8922,6 +9916,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2073"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -8946,6 +9943,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/64556441"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -8985,6 +9986,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2074"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9009,6 +10013,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/64556441"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9048,6 +10056,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3073"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9072,6 +10083,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/64556441"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9111,6 +10126,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3074"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9135,6 +10153,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/64556441"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9174,6 +10196,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2075"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9198,6 +10223,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/65183804"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9237,6 +10266,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2076"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9261,6 +10293,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/65183804"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9300,6 +10336,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3075"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9324,6 +10363,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/65183804"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9363,6 +10406,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3076"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9387,6 +10433,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/65183804"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9426,6 +10476,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2077"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9450,6 +10503,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/65922861"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9489,6 +10546,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2078"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9513,6 +10573,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/65922861"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9552,6 +10616,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2079"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9576,6 +10643,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/65922861"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9615,6 +10686,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2080"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9639,6 +10713,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/65922861"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9656,6 +10734,9 @@
         ],
         "fourStar": []
       },
+      "gachaIds": [
+        "5001"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9680,6 +10761,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/66236171"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9697,6 +10782,9 @@
         ],
         "fourStar": []
       },
+      "gachaIds": [
+        "5002"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9721,6 +10809,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/66236171"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9760,6 +10852,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3077"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9784,6 +10879,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/65922861"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9823,6 +10922,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3078"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9847,6 +10949,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/65922861"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9886,6 +10992,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3079"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9910,6 +11019,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/65922861"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9949,6 +11062,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3080"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -9973,6 +11089,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/65922861"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -9990,6 +11110,9 @@
         ],
         "fourStar": []
       },
+      "gachaIds": [
+        "6001"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -10014,6 +11137,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/66236171"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -10031,6 +11158,9 @@
         ],
         "fourStar": []
       },
+      "gachaIds": [
+        "6002"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -10055,6 +11185,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/66236171"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -10094,6 +11228,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2081"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -10118,6 +11255,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/66671450"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -10157,6 +11298,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2082"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -10181,6 +11325,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/66671450"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -10220,6 +11368,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2083"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -10244,6 +11395,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/66671450"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -10283,6 +11438,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3081"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -10307,6 +11465,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/66671450"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -10346,6 +11508,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3082"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -10370,6 +11535,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/66671450"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -10409,6 +11578,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3083"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -10433,6 +11605,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/66671450"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -10472,6 +11648,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2084"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -10496,6 +11675,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/67404640"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -10535,6 +11718,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2085"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -10559,6 +11745,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/67404640"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -10598,6 +11788,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3084"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -10622,6 +11815,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/67404640"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -10661,6 +11858,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3085"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -10685,6 +11885,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/67404640"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -10724,6 +11928,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2086"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -10748,6 +11955,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/68102923"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -10787,6 +11998,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2087"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -10811,6 +12025,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/68102923"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -10850,6 +12068,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3086"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -10874,6 +12095,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/68102923"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -10913,6 +12138,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3087"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -10937,6 +12165,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/68102923"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -10976,6 +12208,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2088"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -11000,6 +12235,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/68839678"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -11039,6 +12278,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2089"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -11063,6 +12305,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/68839678"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -11080,9 +12326,9 @@
         ],
         "fourStar": [
           {
-            "itemId": "21048",
+            "itemId": "21018",
             "names": {
-              "zh-CN": "梦的蒙太奇"
+              "zh-CN": "舞！舞！舞！"
             },
             "type": "light_cone"
           },
@@ -11094,14 +12340,17 @@
             "type": "light_cone"
           },
           {
-            "itemId": "21005",
+            "itemId": "21048",
             "names": {
-              "zh-CN": "鼹鼠党欢迎你"
+              "zh-CN": "梦的蒙太奇"
             },
             "type": "light_cone"
           }
         ]
       },
+      "gachaIds": [
+        "3088"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -11126,6 +12375,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/68839678"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -11143,9 +12396,9 @@
         ],
         "fourStar": [
           {
-            "itemId": "21048",
+            "itemId": "21018",
             "names": {
-              "zh-CN": "梦的蒙太奇"
+              "zh-CN": "舞！舞！舞！"
             },
             "type": "light_cone"
           },
@@ -11157,14 +12410,17 @@
             "type": "light_cone"
           },
           {
-            "itemId": "21005",
+            "itemId": "21048",
             "names": {
-              "zh-CN": "鼹鼠党欢迎你"
+              "zh-CN": "梦的蒙太奇"
             },
             "type": "light_cone"
           }
         ]
       },
+      "gachaIds": [
+        "3089"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -11189,6 +12445,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/68839678"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -11228,6 +12488,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2090"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -11252,6 +12515,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/69605488"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -11291,6 +12558,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2091"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -11315,6 +12585,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/69605488"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -11354,6 +12628,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3090"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -11378,6 +12655,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/69605488"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -11417,6 +12698,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3091"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -11441,6 +12725,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/69605488"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -11480,6 +12768,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2092"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -11504,6 +12795,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/69921146"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -11543,6 +12838,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2094"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -11567,6 +12865,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/69921146"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -11606,6 +12908,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2093"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -11630,6 +12935,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/69921146"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -11669,6 +12978,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2095"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -11693,6 +13005,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/69921146"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -11732,6 +13048,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3092"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -11756,6 +13075,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/69921146"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -11795,6 +13118,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3094"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -11819,6 +13145,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/69921146"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -11858,6 +13188,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3093"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -11882,6 +13215,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/69921146"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -11921,6 +13258,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3095"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -11945,6 +13285,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/69921146"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -11984,6 +13328,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2096"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -12008,6 +13355,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/70887531"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -12047,6 +13398,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2097"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -12071,6 +13425,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/70887531"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -12110,6 +13468,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2098"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -12134,6 +13495,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/70887531"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -12173,6 +13538,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3096"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -12197,6 +13565,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/70887531"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -12236,6 +13608,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3097"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -12260,6 +13635,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/70887531"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -12299,6 +13678,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3098"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -12323,6 +13705,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/70887531"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -12362,6 +13748,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2099"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -12386,6 +13775,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/71502563"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -12425,6 +13818,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2100"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -12449,6 +13845,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/71502563"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -12488,6 +13888,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3099"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -12512,6 +13915,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/71502563"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -12551,6 +13958,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3100"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -12575,6 +13985,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/71502563"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -12614,6 +14028,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2101"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -12638,6 +14055,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/72124614"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -12677,6 +14098,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2102"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -12701,6 +14125,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/72124614"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -12740,6 +14168,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3101"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -12764,6 +14195,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/72124614"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -12803,6 +14238,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3102"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -12827,6 +14265,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/72124614"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -12866,6 +14308,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2103"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -12890,6 +14335,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/72712893"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -12929,6 +14378,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2104"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -12953,6 +14405,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/72712893"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -12992,6 +14448,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3103"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -13016,6 +14475,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/72712893"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -13055,6 +14518,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3104"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -13079,6 +14545,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/72712893"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -13118,6 +14588,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2105"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -13142,6 +14615,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/73157995"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -13181,6 +14658,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2106"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -13205,6 +14685,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/73157995"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -13244,6 +14728,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2107"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -13268,6 +14755,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/73157995"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -13307,6 +14798,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2108"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -13331,6 +14825,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/73157995"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -13370,6 +14868,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3105"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -13394,6 +14895,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/73157995"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -13433,6 +14938,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3106"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -13457,6 +14965,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/73157995"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -13496,6 +15008,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3107"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -13520,6 +15035,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/73157995"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -13559,6 +15078,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3108"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -13583,6 +15105,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/73157995"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -13622,6 +15148,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2109"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -13646,6 +15175,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/73668032"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -13685,6 +15218,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2110"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -13709,6 +15245,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/73668032"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -13748,6 +15288,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2111"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -13772,6 +15315,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/73668032"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -13811,6 +15358,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2112"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -13835,6 +15385,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/73668032"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -13874,6 +15428,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3109"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -13898,6 +15455,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/73668032"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -13937,6 +15498,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3110"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -13961,6 +15525,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/73668032"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -14000,6 +15568,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3111"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -14024,6 +15595,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/73668032"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -14063,6 +15638,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3112"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -14087,6 +15665,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/73668032"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -14126,6 +15708,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2113"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -14150,6 +15735,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/74136573"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -14189,6 +15778,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2114"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -14213,6 +15805,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/74136573"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -14252,6 +15848,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3113"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -14276,6 +15875,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/74136573"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -14315,6 +15918,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3114"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -14339,6 +15945,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/74136573"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -14378,6 +15988,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2115"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -14402,6 +16015,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/74432883"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -14441,6 +16058,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3115"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -14465,6 +16085,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/74432883"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -14504,6 +16128,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2116"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -14528,6 +16155,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/74771168"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -14567,6 +16198,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2117"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -14591,6 +16225,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/74771168"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -14630,6 +16268,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2118"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -14654,6 +16295,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/74771168"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -14693,6 +16338,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2119"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -14717,6 +16365,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/74771168"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -14725,9 +16377,9 @@
       "featured": {
         "fiveStar": [
           {
-            "itemId": "23058",
+            "itemId": "23057",
             "names": {
-              "zh-CN": "邂逅于下一个花季"
+              "zh-CN": "欢迎来到银河城"
             },
             "type": "light_cone"
           }
@@ -14756,6 +16408,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3116"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -14780,6 +16435,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/74771168"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -14819,6 +16478,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3117"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -14843,6 +16505,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/74771168"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -14882,6 +16548,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3118"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -14906,6 +16575,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/74771168"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -14945,6 +16618,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3119"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -14969,6 +16645,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/74771168"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -15008,6 +16688,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2120"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -15032,6 +16715,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/75267885"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -15071,6 +16758,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2121"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -15095,6 +16785,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/75267885"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -15134,6 +16828,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2122"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -15158,6 +16855,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/75267885"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -15197,6 +16898,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2123"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -15221,6 +16925,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/75267885"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -15229,9 +16937,9 @@
       "featured": {
         "fiveStar": [
           {
-            "itemId": "23057",
+            "itemId": "23058",
             "names": {
-              "zh-CN": "欢迎来到银河城"
+              "zh-CN": "邂逅于下一个花季"
             },
             "type": "light_cone"
           }
@@ -15260,6 +16968,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3120"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -15284,6 +16995,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/75267885"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -15323,6 +17038,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3121"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -15347,6 +17065,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/75267885"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -15386,6 +17108,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3122"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -15410,6 +17135,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/75267885"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -15449,6 +17178,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3123"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -15473,6 +17205,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/75267885"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -15512,6 +17248,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2124"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -15536,6 +17275,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/75715107"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -15575,6 +17318,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2125"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -15599,6 +17345,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/75715107"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -15638,6 +17388,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3124"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -15662,6 +17415,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/75715107"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -15701,6 +17458,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3125"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -15725,6 +17485,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/75715107"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -15764,6 +17528,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2126"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -15788,6 +17555,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/76192169"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -15827,6 +17598,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2127"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -15851,6 +17625,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/76192169"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -15868,28 +17646,31 @@
         ],
         "fourStar": [
           {
-            "itemId": "21010",
+            "itemId": "21012",
             "names": {
-              "zh-CN": "论剑"
+              "zh-CN": "秘密誓心"
             },
             "type": "light_cone"
           },
           {
-            "itemId": "21004",
+            "itemId": "21017",
             "names": {
-              "zh-CN": "记忆中的模样"
+              "zh-CN": "点个关注吧！"
             },
             "type": "light_cone"
           },
           {
-            "itemId": "21007",
+            "itemId": "21018",
             "names": {
-              "zh-CN": "同一种心情"
+              "zh-CN": "舞！舞！舞！"
             },
             "type": "light_cone"
           }
         ]
       },
+      "gachaIds": [
+        "3126"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -15914,6 +17695,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/76192169"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -15931,28 +17716,31 @@
         ],
         "fourStar": [
           {
-            "itemId": "21010",
+            "itemId": "21012",
             "names": {
-              "zh-CN": "论剑"
+              "zh-CN": "秘密誓心"
             },
             "type": "light_cone"
           },
           {
-            "itemId": "21004",
+            "itemId": "21017",
             "names": {
-              "zh-CN": "记忆中的模样"
+              "zh-CN": "点个关注吧！"
             },
             "type": "light_cone"
           },
           {
-            "itemId": "21007",
+            "itemId": "21018",
             "names": {
-              "zh-CN": "同一种心情"
+              "zh-CN": "舞！舞！舞！"
             },
             "type": "light_cone"
           }
         ]
       },
+      "gachaIds": [
+        "3127"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -15977,6 +17765,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/76192169"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16016,6 +17808,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2128"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16040,6 +17835,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/76661906"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16079,6 +17878,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2129"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16103,6 +17905,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/76661906"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16142,6 +17948,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2130"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16166,6 +17975,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/76661906"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16205,6 +18018,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2131"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16229,6 +18045,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/76661906"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16246,6 +18066,9 @@
         ],
         "fourStar": []
       },
+      "gachaIds": [
+        "5003"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16270,6 +18093,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/76423940"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16287,6 +18114,9 @@
         ],
         "fourStar": []
       },
+      "gachaIds": [
+        "5004"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16311,6 +18141,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/76423940"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16350,6 +18184,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3128"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16374,6 +18211,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/76661906"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16413,6 +18254,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3129"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16437,6 +18281,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/76661906"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16476,6 +18324,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3130"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16500,6 +18351,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/76661906"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16539,6 +18394,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3131"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16563,6 +18421,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/76661906"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16580,6 +18442,9 @@
         ],
         "fourStar": []
       },
+      "gachaIds": [
+        "6003"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16604,6 +18469,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/76423940"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16621,6 +18490,9 @@
         ],
         "fourStar": []
       },
+      "gachaIds": [
+        "6004"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16645,6 +18517,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/76423940"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16684,6 +18560,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2133"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16708,6 +18587,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/77188470"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16747,6 +18630,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2132"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16771,6 +18657,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/77188470"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16810,6 +18700,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2134"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16834,6 +18727,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/77188470"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16873,6 +18770,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3133"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16897,6 +18797,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/77188470"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16936,6 +18840,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3132"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -16960,6 +18867,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/77188470"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -16999,6 +18910,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3134"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -17023,6 +18937,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/77188470"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -17062,6 +18980,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2135"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -17086,6 +19007,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/77739472"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -17125,6 +19050,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2136"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -17149,6 +19077,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/77739472"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -17188,6 +19120,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3135"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -17212,6 +19147,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/77739472"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -17251,6 +19190,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3136"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -17275,6 +19217,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/77739472"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -17314,6 +19260,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2137"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -17338,6 +19287,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/78075760"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -17377,6 +19330,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2138"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -17401,6 +19357,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/78075760"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -17440,6 +19400,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3137"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -17464,6 +19427,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/78075760"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -17503,6 +19470,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3138"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -17527,6 +19497,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/78075760"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -17566,6 +19540,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2139"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -17590,6 +19567,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/78448395"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -17629,6 +19610,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "2140"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -17653,6 +19637,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/78448395"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -17692,6 +19680,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3139"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -17716,6 +19707,10 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/78448395"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     },
@@ -17755,6 +19750,9 @@
           }
         ]
       },
+      "gachaIds": [
+        "3140"
+      ],
       "gachaTypes": {
         "raw": null,
         "uigf": [
@@ -17779,11 +19777,15 @@
         {
           "provider": "miyoushe",
           "url": "https://www.miyoushe.com/sr/article/78448395"
+        },
+        {
+          "provider": "firefly",
+          "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
     }
   ],
   "game": "starrail",
-  "generatedAt": "2026-10-16T10:30:05+08:00",
+  "generatedAt": "2026-10-16T10:56:28+08:00",
   "schemaVersion": 1
 }
