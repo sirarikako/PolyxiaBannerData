@@ -123,10 +123,10 @@
             },
             {
               "type": "null",
-              "description": "长期池没有已确定的统一结束时刻。"
+              "description": "仅用于没有确定结束时刻的常驻、新手或星铁联动角色／联动光锥池。"
             }
           ],
-          "description": "本服务器该卡池的结束时刻（不包含边界）；无统一结束日期的常驻/新手池可设为 null，限时池应填写结束时间。"
+          "description": "本服务器该卡池的结束时刻（不包含边界）；常驻、新手及尚无明确结束时刻的星铁联动角色／联动光锥池允许 null，其他限时池必须填写结束时间。"
         }
       },
       "description": "一个服务器对应的一组卡池开放时间；每个卡池同一服务器最多一条。"
@@ -386,7 +386,39 @@
           "description": "仅原神武器活动池或集录大类可选：0=无定轨，1或2=定轨命定值上限，null=未知；非玩家个人命定值。"
         }
       },
-      "description": "具体卡池条目：本仓库独立 ID、展示分类、UP 物品、游戏服务器时间与来源。"
+      "description": "具体卡池条目：本仓库独立 ID、展示分类、UP 物品、游戏服务器时间与来源。",
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "poolType": {
+                "enum": [
+                  "beginner",
+                  "standard",
+                  "collab_character",
+                  "collab_light_cone"
+                ]
+              }
+            },
+            "required": [
+              "poolType"
+            ]
+          },
+          "else": {
+            "properties": {
+              "regions": {
+                "items": {
+                  "properties": {
+                    "endAt": {
+                      "$ref": "#/$defs/time8"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
     }
   },
   "allOf": [
