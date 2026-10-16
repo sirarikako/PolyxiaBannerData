@@ -49,7 +49,7 @@
 | `beginner` | 新手跃迁 | 1 |
 | **合计** | | **286** |
 
-星铁的维护日 06:00 用作版本更新后开放的抽卡记录匹配边界，不表示维护完成时刻。1.0 开服使用 2023-04-26 10:00（UTC+8）。版本边界资料保存在 `../../data/bootstrap/starrail/version-starts-cn.json`（只存在于源仓库，不属于公开同步目录）。
+星铁的维护日 06:00（UTC+8）用作版本更新后开放的抽卡记录匹配边界，不表示维护完成时刻。1.0 开服使用 2023-04-26 10:00（UTC+8）。各卡池的开放时间以 [starrail.json](./starrail.json) 中的 `regions` 记录为准。
 
 ## 发布文件
 
@@ -72,7 +72,7 @@
 | `category`、`poolType` | 用于展示的卡池分类、进一步细分的卡池类型 |
 | `variant` | 原神集录大类的子类型：集录祈愿或溯光祈愿（仅相关卡池） |
 | `names` | 按语言代码保存的卡池名称，目前已发布原神数据提供 `zh-CN` |
-| `featured.fiveStar`、`featured.fourStar` | 五星、四星 UP 物品；**集录／溯光的五星列表是可选定轨目标名单，不表示全部同时固定 UP** |
+| `featured.fiveStar`、`featured.fourStar` | 五星、四星 UP 物品；集录／溯光的五星列表为可选定轨目标名单 |
 | `featured.*[].itemId`、`type`、`names` | 物品 ID、角色或武器等类型、多语言名称；未核实的 ID 可为 `null` |
 | `gachaTypes.raw`、`gachaTypes.uigf` | 已核实的官方原始抽卡类型及 UIGF 规范类型；原始类型尚未核实时 `raw` 可为 `null` |
 | `regions` | 按服务器记录的 `server`、`startAt`、`endAt` |
