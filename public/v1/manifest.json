@@ -3,7 +3,7 @@
     "genshin": {
       "bannerCount": 303,
       "path": "genshin.json",
-      "sha256": "170465a8397b4b2df318eecd3da12061da8c06ec2df9d4ae7d2f6937f1cf3591"
+      "sha256": "73b1fe977a0b3f0fbc93c20188771ccbae0f81e495205b1791774ef514597424"
     },
     "starrail": {
       "bannerCount": 286,
@@ -11,6 +11,6 @@
       "sha256": "8fe8fcaa1f7da77f2c5402066baa2caadf573333b2db3df132a0e721f6058ce2"
     }
   },
-  "generatedAt": "2026-10-16T12:03:01+08:00",
+  "generatedAt": "2026-10-16T13:28:20+08:00",
   "schemaVersion": 1
 }
