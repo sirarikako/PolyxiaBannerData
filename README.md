@@ -11,6 +11,7 @@ Public versioned gacha banner metadata and JSON Schemas for Genshin Impact and H
 | [`public/v1/`](public/v1/) | 正式发布的 v1 卡池数据与 Manifest |
 | [`public/v1/manifest.json`](public/v1/manifest.json) | 数据文件索引及校验信息 |
 | [`public/v1/genshin.json`](public/v1/genshin.json) | 原神卡池情报 |
+| [`public/v1/starrail.json`](public/v1/starrail.json) | 崩坏：星穹铁道卡池情报 |
 | [`schemas/public/v1/`](schemas/public/v1/) | v1 数据格式的 JSON Schema |
 
 客户端应固定请求其支持的接口版本，例如 `public/v1/`。数据更新不代表接口格式版本升级；不兼容的结构变更将使用新的版本目录。
@@ -21,6 +22,7 @@ Public versioned gacha banner metadata and JSON Schemas for Genshin Impact and H
 
 - [Manifest](https://raw.githubusercontent.com/sirarikako/PolyxiaBannerData/main/public/v1/manifest.json)
 - [Genshin Impact](https://raw.githubusercontent.com/sirarikako/PolyxiaBannerData/main/public/v1/genshin.json)
+- [Honkai: Star Rail](https://raw.githubusercontent.com/sirarikako/PolyxiaBannerData/main/public/v1/starrail.json)
 
 相关 JSON 文件及后续游戏数据请以 [Manifest](public/v1/manifest.json) 中的记录为准。
 
