@@ -14,7 +14,7 @@
           "200"
         ]
       },
-      "gameVersion": null,
+      "gameVersion": "1.0",
       "id": "gi-100001",
       "names": {
         "zh-CN": "奔行世间"
@@ -53,7 +53,7 @@
           "100"
         ]
       },
-      "gameVersion": null,
+      "gameVersion": "1.0",
       "id": "gi-100002",
       "names": {
         "zh-CN": "初行者推荐祈愿"
