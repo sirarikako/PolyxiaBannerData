@@ -13,29 +13,35 @@
   ],
   "properties": {
     "format": {
-      "const": "genshin-v1-overrides-v2"
+      "const": "genshin-v1-overrides-v2",
+      "description": "【必填】固定为 genshin-v1-overrides-v2，用于识别当前版本的人工配置格式。"
     },
     "game": {
-      "const": "genshin"
+      "const": "genshin",
+      "description": "【必填】固定 genshin；当前导入器仅处理原神。"
     },
     "locale": {
-      "const": "zh-CN"
+      "const": "zh-CN",
+      "description": "【必填】固定 zh-CN。"
     },
     "version": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "description": "【必填】当前人工文件所属的游戏版本，例如 7.1 或 月之八；文件名必须是 genshin_<version>.json。后者由导入器检查。"
     },
     "upcoming": {
       "type": "array",
       "items": {
         "$ref": "#/$defs/upcoming"
-      }
+      },
+      "description": "【必填，可为空数组】尚未进入 v1 的新卡池的人工补充条目。只与已经生成的公告候选匹配，不自动改动现有池；按条目中的 match 定位。"
     },
     "existing": {
       "type": "array",
       "items": {
         "$ref": "#/$defs/existing"
-      }
+      },
+      "description": "【必填，可为空数组】已发布卡池的人工修改条目，使用内部 id 精确定位；ID 所属版本必须与本文件 version 相同。"
     }
   },
   "$defs": {
@@ -49,12 +55,14 @@
       "properties": {
         "version": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "description": "【可选】匹配的版本号；省略时采用外层 version，若填写则必须与其一致。"
         },
         "phase": {
           "type": "integer",
           "minimum": 1,
-          "maximum": 9
+          "maximum": 9,
+          "description": "【必填】卡池首次所属期数（1～9），例如第一期为 1。"
         },
         "poolType": {
           "enum": [
@@ -62,54 +70,66 @@
             "character_event_2",
             "weapon_event",
             "chronicled"
-          ]
+          ],
+          "description": "【必填】具体卡池类型：character_event 角色活动祈愿、character_event_2 角色活动祈愿-2、weapon_event 武器、chronicled 集录/溯光。"
         },
         "variant": {
           "enum": [
             "chronicled",
             "special_recollection"
-          ]
+          ],
+          "description": "【条件可选】仅 chronicled 类型使用：chronicled 为集录，special_recollection 为溯光；实际组合关系由导入器校验。"
         },
         "bannerName": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "description": "【可选】卡池中文名称，用于在 phase + poolType 不足以唯一定位时进一步匹配。"
         },
         "postId": {
           "type": "string",
-          "pattern": "^[0-9]+$"
+          "pattern": "^[0-9]+$",
+          "description": "【可选】对应真实祈愿公告的数字文章 ID，用于精确匹配候选；不是内部卡池 id。"
         }
-      }
+      },
+      "description": "【upcoming 必填】用来与尚未发布的官方公告候选匹配；phase + poolType 必须提供。如同版本同一期有不同变种或需要精确区分，追加 bannerName、postId、variant。"
     },
     "set": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "names": {
-          "$ref": "../public/v1/banner-data.schema.json#/$defs/names"
+          "$ref": "../public/v1/banner-data.schema.json#/$defs/names",
+          "description": "【可选】卡池显示名称语言字典；例如 {\"zh-CN\":\"…\",\"ja-JP\":\"…\"}，不会修改该池身份。对象内按语言合并。"
         },
         "gachaTypes": {
           "type": "object",
           "additionalProperties": false,
           "properties": {
             "raw": {
-              "$ref": "../public/v1/banner-data.schema.json#/$defs/banner/properties/gachaTypes/properties/raw"
+              "$ref": "../public/v1/banner-data.schema.json#/$defs/banner/properties/gachaTypes/properties/raw",
+              "description": "【可选】官方抽卡原始类型；未核实时可为 null，规范参考 v1 Schema。"
             },
             "uigf": {
-              "$ref": "../public/v1/banner-data.schema.json#/$defs/banner/properties/gachaTypes/properties/uigf"
+              "$ref": "../public/v1/banner-data.schema.json#/$defs/banner/properties/gachaTypes/properties/uigf",
+              "description": "【可选】UIGF 规范化类型编码；例如角色祈愿 301、武器 302。"
             }
-          }
+          },
+          "description": "【可选】UIGF 和游戏原始抽卡类别编码；须使用经过确认的值，不能把文章 ID 当作 gacha type。"
         },
         "featured": {
           "type": "object",
           "additionalProperties": false,
           "properties": {
             "fiveStar": {
-              "$ref": "../public/v1/banner-data.schema.json#/$defs/banner/properties/featured/properties/fiveStar"
+              "$ref": "../public/v1/banner-data.schema.json#/$defs/banner/properties/featured/properties/fiveStar",
+              "description": "【可选】完整五星 UP／可选五星列表，整体替换，不支持按数组下标增量编辑。"
             },
             "fourStar": {
-              "$ref": "../public/v1/banner-data.schema.json#/$defs/banner/properties/featured/properties/fourStar"
+              "$ref": "../public/v1/banner-data.schema.json#/$defs/banner/properties/featured/properties/fourStar",
+              "description": "【可选】完整四星 UP 列表，整体替换；空数组代表明确没有该星级固定 UP。"
             }
-          }
+          },
+          "description": "【可选】五星与四星 UP 物品列表；每个星级数组整体替换，需满足正式 v1 的对应人数和类型校验。"
         },
         "regions": {
           "type": "array",
@@ -121,27 +141,36 @@
             "additionalProperties": false,
             "properties": {
               "server": {
-                "$ref": "../public/v1/banner-data.schema.json#/$defs/region/properties/server"
+                "$ref": "../public/v1/banner-data.schema.json#/$defs/region/properties/server",
+                "description": "【必填】服务器标识，例如 cn_official、asia；按此值定位原有 regions 条目。"
               },
               "startAt": {
-                "$ref": "../public/v1/banner-data.schema.json#/$defs/region/properties/startAt"
+                "$ref": "../public/v1/banner-data.schema.json#/$defs/region/properties/startAt",
+                "description": "【可选】该服务器卡池起始时间（包含边界），格式见正式 v1 Schema。"
               },
               "endAt": {
-                "$ref": "../public/v1/banner-data.schema.json#/$defs/region/properties/endAt"
+                "$ref": "../public/v1/banner-data.schema.json#/$defs/region/properties/endAt",
+                "description": "【可选】该服务器卡池结束时间（不包含边界），不得直接照抄公告 14:59；公告原始结束分钟须按规则转换为 15:00。"
               }
-            }
-          }
+            },
+            "description": "【条件必填】每个服务器时间补丁要填写 server，其余时间字段仅填写需要修改的部分。"
+          },
+          "description": "【可选】按服务器修正卡池开放时间。每个元素必须带 server，同一 server 的时间字段递归合并；UTC+08:00，v1 限时池 endAt 是不包含的结束边界。"
         },
         "sources": {
-          "$ref": "../public/v1/banner-data.schema.json#/$defs/banner/properties/sources"
+          "$ref": "../public/v1/banner-data.schema.json#/$defs/banner/properties/sources",
+          "description": "【可选】v1 的来源列表。使用 set.sources 是整体替换；只是追加来源时优先使用 addSources。"
         },
         "images": {
-          "$ref": "../public/v1/banner-data.schema.json#/$defs/banner/properties/images"
+          "$ref": "../public/v1/banner-data.schema.json#/$defs/banner/properties/images",
+          "description": "【可选】多语言图片 URL，对应 v1 Schema；仅填写已确认的 HTTPS 图片地址。"
         },
         "fatePointLimit": {
-          "$ref": "../public/v1/banner-data.schema.json#/$defs/banner/properties/fatePointLimit"
+          "$ref": "../public/v1/banner-data.schema.json#/$defs/banner/properties/fatePointLimit",
+          "description": "【可选】命定值上限，只有原神武器池、集录/溯光可使用。"
         }
-      }
+      },
+      "description": "【可选】要修改的公开 v1 字段集合，不能更改 id、gameVersion、phase、category、poolType 等身份字段。对象递归合并、普通数组整体替换；regions 唯独按 server 合并。字段的具体取值范围复用公开 v1 Schema。"
     },
     "patch": {
       "type": "object",
@@ -166,27 +195,33 @@
       "properties": {
         "id": {
           "type": "string",
-          "pattern": "^gi-[0-9]{6}$"
+          "pattern": "^gi-[0-9]{6}$",
+          "description": "【existing 必填】已发布的原神内部卡池编号（gi-000001 形式）；upcoming 禁止预先指定。"
         },
         "match": {
-          "$ref": "#/$defs/match"
+          "$ref": "#/$defs/match",
+          "description": "【upcoming 必填】匹配尚未发布的卡池候选；existing 禁止设置 match。"
         },
         "status": {
           "enum": [
             "pending",
             "completed"
-          ]
+          ],
+          "description": "【可选】pending=等待应用（默认）；completed=已处理，后续导入跳过该条，需再次修改时必须显式设回 pending 或添加新条目。"
         },
         "completedAt": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "description": "【状态字段】该条人工设定实际完成时间；正式导入成功后由脚本维护，通常不需要人工填。"
         },
         "appliedId": {
           "type": "string",
-          "pattern": "^gi-[0-9]{6}$"
+          "pattern": "^gi-[0-9]{6}$",
+          "description": "【状态字段】实际应用到的 v1 内部卡池编号；正式导入成功后由脚本维护。"
         },
         "set": {
-          "$ref": "#/$defs/set"
+          "$ref": "#/$defs/set",
+          "description": "【可选】直接设置/合并 v1 可编辑字段，允许仅提供待修改的子字段。"
         },
         "itemIds": {
           "type": "object",
@@ -203,16 +238,21 @@
               {
                 "type": "null"
               }
-            ]
-          }
+            ],
+            "description": "物品官方 ItemID 的十进制正整数字符串；null 表示暂时未知，不允许虚构 ID。"
+          },
+          "description": "【可选】按中文 UP 名称查找唯一物品并设置官方 ItemID；格式为“名称: 数字字符串/null”，未知可以使用 null。新池如与自动确认的非空 ID 冲突将阻断。"
         },
         "addSources": {
           "type": "array",
           "items": {
-            "$ref": "../public/v1/banner-data.schema.json#/$defs/source"
-          }
+            "$ref": "../public/v1/banner-data.schema.json#/$defs/source",
+            "description": "来源对象，包含 provider 及可选的 HTTPS url/externalId，具体遵循公开 v1 Schema。"
+          },
+          "description": "【可选】在 v1 sources 中追加来源对象，去重而非替换；每条来源必须符合公开 v1 source 结构。"
         }
-      }
+      },
+      "description": "每条人工修正至少具有 set、itemIds、addSources 三者之一；status 省略即 pending。具体定位方式由所在 upcoming/existing 数组决定。"
     },
     "upcoming": {
       "allOf": [
@@ -229,7 +269,8 @@
             ]
           }
         }
-      ]
+      ],
+      "description": "新池预设：match 必填、id 禁止设置；仅在真实公告整合出 ready_candidate 时才参与创建 v1，不能修改已经发布的卡池。"
     },
     "existing": {
       "allOf": [
@@ -246,7 +287,9 @@
             ]
           }
         }
-      ]
+      ],
+      "description": "已发布池定向修正：id 必填、match 禁止设置；即使没有新的公告候选也可应用。"
     }
-  }
+  },
+  "description": "原神按游戏版本保存的 v1 人工修正文件。作用：预设新卡池的人工补充（upcoming）和按内部 ID 修正已发布卡池（existing）。真实 v1 字段沿用 schemas/public/v1/banner-data.schema.json。本 Schema 描述文件结构；与实际版本、卡池、ID 的交叉核验，以及 pending/completed 处理仍由导入脚本负责。人工配置不能凭空生成没有官方公告候选的新卡池。"
 }

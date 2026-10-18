@@ -10,17 +10,21 @@
   ],
   "properties": {
     "format": {
-      "const": "genshin-notice-manual-v1"
+      "const": "genshin-notice-manual-v1",
+      "description": "【必填】固定为 genshin-notice-manual-v1。"
     },
     "postId": {
       "type": "string",
-      "pattern": "^[0-9]+$"
+      "pattern": "^[0-9]+$",
+      "description": "【必填】真实官方文章数字 ID；文件名为 <postId>.json，必须与已保存原文的真实文章 ID 一致。"
     },
     "note": {
-      "type": "string"
+      "type": "string",
+      "description": "【可选】人工备注，仅供维护与核对，不用来生成 v1 或替代官方证据。"
     },
     "evidence": {
-      "type": "object"
+      "type": "object",
+      "description": "【可选】人工核对依据说明，不能用来伪造原文、source、OCR 或自动解析元数据。"
     },
     "data": {
       "anyOf": [
@@ -33,7 +37,8 @@
         {
           "$ref": "#/$defs/notice"
         }
-      ]
+      ],
+      "description": "【必填，至少一个字段】人工提供的业务数据。结构复用三种公告当前解析产物：版本更新 update、祈愿预告 preview、正式祈愿公告 notice。所属类型根据实际抓取到的官方帖子类型确定；无需全部填写，仅填需要补充或核对的字段。三个类型的最低业务条件由后续整合器判断，Schema 的 anyOf 并不能单独保证可发布。"
     }
   },
   "$defs": {
@@ -46,35 +51,41 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "description": "【可选】公告开始时间的原文（例如“7.1版本更新后”），用于审查；不能替代 startAt/startCondition 的有效值。"
         },
         "endRaw": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "description": "【可选】公告结束时间的原文；不能代替可解析的 endAt。"
         },
         "startAt": {
           "type": [
             "string",
             "null"
           ],
-          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:00\\+08:00$"
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:00\\+08:00$",
+          "description": "【条件必填】公告明确给出起始时间时填写，+08:00、秒数为 00；对于第一期“版本更新后”可改为 startCondition。"
         },
         "endAt": {
           "type": [
             "string",
             "null"
           ],
-          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:00\\+08:00$"
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:00\\+08:00$",
+          "description": "【重要，自动解析缺失时必填】公告结束分钟（包含这一分钟），+08:00、秒数为 00。祈愿预告和正式公告必须可按该值匹配；正式祈愿公告 OCR 失败时还需由人工填写该字段以形成可信的时间证据。"
         },
         "startCondition": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "description": "【条件必填】第一期如果公告只写“版本更新后”而没有精确开始时间，填 after_version_update；版本更新公告的 maintenance.startAt 会用作生成 v1 的开始时间。其他期不能用此条件替代 startAt。"
         }
-      }
+      },
+      "description": "公告内的原始开放时间信息。人工只填需要的子字段；其中 endAt 按公告结束的最后一分钟保存，而不是 v1 的独占结束时刻（整合时 +1 分钟）。"
     },
     "names": {
       "type": "array",
@@ -82,7 +93,8 @@
         "anyOf": [
           {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "description": "名称简写；已有自动结构包含更多属性时，比较只按名称。"
           },
           {
             "type": "object",
@@ -92,57 +104,71 @@
             "properties": {
               "name": {
                 "type": "string",
-                "minLength": 1
+                "minLength": 1,
+                "description": "【对象必填】人物或武器的简体中文名称，后续用官方 ItemID 映射表定位对应物品。"
               },
               "title": {
                 "type": "string",
-                "minLength": 1
+                "minLength": 1,
+                "description": "【可选】人物称号。"
               },
               "element": {
                 "type": "string",
-                "minLength": 1
+                "minLength": 1,
+                "description": "【可选】人物元素属性。"
               },
               "weaponType": {
                 "type": "string",
-                "minLength": 1
+                "minLength": 1,
+                "description": "【可选】武器种类／角色使用的武器类型。"
               },
               "rarity": {
                 "type": "integer",
                 "minimum": 1,
-                "maximum": 5
+                "maximum": 5,
+                "description": "【可选】稀有度（1～5），角色/武器列表所属星级由对应字段名决定。"
               },
               "limited": {
                 "type": [
                   "boolean",
                   "null"
-                ]
+                ],
+                "description": "【可选】是否限定，无法确定时用 null。"
               },
               "acquisition": {
                 "type": "string",
-                "minLength": 1
+                "minLength": 1,
+                "description": "【可选】新武器获取方式等原文辅助信息。"
               }
-            }
+            },
+            "description": "名称对象格式：只有 name 必填；其余属性是公告可能包含的补充描述，不是 v1 生成的最低条件。"
           }
         ]
-      }
+      },
+      "description": "物品名称数组。可以写 [\"名称\"] 或 [{\"name\":\"名称\"}]；名单作为完整列表使用（不是逐项追加），比较时忽略顺序和解析结果中额外的角色属性。[] 表示确认无此类对象；缺省/人工 null 表示尚未提供，不能据此推断为空。"
     },
     "group": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "fiveStarCharacters": {
-          "$ref": "#/$defs/names"
+          "$ref": "#/$defs/names",
+          "description": "【条件必填】角色池正式公告必须包含该池的 1 名五星 UP；预告可用于汇总该期五星角色；集录/溯光需在 selectable 中列出全部可选五星角色。"
         },
         "fourStarCharacters": {
-          "$ref": "#/$defs/names"
+          "$ref": "#/$defs/names",
+          "description": "【条件必填】角色池正式公告必须提供完整 3 名四星角色 UP；武器池通常没有四星角色 UP。"
         },
         "fiveStarWeapons": {
-          "$ref": "#/$defs/names"
+          "$ref": "#/$defs/names",
+          "description": "【条件必填】武器池正式公告必须提供完整 2 把五星武器 UP；预告据此校对正式公告；集录/溯光需在 selectable 中列出全部可选五星武器。"
         },
         "fourStarWeapons": {
-          "$ref": "#/$defs/names"
+          "$ref": "#/$defs/names",
+          "description": "【条件必填】武器池正式公告必须提供完整 5 把四星武器 UP；角色池通常没有四星武器 UP。"
         }
-      }
+      },
+      "description": "按五星/四星和角色/武器分类的名称列表；仅填写需要人工提供的完整子列表。不同池种所需的具体列表以整合器规则为准。"
     },
     "update": {
       "type": "object",
@@ -151,11 +177,13 @@
       "properties": {
         "version": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "description": "【最低必填】版本标识（如 7.1）；用于关联本版本祈愿预告和更新公告。"
         },
         "versionName": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "description": "【可选】版本名称，供人工核对展示，当前不用于关联匹配。"
         },
         "maintenance": {
           "type": "object",
@@ -163,23 +191,30 @@
           "additionalProperties": false,
           "properties": {
             "startAt": {
-              "type": "string"
+              "type": "string",
+              "description": "【最低必填】维护开始时刻，+08:00；第 1 期公告写“版本更新后”时将作为该池开始时间来源。"
             },
             "estimatedDurationHours": {
-              "type": "number"
+              "type": "number",
+              "description": "【可选】官方预计维护时长（小时），不作为卡池开放时间依据。"
             },
             "estimatedEndAt": {
-              "type": "string"
+              "type": "string",
+              "description": "【可选】官方预计维护结束时刻，不能替代维护开始时刻。"
             }
-          }
+          },
+          "description": "【最低必填】版本维护信息，至少应提供 startAt；第一期祈愿“版本更新后”的开始时刻据此确定。"
         },
         "newCharacters": {
-          "$ref": "#/$defs/names"
+          "$ref": "#/$defs/names",
+          "description": "【可选】此版本新增角色完整名单，仅用于辅助核对；当前整合 v1 不强制依赖。"
         },
         "newWeapons": {
-          "$ref": "#/$defs/names"
+          "$ref": "#/$defs/names",
+          "description": "【可选】此版本新增武器完整名单，仅用于辅助核对；当前整合 v1 不强制依赖。"
         }
-      }
+      },
+      "description": "版本更新公告数据。若该篇更新公告的解析结果完全缺失，但真实原文已保存，v1 整合的最低业务字段是 version + maintenance.startAt。其余内容为可选辅助信息。"
     },
     "preview": {
       "type": "object",
@@ -188,18 +223,22 @@
       "properties": {
         "version": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "description": "【最低必填】版本号，必须与版本更新公告的 version 对应。"
         },
         "phase": {
           "type": "integer",
           "minimum": 1,
-          "maximum": 9
+          "maximum": 9,
+          "description": "【最低必填】版本第几期（1～9），据此决定候选写入的期数。"
         },
         "time": {
-          "$ref": "#/$defs/time"
+          "$ref": "#/$defs/time",
+          "description": "【最低必填】至少需要 endAt 与同一期正式祈愿公告的结束分钟匹配；startAt 若同时出现在预告和正式公告中，则须一致。"
         },
         "up": {
-          "$ref": "#/$defs/group"
+          "$ref": "#/$defs/group",
+          "description": "【条件必填】预告整期五星 UP 汇总。角色池需包含目标五星角色；武器池需包含该期两把五星 UP 武器；集录/溯光没有相同的强制匹配。"
         },
         "additionalWishes": {
           "type": "array",
@@ -213,24 +252,30 @@
             "properties": {
               "name": {
                 "type": "string",
-                "minLength": 1
+                "minLength": 1,
+                "description": "【必填】额外祈愿名称。"
               },
               "kind": {
                 "enum": [
                   "chronicled",
                   "recollection"
-                ]
+                ],
+                "description": "【必填】chronicled 为集录；recollection 为溯光。"
               },
               "noticeType": {
                 "enum": [
                   "集录祈愿",
                   "溯光祈愿"
-                ]
+                ],
+                "description": "【必填】原公告中的“集录祈愿”或“溯光祈愿”。"
               }
-            }
-          }
+            },
+            "description": "额外祈愿的名称、分类和原公告中文类型；这是整期预告辅助信息，不是单个正式池的完整 UP 明细。"
+          },
+          "description": "【可选】预告中的集录/溯光等额外祈愿信息；不需要时可省略或填 []。"
         }
-      }
+      },
+      "description": "祈愿预告数据。当前整合的最低业务字段是 version、phase、time.endAt，以及对应池种用于核对的五星 UP 汇总名单（角色池包含目标角色、武器池包含该期两把五星武器）；集录/溯光没有同样的五星汇总强制匹配要求。"
     },
     "notice": {
       "type": "object",
@@ -239,11 +284,13 @@
       "properties": {
         "bannerName": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "description": "【最低必填】单个卡池中文名称，用于正式 v1 的 names.zh-CN。"
         },
         "officialWishType": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "description": "【可选】公告原始祈愿类型文字，用于人工比对；如果与自动值不一致，属于关键冲突。"
         },
         "poolType": {
           "enum": [
@@ -251,20 +298,24 @@
             "character_event_2",
             "weapon_event",
             "chronicled"
-          ]
+          ],
+          "description": "【最低必填】池种：character_event、character_event_2、weapon_event 或 chronicled，决定 UP 人数与 v1 类型。"
         },
         "variant": {
           "enum": [
             "chronicled",
             "special_recollection",
             null
-          ]
+          ],
+          "description": "【集录/溯光必填】chronicled 类型须写 chronicled（集录）或 special_recollection（溯光）；普通角色/武器池可以不写。"
         },
         "time": {
-          "$ref": "#/$defs/time"
+          "$ref": "#/$defs/time",
+          "description": "【最低必填】需要 endAt 和有效起始依据：非第一期必须写 startAt；第一期“版本更新后”可用 startCondition=after_version_update。"
         },
         "up": {
-          "$ref": "#/$defs/group"
+          "$ref": "#/$defs/group",
+          "description": "【普通池条件必填】角色池：1 名五星角色 + 3 名四星角色；武器池：2 把五星武器 + 5 把四星武器；其他类别不应有内容。集录/溯光的五星定轨范围请放入 selectable，不放这里。"
         },
         "selectable": {
           "anyOf": [
@@ -274,7 +325,8 @@
             {
               "type": "null"
             }
-          ]
+          ],
+          "description": "【集录/溯光条件必填】列出完整可选择五星角色及五星武器；目前整合器要求两类都有且名单非空。普通池一般不需要。"
         },
         "rules": {
           "type": "object",
@@ -284,23 +336,29 @@
               "type": [
                 "boolean",
                 "null"
-              ]
+              ],
+              "description": "【可选】公告是否说明限定物品不进入常驻池；未核实时可为 null。"
             },
             "characterEventPityShared": {
               "type": [
                 "boolean",
                 "null"
-              ]
+              ],
+              "description": "【可选】角色活动祈愿保底是否共享；未核实时可为 null。"
             },
             "characterTrial": {
               "type": [
                 "boolean",
                 "null"
-              ]
+              ],
+              "description": "【可选】公告是否包含角色试用活动；未核实时可为 null。"
             }
-          }
+          },
+          "description": "【可选】公告的卡池细则，非当前 v1 候选构成的最低字段；只供审查或后续扩展。"
         }
-      }
+      },
+      "description": "单篇正式祈愿公告数据。若原解析结果完全缺失但真实文章已保存，最低需要 bannerName、poolType、time.endAt、有效 startAt（第一期可用 startCondition）以及按池种提供完整的 UP／selectable 名单。结束时间需要人工字段形成证据，不能只写原文字符串。"
     }
-  }
+  },
+  "description": "原神官方公告人工补充数据：一篇真实帖子一个 JSON，路径 manual/notices/genshin/zh-CN/miyoushe/<postId>.json。只提供自动没有解析出来或需要人工核对的字段；自动无值/null 时补缺，自动已有值则比较，关键差异会阻止相关候选自动发布。本 Schema 提供结构及最低业务需求的说明，并未将不同公告的最低发布条件改为新的强制校验；实际公告类型和发布条件以现有解析、整合脚本为准。必须已有可信的官方原始公告，不能仅凭人工 JSON 虚构帖子或卡池。"
 }
