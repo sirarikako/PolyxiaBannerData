@@ -360,5 +360,5 @@
       "description": "单篇正式祈愿公告数据。若原解析结果完全缺失但真实文章已保存，最低需要 bannerName、poolType、time.endAt、有效 startAt（第一期可用 startCondition）以及按池种提供完整的 UP／selectable 名单。结束时间需要人工字段形成证据，不能只写原文字符串。"
     }
   },
-  "description": "【真实帖子人工补缺】必须已经有可靠、真实的文章 postId 和可核对的官方原始公告。用于补充 OCR/解析缺失字段、对比已有自动结果；不得虚构来源或 postId。对于完全没有官方帖子／取不到文章 ID 的场景，使用同目录下独立的 genshin-missing-notice.schema.json，以逻辑身份、sourceKey 和人工核对证据定位；两者不能互相伪装。"
+  "description": "【真实帖子人工补缺】必须已经有可靠、真实的文章 postId 和可核对的官方原始公告。用于补充 OCR/解析缺失字段、对比已有自动结果；不得虚构来源或 postId。对于完全没有官方帖子／取不到文章 ID 的场景，使用同目录下独立的 genshin-missing-notice.schema.json，以逻辑身份和人工核对证据定位，sourceKey 在后续程序中根据身份自动派生，不要求人工填写；两者不能互相伪装。"
 }
