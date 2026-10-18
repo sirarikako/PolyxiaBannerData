@@ -1,0 +1,306 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "原神公告人工数据",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "postId",
+    "data"
+  ],
+  "properties": {
+    "format": {
+      "const": "genshin-notice-manual-v1"
+    },
+    "postId": {
+      "type": "string",
+      "pattern": "^[0-9]+$"
+    },
+    "note": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "object"
+    },
+    "data": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/update"
+        },
+        {
+          "$ref": "#/$defs/preview"
+        },
+        {
+          "$ref": "#/$defs/notice"
+        }
+      ]
+    }
+  },
+  "$defs": {
+    "time": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "startRaw": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "endRaw": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "startAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:00\\+08:00$"
+        },
+        "endAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:00\\+08:00$"
+        },
+        "startCondition": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "names": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "element": {
+                "type": "string",
+                "minLength": 1
+              },
+              "weaponType": {
+                "type": "string",
+                "minLength": 1
+              },
+              "rarity": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "limited": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "acquisition": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "group": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fiveStarCharacters": {
+          "$ref": "#/$defs/names"
+        },
+        "fourStarCharacters": {
+          "$ref": "#/$defs/names"
+        },
+        "fiveStarWeapons": {
+          "$ref": "#/$defs/names"
+        },
+        "fourStarWeapons": {
+          "$ref": "#/$defs/names"
+        }
+      }
+    },
+    "update": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "versionName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "maintenance": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": false,
+          "properties": {
+            "startAt": {
+              "type": "string"
+            },
+            "estimatedDurationHours": {
+              "type": "number"
+            },
+            "estimatedEndAt": {
+              "type": "string"
+            }
+          }
+        },
+        "newCharacters": {
+          "$ref": "#/$defs/names"
+        },
+        "newWeapons": {
+          "$ref": "#/$defs/names"
+        }
+      }
+    },
+    "preview": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phase": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9
+        },
+        "time": {
+          "$ref": "#/$defs/time"
+        },
+        "up": {
+          "$ref": "#/$defs/group"
+        },
+        "additionalWishes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "kind",
+              "noticeType"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "enum": [
+                  "chronicled",
+                  "recollection"
+                ]
+              },
+              "noticeType": {
+                "enum": [
+                  "集录祈愿",
+                  "溯光祈愿"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "notice": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+        "bannerName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "officialWishType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "poolType": {
+          "enum": [
+            "character_event",
+            "character_event_2",
+            "weapon_event",
+            "chronicled"
+          ]
+        },
+        "variant": {
+          "enum": [
+            "chronicled",
+            "special_recollection",
+            null
+          ]
+        },
+        "time": {
+          "$ref": "#/$defs/time"
+        },
+        "up": {
+          "$ref": "#/$defs/group"
+        },
+        "selectable": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/group"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rules": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "limitedNotInStandard": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "characterEventPityShared": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "characterTrial": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
