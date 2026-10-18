@@ -16,7 +16,7 @@
     "postId": {
       "type": "string",
       "pattern": "^[0-9]+$",
-      "description": "【必填】真实官方文章数字 ID；文件名为 <postId>.json，必须与已保存原文的真实文章 ID 一致。"
+      "description": "【真实帖必填】该公告的真实官方文章 ID，必须对应已取得并保存的原始文章 JSON；缺失帖子不能使用虚构的数字 ID 代替，改用独立 missing Schema。"
     },
     "note": {
       "type": "string",
@@ -38,7 +38,7 @@
           "$ref": "#/$defs/notice"
         }
       ],
-      "description": "【必填，至少一个字段】人工提供的业务数据。结构复用三种公告当前解析产物：版本更新 update、祈愿预告 preview、正式祈愿公告 notice。所属类型根据实际抓取到的官方帖子类型确定；无需全部填写，仅填需要补充或核对的字段。三个类型的最低业务条件由后续整合器判断，Schema 的 anyOf 并不能单独保证可发布。"
+      "description": "【必填】对真实帖子自动解析结果的人工补充或核对字段，空缺或 null 采用人工有效值，自动已有值时比较；关键冲突不能自动覆盖正式 v1。完全无帖子来源时不要把新人工业务数据塞入本格式。"
     }
   },
   "$defs": {
@@ -360,5 +360,5 @@
       "description": "单篇正式祈愿公告数据。若原解析结果完全缺失但真实文章已保存，最低需要 bannerName、poolType、time.endAt、有效 startAt（第一期可用 startCondition）以及按池种提供完整的 UP／selectable 名单。结束时间需要人工字段形成证据，不能只写原文字符串。"
     }
   },
-  "description": "原神官方公告人工补充数据：一篇真实帖子一个 JSON，路径 manual/notices/genshin/zh-CN/miyoushe/<postId>.json。只提供自动没有解析出来或需要人工核对的字段；自动无值/null 时补缺，自动已有值则比较，关键差异会阻止相关候选自动发布。本 Schema 提供结构及最低业务需求的说明，并未将不同公告的最低发布条件改为新的强制校验；实际公告类型和发布条件以现有解析、整合脚本为准。必须已有可信的官方原始公告，不能仅凭人工 JSON 虚构帖子或卡池。"
+  "description": "【真实帖子人工补缺】必须已经有可靠、真实的文章 postId 和可核对的官方原始公告。用于补充 OCR/解析缺失字段、对比已有自动结果；不得虚构来源或 postId。对于完全没有官方帖子／取不到文章 ID 的场景，使用同目录下独立的 genshin-missing-notice.schema.json，以逻辑身份、sourceKey 和人工核对证据定位；两者不能互相伪装。"
 }

@@ -88,7 +88,7 @@
         "postId": {
           "type": "string",
           "pattern": "^[0-9]+$",
-          "description": "【可选】对应真实祈愿公告的数字文章 ID，用于精确匹配候选；不是内部卡池 id。"
+          "description": "【可选】只有存在真实官方祈愿公告文章时，才可填写数字 postId 进一步缩小新池匹配条件。独立 missing 人工来源没有 postId，按 version+phase+poolType（及 variant）逻辑身份匹配，不能伪造号码。"
         }
       },
       "description": "【upcoming 必填】用来与尚未发布的官方公告候选匹配；phase + poolType 必须提供。如同版本同一期有不同变种或需要精确区分，追加 bannerName、postId、variant。"
@@ -270,7 +270,7 @@
           }
         }
       ],
-      "description": "新池预设：match 必填、id 禁止设置；仅在真实公告整合出 ready_candidate 时才参与创建 v1，不能修改已经发布的卡池。"
+      "description": "新池人工补充必须匹配已经核实的候选；候选可来自真实公告，或将来接入的缺帖人工来源（稳定逻辑身份及证据）。当前导入器只读取已生成的 ready_candidate，不读取 missing 文件；upcoming 只在新池追加时应用、绝不反向修改已有 v1。"
     },
     "existing": {
       "allOf": [
@@ -291,5 +291,5 @@
       "description": "已发布池定向修正：id 必填、match 禁止设置；即使没有新的公告候选也可应用。"
     }
   },
-  "description": "原神按游戏版本保存的 v1 人工修正文件。作用：预设新卡池的人工补充（upcoming）和按内部 ID 修正已发布卡池（existing）。真实 v1 字段沿用 schemas/public/v1/banner-data.schema.json。本 Schema 描述文件结构；与实际版本、卡池、ID 的交叉核验，以及 pending/completed 处理仍由导入脚本负责。人工配置不能凭空生成没有官方公告候选的新卡池。"
+  "description": "原神按版本保存的 v1 人工修正。upcoming 针对已有可信 ready_candidate 的新池补充字段，existing 按内部 ID 修正已发布卡池；真实文章候选以及未来独立 missing 人工来源生成的候选均必须先完成来源核对、逻辑去重和正式 v1 校验。此文件不负责抓取公告，也不能自动以 upcoming 覆盖已发布池。"
 }
