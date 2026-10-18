@@ -1,14 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "原神无帖子人工公告来源 v1",
-  "description": "【新方案数据契约】适用于官方公告未取得、没有可靠 postId 时的人工来源。它与按真实文章 ID 建立的 genshin-notice-manual.schema.json 是两套并列输入。按版本/期数/卡池类型等稳定逻辑身份标识；不得虚构 postId、官方 URL 或 OCR 证据。可在满足候选安全校验后先发布；官方来源恢复时必须继续比对，已发布 v1 不自动被覆盖。此 Schema 只描述数据和局部必填条件；跨字段身份一致性、人工证据、状态和发布规则由采集与整合实现负责。",
+  "title": "原神无帖子人工公告来源（按逻辑身份自动派生字段）",
+  "description": "【尚未接入发布脚本的数据契约】完全缺少真实官方文章时，用 noticeType、identity、data、evidence 保存人工核对资料，不伪造 postId。人工只在 identity 填写版本/期数/卡池类型/特殊类型；程序从 identity 自动生成稳定 sourceKey、文件名，并在转换为解析候选时填入版本、期数、poolType、variant；这些派生字段不允许手工在 JSON 重复填写。祈愿预告若只包含集录/溯光等特殊池，可不写 up；常规池仍须核实并提供五星 UP 汇总。跨公告类型、整期池构成及发布安全性须在候选整合阶段检查。本 Schema 的 missing 读取链当前尚未接入正式脚本。",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "format",
     "noticeType",
     "identity",
-    "sourceKey",
     "data",
     "evidence"
   ],
@@ -26,7 +25,7 @@
       "description": "【必填】人工补齐的是版本更新、祈愿预告还是单池祈愿公告。"
     },
     "identity": {
-      "description": "【必填】以业务身份唯一定位缺失公告：版本更新=版本；祈愿预告=版本+期数；祈愿公告=版本+期数+池种，集录/溯光再加 variant。",
+      "description": "【必填，唯一身份输入】版本更新填 version；祈愿预告填 version+phase；单池祈愿公告填 version+phase+poolType，集录/溯光追加 variant。程序据此生成稳定 sourceKey、文件名和候选数据中的身份字段，无需人工重复输入。",
       "oneOf": [
         {
           "$ref": "#/$defs/versionIdentity"
@@ -39,14 +38,9 @@
         }
       ]
     },
-    "sourceKey": {
-      "type": "string",
-      "minLength": 1,
-      "description": "【必填】稳定人工来源键。应按 noticeType 和 identity 生成固定形式，例如 genshin:7.1:version_update、genshin:7.1:2:wish_preview、genshin:7.1:2:character_event_2；集录/溯光再附加 variant。同一来源跨重试不改变。将来映射为 v1 sources[].externalId，provider=manual，绝不冒充 postId。"
-    },
     "data": {
       "type": "object",
-      "description": "【必填】对应公告类型生成 v1 候选的最低业务字段；不是直接写入的正式 v1，也不应包含 source、review、imageTimeRecognition 等自动证据。"
+      "description": "【必填】只填写该公告特有的业务内容，不重复填写 identity 已提供的 version、phase、poolType、variant，也不添加机器生成的 sourceKey。正常池预告的五星 UP 汇总按实际整期核对；只有特殊池时可省略 up；正式候选整合时仍要验证引用的一致性。"
     },
     "evidence": {
       "type": "object",
@@ -310,15 +304,9 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "version",
         "maintenance"
       ],
       "properties": {
-        "version": {
-          "type": "string",
-          "minLength": 1,
-          "description": "【最低必填】版本号，必须与 identity.version 对应。"
-        },
         "versionName": {
           "type": "string",
           "minLength": 1,
@@ -354,29 +342,16 @@
         "newWeapons": {
           "$ref": "#/$defs/nameList"
         }
-      }
+      },
+      "description": "版本更新：维护开始时间必需；版本号仅在 identity.version 填写，由后续处理程序自动填入候选的 version。新角色、新武器、版本名称可选。"
     },
     "previewData": {
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "version",
-        "phase",
-        "time",
-        "up"
+        "time"
       ],
       "properties": {
-        "version": {
-          "type": "string",
-          "minLength": 1,
-          "description": "【最低必填】版本号，必须与 identity.version 对应。"
-        },
-        "phase": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 9,
-          "description": "【最低必填】期数，必须与 identity.phase 对应。"
-        },
         "time": {
           "type": "object",
           "additionalProperties": false,
@@ -407,38 +382,8 @@
           }
         },
         "up": {
-          "allOf": [
-            {
-              "$ref": "#/$defs/groups"
-            },
-            {
-              "anyOf": [
-                {
-                  "required": [
-                    "fiveStarCharacters"
-                  ],
-                  "properties": {
-                    "fiveStarCharacters": {
-                      "type": "array",
-                      "minItems": 1
-                    }
-                  }
-                },
-                {
-                  "required": [
-                    "fiveStarWeapons"
-                  ],
-                  "properties": {
-                    "fiveStarWeapons": {
-                      "type": "array",
-                      "minItems": 1
-                    }
-                  }
-                }
-              ]
-            }
-          ],
-          "description": "【常规池最低必填】整期五星 UP 汇总。角色池须包含本池五星角色，武器池须包含该期两把五星武器；集录/溯光等特例由候选规则核对。"
+          "$ref": "#/$defs/groups",
+          "description": "【条件必填】预告有常规角色/武器 UP 池时，需提供对应的整期五星 UP 名单，以便与单池正式公告核对；如果这一期仅有集录/溯光等特殊池，没有常规 UP 汇总，则允许完全省略 up。Schema 无法仅根据预告本身判断整期是否有常规池，是否足够用于发布由候选整合阶段结合该期其他池子检查。"
         },
         "additionalWishes": {
           "type": "array",
@@ -470,14 +415,14 @@
             }
           }
         }
-      }
+      },
+      "description": "祈愿预告：版本号与期数从 identity 派生。data 只需公告结束分钟，以及有常规角色/武器池时的整期五星 UP 汇总；仅存在集录/溯光等特殊池时，up 可省略。Schema 不知道其他单池是否存在，常规池场景由后续整合阶段强制检查。"
     },
     "noticeData": {
       "type": "object",
       "additionalProperties": false,
       "required": [
         "bannerName",
-        "poolType",
         "time"
       ],
       "properties": {
@@ -490,22 +435,6 @@
           "type": "string",
           "minLength": 1,
           "description": "【可选】公告原始祈愿类型说明。"
-        },
-        "poolType": {
-          "enum": [
-            "character_event",
-            "character_event_2",
-            "weapon_event",
-            "chronicled"
-          ],
-          "description": "【最低必填】与 identity.poolType 一致；角色池、武器池、集录/溯光分别对应各自名单规则。"
-        },
-        "variant": {
-          "enum": [
-            "chronicled",
-            "special_recollection"
-          ],
-          "description": "【条件必填】集录/溯光需要填写，与 identity.variant 一致。"
         },
         "time": {
           "$ref": "#/$defs/time"
@@ -541,9 +470,116 @@
           }
         }
       },
-      "allOf": [
-        {
-          "if": {
+      "description": "单池祈愿公告：poolType、variant、版本、期数只填 identity，转换候选时自动继承。data 只填卡池名称、时间及按 identity.poolType 要求的完整 UP 或 selectable 名单。"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "noticeType": {
+            "const": "version_update"
+          }
+        },
+        "required": [
+          "noticeType"
+        ]
+      },
+      "then": {
+        "properties": {
+          "identity": {
+            "$ref": "#/$defs/versionIdentity"
+          },
+          "data": {
+            "$ref": "#/$defs/updateData"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "noticeType": {
+            "const": "wish_preview"
+          }
+        },
+        "required": [
+          "noticeType"
+        ]
+      },
+      "then": {
+        "properties": {
+          "identity": {
+            "$ref": "#/$defs/previewIdentity"
+          },
+          "data": {
+            "$ref": "#/$defs/previewData"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "noticeType": {
+            "const": "wish_notice"
+          }
+        },
+        "required": [
+          "noticeType"
+        ]
+      },
+      "then": {
+        "properties": {
+          "identity": {
+            "$ref": "#/$defs/noticeIdentity"
+          },
+          "data": {
+            "$ref": "#/$defs/noticeData"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "noticeType": {
+            "const": "wish_notice"
+          },
+          "identity": {
+            "properties": {
+              "phase": {
+                "minimum": 2
+              }
+            }
+          }
+        },
+        "required": [
+          "noticeType",
+          "identity"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "properties": {
+              "time": {
+                "required": [
+                  "startAt"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "noticeType": {
+            "const": "wish_notice"
+          },
+          "identity": {
             "properties": {
               "poolType": {
                 "enum": [
@@ -555,8 +591,16 @@
             "required": [
               "poolType"
             ]
-          },
-          "then": {
+          }
+        },
+        "required": [
+          "noticeType",
+          "identity"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
             "required": [
               "up"
             ],
@@ -626,9 +670,16 @@
               }
             }
           }
-        },
-        {
-          "if": {
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "noticeType": {
+            "const": "wish_notice"
+          },
+          "identity": {
             "properties": {
               "poolType": {
                 "const": "weapon_event"
@@ -637,8 +688,16 @@
             "required": [
               "poolType"
             ]
-          },
-          "then": {
+          }
+        },
+        "required": [
+          "noticeType",
+          "identity"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
             "required": [
               "up"
             ],
@@ -708,9 +767,16 @@
               }
             }
           }
-        },
-        {
-          "if": {
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "noticeType": {
+            "const": "wish_notice"
+          },
+          "identity": {
             "properties": {
               "poolType": {
                 "const": "chronicled"
@@ -719,10 +785,17 @@
             "required": [
               "poolType"
             ]
-          },
-          "then": {
+          }
+        },
+        "required": [
+          "noticeType",
+          "identity"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
             "required": [
-              "variant",
               "selectable"
             ],
             "properties": {
@@ -804,126 +877,6 @@
                       }
                     }
                   }
-                ]
-              }
-            }
-          },
-          "else": {
-            "not": {
-              "required": [
-                "variant"
-              ]
-            }
-          }
-        }
-      ]
-    }
-  },
-  "allOf": [
-    {
-      "if": {
-        "properties": {
-          "noticeType": {
-            "const": "version_update"
-          }
-        },
-        "required": [
-          "noticeType"
-        ]
-      },
-      "then": {
-        "properties": {
-          "identity": {
-            "$ref": "#/$defs/versionIdentity"
-          },
-          "sourceKey": {
-            "type": "string",
-            "pattern": "^genshin:[^:]+:version_update$"
-          },
-          "data": {
-            "$ref": "#/$defs/updateData"
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "noticeType": {
-            "const": "wish_preview"
-          }
-        },
-        "required": [
-          "noticeType"
-        ]
-      },
-      "then": {
-        "properties": {
-          "identity": {
-            "$ref": "#/$defs/previewIdentity"
-          },
-          "sourceKey": {
-            "type": "string",
-            "pattern": "^genshin:[^:]+:[1-9]:wish_preview$"
-          },
-          "data": {
-            "$ref": "#/$defs/previewData"
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "noticeType": {
-            "const": "wish_notice"
-          }
-        },
-        "required": [
-          "noticeType"
-        ]
-      },
-      "then": {
-        "properties": {
-          "identity": {
-            "$ref": "#/$defs/noticeIdentity"
-          },
-          "sourceKey": {
-            "type": "string",
-            "pattern": "^genshin:[^:]+:[1-9]:(?:character_event|character_event_2|weapon_event|chronicled:(?:chronicled|special_recollection))$"
-          },
-          "data": {
-            "$ref": "#/$defs/noticeData"
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "noticeType": {
-            "const": "wish_notice"
-          },
-          "identity": {
-            "properties": {
-              "phase": {
-                "minimum": 2
-              }
-            }
-          }
-        },
-        "required": [
-          "noticeType",
-          "identity"
-        ]
-      },
-      "then": {
-        "properties": {
-          "data": {
-            "properties": {
-              "time": {
-                "required": [
-                  "startAt"
                 ]
               }
             }
