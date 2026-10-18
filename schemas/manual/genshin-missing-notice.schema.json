@@ -1,0 +1,935 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "原神无帖子人工公告来源 v1",
+  "description": "【新方案数据契约】适用于官方公告未取得、没有可靠 postId 时的人工来源。它与按真实文章 ID 建立的 genshin-notice-manual.schema.json 是两套并列输入。按版本/期数/卡池类型等稳定逻辑身份标识；不得虚构 postId、官方 URL 或 OCR 证据。可在满足候选安全校验后先发布；官方来源恢复时必须继续比对，已发布 v1 不自动被覆盖。此 Schema 只描述数据和局部必填条件；跨字段身份一致性、人工证据、状态和发布规则由采集与整合实现负责。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "noticeType",
+    "identity",
+    "sourceKey",
+    "data",
+    "evidence"
+  ],
+  "properties": {
+    "format": {
+      "const": "genshin-missing-notice-v1",
+      "description": "【必填】无官方帖子来源人工数据的独立格式标记。不能写 genshin-notice-manual-v1，也不能提供伪造的 postId。"
+    },
+    "noticeType": {
+      "enum": [
+        "version_update",
+        "wish_preview",
+        "wish_notice"
+      ],
+      "description": "【必填】人工补齐的是版本更新、祈愿预告还是单池祈愿公告。"
+    },
+    "identity": {
+      "description": "【必填】以业务身份唯一定位缺失公告：版本更新=版本；祈愿预告=版本+期数；祈愿公告=版本+期数+池种，集录/溯光再加 variant。",
+      "oneOf": [
+        {
+          "$ref": "#/$defs/versionIdentity"
+        },
+        {
+          "$ref": "#/$defs/previewIdentity"
+        },
+        {
+          "$ref": "#/$defs/noticeIdentity"
+        }
+      ]
+    },
+    "sourceKey": {
+      "type": "string",
+      "minLength": 1,
+      "description": "【必填】稳定人工来源键。应按 noticeType 和 identity 生成固定形式，例如 genshin:7.1:version_update、genshin:7.1:2:wish_preview、genshin:7.1:2:character_event_2；集录/溯光再附加 variant。同一来源跨重试不改变。将来映射为 v1 sources[].externalId，provider=manual，绝不冒充 postId。"
+    },
+    "data": {
+      "type": "object",
+      "description": "【必填】对应公告类型生成 v1 候选的最低业务字段；不是直接写入的正式 v1，也不应包含 source、review、imageTimeRecognition 等自动证据。"
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "required": [
+        "summary"
+      ],
+      "properties": {
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "【必填】人工核对依据简述、来源与判断结论；不能声称实际未确认的官方公告已存在。"
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "description"
+            ],
+            "properties": {
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "description": "来源或核对材料的文字说明。"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "pattern": "^https://",
+                "description": "【可选】可核实的 HTTPS 证据链接；无可靠链接时省略，不得拼造公告 URL。"
+              },
+              "kind": {
+                "enum": [
+                  "official",
+                  "cross_check",
+                  "manual"
+                ],
+                "description": "证据类别，仅用于审计，不赋予自动解析可信度。"
+              }
+            }
+          },
+          "description": "【可选】附加人工核对依据。不存在官方帖子 URL 时可只填写 summary。"
+        }
+      },
+      "description": "来源审查记录；不充当机器伪造的 postId、OCR 信息或官方采集成功状态。"
+    }
+  },
+  "$defs": {
+    "versionIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "description": "仅按版本识别一次版本更新公告。"
+        }
+      }
+    },
+    "previewIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "phase"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phase": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9
+        }
+      }
+    },
+    "noticeIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "phase",
+        "poolType"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phase": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9
+        },
+        "poolType": {
+          "enum": [
+            "character_event",
+            "character_event_2",
+            "weapon_event",
+            "chronicled"
+          ]
+        },
+        "variant": {
+          "enum": [
+            "chronicled",
+            "special_recollection"
+          ],
+          "description": "【条件必填】集录/溯光祈愿的类型，用于避免同版本同一期的身份混淆。"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "poolType": {
+                "const": "chronicled"
+              }
+            },
+            "required": [
+              "poolType"
+            ]
+          },
+          "then": {
+            "required": [
+              "variant"
+            ]
+          },
+          "else": {
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "name": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "title": {
+              "type": "string"
+            },
+            "element": {
+              "type": "string"
+            },
+            "weaponType": {
+              "type": "string"
+            },
+            "rarity": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "limited": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "acquisition": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "nameList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/name"
+      },
+      "description": "一份完整 UP/可选名单，可以用名称字符串简写。自动比对时忽略名单顺序，[] 是明确没有，省略表示未提供。"
+    },
+    "groups": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fiveStarCharacters": {
+          "$ref": "#/$defs/nameList"
+        },
+        "fourStarCharacters": {
+          "$ref": "#/$defs/nameList"
+        },
+        "fiveStarWeapons": {
+          "$ref": "#/$defs/nameList"
+        },
+        "fourStarWeapons": {
+          "$ref": "#/$defs/nameList"
+        }
+      }
+    },
+    "time": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "endAt"
+      ],
+      "properties": {
+        "startAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:00\\+08:00$",
+          "description": "【条件必填】非第一期必须有真实开池时刻；第一期“版本更新后”可使用 startCondition。"
+        },
+        "endAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:00\\+08:00$",
+          "description": "【必填】公告原始结束分钟，例如 14:59:00+08:00；生成 v1 时转换为独占结束边界（+1 分钟）。"
+        },
+        "startCondition": {
+          "const": "after_version_update",
+          "description": "【第一期可用】仅第一期写“版本更新后”时使用，开始时间取版本更新维护开始时刻。"
+        },
+        "startRaw": {
+          "type": "string",
+          "description": "【可选】官方或人工核实的开放时间原文。"
+        },
+        "endRaw": {
+          "type": "string",
+          "description": "【可选】官方或人工核实的结束时间原文。"
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "startAt"
+          ]
+        },
+        {
+          "required": [
+            "startCondition"
+          ]
+        }
+      ]
+    },
+    "updateData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "maintenance"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "description": "【最低必填】版本号，必须与 identity.version 对应。"
+        },
+        "versionName": {
+          "type": "string",
+          "minLength": 1,
+          "description": "【可选】版本中文名称。"
+        },
+        "maintenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "startAt"
+          ],
+          "properties": {
+            "startAt": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:00\\+08:00$",
+              "description": "【最低必填】版本维护开始时刻；第一期更新后卡池的开池时间取此值。"
+            },
+            "estimatedEndAt": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:00\\+08:00$"
+            },
+            "estimatedDurationHours": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          }
+        },
+        "newCharacters": {
+          "$ref": "#/$defs/nameList"
+        },
+        "newWeapons": {
+          "$ref": "#/$defs/nameList"
+        }
+      }
+    },
+    "previewData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "phase",
+        "time",
+        "up"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "description": "【最低必填】版本号，必须与 identity.version 对应。"
+        },
+        "phase": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9,
+          "description": "【最低必填】期数，必须与 identity.phase 对应。"
+        },
+        "time": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "endAt"
+          ],
+          "properties": {
+            "startAt": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:00\\+08:00$"
+            },
+            "endAt": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:00\\+08:00$",
+              "description": "【最低必填】用于与单池公告结束分钟进行精确匹配。"
+            },
+            "startCondition": {
+              "const": "after_version_update"
+            },
+            "startRaw": {
+              "type": "string"
+            },
+            "endRaw": {
+              "type": "string"
+            }
+          }
+        },
+        "up": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/groups"
+            },
+            {
+              "anyOf": [
+                {
+                  "required": [
+                    "fiveStarCharacters"
+                  ],
+                  "properties": {
+                    "fiveStarCharacters": {
+                      "type": "array",
+                      "minItems": 1
+                    }
+                  }
+                },
+                {
+                  "required": [
+                    "fiveStarWeapons"
+                  ],
+                  "properties": {
+                    "fiveStarWeapons": {
+                      "type": "array",
+                      "minItems": 1
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "【常规池最低必填】整期五星 UP 汇总。角色池须包含本池五星角色，武器池须包含该期两把五星武器；集录/溯光等特例由候选规则核对。"
+        },
+        "additionalWishes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "kind",
+              "noticeType"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "enum": [
+                  "chronicled",
+                  "recollection"
+                ]
+              },
+              "noticeType": {
+                "enum": [
+                  "集录祈愿",
+                  "溯光祈愿"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "noticeData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bannerName",
+        "poolType",
+        "time"
+      ],
+      "properties": {
+        "bannerName": {
+          "type": "string",
+          "minLength": 1,
+          "description": "【最低必填】卡池正式中文名称。"
+        },
+        "officialWishType": {
+          "type": "string",
+          "minLength": 1,
+          "description": "【可选】公告原始祈愿类型说明。"
+        },
+        "poolType": {
+          "enum": [
+            "character_event",
+            "character_event_2",
+            "weapon_event",
+            "chronicled"
+          ],
+          "description": "【最低必填】与 identity.poolType 一致；角色池、武器池、集录/溯光分别对应各自名单规则。"
+        },
+        "variant": {
+          "enum": [
+            "chronicled",
+            "special_recollection"
+          ],
+          "description": "【条件必填】集录/溯光需要填写，与 identity.variant 一致。"
+        },
+        "time": {
+          "$ref": "#/$defs/time"
+        },
+        "up": {
+          "$ref": "#/$defs/groups"
+        },
+        "selectable": {
+          "$ref": "#/$defs/groups"
+        },
+        "rules": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "limitedNotInStandard": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "characterEventPityShared": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "characterTrial": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "poolType": {
+                "enum": [
+                  "character_event",
+                  "character_event_2"
+                ]
+              }
+            },
+            "required": [
+              "poolType"
+            ]
+          },
+          "then": {
+            "required": [
+              "up"
+            ],
+            "properties": {
+              "up": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/groups"
+                  },
+                  {
+                    "allOf": [
+                      {
+                        "properties": {
+                          "fiveStarCharacters": {
+                            "type": "array",
+                            "minItems": 1,
+                            "maxItems": 1,
+                            "items": {
+                              "$ref": "#/$defs/name"
+                            }
+                          }
+                        },
+                        "required": [
+                          "fiveStarCharacters"
+                        ]
+                      },
+                      {
+                        "properties": {
+                          "fourStarCharacters": {
+                            "type": "array",
+                            "minItems": 3,
+                            "maxItems": 3,
+                            "items": {
+                              "$ref": "#/$defs/name"
+                            }
+                          }
+                        },
+                        "required": [
+                          "fourStarCharacters"
+                        ]
+                      },
+                      {
+                        "properties": {
+                          "fiveStarWeapons": {
+                            "type": "array",
+                            "maxItems": 0,
+                            "items": {
+                              "$ref": "#/$defs/name"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "properties": {
+                          "fourStarWeapons": {
+                            "type": "array",
+                            "maxItems": 0,
+                            "items": {
+                              "$ref": "#/$defs/name"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "poolType": {
+                "const": "weapon_event"
+              }
+            },
+            "required": [
+              "poolType"
+            ]
+          },
+          "then": {
+            "required": [
+              "up"
+            ],
+            "properties": {
+              "up": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/groups"
+                  },
+                  {
+                    "allOf": [
+                      {
+                        "properties": {
+                          "fiveStarWeapons": {
+                            "type": "array",
+                            "minItems": 2,
+                            "maxItems": 2,
+                            "items": {
+                              "$ref": "#/$defs/name"
+                            }
+                          }
+                        },
+                        "required": [
+                          "fiveStarWeapons"
+                        ]
+                      },
+                      {
+                        "properties": {
+                          "fourStarWeapons": {
+                            "type": "array",
+                            "minItems": 5,
+                            "maxItems": 5,
+                            "items": {
+                              "$ref": "#/$defs/name"
+                            }
+                          }
+                        },
+                        "required": [
+                          "fourStarWeapons"
+                        ]
+                      },
+                      {
+                        "properties": {
+                          "fiveStarCharacters": {
+                            "type": "array",
+                            "maxItems": 0,
+                            "items": {
+                              "$ref": "#/$defs/name"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "properties": {
+                          "fourStarCharacters": {
+                            "type": "array",
+                            "maxItems": 0,
+                            "items": {
+                              "$ref": "#/$defs/name"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "poolType": {
+                "const": "chronicled"
+              }
+            },
+            "required": [
+              "poolType"
+            ]
+          },
+          "then": {
+            "required": [
+              "variant",
+              "selectable"
+            ],
+            "properties": {
+              "selectable": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/groups"
+                  },
+                  {
+                    "required": [
+                      "fiveStarCharacters",
+                      "fiveStarWeapons"
+                    ],
+                    "properties": {
+                      "fiveStarCharacters": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                          "$ref": "#/$defs/name"
+                        }
+                      },
+                      "fiveStarWeapons": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                          "$ref": "#/$defs/name"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "up": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/groups"
+                  },
+                  {
+                    "properties": {
+                      "fiveStarCharacters": {
+                        "type": "array",
+                        "maxItems": 0,
+                        "items": {
+                          "$ref": "#/$defs/name"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "properties": {
+                      "fourStarCharacters": {
+                        "type": "array",
+                        "maxItems": 0,
+                        "items": {
+                          "$ref": "#/$defs/name"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "properties": {
+                      "fiveStarWeapons": {
+                        "type": "array",
+                        "maxItems": 0,
+                        "items": {
+                          "$ref": "#/$defs/name"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "properties": {
+                      "fourStarWeapons": {
+                        "type": "array",
+                        "maxItems": 0,
+                        "items": {
+                          "$ref": "#/$defs/name"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "else": {
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "noticeType": {
+            "const": "version_update"
+          }
+        },
+        "required": [
+          "noticeType"
+        ]
+      },
+      "then": {
+        "properties": {
+          "identity": {
+            "$ref": "#/$defs/versionIdentity"
+          },
+          "sourceKey": {
+            "type": "string",
+            "pattern": "^genshin:[^:]+:version_update$"
+          },
+          "data": {
+            "$ref": "#/$defs/updateData"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "noticeType": {
+            "const": "wish_preview"
+          }
+        },
+        "required": [
+          "noticeType"
+        ]
+      },
+      "then": {
+        "properties": {
+          "identity": {
+            "$ref": "#/$defs/previewIdentity"
+          },
+          "sourceKey": {
+            "type": "string",
+            "pattern": "^genshin:[^:]+:[1-9]:wish_preview$"
+          },
+          "data": {
+            "$ref": "#/$defs/previewData"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "noticeType": {
+            "const": "wish_notice"
+          }
+        },
+        "required": [
+          "noticeType"
+        ]
+      },
+      "then": {
+        "properties": {
+          "identity": {
+            "$ref": "#/$defs/noticeIdentity"
+          },
+          "sourceKey": {
+            "type": "string",
+            "pattern": "^genshin:[^:]+:[1-9]:(?:character_event|character_event_2|weapon_event|chronicled:(?:chronicled|special_recollection))$"
+          },
+          "data": {
+            "$ref": "#/$defs/noticeData"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "noticeType": {
+            "const": "wish_notice"
+          },
+          "identity": {
+            "properties": {
+              "phase": {
+                "minimum": 2
+              }
+            }
+          }
+        },
+        "required": [
+          "noticeType",
+          "identity"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "properties": {
+              "time": {
+                "required": [
+                  "startAt"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
