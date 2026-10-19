@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "星铁V1版本级人工upcoming/existing数据",
+  "description": "按 starrail_<版本>.json 分文件保存，upcoming 用完整逻辑身份定位首次新增池，existing 使用正式内部ID定向修订。不可直接覆盖已发布池。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "game",
+    "locale",
+    "version",
+    "upcoming",
+    "existing"
+  ],
+  "properties": {
+    "format": {
+      "const": "starrail-v1-overrides-v1"
+    },
+    "game": {
+      "const": "starrail"
+    },
+    "locale": {
+      "const": "zh-CN"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "upcoming": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/upcoming"
+      }
+    },
+    "existing": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/existing"
+      }
+    }
+  },
+  "$defs": {
+    "match": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "phase",
+        "poolType",
+        "bannerName"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phase": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9
+        },
+        "poolType": {
+          "enum": [
+            "character_event",
+            "light_cone_event",
+            "collab_character",
+            "collab_light_cone"
+          ]
+        },
+        "bannerName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fiveStarName": {
+          "type": "string",
+          "minLength": 1,
+          "description": "同名多池时用于明确五星UP"
+        }
+      }
+    },
+    "common": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "pending",
+            "completed"
+          ]
+        },
+        "completedAt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "appliedId": {
+          "type": "string",
+          "pattern": "^hsr-[0-9]{6}$"
+        },
+        "set": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "names": {
+              "type": "object"
+            },
+            "featured": {
+              "type": "object"
+            },
+            "regions": {
+              "type": "array"
+            },
+            "gachaTypes": {
+              "type": "object"
+            },
+            "gachaIds": {
+              "type": "array"
+            },
+            "sources": {
+              "type": "array"
+            },
+            "images": {
+              "type": "object"
+            }
+          }
+        },
+        "itemIds": {
+          "type": "object",
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[1-9][0-9]*$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "addSources": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "set"
+          ]
+        },
+        {
+          "required": [
+            "itemIds"
+          ]
+        },
+        {
+          "required": [
+            "addSources"
+          ]
+        }
+      ]
+    },
+    "upcoming": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        },
+        {
+          "type": "object",
+          "required": [
+            "match"
+          ],
+          "properties": {
+            "match": {
+              "$ref": "#/$defs/match"
+            }
+          },
+          "not": {
+            "required": [
+              "id"
+            ]
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "existing": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^hsr-[0-9]{6}$"
+            }
+          },
+          "not": {
+            "required": [
+              "match"
+            ]
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    }
+  }
+}
