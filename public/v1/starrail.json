@@ -2078,7 +2078,7 @@
       "gameVersion": "1.5",
       "id": "hsr-000028",
       "names": {
-        "zh-CN": "流光定影"
+        "zh-CN": "溯回忆象"
       },
       "phase": 2,
       "poolType": "light_cone_event",
@@ -2366,7 +2366,7 @@
       "gameVersion": "1.6",
       "id": "hsr-000032",
       "names": {
-        "zh-CN": "流光定影"
+        "zh-CN": "溯回忆象"
       },
       "phase": 1,
       "poolType": "light_cone_event",
@@ -2654,7 +2654,7 @@
       "gameVersion": "1.6",
       "id": "hsr-000036",
       "names": {
-        "zh-CN": "流光定影"
+        "zh-CN": "溯回忆象"
       },
       "phase": 2,
       "poolType": "light_cone_event",
@@ -20358,6 +20358,6 @@
     }
   ],
   "game": "starrail",
-  "generatedAt": "2026-10-19T18:24:41+08:00",
+  "generatedAt": "2026-10-19T23:13:53+08:00",
   "schemaVersion": 1
 }
