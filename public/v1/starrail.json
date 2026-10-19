@@ -1646,7 +1646,7 @@
       "gameVersion": "1.4",
       "id": "hsr-000022",
       "names": {
-        "zh-CN": "流光定影"
+        "zh-CN": "溯回忆象"
       },
       "phase": 2,
       "poolType": "light_cone_event",
@@ -5678,7 +5678,7 @@
       "gameVersion": "2.5",
       "id": "hsr-000078",
       "names": {
-        "zh-CN": "夜将不眠"
+        "zh-CN": "铭心之萃•卡芙卡"
       },
       "phase": 1,
       "poolType": "character_event",
@@ -5750,7 +5750,7 @@
       "gameVersion": "2.5",
       "id": "hsr-000079",
       "names": {
-        "zh-CN": "镜映婆娑"
+        "zh-CN": "铭心之萃•黑天鹅"
       },
       "phase": 1,
       "poolType": "character_event",
@@ -5822,7 +5822,7 @@
       "gameVersion": "2.5",
       "id": "hsr-000080",
       "names": {
-        "zh-CN": "翼声纯律"
+        "zh-CN": "铭心之萃•知更鸟"
       },
       "phase": 1,
       "poolType": "character_event",
@@ -7982,7 +7982,7 @@
       "gameVersion": "3.0",
       "id": "hsr-000110",
       "names": {
-        "zh-CN": "真意之汇"
+        "zh-CN": "真意之汇•唯有香如故"
       },
       "phase": 1,
       "poolType": "light_cone_event",
@@ -8054,7 +8054,7 @@
       "gameVersion": "3.0",
       "id": "hsr-000111",
       "names": {
-        "zh-CN": "真意之汇"
+        "zh-CN": "真意之汇•我将，巡征追猎"
       },
       "phase": 1,
       "poolType": "light_cone_event",
@@ -8126,7 +8126,7 @@
       "gameVersion": "3.0",
       "id": "hsr-000112",
       "names": {
-        "zh-CN": "真意之汇"
+        "zh-CN": "真意之汇•偏偏希望无价"
       },
       "phase": 1,
       "poolType": "light_cone_event",
@@ -8558,7 +8558,7 @@
       "gameVersion": "3.0",
       "id": "hsr-000118",
       "names": {
-        "zh-CN": "真意之汇"
+        "zh-CN": "真意之汇•驶向第二次生命"
       },
       "phase": 2,
       "poolType": "light_cone_event",
@@ -8630,7 +8630,7 @@
       "gameVersion": "3.0",
       "id": "hsr-000119",
       "names": {
-        "zh-CN": "真意之汇"
+        "zh-CN": "真意之汇•夜色流光溢彩"
       },
       "phase": 2,
       "poolType": "light_cone_event",
@@ -8702,7 +8702,7 @@
       "gameVersion": "3.0",
       "id": "hsr-000120",
       "names": {
-        "zh-CN": "真意之汇"
+        "zh-CN": "真意之汇•雨一直下"
       },
       "phase": 2,
       "poolType": "light_cone_event",
@@ -16894,7 +16894,7 @@
       "gameVersion": "4.2",
       "id": "hsr-000231",
       "names": {
-        "zh-CN": "流光定影"
+        "zh-CN": "流光定影•欢迎来到银河城"
       },
       "phase": 1,
       "poolType": "light_cone_event",
@@ -17470,7 +17470,7 @@
       "gameVersion": "4.2",
       "id": "hsr-000239",
       "names": {
-        "zh-CN": "流光定影"
+        "zh-CN": "流光定影•邂逅于下一个花季"
       },
       "phase": 2,
       "poolType": "light_cone_event",
@@ -20358,6 +20358,6 @@
     }
   ],
   "game": "starrail",
-  "generatedAt": "2026-10-16T12:03:01+08:00",
+  "generatedAt": "2026-10-19T18:24:41+08:00",
   "schemaVersion": 1
 }
