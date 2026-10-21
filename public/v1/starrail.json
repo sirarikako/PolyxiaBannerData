@@ -20355,9 +20355,139 @@
           "url": "https://github.com/Natrium0521/Firefly/blob/main/src/static/json/GachaPoolInfo.json"
         }
       ]
+    },
+    {
+      "gameVersion": "4.6",
+      "phase": 2,
+      "category": "character",
+      "poolType": "character_event",
+      "names": {
+        "zh-CN": "我身即刃"
+      },
+      "gachaTypes": {
+        "raw": [
+          "11"
+        ],
+        "uigf": [
+          "11"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": "1507",
+            "type": "character",
+            "names": {
+              "zh-CN": "千冶•刃"
+            }
+          }
+        ],
+        "fourStar": [
+          {
+            "itemId": "1201",
+            "type": "character",
+            "names": {
+              "zh-CN": "青雀"
+            }
+          },
+          {
+            "itemId": "1214",
+            "type": "character",
+            "names": {
+              "zh-CN": "雪衣"
+            }
+          },
+          {
+            "itemId": "1312",
+            "type": "character",
+            "names": {
+              "zh-CN": "米沙"
+            }
+          }
+        ]
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-10-21T12:00:00+08:00",
+          "endAt": "2026-11-10T15:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/sr/article/79023863"
+        }
+      ],
+      "id": "hsr-000277"
+    },
+    {
+      "gameVersion": "4.6",
+      "phase": 2,
+      "category": "light_cone",
+      "poolType": "light_cone_event",
+      "names": {
+        "zh-CN": "溯回忆象•灼尽炼狱的新骸"
+      },
+      "gachaTypes": {
+        "raw": [
+          "12"
+        ],
+        "uigf": [
+          "12"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": "23059",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "灼尽炼狱的新骸"
+            }
+          }
+        ],
+        "fourStar": [
+          {
+            "itemId": "21000",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "一场术后对话"
+            }
+          },
+          {
+            "itemId": "21011",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "与行星相会"
+            }
+          },
+          {
+            "itemId": "21044",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "无边曼舞"
+            }
+          }
+        ]
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-10-21T12:00:00+08:00",
+          "endAt": "2026-11-10T15:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/sr/article/79023863"
+        }
+      ],
+      "id": "hsr-000278"
     }
   ],
   "game": "starrail",
-  "generatedAt": "2026-10-19T23:13:53+08:00",
+  "generatedAt": "2026-10-21T06:45:35+08:00",
   "schemaVersion": 1
 }

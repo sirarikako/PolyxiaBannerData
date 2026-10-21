@@ -6,11 +6,11 @@
       "sha256": "9cf30754fab80c066c7cecffe7f23cac301aab9fa53f970f454b3212970fa1e0"
     },
     "starrail": {
-      "bannerCount": 286,
+      "bannerCount": 288,
       "path": "starrail.json",
-      "sha256": "fc2fe6381f5bf9055021e2f14c9b319c227c8ce83d8130bae2e00c8bc468d8d4"
+      "sha256": "190dfdf79310867ff0148f62f80e31b13d3c2dcde8c380af7e83f8461073779a"
     }
   },
-  "generatedAt": "2026-10-19T23:37:45+08:00",
+  "generatedAt": "2026-10-21T06:46:00+08:00",
   "schemaVersion": 1
 }
