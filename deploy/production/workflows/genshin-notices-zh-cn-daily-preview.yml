@@ -179,7 +179,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git add -A -- data/announcements/genshin/zh-cn/miyoushe/posts data/derived/genshin
+          git add -A -- data/derived/genshin
           if git diff --cached --quiet; then
             echo '本轮没有新增公告或状态变更。' >> "$GITHUB_STEP_SUMMARY"
             exit 0

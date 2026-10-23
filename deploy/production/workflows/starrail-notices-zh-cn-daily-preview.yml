@@ -81,9 +81,7 @@ jobs:
             python -m scripts.release.import_starrail_v1_zh_cn --isolate-invalid > /tmp/starrail-v1-preview.json
             sha256sum -c /tmp/starrail-v1-before.sha256
             git add -A -- data/derived/starrail
-            if [ -d data/announcements/starrail ]; then
-              git add -A -- data/announcements/starrail
-            fi
+            # 原文仅用于本轮采集，不提交到公开 Git 历史。
             if git diff --cached --quiet; then
               echo "未发现新的公告候选变更"
               break

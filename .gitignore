@@ -1,0 +1,11 @@
+# Production scratch and transient input: never track external full source posts.
+/data/announcements/genshin/zh-cn/miyoushe/posts/
+/data/announcements/starrail/zh-cn/miyoushe/posts/
+/data/announcements/genshin/zh-cn/miyoushe/images/
+/data/derived/genshin/archive/
+/data/review/
+/data/cache/
+/data/audit/
+/staging/
+__pycache__/
+*.py[cod]

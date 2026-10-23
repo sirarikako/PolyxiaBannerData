@@ -42,3 +42,11 @@ Public 原有 `public/` + `schemas/` 共 15 个 Blob 未改动。只读验证 wo
 2. CI 通过后审阅迁移候选：所有 scripts/manual/derived/blob SHA 对照源分支一致，不缺少必要脚本、fixture。
 3. 验证 v1 与 Manifest；验证人工 missing、按真实 postId 补齐和三方冲突；真实 OCR/公告采集必须在隔离条件下验证。
 4. P4 时以**最新** Private main 重做增量校验，停止 Private 写入并等待运行结束后才能切换；两库禁止双写。
+
+## P2 安全补丁：禁止原始公告进入 Public Git 历史
+
+已经在暂存版 2-1/3-1 中移除 `git add -A -- data/announcements/**/posts`，只提交结构化 `data/derived/**`。同时新增 `.gitignore` 忽略原始 `posts/` 与旧图片目录；即使未来 Runner 重新联网抓取，原文也只存在本次 Runner 工作目录，**不会因为旧的 staging 语句而进入 Public**。
+
+此改动**不代表人工恢复问题已解决**：原神 `manualRecovered` 和星铁 `load_real()` 在缺少持久化 `posts` 时可能无法恢复。P3 必须实现并测试按文章 ID 补抓及失败处理，才能允许 P4 实际启用生产调度。
+
+测试新增 `tests/test_p2_public_staging.py`，严格检查完整原文/旧归档不在 Git、暂存工作流不提交原文；此测试由 Public 的只读 CI 执行。

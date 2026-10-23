@@ -10,9 +10,9 @@
 |---|---|---|
 | `official-item-mappings-daily.yml` | 0-1，每日北京时间 13:17 | 不再向另一个仓库同步；删除无用 actions 写权限 |
 | `refresh-v1-manifest.yml` | 1-1，正式 Manifest 刷新 | 不再触发旧的 1-2；删除无用 actions 写权限 |
-| `genshin-notices-zh-cn-daily-preview.yml` | 2-1，14:17/27/37/47/57 | 原样暂存，不改公告下载、OCR、posts 或 checkpoint |
+| `genshin-notices-zh-cn-daily-preview.yml` | 2-1，14:17/27/37/47/57 | 保留采集/OCR/checkpoint，但去掉 raw posts Git 提交 |
 | `genshin-v1-auto-publish.yml` | 2-2，原神 v1 发布 | workflow_run 限定上游为本仓库 main 且成功采集 |
-| `starrail-notices-zh-cn-daily-preview.yml` | 3-1，15:17/27/37/47/57 | 原样暂存，不改公告下载、posts 或 checkpoint |
+| `starrail-notices-zh-cn-daily-preview.yml` | 3-1，15:17/27/37/47/57 | 保留采集/checkpoint，但去掉 raw posts Git 提交 |
 | `starrail-v1-auto-publish.yml` | 3-2，星铁 v1 发布 | workflow_run 限定上游为本仓库 main 且成功采集 |
 
 不部署旧 `sync-public-data.yml`（1-2）。
