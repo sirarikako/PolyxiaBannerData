@@ -1,0 +1,47 @@
+name: P2 staging validation (read-only)
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validation:
+    if: github.event_name == 'pull_request' || github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 安装测试依赖
+        run: python -m pip install -r requirements-dev.txt
+      - name: v1 与 Manifest 合约校验
+        run: python -m scripts.release.validate_v1 --public
+      - name: 检查现役 Python 语法
+        run: python -m compileall -q scripts/collect scripts/transform scripts/release
+      - name: 隔离回归测试（不访问官网、不写正式 v1）
+        run: |
+          python -m pytest -q \
+            tests/test_v1.py \
+            tests/test_import_genshin_v1_zh_cn.py \
+            tests/test_starrail_import_zh_cn.py \
+            tests/test_genshin_missing_notices_zh_cn.py \
+            tests/test_genshin_manual_postmerge_integration.py \
+            tests/test_starrail_notice_scenarios_zh_cn.py
+      - name: 严格确认排除项和生产部署隔离
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f deploy/production/workflows/genshin-v1-auto-publish.yml
+          test -f deploy/production/workflows/starrail-v1-auto-publish.yml
+          test ! -f .github/workflows/genshin-v1-auto-publish.yml
+          test ! -f .github/workflows/starrail-v1-auto-publish.yml
+          test ! -d data/derived/genshin/archive
+          test ! -d data/review
+          test ! -d data/announcements/genshin/zh-cn/miyoushe/images
+          test ! -f data/announcements/genshin/zh-cn/miyoushe/index.json
+          test ! -f data/announcements/genshin/zh-cn/miyoushe/checkpoint.json
+          test ! -d data/announcements/genshin/zh-cn/miyoushe/posts
+          test ! -d data/announcements/starrail/zh-cn/miyoushe/posts
