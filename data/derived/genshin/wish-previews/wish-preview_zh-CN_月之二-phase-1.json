@@ -1,0 +1,94 @@
+{
+  "format": "genshin-wish-preview-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_preview",
+  "version": "月之二",
+  "phase": 1,
+  "time": {
+    "startRaw": "2025/10/22「月之二」版本更新后",
+    "endRaw": "2025/11/11 17:59",
+    "startAt": null,
+    "endAt": "2025-11-11T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "奈芙尔",
+        "title": "湮沙的秘闻",
+        "element": "草"
+      },
+      {
+        "name": "芙宁娜",
+        "title": "不休独舞",
+        "element": "水"
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "行秋",
+        "title": "少年春衫薄",
+        "element": "水"
+      },
+      {
+        "name": "柯莱",
+        "title": "萃念初蘖",
+        "element": "草"
+      },
+      {
+        "name": "瑶瑶",
+        "title": "仙蕊玲珑",
+        "element": "草"
+      }
+    ],
+    "fiveStarWeapons": [
+      {
+        "name": "真语秘匣",
+        "weaponType": "法器"
+      },
+      {
+        "name": "静水流涌之辉",
+        "weaponType": "单手剑"
+      }
+    ],
+    "fourStarWeapons": [
+      {
+        "name": "织月者的曙色",
+        "weaponType": "单手剑"
+      },
+      {
+        "name": "圣祭者的辉杖",
+        "weaponType": "长柄武器"
+      },
+      {
+        "name": "霜辰",
+        "weaponType": "法器"
+      },
+      {
+        "name": "钟剑",
+        "weaponType": "双手剑"
+      },
+      {
+        "name": "西风猎弓",
+        "weaponType": "弓"
+      }
+    ]
+  },
+  "additionalWishes": [],
+  "source": {
+    "postId": "69784376",
+    "title": "「月之二」版本活动祈愿预告第一期",
+    "url": "https://www.miyoushe.com/ys/article/69784376",
+    "listUrl": "https://www.miyoushe.com/ys/home/28?type=3",
+    "publishedAt": "2025-10-20T10:30:24+08:00",
+    "updatedAt": "2026-04-12T01:24:19+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/69784376.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "预告是整期汇总，不含可靠的单独祈愿池名称、角色武器配对或 itemId；不得直接发布到 v1"
+  }
+}

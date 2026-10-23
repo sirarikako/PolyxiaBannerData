@@ -1,0 +1,92 @@
+{
+  "format": "genshin-version-update-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "version": "月之一",
+  "versionName": "『空月之歌·呈示』雪浪与苍林之舞",
+  "maintenance": {
+    "startAt": "2025-09-10T06:00:00+08:00",
+    "estimatedDurationHours": 5,
+    "estimatedEndAt": "2025-09-10T11:00:00+08:00"
+  },
+  "newCharacters": [
+    {
+      "name": "菈乌玛",
+      "rarity": 5,
+      "title": "永月的祀歌",
+      "element": "草",
+      "weaponType": "法器"
+    },
+    {
+      "name": "菲林斯",
+      "rarity": 5,
+      "title": "诡灯陌影",
+      "element": "雷",
+      "weaponType": "长柄武器"
+    }
+  ],
+  "newWeapons": [
+    {
+      "name": "纺夜天镜",
+      "rarity": 5,
+      "weaponType": "法器",
+      "acquisition": "wish"
+    },
+    {
+      "name": "血染荒城",
+      "rarity": 5,
+      "weaponType": "长柄武器",
+      "acquisition": "wish"
+    },
+    {
+      "name": "天光的纺琴",
+      "rarity": 4,
+      "weaponType": "法器",
+      "acquisition": "unknown"
+    },
+    {
+      "name": "谧音吹哨",
+      "rarity": 4,
+      "weaponType": "单手剑",
+      "acquisition": "unknown"
+    },
+    {
+      "name": "万能钥匙",
+      "rarity": 4,
+      "weaponType": "双手剑",
+      "acquisition": "unknown"
+    },
+    {
+      "name": "掘金之锹",
+      "rarity": 4,
+      "weaponType": "长柄武器",
+      "acquisition": "unknown"
+    },
+    {
+      "name": "乌髓孑灯",
+      "rarity": 4,
+      "weaponType": "法器",
+      "acquisition": "unknown"
+    },
+    {
+      "name": "罗网勾针",
+      "rarity": 4,
+      "weaponType": "弓",
+      "acquisition": "unknown"
+    }
+  ],
+  "source": {
+    "postId": "68360721",
+    "title": "「『空月之歌·呈示』雪浪与苍林之舞」「月之一」版本更新说明",
+    "url": "https://www.miyoushe.com/ys/article/68360721",
+    "publishedAt": "2025-09-10T07:00:16+08:00",
+    "updatedAt": "2026-08-14T10:18:58+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/68360721.json"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [
+      "有武器无法确认获取方式，不能视为祈愿武器"
+    ]
+  }
+}

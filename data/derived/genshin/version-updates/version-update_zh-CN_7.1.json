@@ -1,0 +1,78 @@
+{
+  "format": "genshin-version-update-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "version": "7.1",
+  "versionName": "往冥府的安魂歌",
+  "maintenance": {
+    "startAt": "2026-09-23T06:00:00+08:00",
+    "estimatedDurationHours": 5,
+    "estimatedEndAt": "2026-09-23T11:00:00+08:00"
+  },
+  "newCharacters": [
+    {
+      "name": "薇斯纳",
+      "rarity": 5,
+      "title": "雪宴之锋",
+      "element": "风",
+      "weaponType": "单手剑"
+    },
+    {
+      "name": "沃雅妮莎",
+      "rarity": 5,
+      "title": "幽歌萦渊",
+      "element": "水",
+      "weaponType": "法器"
+    }
+  ],
+  "newWeapons": [
+    {
+      "name": "蝶变",
+      "rarity": 5,
+      "weaponType": "单手剑",
+      "acquisition": "wish"
+    },
+    {
+      "name": "漩流颂歌",
+      "rarity": 5,
+      "weaponType": "法器",
+      "acquisition": "wish"
+    },
+    {
+      "name": "新枝",
+      "rarity": 4,
+      "weaponType": "单手剑",
+      "acquisition": "wish"
+    },
+    {
+      "name": "凝雪沉心",
+      "rarity": 4,
+      "weaponType": "法器",
+      "acquisition": "wish"
+    },
+    {
+      "name": "柔风游弦",
+      "rarity": 4,
+      "weaponType": "弓",
+      "acquisition": "wish"
+    },
+    {
+      "name": "银釭",
+      "rarity": 4,
+      "weaponType": "单手剑",
+      "acquisition": "event"
+    }
+  ],
+  "source": {
+    "postId": "78335167",
+    "title": "「往冥府的安魂歌」7.1版本更新说明",
+    "url": "https://www.miyoushe.com/ys/article/78335167",
+    "publishedAt": "2026-09-23T07:00:18+08:00",
+    "updatedAt": "2026-10-12T02:52:16+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/78335167.json"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": []
+  }
+}

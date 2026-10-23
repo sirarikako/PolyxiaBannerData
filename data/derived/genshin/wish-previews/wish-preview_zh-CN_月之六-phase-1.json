@@ -1,0 +1,57 @@
+{
+  "format": "genshin-wish-preview-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_preview",
+  "version": "月之六",
+  "phase": 1,
+  "time": {
+    "startRaw": "2026/04/08「月之六」版本更新后",
+    "endRaw": "2026/04/28 17:59",
+    "startAt": null,
+    "endAt": "2026-04-28T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "莉奈娅",
+        "title": "博闻异旅",
+        "element": "岩"
+      },
+      {
+        "name": "恰斯卡",
+        "title": "巡宇翦定",
+        "element": "风"
+      }
+    ],
+    "fourStarCharacters": [],
+    "fiveStarWeapons": [
+      {
+        "name": "霜结的誓金枝",
+        "weaponType": "弓"
+      },
+      {
+        "name": "星鹫赤羽",
+        "weaponType": "弓"
+      }
+    ],
+    "fourStarWeapons": []
+  },
+  "additionalWishes": [],
+  "source": {
+    "postId": "74418358",
+    "title": "「月之六」版本活动祈愿预告第一期",
+    "url": "https://www.miyoushe.com/ys/article/74418358",
+    "listUrl": "https://www.miyoushe.com/ys/home/28?type=3",
+    "publishedAt": "2026-04-06T18:00:12+08:00",
+    "updatedAt": "2026-06-17T22:06:34+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe-account-75276539/posts/74418358.json",
+    "textSource": "structured_content"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "预告是整期汇总，不含可靠的单独祈愿池名称、角色武器配对或 itemId；不得直接发布到 v1"
+  }
+}

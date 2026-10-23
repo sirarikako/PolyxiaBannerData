@@ -1,0 +1,26 @@
+{
+  "format": "genshin-missing-notice-v1",
+  "noticeType": "wish_preview",
+  "identity": {
+    "version": "7.1",
+    "phase": 2
+  },
+  "data": {
+    "time": {
+      "endAt": "2026-11-03T14:59:00+08:00"
+    },
+    "up": {
+      "fiveStarCharacters": [
+        "丝柯克",
+        "爱可菲"
+      ],
+      "fiveStarWeapons": [
+        "苍耀",
+        "香韵奏者"
+      ]
+    }
+  },
+  "evidence": {
+    "summary": "格式示例：预告结束时间及整期五星角色/武器列表须人工核实后再用于实际数据。"
+  }
+}

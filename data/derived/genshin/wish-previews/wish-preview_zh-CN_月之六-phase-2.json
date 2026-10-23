@@ -1,0 +1,57 @@
+{
+  "format": "genshin-wish-preview-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_preview",
+  "version": "月之六",
+  "phase": 2,
+  "time": {
+    "startRaw": "2026/04/28 18:00",
+    "endRaw": "2026/05/19 14:59",
+    "startAt": "2026-04-28T18:00:00+08:00",
+    "endAt": "2026-05-19T14:59:00+08:00",
+    "startCondition": null
+  },
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "菈乌玛",
+        "title": "永月的祀歌",
+        "element": "草"
+      },
+      {
+        "name": "奈芙尔",
+        "title": "湮沙的秘闻",
+        "element": "草"
+      }
+    ],
+    "fourStarCharacters": [],
+    "fiveStarWeapons": [
+      {
+        "name": "纺夜天镜",
+        "weaponType": "法器"
+      },
+      {
+        "name": "真语秘匣",
+        "weaponType": "法器"
+      }
+    ],
+    "fourStarWeapons": []
+  },
+  "additionalWishes": [],
+  "source": {
+    "postId": "74965073",
+    "title": "「月之六」版本活动祈愿预告第二期",
+    "url": "https://www.miyoushe.com/ys/article/74965073",
+    "listUrl": "https://www.miyoushe.com/ys/home/28?type=3",
+    "publishedAt": "2026-04-27T12:00:11+08:00",
+    "updatedAt": "2026-09-04T09:25:45+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe-account-75276539/posts/74965073.json",
+    "textSource": "structured_content"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "预告是整期汇总，不含可靠的单独祈愿池名称、角色武器配对或 itemId；不得直接发布到 v1"
+  }
+}

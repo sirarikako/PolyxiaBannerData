@@ -1,0 +1,23 @@
+{
+  "format": "genshin-v1-final-review-zh-CN-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "publicationEnabled": false,
+  "blockingNotifications": [],
+  "counts": {
+    "ready": 53,
+    "waiting": 7,
+    "conflict": 0,
+    "requiresAttention": 0,
+    "blocking": 0,
+    "warnings": 0,
+    "wouldAppend": 0,
+    "wouldUpdateExisting": 0
+  },
+  "preview": {
+    "mode": "dry-run",
+    "appended": [],
+    "updatedExistingIds": []
+  },
+  "notifications": {}
+}

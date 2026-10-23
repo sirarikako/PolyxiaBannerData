@@ -1,0 +1,96 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "宿古的赫炎",
+  "officialWishType": "角色活动祈愿-2",
+  "poolType": "character_event_2",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "玛薇卡",
+        "title": "焚夜以炎",
+        "element": "火",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "米卡",
+        "title": "晴霜的标绘",
+        "element": "冰",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "香菱",
+        "title": "万民百味",
+        "element": "火",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "班尼特",
+        "title": "命运试金石",
+        "element": "火",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "2026/06/09 18:00",
+    "endRaw": "2026/06/30 14:59",
+    "startAt": "2026-06-09T18:00:00+08:00",
+    "endAt": "2026-06-30T14:59:00+08:00",
+    "startCondition": null
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/06/02/75276539/2978c372ad47646553005aa03483129c_9001820130716142234.jpg",
+    "https://upload-bbs.miyoushe.com/upload/2026/06/02/75276539/120289fc6aaf90f9b398bdb3b5cc8a5c_9190230836557157162.png",
+    "https://upload-bbs.miyoushe.com/upload/2021/01/05/477d4c535e965bec1791203aecdfa8e6.png"
+  ],
+  "source": {
+    "postId": "75781476",
+    "title": "「宿古的赫炎」祈愿：「焚夜以炎·玛薇卡(火)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/75781476",
+    "publishedAt": "2026-06-03T12:01:12+08:00",
+    "updatedAt": "2026-08-20T10:24:25+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/75781476.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized",
+    "times": {
+      "startRaw": "2026/06/09 18:00",
+      "endRaw": "2026/06/30 14:59",
+      "startAt": "2026-06-09T18:00:00+08:00",
+      "endAt": "2026-06-30T14:59:00+08:00",
+      "startCondition": null,
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/06/02/75276539/120289fc6aaf90f9b398bdb3b5cc8a5c_9190230836557157162.png",
+      "imageSha256": "12467bd9fd6436bf19c2a141464d10942e7f013fc44f420da6e59c55870248d4",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 3,
+    "warnings": []
+  }
+}

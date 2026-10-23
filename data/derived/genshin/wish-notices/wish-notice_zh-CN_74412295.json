@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "饮羽散红",
+  "officialWishType": "角色活动祈愿-2",
+  "poolType": "character_event_2",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "恰斯卡",
+        "title": "巡宇翦定",
+        "element": "风",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "叶洛亚",
+        "title": "魇夜燃芯",
+        "element": "岩",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "爱诺",
+        "title": "妙械咣咣铛",
+        "element": "水",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "诺艾尔",
+        "title": "未授勋之花",
+        "element": "岩",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "版本更新后",
+    "endRaw": "2026/04/28 17:59",
+    "startAt": null,
+    "endAt": "2026-04-28T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/04/03/75276539/29dc2fbb18987b4e600dc41e33471ae1_645704821232979632.jpg",
+    "https://upload-bbs.miyoushe.com/upload/2026/04/03/75276539/362e43f0d44bdb3a03a53951d5545a55_4636808624375859998.png"
+  ],
+  "source": {
+    "postId": "74412295",
+    "title": "「饮羽散红」祈愿：「巡宇翦定·恰斯卡(风)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/74412295",
+    "publishedAt": "2026-04-06T12:00:14+08:00",
+    "updatedAt": "2026-05-11T12:40:01+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/74412295.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized_conditional",
+    "times": {
+      "startRaw": "版本更新后",
+      "endRaw": "2026/04/28 17:59",
+      "startAt": null,
+      "endAt": "2026-04-28T17:59:00+08:00",
+      "startCondition": "after_version_update",
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/04/03/75276539/362e43f0d44bdb3a03a53951d5545a55_4636808624375859998.png",
+      "imageSha256": "d835b9faff98aa7e0e092433d2dbc0edcd915c4bd159fa2f3e358eac37a24396",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

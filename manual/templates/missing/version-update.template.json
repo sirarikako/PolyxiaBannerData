@@ -1,0 +1,15 @@
+{
+  "format": "genshin-missing-notice-v1",
+  "noticeType": "version_update",
+  "identity": {
+    "version": "7.1"
+  },
+  "data": {
+    "maintenance": {
+      "startAt": "2026-09-23T06:00:00+08:00"
+    }
+  },
+  "evidence": {
+    "summary": "格式示例：对应版本的信息经过人工核对；正式使用前请改写为实际核对依据。"
+  }
+}

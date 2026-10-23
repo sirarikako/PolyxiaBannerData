@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "白礜赤成",
+  "officialWishType": "角色活动祈愿-2",
+  "poolType": "character_event_2",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "杜林",
+        "title": "『不熄灭的火』",
+        "element": "火",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "布伦妮",
+        "title": "稚梦归心",
+        "element": "风",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "雷泽",
+        "title": "狼少年",
+        "element": "雷",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "菲谢尔",
+        "title": "断罪皇女！！",
+        "element": "雷",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "版本更新后",
+    "endRaw": "2026/06/09 17:59",
+    "startAt": null,
+    "endAt": "2026-06-09T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/05/20/75276539/ad1498daae8577a68914b5462a604b93_210625938444102700.jpg",
+    "https://upload-bbs.miyoushe.com/upload/2026/05/20/75276539/21d719ce83ac43279a3f977a13920073_8255058258668830403.png"
+  ],
+  "source": {
+    "postId": "75443619",
+    "title": "「白礜赤成」祈愿：「『不熄灭的火』·杜林(火)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/75443619",
+    "publishedAt": "2026-05-20T10:17:40+08:00",
+    "updatedAt": "2026-10-14T18:32:37+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/75443619.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized_conditional",
+    "times": {
+      "startRaw": "版本更新后",
+      "endRaw": "2026/06/09 17:59",
+      "startAt": null,
+      "endAt": "2026-06-09T17:59:00+08:00",
+      "startCondition": "after_version_update",
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/05/20/75276539/21d719ce83ac43279a3f977a13920073_8255058258668830403.png",
+      "imageSha256": "a8e004f36c96316ffd409b99c4dddf605e3350aaa036488843b037d007d10832",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

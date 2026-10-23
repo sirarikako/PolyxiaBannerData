@@ -1,0 +1,114 @@
+{
+  "format": "genshin-v1-candidate-zh-CN-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "status": "ready_candidate",
+  "postId": "71075617",
+  "sourceKey": "71075617",
+  "version": "月之三",
+  "phase": 1,
+  "bannerName": "杯装之诗",
+  "poolType": "character_event_2",
+  "variant": null,
+  "existingV1Id": "gi-000251",
+  "v1Draft": {
+    "gameVersion": "月之三",
+    "phase": 1,
+    "category": "character",
+    "poolType": "character_event_2",
+    "names": {
+      "zh-CN": "杯装之诗"
+    },
+    "gachaTypes": {
+      "raw": [
+        "400"
+      ],
+      "uigf": [
+        "301"
+      ]
+    },
+    "featured": {
+      "fiveStar": [
+        {
+          "itemId": "10000022",
+          "names": {
+            "zh-CN": "温迪"
+          },
+          "type": "character"
+        }
+      ],
+      "fourStar": [
+        {
+          "itemId": "10000124",
+          "names": {
+            "zh-CN": "雅珂达"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000032",
+          "names": {
+            "zh-CN": "班尼特"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000076",
+          "names": {
+            "zh-CN": "珐露珊"
+          },
+          "type": "character"
+        }
+      ]
+    },
+    "regions": [
+      {
+        "server": "cn_official",
+        "startAt": null,
+        "endAt": "2025-12-23T18:00:00+08:00"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/71075621"
+      },
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/71075617"
+      }
+    ]
+  },
+  "timeEvidence": {
+    "versionMaintenanceStartAt": "2025-12-03T06:00:00+08:00",
+    "previewEndAt": "2025-12-23T17:59:00+08:00",
+    "ocrEndAt": "2025-12-23T17:59:00+08:00",
+    "ocrStatus": "recognized_conditional",
+    "endTimeSource": "ocr",
+    "manualFile": null,
+    "ocrImageSha256": "5c43171f16fbe8ad2c9c25fffdb00bfe5b719c1955777666fe39dce7a562ccb8",
+    "startRaw": "版本更新后",
+    "endRaw": "2025/12/23 17:59",
+    "startCondition": "after_version_update",
+    "exclusiveEndPolicy": "原公告分钟结束时间 + 1 分钟；仅候选转换"
+  },
+  "provenance": {
+    "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之三.json",
+    "versionUpdatePostId": "71124325",
+    "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之三-phase-1.json",
+    "previewPostId": "71075621",
+    "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71075617.json",
+    "noticePostId": "71075617",
+    "noticeSourceKey": "71075617"
+  },
+  "warnings": [
+    "conditional_start_time"
+  ],
+  "manualAudit": {
+    "filled": [],
+    "matched": [],
+    "file": null,
+    "sources": []
+  },
+  "note": "离线候选；不自动确定版本更新后的精确开池时间，不自动分配内部 ID，不修改正式 v1"
+}

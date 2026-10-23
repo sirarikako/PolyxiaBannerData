@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "杯装之诗",
+  "officialWishType": "角色活动祈愿-2",
+  "poolType": "character_event_2",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "温迪",
+        "title": "风色诗人",
+        "element": "风",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "雅珂达",
+        "title": "系风攘影",
+        "element": "风",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "班尼特",
+        "title": "命运试金石",
+        "element": "火",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "珐露珊",
+        "title": "机逐封秘",
+        "element": "风",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "版本更新后",
+    "endRaw": "2025/12/23 17:59",
+    "startAt": null,
+    "endAt": "2025-12-23T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2025/11/28/75276539/07d61a61957f4e9647516d7b516ddaf1_963098946653163466.jpg",
+    "https://upload-bbs.miyoushe.com/upload/2025/11/28/75276539/02ae8b2569ee7e327f558dced4aba772_9102494019258073666.png"
+  ],
+  "source": {
+    "postId": "71075617",
+    "title": "「杯装之诗」祈愿：「风色诗人·温迪(风)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/71075617",
+    "publishedAt": "2025-12-01T12:00:26+08:00",
+    "updatedAt": "2025-12-25T18:46:41+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/71075617.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized_conditional",
+    "times": {
+      "startRaw": "版本更新后",
+      "endRaw": "2025/12/23 17:59",
+      "startAt": null,
+      "endAt": "2025-12-23T17:59:00+08:00",
+      "startCondition": "after_version_update",
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2025/11/28/75276539/02ae8b2569ee7e327f558dced4aba772_9102494019258073666.png",
+      "imageSha256": "5c43171f16fbe8ad2c9c25fffdb00bfe5b719c1955777666fe39dce7a562ccb8",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

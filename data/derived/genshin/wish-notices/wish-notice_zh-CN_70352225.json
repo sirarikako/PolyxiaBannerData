@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "炉边烬影",
+  "officialWishType": "角色活动祈愿",
+  "poolType": "character_event",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "阿蕾奇诺",
+        "title": "孤暝厄月",
+        "element": "火",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "蓝砚",
+        "title": "翦玉编春",
+        "element": "风",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "罗莎莉亚",
+        "title": "棘冠恩典",
+        "element": "冰",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "云堇",
+        "title": "红毹婵娟",
+        "element": "岩",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "2025/11/11 18:00",
+    "endRaw": "2025/12/02 14:59",
+    "startAt": "2025-11-11T18:00:00+08:00",
+    "endAt": "2025-12-02T14:59:00+08:00",
+    "startCondition": null
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2025/11/05/75276539/277cb455ed8537f6743d58acb00996c4_3565205888952967051.jpg",
+    "https://upload-bbs.miyoushe.com/upload/2025/11/05/75276539/5a928467e1a0949c7c7254e7f2296302_3752330978270327358.png"
+  ],
+  "source": {
+    "postId": "70352225",
+    "title": "「炉边烬影」祈愿：「孤暝厄月·阿蕾奇诺(火)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/70352225",
+    "publishedAt": "2025-11-06T16:00:19+08:00",
+    "updatedAt": "2026-09-28T23:06:48+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/70352225.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized",
+    "times": {
+      "startRaw": "2025/11/11 18:00",
+      "endRaw": "2025/12/02 14:59",
+      "startAt": "2025-11-11T18:00:00+08:00",
+      "endAt": "2025-12-02T14:59:00+08:00",
+      "startCondition": null,
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2025/11/05/75276539/5a928467e1a0949c7c7254e7f2296302_3752330978270327358.png",
+      "imageSha256": "2bb3f64457f87b72a4b9a3c4abf6509c82287d6d19b3d1282ef5ea0292d4043a",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

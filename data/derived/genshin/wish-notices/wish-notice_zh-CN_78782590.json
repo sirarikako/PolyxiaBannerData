@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "莓色香颂",
+  "officialWishType": "角色活动祈愿-2",
+  "poolType": "character_event_2",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "爱可菲",
+        "title": "明绚千韵",
+        "element": "冰",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "塔利雅",
+        "title": "颂礼祝祭",
+        "element": "水",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "坎蒂丝",
+        "title": "浮金的誓愿",
+        "element": "水",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "米卡",
+        "title": "晴霜的标绘",
+        "element": "冰",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "2026/10/13 18:00",
+    "endRaw": "2026/11/03 14:59",
+    "startAt": "2026-10-13T18:00:00+08:00",
+    "endAt": "2026-11-03T14:59:00+08:00",
+    "startCondition": null
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/09/29/75276539/28aa3ccee3afc45dbce456c31be8868a_6092291719872831676.png",
+    "https://upload-bbs.miyoushe.com/upload/2026/09/29/75276539/3d4e5fd5b3765ee2a537a36883feae51_3461663483064688342.png"
+  ],
+  "source": {
+    "postId": "78782590",
+    "title": "「莓色香颂」祈愿：「明绚千韵·爱可菲(冰)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/78782590",
+    "publishedAt": "2026-10-08T16:00:13+08:00",
+    "updatedAt": "2026-10-14T12:03:27+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/78782590.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized",
+    "times": {
+      "startRaw": "2026/10/13 18:00",
+      "endRaw": "2026/11/03 14:59",
+      "startAt": "2026-10-13T18:00:00+08:00",
+      "endAt": "2026-11-03T14:59:00+08:00",
+      "startCondition": null,
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/09/29/75276539/3d4e5fd5b3765ee2a537a36883feae51_3461663483064688342.png",
+      "imageSha256": "12eae46405fb1c266af89e4da7ae8227556a9138013ddbbbf1f989ac17092f06",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

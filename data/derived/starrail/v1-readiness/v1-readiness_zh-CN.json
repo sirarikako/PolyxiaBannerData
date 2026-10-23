@@ -1,0 +1,341 @@
+{
+  "format": "starrail-v1-readiness-v1",
+  "count": 4,
+  "ready": 0,
+  "alreadyPublished": 4,
+  "unparsedNotices": [],
+  "rows": [
+    {
+      "format": "starrail-v1-candidate-zh-CN-v1",
+      "game": "starrail",
+      "locale": "zh-CN",
+      "version": "4.6",
+      "phase": 2,
+      "poolType": "character_event",
+      "bannerName": "我身即刃",
+      "sourceKey": "79023863-038d17f9d6ee",
+      "status": "already_published",
+      "issues": [],
+      "publishedDifferences": [],
+      "existingId": "hsr-000277",
+      "sources": [
+        "data/derived/starrail/warp-notices/warp-notice_zh-CN_79023863.json"
+      ],
+      "manualFilled": [],
+      "manualRecovery": false,
+      "v1Draft": {
+        "gameVersion": "4.6",
+        "phase": 2,
+        "category": "character",
+        "poolType": "character_event",
+        "names": {
+          "zh-CN": "我身即刃"
+        },
+        "gachaTypes": {
+          "raw": [
+            "11"
+          ],
+          "uigf": [
+            "11"
+          ]
+        },
+        "featured": {
+          "fiveStar": [
+            {
+              "itemId": "1507",
+              "type": "character",
+              "names": {
+                "zh-CN": "千冶•刃"
+              }
+            }
+          ],
+          "fourStar": [
+            {
+              "itemId": "1201",
+              "type": "character",
+              "names": {
+                "zh-CN": "青雀"
+              }
+            },
+            {
+              "itemId": "1214",
+              "type": "character",
+              "names": {
+                "zh-CN": "雪衣"
+              }
+            },
+            {
+              "itemId": "1312",
+              "type": "character",
+              "names": {
+                "zh-CN": "米沙"
+              }
+            }
+          ]
+        },
+        "regions": [
+          {
+            "server": "cn_official",
+            "startAt": "2026-10-21T12:00:00+08:00",
+            "endAt": "2026-11-10T15:00:00+08:00"
+          }
+        ],
+        "sources": [
+          {
+            "provider": "miyoushe",
+            "url": "https://www.miyoushe.com/sr/article/79023863"
+          }
+        ]
+      }
+    },
+    {
+      "format": "starrail-v1-candidate-zh-CN-v1",
+      "game": "starrail",
+      "locale": "zh-CN",
+      "version": "4.6",
+      "phase": 2,
+      "poolType": "character_event",
+      "bannerName": "沧海萃珠",
+      "sourceKey": "79023863-e444d2131a32",
+      "status": "already_published",
+      "issues": [],
+      "publishedDifferences": [],
+      "existingId": "hsr-000273",
+      "sources": [
+        "data/derived/starrail/warp-notices/warp-notice_zh-CN_79023863.json"
+      ],
+      "manualFilled": [],
+      "manualRecovery": false,
+      "v1Draft": {
+        "gameVersion": "4.6",
+        "phase": 2,
+        "category": "character",
+        "poolType": "character_event",
+        "names": {
+          "zh-CN": "沧海萃珠"
+        },
+        "gachaTypes": {
+          "raw": [
+            "11"
+          ],
+          "uigf": [
+            "11"
+          ]
+        },
+        "featured": {
+          "fiveStar": [
+            {
+              "itemId": "1503",
+              "type": "character",
+              "names": {
+                "zh-CN": "真珠"
+              }
+            }
+          ],
+          "fourStar": [
+            {
+              "itemId": "1201",
+              "type": "character",
+              "names": {
+                "zh-CN": "青雀"
+              }
+            },
+            {
+              "itemId": "1214",
+              "type": "character",
+              "names": {
+                "zh-CN": "雪衣"
+              }
+            },
+            {
+              "itemId": "1312",
+              "type": "character",
+              "names": {
+                "zh-CN": "米沙"
+              }
+            }
+          ]
+        },
+        "regions": [
+          {
+            "server": "cn_official",
+            "startAt": "2026-09-28T06:00:00+08:00",
+            "endAt": "2026-11-10T15:00:00+08:00"
+          }
+        ],
+        "sources": [
+          {
+            "provider": "miyoushe",
+            "url": "https://www.miyoushe.com/sr/article/79023863"
+          }
+        ]
+      }
+    },
+    {
+      "format": "starrail-v1-candidate-zh-CN-v1",
+      "game": "starrail",
+      "locale": "zh-CN",
+      "version": "4.6",
+      "phase": 2,
+      "poolType": "light_cone_event",
+      "bannerName": "流光定影•献给明日的色彩",
+      "sourceKey": "79023863-992ff3444eac",
+      "status": "already_published",
+      "issues": [],
+      "publishedDifferences": [],
+      "existingId": "hsr-000275",
+      "sources": [
+        "data/derived/starrail/warp-notices/warp-notice_zh-CN_79023863.json"
+      ],
+      "manualFilled": [],
+      "manualRecovery": false,
+      "v1Draft": {
+        "gameVersion": "4.6",
+        "phase": 2,
+        "category": "light_cone",
+        "poolType": "light_cone_event",
+        "names": {
+          "zh-CN": "流光定影•献给明日的色彩"
+        },
+        "gachaTypes": {
+          "raw": [
+            "12"
+          ],
+          "uigf": [
+            "12"
+          ]
+        },
+        "featured": {
+          "fiveStar": [
+            {
+              "itemId": "23055",
+              "type": "light_cone",
+              "names": {
+                "zh-CN": "献给明日的色彩"
+              }
+            }
+          ],
+          "fourStar": [
+            {
+              "itemId": "21000",
+              "type": "light_cone",
+              "names": {
+                "zh-CN": "一场术后对话"
+              }
+            },
+            {
+              "itemId": "21011",
+              "type": "light_cone",
+              "names": {
+                "zh-CN": "与行星相会"
+              }
+            },
+            {
+              "itemId": "21044",
+              "type": "light_cone",
+              "names": {
+                "zh-CN": "无边曼舞"
+              }
+            }
+          ]
+        },
+        "regions": [
+          {
+            "server": "cn_official",
+            "startAt": "2026-09-28T06:00:00+08:00",
+            "endAt": "2026-11-10T15:00:00+08:00"
+          }
+        ],
+        "sources": [
+          {
+            "provider": "miyoushe",
+            "url": "https://www.miyoushe.com/sr/article/79023863"
+          }
+        ]
+      }
+    },
+    {
+      "format": "starrail-v1-candidate-zh-CN-v1",
+      "game": "starrail",
+      "locale": "zh-CN",
+      "version": "4.6",
+      "phase": 2,
+      "poolType": "light_cone_event",
+      "bannerName": "溯回忆象•灼尽炼狱的新骸",
+      "sourceKey": "79023863-60b97cd3f65f",
+      "status": "already_published",
+      "issues": [],
+      "publishedDifferences": [],
+      "existingId": "hsr-000278",
+      "sources": [
+        "data/derived/starrail/warp-notices/warp-notice_zh-CN_79023863.json"
+      ],
+      "manualFilled": [],
+      "manualRecovery": false,
+      "v1Draft": {
+        "gameVersion": "4.6",
+        "phase": 2,
+        "category": "light_cone",
+        "poolType": "light_cone_event",
+        "names": {
+          "zh-CN": "溯回忆象•灼尽炼狱的新骸"
+        },
+        "gachaTypes": {
+          "raw": [
+            "12"
+          ],
+          "uigf": [
+            "12"
+          ]
+        },
+        "featured": {
+          "fiveStar": [
+            {
+              "itemId": "23059",
+              "type": "light_cone",
+              "names": {
+                "zh-CN": "灼尽炼狱的新骸"
+              }
+            }
+          ],
+          "fourStar": [
+            {
+              "itemId": "21000",
+              "type": "light_cone",
+              "names": {
+                "zh-CN": "一场术后对话"
+              }
+            },
+            {
+              "itemId": "21011",
+              "type": "light_cone",
+              "names": {
+                "zh-CN": "与行星相会"
+              }
+            },
+            {
+              "itemId": "21044",
+              "type": "light_cone",
+              "names": {
+                "zh-CN": "无边曼舞"
+              }
+            }
+          ]
+        },
+        "regions": [
+          {
+            "server": "cn_official",
+            "startAt": "2026-10-21T12:00:00+08:00",
+            "endAt": "2026-11-10T15:00:00+08:00"
+          }
+        ],
+        "sources": [
+          {
+            "provider": "miyoushe",
+            "url": "https://www.miyoushe.com/sr/article/79023863"
+          }
+        ]
+      }
+    }
+  ]
+}

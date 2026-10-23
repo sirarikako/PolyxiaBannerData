@@ -1,0 +1,601 @@
+{
+  "format": "genshin-notice-discovery-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "feeds": {
+    "1": {
+      "anchors": [
+        "79002868",
+        "78982011",
+        "78817337",
+        "78782593",
+        "78782590",
+        "78782589",
+        "78779561",
+        "78469941",
+        "78337477",
+        "78335796",
+        "78335167",
+        "78324484",
+        "78323610",
+        "78322888",
+        "78322543",
+        "78322525",
+        "78322062",
+        "78319398",
+        "78299710",
+        "78299709"
+      ],
+      "lastCheckedAt": "2026-10-23T19:51:31+08:00",
+      "initializedOnly": false
+    },
+    "3": {
+      "anchors": [
+        "79040390",
+        "79026493",
+        "79022160",
+        "79002864",
+        "79002844",
+        "78959150",
+        "78937633",
+        "78918177",
+        "78899384",
+        "78879329",
+        "78879221",
+        "78864529",
+        "78864405",
+        "78864131",
+        "78859378",
+        "78839506",
+        "78838316",
+        "78817398",
+        "78817334",
+        "78798084"
+      ],
+      "lastCheckedAt": "2026-10-23T19:51:32+08:00",
+      "initializedOnly": false
+    }
+  },
+  "pending": {},
+  "manualReview": {},
+  "manualRecovered": {},
+  "completed": {
+    "68312649": {
+      "kind": "wish_notice",
+      "title": "「苍林月祷」祈愿：「永月的祀歌·菈乌玛(草)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_68312649.json",
+      "completedAt": "2026-10-18T12:56:09+08:00"
+    },
+    "68312650": {
+      "kind": "wish_notice",
+      "title": "「月草的赐慧」祈愿：「白草净华·纳西妲(草)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_68312650.json",
+      "completedAt": "2026-10-18T12:56:20+08:00"
+    },
+    "68312651": {
+      "kind": "wish_notice",
+      "title": "「神铸赋形」：「法器·纺夜天镜」「法器·千夜浮梦」概率UP",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_68312651.json",
+      "completedAt": "2026-10-18T12:56:27+08:00"
+    },
+    "68312655": {
+      "kind": "wish_notice",
+      "title": "「露草的行盏」祈愿：集录祈愿开启！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_68312655.json",
+      "completedAt": "2026-10-18T12:56:37+08:00"
+    },
+    "68360721": {
+      "kind": "version_update",
+      "title": "「『空月之歌·呈示』雪浪与苍林之舞」「月之一」版本更新说明",
+      "outputFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之一.json",
+      "completedAt": "2026-10-18T12:56:37+08:00"
+    },
+    "68917810": {
+      "kind": "wish_notice",
+      "title": "「孤灯夜访」祈愿：「诡灯陌影·菲林斯(雷)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_68917810.json",
+      "completedAt": "2026-10-18T12:56:46+08:00"
+    },
+    "68917811": {
+      "kind": "wish_notice",
+      "title": "「素霓伣天」祈愿：「兰生幽谷·夜兰(水)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_68917811.json",
+      "completedAt": "2026-10-18T12:56:55+08:00"
+    },
+    "68917812": {
+      "kind": "wish_notice",
+      "title": "「神铸赋形」祈愿：「长柄武器·血染荒城」「弓·若水」概率UP",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_68917812.json",
+      "completedAt": "2026-10-18T23:10:52+08:00",
+      "resolution": "ocr_reprocessed_verified",
+      "ocrStatus": "recognized",
+      "imageSha256": "f70fef88714f07dacaa3282ea0409c2c00569371b4f1d08277756bdd4ed32e9e",
+      "previousManualReviewReason": "公告 68917812 OCR unresolved：图片中没有识别出唯一可靠的双日期或版本更新后条件时间"
+    },
+    "69784376": {
+      "kind": "wish_preview",
+      "title": "「月之二」版本活动祈愿预告第一期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之二-phase-1.json",
+      "completedAt": "2026-10-18T13:23:21+08:00"
+    },
+    "69786044": {
+      "kind": "wish_notice",
+      "title": "「赤砂的诱言」祈愿：「湮沙的秘闻·奈芙尔(草)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_69786044.json",
+      "completedAt": "2026-10-18T16:49:23+08:00"
+    },
+    "69786045": {
+      "kind": "wish_notice",
+      "title": "「众水的颂诗」祈愿：「不休独舞·芙宁娜(水)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_69786045.json",
+      "completedAt": "2026-10-18T16:49:32+08:00"
+    },
+    "69786055": {
+      "kind": "wish_notice",
+      "title": "祈愿：「法器·真语秘匣」「单手剑·静水流涌之辉」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_69786055.json",
+      "completedAt": "2026-10-18T16:49:39+08:00"
+    },
+    "69831610": {
+      "kind": "version_update",
+      "title": "「『空月之歌·复演』回望湮灭的月光」「月之二」版本更新说明",
+      "outputFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之二.json",
+      "completedAt": "2026-10-18T13:07:02+08:00"
+    },
+    "70352225": {
+      "kind": "wish_notice",
+      "title": "「炉边烬影」祈愿：「孤暝厄月·阿蕾奇诺(火)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_70352225.json",
+      "completedAt": "2026-10-18T16:49:48+08:00"
+    },
+    "70352227": {
+      "kind": "wish_notice",
+      "title": "「陵薮市朝」祈愿：「尘世闲游·钟离(岩)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_70352227.json",
+      "completedAt": "2026-10-18T16:49:57+08:00"
+    },
+    "70352228": {
+      "kind": "wish_notice",
+      "title": "祈愿：「长柄武器·赤月之形」「长柄武器·贯虹之槊」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_70352228.json",
+      "completedAt": "2026-10-18T16:50:06+08:00"
+    },
+    "70352230": {
+      "kind": "wish_preview",
+      "title": "「月之二」版本活动祈愿预告第二期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之二-phase-2.json",
+      "completedAt": "2026-10-18T13:23:22+08:00"
+    },
+    "71075615": {
+      "kind": "wish_notice",
+      "title": "「神铸赋形」：「单手剑·黑蚀」「弓·黎明破晓之史」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71075615.json",
+      "completedAt": "2026-10-18T13:17:12+08:00"
+    },
+    "71075617": {
+      "kind": "wish_notice",
+      "title": "「杯装之诗」祈愿：「风色诗人·温迪(风)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71075617.json",
+      "completedAt": "2026-10-18T13:17:22+08:00"
+    },
+    "71075619": {
+      "kind": "wish_notice",
+      "title": "「白礜赤成」祈愿：「『不熄灭的火』·杜林(火)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71075619.json",
+      "completedAt": "2026-10-18T13:17:32+08:00"
+    },
+    "71075621": {
+      "kind": "wish_preview",
+      "title": "「月之三」版本活动祈愿预告第一期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之三-phase-1.json",
+      "completedAt": "2026-10-18T13:23:23+08:00"
+    },
+    "71124325": {
+      "kind": "version_update",
+      "title": "「『空月之歌·间奏』终北的夜行诗」「月之三」版本更新说明",
+      "outputFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之三.json",
+      "completedAt": "2026-10-18T13:17:32+08:00"
+    },
+    "71557457": {
+      "kind": "wish_notice",
+      "title": "「神铸赋形」：「法器·溢彩心念」「单手剑·岩峰巡歌」概率UP",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71557457.json",
+      "completedAt": "2026-10-18T13:17:42+08:00"
+    },
+    "71557460": {
+      "kind": "wish_notice",
+      "title": "「煅火的祝赐」祈愿：「焮火铸魂·希诺宁(岩)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71557460.json",
+      "completedAt": "2026-10-18T13:17:53+08:00"
+    },
+    "71557463": {
+      "kind": "wish_notice",
+      "title": "「饫宴角戏」祈愿：「悠暇豪劲·瓦雷莎(雷)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71557463.json",
+      "completedAt": "2026-10-18T13:18:04+08:00"
+    },
+    "71557465": {
+      "kind": "wish_preview",
+      "title": "「月之三」版本活动祈愿预告第二期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之三-phase-2.json",
+      "completedAt": "2026-10-18T13:23:24+08:00"
+    },
+    "72261667": {
+      "kind": "wish_notice",
+      "title": "祈愿：「单手剑·朏魄含光」「法器·万世流涌大典」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261667.json",
+      "completedAt": "2026-10-18T13:18:12+08:00"
+    },
+    "72261668": {
+      "kind": "wish_notice",
+      "title": "「渊海界令」祈愿：「谕告的潮音·那维莱特(水)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261668.json",
+      "completedAt": "2026-10-18T13:18:20+08:00"
+    },
+    "72261669": {
+      "kind": "wish_notice",
+      "title": "「华黍由仪」祈愿：「驹隙隐泉·兹白(岩)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261669.json",
+      "completedAt": "2026-10-18T13:18:31+08:00"
+    },
+    "72261670": {
+      "kind": "wish_notice",
+      "title": "祈愿：「法器·帷间夜曲」「长柄武器·支离轮光」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261670.json",
+      "completedAt": "2026-10-18T13:18:42+08:00"
+    },
+    "72261671": {
+      "kind": "wish_notice",
+      "title": "「聚星源动」祈愿：「轰隆雷鸣波·伊涅芙(雷)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261671.json",
+      "completedAt": "2026-10-18T13:18:51+08:00"
+    },
+    "72261672": {
+      "kind": "wish_notice",
+      "title": "「伴月同眠」祈愿：「空月归乡·哥伦比娅(水)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261672.json",
+      "completedAt": "2026-10-18T13:19:00+08:00"
+    },
+    "72287317": {
+      "kind": "wish_preview",
+      "title": "「月之四」版本活动祈愿预告第一期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之四-phase-1.json",
+      "completedAt": "2026-10-18T13:23:25+08:00"
+    },
+    "72299859": {
+      "kind": "version_update",
+      "title": "「如果在冬夜，一个旅人」「月之四」版本更新说明",
+      "outputFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之四.json",
+      "completedAt": "2026-10-18T13:19:00+08:00"
+    },
+    "72868817": {
+      "kind": "wish_preview",
+      "title": "「月之四」版本活动祈愿预告第二期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之四-phase-2.json",
+      "completedAt": "2026-10-18T13:23:26+08:00"
+    },
+    "73475916": {
+      "kind": "wish_notice",
+      "title": "「北风的凯旋歌」祈愿：「北风骑士·法尔伽(风)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73475916.json",
+      "completedAt": "2026-10-18T13:19:08+08:00"
+    },
+    "73475917": {
+      "kind": "wish_notice",
+      "title": "「孤灯夜访」祈愿：「诡灯陌影·菲林斯(雷)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73475917.json",
+      "completedAt": "2026-10-18T16:50:14+08:00"
+    },
+    "73475918": {
+      "kind": "wish_notice",
+      "title": "祈愿：「双手剑·狼的武功歌」「长柄武器·血染荒城」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73475918.json",
+      "completedAt": "2026-10-18T13:22:39+08:00"
+    },
+    "73475919": {
+      "kind": "wish_notice",
+      "title": "「晨风之诗」祈愿：集录祈愿开启！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73475919.json",
+      "completedAt": "2026-10-18T23:10:52+08:00",
+      "resolution": "ocr_reprocessed_verified",
+      "ocrStatus": "recognized_conditional",
+      "imageSha256": "ec939e5b3ebe4952fc9ede7a0c59642c4406670c0c088bcbf430ceb54f656e26",
+      "previousManualReviewReason": "公告 73475919 OCR unresolved：图片中没有识别出唯一可靠的双日期或版本更新后条件时间"
+    },
+    "73483205": {
+      "kind": "wish_preview",
+      "title": "「月之五」版本活动祈愿预告第一期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之五-phase-1.json",
+      "completedAt": "2026-10-18T13:23:27+08:00"
+    },
+    "73521381": {
+      "kind": "version_update",
+      "title": "「『空月之歌·变奏』捕风的归客」「月之五」版本更新说明",
+      "outputFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之五.json",
+      "completedAt": "2026-10-18T13:22:52+08:00"
+    },
+    "73885911": {
+      "kind": "wish_notice",
+      "title": "祈愿：「单手剑·苍耀」「长柄武器·香韵奏者」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73885911.json",
+      "completedAt": "2026-10-18T13:23:00+08:00"
+    },
+    "73885912": {
+      "kind": "wish_notice",
+      "title": "「莓色香颂」祈愿：「明绚千韵·爱可菲(冰)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73885912.json",
+      "completedAt": "2026-10-18T13:23:11+08:00"
+    },
+    "73885913": {
+      "kind": "wish_notice",
+      "title": "「虚星临渡」祈愿：「虚渊暗星·丝柯克(冰)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73885913.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "73969586": {
+      "kind": "wish_preview",
+      "title": "「月之五」版本活动祈愿预告第二期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之五-phase-2.json",
+      "completedAt": "2026-10-18T13:23:28+08:00"
+    },
+    "74412291": {
+      "kind": "wish_notice",
+      "title": "「呀吼吼博物志」祈愿：「博闻异旅·莉奈娅(岩)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_74412291.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "74412295": {
+      "kind": "wish_notice",
+      "title": "「饮羽散红」祈愿：「巡宇翦定·恰斯卡(风)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_74412295.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "74412299": {
+      "kind": "wish_notice",
+      "title": "「神铸赋形」：「弓·霜结的誓金枝」「弓·星鹫赤羽」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_74412299.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "74418358": {
+      "kind": "wish_preview",
+      "title": "「月之六」版本活动祈愿预告第一期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之六-phase-1.json",
+      "completedAt": "2026-10-18T13:23:28+08:00"
+    },
+    "74446206": {
+      "kind": "version_update",
+      "title": "「『空月之歌·旋舞』逢归的谶羽」「月之六」版本更新说明",
+      "outputFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之六.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "74965073": {
+      "kind": "wish_preview",
+      "title": "「月之六」版本活动祈愿预告第二期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之六-phase-2.json",
+      "completedAt": "2026-10-18T13:23:28+08:00"
+    },
+    "75425444": {
+      "kind": "wish_preview",
+      "title": "「月之七」版本活动祈愿预告第一期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之七-phase-1.json",
+      "completedAt": "2026-10-18T13:23:28+08:00"
+    },
+    "75440954": {
+      "kind": "version_update",
+      "title": "「『空月之歌·行律』虚空劫灰往世书」「月之七」版本更新说明",
+      "outputFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之七.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "75443617": {
+      "kind": "wish_notice",
+      "title": "「炽天的默想曲」祈愿：「喧寂于心·尼可(火)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75443617.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "75443619": {
+      "kind": "wish_notice",
+      "title": "「白礜赤成」祈愿：「『不熄灭的火』·杜林(火)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75443619.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "75443624": {
+      "kind": "wish_notice",
+      "title": "「神铸赋形」祈愿：「法器·尘光七谕」「单手剑·黑蚀」概率UP",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75443624.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "75781475": {
+      "kind": "wish_notice",
+      "title": "「霜锋夜白」祈愿：「恣锐锋镞·洛恩(冰)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75781475.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "75781476": {
+      "kind": "wish_notice",
+      "title": "「宿古的赫炎」祈愿：「焚夜以炎·玛薇卡(火)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75781476.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "75781477": {
+      "kind": "wish_notice",
+      "title": "「神铸赋形」：「长柄武器·灾悔」「双手剑·焚曜千阳」概率UP",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75781477.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "75880451": {
+      "kind": "wish_preview",
+      "title": "「月之七」版本活动祈愿预告第二期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之七-phase-2.json",
+      "completedAt": "2026-10-18T13:23:28+08:00"
+    },
+    "76308871": {
+      "kind": "wish_notice",
+      "title": "「辉天的星告」祈愿：溯光祈愿开启！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76308871.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "76308874": {
+      "kind": "wish_notice",
+      "title": "祈愿：「双手剑·超越之匙」「法器·祭星者之望」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76308874.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "76308876": {
+      "kind": "wish_notice",
+      "title": "「星边夜语」祈愿：「白星黑曜·茜特菈莉(冰)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76308876.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "76308879": {
+      "kind": "wish_notice",
+      "title": "「镜中的茶宴」祈愿：「镜水析谬·桑多涅(冰)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76308879.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "76328614": {
+      "kind": "wish_preview",
+      "title": "「月之八」版本活动祈愿预告第一期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之八-phase-1.json",
+      "completedAt": "2026-10-18T13:23:28+08:00"
+    },
+    "76345546": {
+      "kind": "version_update",
+      "title": "「『空月之歌·谐谑』映夏！归乡？千灵节！」「月之八」更新说明",
+      "outputFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之八.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "76723985": {
+      "kind": "wish_notice",
+      "title": "祈愿：「法器·帷间夜曲」「长柄武器·薙草之稻光」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76723985.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "76723988": {
+      "kind": "wish_notice",
+      "title": "「影寂天下人」祈愿：「一心净土·雷电将军(雷)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76723988.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "76723989": {
+      "kind": "wish_notice",
+      "title": "「伴月同眠」祈愿：「空月归乡·哥伦比娅(水)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76723989.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "76834102": {
+      "kind": "wish_preview",
+      "title": "「月之八」版本活动祈愿预告第二期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之八-phase-2.json",
+      "completedAt": "2026-10-18T13:23:28+08:00"
+    },
+    "77322269": {
+      "kind": "wish_notice",
+      "title": "「冰绡鹄影」祈愿：「翾风回雪·奥黛塔(冰)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77322269.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "77322273": {
+      "kind": "wish_notice",
+      "title": "「炉边烬影」祈愿：「孤暝厄月·阿蕾奇诺(火)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77322273.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "77322275": {
+      "kind": "wish_notice",
+      "title": "祈愿：「单手剑·白湖冬羽」「长柄武器·赤月之形」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77322275.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "77350703": {
+      "kind": "wish_preview",
+      "title": "7.0版本活动祈愿预告第一期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.0-phase-1.json",
+      "completedAt": "2026-10-18T13:23:28+08:00"
+    },
+    "77363392": {
+      "kind": "version_update",
+      "title": "「无神怜爱的雪国」7.0版本更新说明",
+      "outputFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.0.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "77797176": {
+      "kind": "wish_notice",
+      "title": "「孤灯夜访」祈愿：「诡灯陌影·菲林斯(雷)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77797176.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "77797177": {
+      "kind": "wish_notice",
+      "title": "「聚星源动」祈愿：「轰隆雷鸣波·伊涅芙(雷)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77797177.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "77797178": {
+      "kind": "wish_notice",
+      "title": "祈愿：「长柄武器·血染荒城」「长柄武器·支离轮光」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77797178.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "77910704": {
+      "kind": "wish_preview",
+      "title": "7.0版本活动祈愿预告第二期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.0-phase-2.json",
+      "completedAt": "2026-10-18T13:23:28+08:00"
+    },
+    "78299708": {
+      "kind": "wish_notice",
+      "title": "「神铸赋形」祈愿：「单手剑·蝶变」「法器·漩流颂歌」概率UP",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78299708.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "78299709": {
+      "kind": "wish_notice",
+      "title": "「涌浪叙歌」祈愿：「幽歌萦渊·沃雅妮莎(水)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78299709.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "78299710": {
+      "kind": "wish_notice",
+      "title": "「煦风欢舞时」祈愿：「雪宴之锋·薇斯纳(风)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78299710.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "78324485": {
+      "kind": "wish_preview",
+      "title": "7.1版本活动祈愿预告第一期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.1-phase-1.json",
+      "completedAt": "2026-10-18T13:23:28+08:00"
+    },
+    "78335167": {
+      "kind": "version_update",
+      "title": "「往冥府的安魂歌」7.1版本更新说明",
+      "outputFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.1.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "78782589": {
+      "kind": "wish_notice",
+      "title": "「虚星临渡」祈愿：「虚渊暗星·丝柯克(冰)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78782589.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "78782590": {
+      "kind": "wish_notice",
+      "title": "「莓色香颂」祈愿：「明绚千韵·爱可菲(冰)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78782590.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "78782593": {
+      "kind": "wish_notice",
+      "title": "「神铸赋形」：「单手剑·苍耀」「长柄武器·香韵奏者」概率UP",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78782593.json",
+      "completedAt": "2026-10-18T13:23:20+08:00"
+    },
+    "78879329": {
+      "kind": "wish_preview",
+      "title": "7.1版本活动祈愿预告第二期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.1-phase-2.json",
+      "completedAt": "2026-10-18T13:23:28+08:00"
+    }
+  },
+  "updatedAt": "2026-10-23T19:51:32+08:00"
+}

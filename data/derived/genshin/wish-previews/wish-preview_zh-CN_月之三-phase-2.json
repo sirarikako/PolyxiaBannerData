@@ -1,0 +1,94 @@
+{
+  "format": "genshin-wish-preview-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_preview",
+  "version": "月之三",
+  "phase": 2,
+  "time": {
+    "startRaw": "2025/12/23 18:00",
+    "endRaw": "2026/01/13 14:59",
+    "startAt": "2025-12-23T18:00:00+08:00",
+    "endAt": "2026-01-13T14:59:00+08:00",
+    "startCondition": null
+  },
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "瓦雷莎",
+        "title": "悠暇豪劲",
+        "element": "雷"
+      },
+      {
+        "name": "希诺宁",
+        "title": "焮火铸魂",
+        "element": "岩"
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "伊安珊",
+        "title": "熔石百炼",
+        "element": "雷"
+      },
+      {
+        "name": "夏沃蕾",
+        "title": "明律决罚",
+        "element": "火"
+      },
+      {
+        "name": "嘉明",
+        "title": "骏猊頕首",
+        "element": "火"
+      }
+    ],
+    "fiveStarWeapons": [
+      {
+        "name": "溢彩心念",
+        "weaponType": "法器"
+      },
+      {
+        "name": "岩峰巡歌",
+        "weaponType": "单手剑"
+      }
+    ],
+    "fourStarWeapons": [
+      {
+        "name": "硕果钩",
+        "weaponType": "双手剑"
+      },
+      {
+        "name": "暗巷猎手",
+        "weaponType": "弓"
+      },
+      {
+        "name": "西风剑",
+        "weaponType": "单手剑"
+      },
+      {
+        "name": "西风长枪",
+        "weaponType": "长柄武器"
+      },
+      {
+        "name": "流浪乐章",
+        "weaponType": "法器"
+      }
+    ]
+  },
+  "additionalWishes": [],
+  "source": {
+    "postId": "71557465",
+    "title": "「月之三」版本活动祈愿预告第二期",
+    "url": "https://www.miyoushe.com/ys/article/71557465",
+    "listUrl": "https://www.miyoushe.com/ys/home/28?type=3",
+    "publishedAt": "2025-12-18T16:00:22+08:00",
+    "updatedAt": "2026-09-24T10:20:44+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/71557465.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "预告是整期汇总，不含可靠的单独祈愿池名称、角色武器配对或 itemId；不得直接发布到 v1"
+  }
+}

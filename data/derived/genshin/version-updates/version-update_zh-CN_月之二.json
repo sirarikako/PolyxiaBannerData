@@ -1,0 +1,61 @@
+{
+  "format": "genshin-version-update-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "version": "月之二",
+  "versionName": "『空月之歌·复演』回望湮灭的月光",
+  "maintenance": {
+    "startAt": "2025-10-22T06:00:00+08:00",
+    "estimatedDurationHours": 7,
+    "estimatedEndAt": "2025-10-22T13:00:00+08:00"
+  },
+  "newCharacters": [
+    {
+      "name": "奈芙尔",
+      "rarity": 5,
+      "title": "湮沙的秘闻",
+      "element": "草",
+      "weaponType": "法器"
+    }
+  ],
+  "newWeapons": [
+    {
+      "name": "真语秘匣",
+      "rarity": 5,
+      "weaponType": "法器",
+      "acquisition": "wish"
+    },
+    {
+      "name": "圣祭者的辉杖",
+      "rarity": 4,
+      "weaponType": "长柄武器",
+      "acquisition": "wish"
+    },
+    {
+      "name": "霜辰",
+      "rarity": 4,
+      "weaponType": "法器",
+      "acquisition": "wish"
+    },
+    {
+      "name": "织月者的曙色",
+      "rarity": 4,
+      "weaponType": "单手剑",
+      "acquisition": "unknown"
+    }
+  ],
+  "source": {
+    "postId": "69831610",
+    "title": "「『空月之歌·复演』回望湮灭的月光」「月之二」版本更新说明",
+    "url": "https://www.miyoushe.com/ys/article/69831610",
+    "publishedAt": "2025-10-22T07:00:18+08:00",
+    "updatedAt": "2026-08-08T13:34:51+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/69831610.json"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [
+      "有武器无法确认获取方式，不能视为祈愿武器"
+    ]
+  }
+}

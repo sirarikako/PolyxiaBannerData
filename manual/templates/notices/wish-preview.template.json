@@ -1,0 +1,16 @@
+{
+  "format": "genshin-notice-manual-v1",
+  "postId": "78879329",
+  "data": {
+    "phase": 2,
+    "time": {
+      "endAt": "2026-11-03T14:59:00+08:00"
+    },
+    "up": {
+      "fiveStarCharacters": [
+        "丝柯克",
+        "爱可菲"
+      ]
+    }
+  }
+}

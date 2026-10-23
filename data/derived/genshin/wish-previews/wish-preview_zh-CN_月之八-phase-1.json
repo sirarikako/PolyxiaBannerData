@@ -1,0 +1,66 @@
+{
+  "format": "genshin-wish-preview-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_preview",
+  "version": "月之八",
+  "phase": 1,
+  "time": {
+    "startRaw": "2026/07/01「月之八」版本更新后",
+    "endRaw": "2026/07/21 17:59",
+    "startAt": null,
+    "endAt": "2026-07-21T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "桑多涅",
+        "title": "镜水析谬",
+        "element": "冰"
+      },
+      {
+        "name": "茜特菈莉",
+        "title": "白星黑曜",
+        "element": "冰"
+      }
+    ],
+    "fourStarCharacters": [],
+    "fiveStarWeapons": [
+      {
+        "name": "超越之匙",
+        "weaponType": "双手剑"
+      },
+      {
+        "name": "祭星者之望",
+        "weaponType": "法器"
+      }
+    ],
+    "fourStarWeapons": [
+      {
+        "name": "西风剑",
+        "weaponType": "单手剑"
+      },
+      {
+        "name": "祭礼弓",
+        "weaponType": "弓"
+      }
+    ]
+  },
+  "additionalWishes": [],
+  "source": {
+    "postId": "76328614",
+    "title": "「月之八」版本活动祈愿预告第一期",
+    "url": "https://www.miyoushe.com/ys/article/76328614",
+    "listUrl": "https://www.miyoushe.com/ys/home/28?type=3",
+    "publishedAt": "2026-06-30T12:05:09+08:00",
+    "updatedAt": "2026-09-18T10:13:01+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe-account-75276539/posts/76328614.json",
+    "textSource": "structured_content"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "预告是整期汇总，不含可靠的单独祈愿池名称、角色武器配对或 itemId；不得直接发布到 v1"
+  }
+}

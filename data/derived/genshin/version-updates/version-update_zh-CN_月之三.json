@@ -1,0 +1,62 @@
+{
+  "format": "genshin-version-update-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "version": "月之三",
+  "versionName": "『空月之歌·间奏』终北的夜行诗",
+  "maintenance": {
+    "startAt": "2025-12-03T06:00:00+08:00",
+    "estimatedDurationHours": 5,
+    "estimatedEndAt": "2025-12-03T11:00:00+08:00"
+  },
+  "newCharacters": [
+    {
+      "name": "杜林",
+      "rarity": 5,
+      "title": "『不熄灭的火』",
+      "element": "火",
+      "weaponType": "单手剑"
+    },
+    {
+      "name": "雅珂达",
+      "rarity": 4,
+      "title": "系风攘影",
+      "element": "风",
+      "weaponType": "弓"
+    }
+  ],
+  "newWeapons": [
+    {
+      "name": "黑蚀",
+      "rarity": 5,
+      "weaponType": "单手剑",
+      "acquisition": "wish"
+    },
+    {
+      "name": "黎明破晓之史",
+      "rarity": 5,
+      "weaponType": "弓",
+      "acquisition": "wish"
+    },
+    {
+      "name": "虹蛇的雨弦",
+      "rarity": 4,
+      "weaponType": "弓",
+      "acquisition": "unknown"
+    }
+  ],
+  "source": {
+    "postId": "71124325",
+    "title": "「『空月之歌·间奏』终北的夜行诗」「月之三」版本更新说明",
+    "url": "https://www.miyoushe.com/ys/article/71124325",
+    "publishedAt": "2025-12-03T07:00:15+08:00",
+    "updatedAt": "2026-04-22T15:06:28+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/71124325.json"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [
+      "有武器无法确认获取方式，不能视为祈愿武器"
+    ]
+  }
+}

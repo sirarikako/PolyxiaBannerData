@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "星边夜语",
+  "officialWishType": "角色活动祈愿-2",
+  "poolType": "character_event_2",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "茜特菈莉",
+        "title": "白星黑曜",
+        "element": "冰",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "北斗",
+        "title": "无冕的龙王",
+        "element": "雷",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "迪奥娜",
+        "title": "猫尾特调",
+        "element": "冰",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "菲米尼",
+        "title": "潜怀遐梦",
+        "element": "冰",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "版本更新后",
+    "endRaw": "2026/07/21 17:59",
+    "startAt": null,
+    "endAt": "2026-07-21T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/06/25/75276539/edf78075dc5619a25d1c84dc6efd7cb6_8631965106110322452.jpg",
+    "https://upload-bbs.miyoushe.com/upload/2026/06/25/75276539/68c820750192d1c899a74b44b83f99bf_474907652322155270.png"
+  ],
+  "source": {
+    "postId": "76308876",
+    "title": "「星边夜语」祈愿：「白星黑曜·茜特菈莉(冰)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/76308876",
+    "publishedAt": "2026-06-29T12:00:23+08:00",
+    "updatedAt": "2026-07-21T14:10:28+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/76308876.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized_conditional",
+    "times": {
+      "startRaw": "版本更新后",
+      "endRaw": "2026/07/21 17:59",
+      "startAt": null,
+      "endAt": "2026-07-21T17:59:00+08:00",
+      "startCondition": "after_version_update",
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/06/25/75276539/68c820750192d1c899a74b44b83f99bf_474907652322155270.png",
+      "imageSha256": "48223109d1a0717f2f76c80ee5ce95af6b6cf5e18b737b6d135b256b9c7672c0",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

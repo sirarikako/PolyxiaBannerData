@@ -1,0 +1,61 @@
+{
+  "format": "genshin-version-update-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "version": "月之四",
+  "versionName": "如果在冬夜，一个旅人",
+  "maintenance": {
+    "startAt": "2026-01-14T06:00:00+08:00",
+    "estimatedDurationHours": 5,
+    "estimatedEndAt": "2026-01-14T11:00:00+08:00"
+  },
+  "newCharacters": [
+    {
+      "name": "哥伦比娅",
+      "rarity": 5,
+      "title": "空月归乡",
+      "element": "水",
+      "weaponType": "法器"
+    },
+    {
+      "name": "兹白",
+      "rarity": 5,
+      "title": "驹隙隐泉",
+      "element": "岩",
+      "weaponType": "单手剑"
+    },
+    {
+      "name": "叶洛亚",
+      "rarity": 4,
+      "title": "魇夜燃芯",
+      "element": "岩",
+      "weaponType": "长柄武器"
+    }
+  ],
+  "newWeapons": [
+    {
+      "name": "帷间夜曲",
+      "rarity": 5,
+      "weaponType": "法器",
+      "acquisition": "wish"
+    },
+    {
+      "name": "朏魄含光",
+      "rarity": 5,
+      "weaponType": "单手剑",
+      "acquisition": "wish"
+    }
+  ],
+  "source": {
+    "postId": "72299859",
+    "title": "「如果在冬夜，一个旅人」「月之四」版本更新说明",
+    "url": "https://www.miyoushe.com/ys/article/72299859",
+    "publishedAt": "2026-01-14T07:00:20+08:00",
+    "updatedAt": "2026-03-20T10:13:12+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/72299859.json"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": []
+  }
+}

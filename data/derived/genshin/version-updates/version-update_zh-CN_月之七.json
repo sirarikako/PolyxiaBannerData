@@ -1,0 +1,61 @@
+{
+  "format": "genshin-version-update-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "version": "月之七",
+  "versionName": "『空月之歌·行律』虚空劫灰往世书",
+  "maintenance": {
+    "startAt": "2026-05-20T06:00:00+08:00",
+    "estimatedDurationHours": 5,
+    "estimatedEndAt": "2026-05-20T11:00:00+08:00"
+  },
+  "newCharacters": [
+    {
+      "name": "尼可",
+      "rarity": 5,
+      "title": "喧寂于心",
+      "element": "火",
+      "weaponType": "法器"
+    },
+    {
+      "name": "洛恩",
+      "rarity": 5,
+      "title": "恣锐锋镞",
+      "element": "冰",
+      "weaponType": "长柄武器"
+    },
+    {
+      "name": "布伦妮",
+      "rarity": 4,
+      "title": "稚梦归心",
+      "element": "风",
+      "weaponType": "法器"
+    }
+  ],
+  "newWeapons": [
+    {
+      "name": "尘光七谕",
+      "rarity": 5,
+      "weaponType": "法器",
+      "acquisition": "wish"
+    },
+    {
+      "name": "灾悔",
+      "rarity": 5,
+      "weaponType": "长柄武器",
+      "acquisition": "wish"
+    }
+  ],
+  "source": {
+    "postId": "75440954",
+    "title": "「『空月之歌·行律』虚空劫灰往世书」「月之七」版本更新说明",
+    "url": "https://www.miyoushe.com/ys/article/75440954",
+    "publishedAt": "2026-05-20T07:00:12+08:00",
+    "updatedAt": "2026-06-12T22:51:47+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/75440954.json"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": []
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "format": "genshin-missing-notice-v1",
+  "noticeType": "wish_preview",
+  "identity": {
+    "version": "示例版本",
+    "phase": 1
+  },
+  "data": {
+    "time": {
+      "endAt": "2026-11-03T14:59:00+08:00"
+    },
+    "additionalWishes": [
+      {
+        "name": "示例集录祈愿",
+        "kind": "chronicled",
+        "noticeType": "集录祈愿"
+      }
+    ]
+  },
+  "evidence": {
+    "summary": "仅演示本期全部是集录/溯光等特殊池时可不填写 up；日期与名称均为示例，不得用于真实发布。"
+  }
+}

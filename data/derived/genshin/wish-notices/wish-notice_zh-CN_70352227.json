@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "陵薮市朝",
+  "officialWishType": "角色活动祈愿-2",
+  "poolType": "character_event_2",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "钟离",
+        "title": "尘世闲游",
+        "element": "岩",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "蓝砚",
+        "title": "翦玉编春",
+        "element": "风",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "罗莎莉亚",
+        "title": "棘冠恩典",
+        "element": "冰",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "云堇",
+        "title": "红毹婵娟",
+        "element": "岩",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "2025/11/11 18:00",
+    "endRaw": "2025/12/02 14:59",
+    "startAt": "2025-11-11T18:00:00+08:00",
+    "endAt": "2025-12-02T14:59:00+08:00",
+    "startCondition": null
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2025/11/05/75276539/78b6179a428716d0a777bd0c24d8cfe5_9210035592882383612.jpg",
+    "https://upload-bbs.miyoushe.com/upload/2025/11/05/75276539/df8c92371e0bfcb65c3b1ae89dcea536_2323270841504206817.png"
+  ],
+  "source": {
+    "postId": "70352227",
+    "title": "「陵薮市朝」祈愿：「尘世闲游·钟离(岩)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/70352227",
+    "publishedAt": "2025-11-06T16:00:20+08:00",
+    "updatedAt": "2026-07-14T09:52:32+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/70352227.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized",
+    "times": {
+      "startRaw": "2025/11/11 18:00",
+      "endRaw": "2025/12/02 14:59",
+      "startAt": "2025-11-11T18:00:00+08:00",
+      "endAt": "2025-12-02T14:59:00+08:00",
+      "startCondition": null,
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2025/11/05/75276539/df8c92371e0bfcb65c3b1ae89dcea536_2323270841504206817.png",
+      "imageSha256": "3dea86eb4202bd3cea88e0cebbd266d879c75bb6cd22c873320a5bd65958fd4c",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

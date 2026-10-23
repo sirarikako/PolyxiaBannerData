@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "煦风欢舞时",
+  "officialWishType": "角色活动祈愿",
+  "poolType": "character_event",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "薇斯纳",
+        "title": "雪宴之锋",
+        "element": "风",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "迪奥娜",
+        "title": "猫尾特调",
+        "element": "冰",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "珐露珊",
+        "title": "机逐封秘",
+        "element": "风",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "重云",
+        "title": "雪融有踪",
+        "element": "冰",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "7.1版本更新后",
+    "endRaw": "2026/10/13 17:59",
+    "startAt": null,
+    "endAt": "2026-10-13T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/09/18/75276539/eccf96746ff710aedeb1fe8aa20e1df5_6483862466699722878.png",
+    "https://upload-bbs.miyoushe.com/upload/2026/09/18/75276539/23524465d4f04c03aeed4145e19898b0_2661607325888247286.png"
+  ],
+  "source": {
+    "postId": "78299710",
+    "title": "「煦风欢舞时」祈愿：「雪宴之锋·薇斯纳(风)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/78299710",
+    "publishedAt": "2026-09-21T12:00:27+08:00",
+    "updatedAt": "2026-10-12T21:58:28+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/78299710.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized_conditional",
+    "times": {
+      "startRaw": "7.1版本更新后",
+      "endRaw": "2026/10/13 17:59",
+      "startAt": null,
+      "endAt": "2026-10-13T17:59:00+08:00",
+      "startCondition": "after_version_update",
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/09/18/75276539/23524465d4f04c03aeed4145e19898b0_2661607325888247286.png",
+      "imageSha256": "8f40a3888f26e07706df1a78ee7b864c10f72e38d3b3a96fd776649699b1f217",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

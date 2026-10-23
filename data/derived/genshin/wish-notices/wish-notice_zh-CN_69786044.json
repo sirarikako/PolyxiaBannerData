@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "赤砂的诱言",
+  "officialWishType": "角色活动祈愿",
+  "poolType": "character_event",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "奈芙尔",
+        "title": "湮沙的秘闻",
+        "element": "草",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "行秋",
+        "title": "少年春衫薄",
+        "element": "水",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "柯莱",
+        "title": "萃念初蘖",
+        "element": "草",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "瑶瑶",
+        "title": "仙蕊玲珑",
+        "element": "草",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "版本更新后",
+    "endRaw": "2025/11/11 17:59",
+    "startAt": null,
+    "endAt": "2025-11-11T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2025/10/17/75276539/bf84f3fbf413c9e450462a7044493a31_3504544660406210389.jpg",
+    "https://upload-bbs.miyoushe.com/upload/2025/10/17/75276539/6e2c1687ae121c88fa14eb092c049b8b_4315122283941077542.png"
+  ],
+  "source": {
+    "postId": "69786044",
+    "title": "「赤砂的诱言」祈愿：「湮沙的秘闻·奈芙尔(草)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/69786044",
+    "publishedAt": "2025-10-20T12:00:16+08:00",
+    "updatedAt": "2025-11-24T11:41:22+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/69786044.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized_conditional",
+    "times": {
+      "startRaw": "版本更新后",
+      "endRaw": "2025/11/11 17:59",
+      "startAt": null,
+      "endAt": "2025-11-11T17:59:00+08:00",
+      "startCondition": "after_version_update",
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2025/10/17/75276539/6e2c1687ae121c88fa14eb092c049b8b_4315122283941077542.png",
+      "imageSha256": "85a9d5e32b6f759ee0dd017eb861851556e4a49caabd78e80582d4a6dd0b1531",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}
