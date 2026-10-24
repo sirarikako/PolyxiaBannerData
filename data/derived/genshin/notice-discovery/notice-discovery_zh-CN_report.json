@@ -2,7 +2,7 @@
   "format": "genshin-notice-discovery-report-v1",
   "game": "genshin",
   "locale": "zh-CN",
-  "startedAt": "2026-10-23T19:51:30+08:00",
+  "startedAt": "2026-10-24T11:14:19+08:00",
   "feeds": {
     "1": {
       "initialized": false,
@@ -13,7 +13,7 @@
     "3": {
       "initialized": false,
       "pages": 1,
-      "newPosts": 0,
+      "newPosts": 5,
       "matched": 0
     }
   },
@@ -23,5 +23,5 @@
   "reviewNeeded": [],
   "pendingCount": 0,
   "manualReviewCount": 0,
-  "finishedAt": "2026-10-23T19:51:32+08:00"
+  "finishedAt": "2026-10-24T11:14:23+08:00"
 }
