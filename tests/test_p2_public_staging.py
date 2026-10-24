@@ -1,4 +1,4 @@
-"""P2 safety gates: no raw posts or active production jobs in public staging."""
+"""P2/P4 safety gates: production workflows exactly match reviewed templates."""
 from pathlib import Path
 import re
 import subprocess
@@ -29,9 +29,12 @@ def _tracked():
 def test_only_readonly_p2_workflow_is_deployed():
     tracked = _tracked()
     assert {p for p in tracked if p.startswith(".github/workflows/")} == {
-        ".github/workflows/p2-staging-validate.yml"
+        ".github/workflows/p2-staging-validate.yml",
+        *{".github/workflows/" + name for name in EXPECTED_PRODUCTION},
     }
     assert {p.name for p in PRODUCTION.glob("*.yml")} == EXPECTED_PRODUCTION
+    for name in EXPECTED_PRODUCTION:
+        assert (ROOT / ".github/workflows" / name).read_bytes() == (PRODUCTION / name).read_bytes(), name
     workflow = (ROOT / ".github/workflows/p2-staging-validate.yml").read_text(encoding="utf-8")
     assert "permissions:\n  contents: read" in workflow
     assert "  pull_request:" in workflow

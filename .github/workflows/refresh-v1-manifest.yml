@@ -1,0 +1,71 @@
+name: 1-1_V1 Manifest自动更新
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/v1/genshin.json'
+      - 'public/v1/starrail.json'
+      - '.github/workflows/refresh-v1-manifest.yml'
+      - 'scripts/release/**'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: refresh-v1-manifest-main
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements-dev.txt
+      - name: 先校验游戏数据，拒绝不合法的 Manifest 刷新
+        run: python -m scripts.release.validate_v1 --datasets-only
+      - name: 自动计算 Manifest 哈希、数量和生成时间
+        run: python -m scripts.release.refresh_v1_manifest
+      - name: 校验正式发布数据与 Manifest
+        run: |
+          python -m scripts.release.validate_v1 --public
+          # 开发测试独立执行；发布仅使用稳定的 v1 合约回归。
+          python -m unittest discover -s tests -p 'test_v1.py'
+      - name: 只提交 Manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- public/v1/manifest.json
+          if git diff --cached --quiet; then
+            echo 'Manifest 已经是最新版本。' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m '自动更新 v1 Manifest 哈希和记录数量'
+          # 并行提交可能在运行期间推进 main；重新基于最新 main 计算后再提交。
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "::warning::main 在发布期间更新，重新检出最新版本并验证（第 ${attempt} 次）"
+            git fetch origin main
+            git reset --hard origin/main
+            python -m scripts.release.validate_v1 --datasets-only
+            python -m scripts.release.refresh_v1_manifest
+            python -m scripts.release.validate_v1 --public
+            python -m unittest discover -s tests -p 'test_v1.py'
+            git add -- public/v1/manifest.json
+            if git diff --cached --quiet; then
+              echo 'Manifest 已由其他提交刷新。' >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            git -c user.name='github-actions[bot]' \
+                -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+                commit -m '自动更新 v1 Manifest 哈希和记录数量'
+          done
+          echo "::error::连续三次提交竞争，停止更新 Manifest"
+          exit 1

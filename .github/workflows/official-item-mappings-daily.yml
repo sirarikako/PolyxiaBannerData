@@ -1,0 +1,87 @@
+# Polyxia 单仓生产：国服优先、国际服回退，直接更新本仓库 ItemID，绝不修改现有 v1。
+name: 0-1_官方ItemID每日自动更新
+on:
+  schedule:
+    - cron: '17 5 * * *' # UTC 05:17 / 北京时间13:17
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/official-item-mappings-daily.yml']
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: official-itemid-daily
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONUTF8: '1'
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 验证 ItemID 更新器回归
+        run: |
+          python -m unittest discover -s tests -p 'test_refresh_official_item_mappings.py' -v
+          python -m unittest discover -s tests -p 'test_notify_official_itemid_conflicts.py' -v
+      - name: 保存 v1 原始哈希
+        run: sha256sum public/v1/genshin.json public/v1/starrail.json public/v1/manifest.json > /tmp/v1-original-itemid.txt
+      - name: 匿名查询官方目录并仅补全 item-mappings
+        id: update
+        shell: bash
+        run: |
+          set +e
+          python -m scripts.release.refresh_official_item_mappings --write --report /tmp/itemid-daily-report.json
+          code=$?
+          set -e
+          if [ "$code" -ne 0 ] && [ "$code" -ne 2 ]; then
+            echo "::error::ItemID 更新器发生非业务异常"
+            exit "$code"
+          fi
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          test -f /tmp/itemid-daily-report.json
+      - name: 校验写入范围与 v1 哈希，提交合法映射
+        id: commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          sha256sum --check /tmp/v1-original-itemid.txt
+          git diff --exit-code -- public/v1 schemas manual
+          other="$(git diff --name-only | grep -vE '^public/item-mappings/(genshin|starrail)/zh-CN[.]json$' || true)"
+          if [ -n "$other" ]; then
+            echo "::error::存在不允许的修改 $other"
+            exit 1
+          fi
+          git add -- public/item-mappings/genshin/zh-CN.json public/item-mappings/starrail/zh-CN.json
+          if git diff --cached --quiet; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m '自动补齐官方简体中文 ItemID 对照表'
+          git push origin HEAD:main
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+      - name: 冲突 Issue 通知、自动指派和完整复核后自动关闭
+        if: always()
+        shell: bash
+        run: |
+          if [ ! -f /tmp/itemid-daily-report.json ]; then
+            echo '本次未生成 ItemID 报告，跳过 Issue 操作。' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          python -m scripts.release.notify_official_itemid_conflicts --report /tmp/itemid-daily-report.json
+      - name: 保存更新报告 Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: official-itemid-daily-report
+          path: /tmp/itemid-daily-report.json
+          if-no-files-found: warn
+          retention-days: 14
