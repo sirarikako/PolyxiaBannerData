@@ -1,4 +1,4 @@
-name: Migration and production safety validation (read-only)
+name: Public production safety validation (read-only)
 on:
   pull_request:
     branches: [main]
@@ -36,32 +36,19 @@ jobs:
             tests/test_starrail_collector_notifier_zh_cn.py \
             tests/test_notify_genshin_notice_problems.py \
             tests/test_notice_fullscan_schedule.py \
+            tests/test_production_workflow_names.py \
             tests/test_v1.py \
             tests/test_import_genshin_v1_zh_cn.py \
             tests/test_starrail_import_zh_cn.py \
             tests/test_genshin_missing_notices_zh_cn.py \
             tests/test_genshin_manual_postmerge_integration.py \
             tests/test_starrail_notice_scenarios_zh_cn.py
-      - name: P3 单次真实官方详情与 OCR 隔离探针（无 Git/Artifact 写入）
-        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && hashFiles('deploy/migration/p3-live-once.flag') != '' }}
-        shell: bash
-        timeout-minutes: 8
-        env:
-          PYTHONUTF8: '1'
-          PYTHONDONTWRITEBYTECODE: '1'
-        run: |
-          set -euo pipefail
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq --no-install-recommends tesseract-ocr tesseract-ocr-chi-sim
-          PYTHONPATH=. python tests/p3_live_official_probe.py
-      - name: 严格确认排除项和生产部署隔离
+      - name: 严格确认原文排除项与正式工作流
         shell: bash
         run: |
           set -euo pipefail
-          test -f deploy/production/workflows/genshin-v1-auto-publish.yml
-          test -f deploy/production/workflows/starrail-v1-auto-publish.yml
           for name in official-item-mappings-daily.yml refresh-v1-manifest.yml genshin-notices-zh-cn-daily-preview.yml genshin-v1-auto-publish.yml starrail-notices-zh-cn-daily-preview.yml starrail-v1-auto-publish.yml; do
-            cmp ".github/workflows/$name" "deploy/production/workflows/$name"
+            test -f ".github/workflows/$name"
           done
           test ! -d data/derived/genshin/archive
           test ! -d data/review
@@ -70,5 +57,5 @@ jobs:
           test ! -f data/announcements/genshin/zh-cn/miyoushe/checkpoint.json
           test ! -d data/announcements/genshin/zh-cn/miyoushe/posts
           test ! -d data/announcements/starrail/zh-cn/miyoushe/posts
-          ! grep -Fq 'git add -A -- data/announcements' deploy/production/workflows/genshin-notices-zh-cn-daily-preview.yml
-          ! grep -Fq 'git add -A -- data/announcements' deploy/production/workflows/starrail-notices-zh-cn-daily-preview.yml
+          ! grep -Fq 'git add -A -- data/announcements' .github/workflows/genshin-notices-zh-cn-daily-preview.yml
+          ! grep -Fq 'git add -A -- data/announcements' .github/workflows/starrail-notices-zh-cn-daily-preview.yml

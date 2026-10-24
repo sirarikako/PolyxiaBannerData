@@ -1,10 +1,10 @@
-"""P2/P4 safety gates: production workflows exactly match reviewed templates."""
+"""Long-term Public production safety gates: active workflows, raw exclusions, and publishing."""
 from pathlib import Path
 import re
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-PRODUCTION = ROOT / "deploy/production/workflows"
+PRODUCTION = ROOT / ".github/workflows"
 EXPECTED_PRODUCTION = {
     "official-item-mappings-daily.yml",
     "refresh-v1-manifest.yml",
@@ -26,16 +26,13 @@ def _tracked():
     return {path.decode("utf-8") for path in output.split(b"\0") if path}
 
 
-def test_only_readonly_p2_workflow_is_deployed():
+def test_only_six_production_workflows_and_readonly_ci_are_deployed():
     tracked = _tracked()
     assert {p for p in tracked if p.startswith(".github/workflows/")} == {
         ".github/workflows/p2-staging-validate.yml",
         *{".github/workflows/" + name for name in EXPECTED_PRODUCTION},
     }
-    assert {p.name for p in PRODUCTION.glob("*.yml")} == EXPECTED_PRODUCTION
-    for name in EXPECTED_PRODUCTION:
-        assert (ROOT / ".github/workflows" / name).read_bytes() == (PRODUCTION / name).read_bytes(), name
-    workflow = (ROOT / ".github/workflows/p2-staging-validate.yml").read_text(encoding="utf-8")
+    workflow = (PRODUCTION / "p2-staging-validate.yml").read_text(encoding="utf-8")
     assert "permissions:\n  contents: read" in workflow
     assert "  pull_request:" in workflow
     assert "  schedule:" not in workflow
@@ -61,7 +58,7 @@ def test_git_index_excludes_old_content_and_raw_notices():
         assert path in tracked, path
 
 
-def test_production_templates_cannot_add_raw_posts():
+def test_active_production_collectors_cannot_add_raw_posts():
     for game, filename in (
         ("genshin", "genshin-notices-zh-cn-daily-preview.yml"),
         ("starrail", "starrail-notices-zh-cn-daily-preview.yml"),
