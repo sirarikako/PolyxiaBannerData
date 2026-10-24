@@ -28,7 +28,7 @@ Public versioned gacha banner metadata and JSON Schemas for Genshin Impact and H
 
 ## 更新与维护 / Updates
 
-此仓库是只读发布镜像。卡池资料在私有维护仓库中采集、整理并验证后，通过 GitHub Actions 自动同步 `public/` 和 `schemas/` 到此仓库。
+**迁移状态（P2）**：公开 `main` 当前仍是既有发布镜像；在 `staging/p2-polyxia-production` Draft PR 中，正准备把此库改为自主管理公告采集、候选整合、v1 与 Manifest 的独立生产仓库。P4 完成停旧启新以前，正式生产只在 Private 执行，不启用 Public 的新定时任务。切换后不再采用跨库 v1 同步；原始公告全文、图片与历史归档不迁移、不提交 Public Git。详细边界参见 [`P2 迁移报告`](deploy/migration/P2-staging-report.md)。
 
 请勿直接修改这两个目录：下一次同步会覆盖其中的更改，包括删除源仓库中已经移除的文件。
 
