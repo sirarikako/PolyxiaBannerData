@@ -69,3 +69,16 @@ def test_official_live_probe_is_disabled_without_explicit_one_shot_opt_in():
     assert "hashFiles('deploy/migration/p3-live-once.flag') != ''" in body
     assert "github.event.pull_request.head.repo.full_name == github.repository" in body
     assert "PYTHONPATH=. python tests/p3_live_official_probe.py" in body
+
+
+def test_both_games_manual_changes_trigger_staged_reassembly():
+    genshin = (WORKFLOWS / "genshin-notices-zh-cn-daily-preview.yml").read_text(encoding="utf-8")
+    starrail = (WORKFLOWS / "starrail-notices-zh-cn-daily-preview.yml").read_text(encoding="utf-8")
+    for needle in (
+        "'manual/notices/genshin/zh-CN/missing/**'",
+        "'manual/notices/genshin/zh-CN/miyoushe/**'",
+    ):
+        assert needle in genshin
+    assert "'manual/notices/starrail/zh-CN/**'" in starrail
+    assert "python -m scripts.collect.recover_manual_raw_zh_cn --game genshin" in genshin
+    assert "python -m scripts.collect.recover_manual_raw_zh_cn --game starrail" in starrail
