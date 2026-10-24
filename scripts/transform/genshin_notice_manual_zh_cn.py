@@ -206,10 +206,29 @@ def index_additional(root: Path, existing: list[dict], kind: str) -> list[dict]:
             candidates.append({"path": raw.relative_to(root).as_posix(),
                                "error": "已经用人工文件恢复的公告缺少原人工 JSON", "postId": pid})
             continue
-        if not manual.is_file() or not raw.is_file():
+        if not manual.is_file():
             continue
         try:
-            base = partial_from_raw(root, pid, kind, raw)
+            if raw.is_file():
+                base = partial_from_raw(root, pid, kind, raw)
+                evidence_file = raw.relative_to(root).as_posix()
+            else:
+                # P3: 只有此前经过真实原文验证、且已经正式结清的
+                # manualRecovered 才能在无持久 raw 的公开仓库复用来源证明。
+                completed = (state.get("completed") or {}).get(pid) or {}
+                if (pid not in (state.get("manualRecovered") or {})
+                        or completed.get("resolution") != "manual_verified"
+                        or completed.get("kind") != kind
+                        or not isinstance(completed.get("title"), str)
+                        or not completed["title"]
+                        or entry.get("title") != completed["title"]):
+                    raise ValueError("缺少已验证的官方原文；需按 postId 临时补抓，禁止凭人工文件生成官方来源")
+                base = {"game": "genshin", "locale": "zh-CN",
+                        "noticeType": kind,
+                        "source": {"postId": pid, "title": completed["title"],
+                                   "url": f"https://www.miyoushe.com/ys/article/{pid}"},
+                        "review": {"warnings": []}}
+                evidence_file = checkpoint.relative_to(root).as_posix()
             if entry.get("title") and entry["title"] != base["source"]["title"]:
                 raise ValueError("原始文章标题与发现时的标题不同，禁止人工恢复错误来源")
             patched = apply(root, kind, pid, base)
@@ -223,7 +242,7 @@ def index_additional(root: Path, existing: list[dict], kind: str) -> list[dict]:
             else:
                 filename, folder = f"wish-notice_zh-CN_{pid}.json", "wish-notices"
             candidates.append({"path": f"data/derived/genshin/{folder}/{filename}",
-                               "evidenceFile": raw.relative_to(root).as_posix(),
+                               "evidenceFile": evidence_file,
                                **patched, "fallback": True})
         except (ValueError, KeyError, TypeError, OSError, json.JSONDecodeError) as exc:
             candidates.append({"path": raw.relative_to(root).as_posix(),
