@@ -4,16 +4,23 @@
 """
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1] / ".github" / "workflows"
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def workflow(name):
+    # Private 生产使用原路径；Public P2/P3 在正式切换前只能使用暂存路径。
+    active = ROOT / ".github/workflows" / name
+    staged = ROOT / "deploy/production/workflows" / name
+    return active if active.is_file() else staged
 
 
 def test_official_item_mapping_daily_time():
-    body = (ROOT / "official-item-mappings-daily.yml").read_text(encoding="utf-8")
+    body = workflow("official-item-mappings-daily.yml").read_text(encoding="utf-8")
     assert "cron: '17 5 * * *'" in body  # UTC+8 13:17
 
 
 def test_genshin_all_five_scheduled_runs_are_full_scans():
-    body = (ROOT / "genshin-notices-zh-cn-daily-preview.yml").read_text(encoding="utf-8")
+    body = workflow("genshin-notices-zh-cn-daily-preview.yml").read_text(encoding="utf-8")
     assert "cron: '17 6 * * *'" in body
     assert "cron: '27,37,47,57 6 * * *'" in body
     assert "os.environ['EVENT_NAME'] == 'workflow_dispatch'" in body
@@ -24,7 +31,7 @@ def test_genshin_all_five_scheduled_runs_are_full_scans():
 
 
 def test_starrail_all_five_scheduled_runs_are_full_scans():
-    body = (ROOT / "starrail-notices-zh-cn-daily-preview.yml").read_text(encoding="utf-8")
+    body = workflow("starrail-notices-zh-cn-daily-preview.yml").read_text(encoding="utf-8")
     assert "cron: '17 7 * * *'" in body
     assert "cron: '27,37,47,57 7 * * *'" in body
     assert "echo 'should_run=true' >>" in body
