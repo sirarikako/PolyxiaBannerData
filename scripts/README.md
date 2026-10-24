@@ -1,5 +1,7 @@
 # scripts：数据抓取、整理、v1 发布与仓库同步
 
+> **Public P2 迁移说明（2026-10-24）**：本文件保留自 Private 开发仓库，后文涉及旧 1-2 跨库同步、持久 `posts/*.json`、历史 Actions 时序的内容仅作旧流程参考，**不代表 Public 的现役部署**。Public 正式迁移目标为单仓执行 0-1、1-1、2-1/2-2、3-1/3-2，不再同步库间 v1；公告完整原文及图片不进入 Public Git，采集时仅临时使用。生产工作流当前只暂存于 `deploy/production/workflows/`，未启用；P3 仍需验证缺少原文时的人工恢复路径。以 [`P2 迁移报告`](../deploy/migration/P2-staging-report.md) 和 [`生产暂存说明`](../deploy/production/README.md) 为准。
+
 本目录集中管理 **CastoriceWishBannerData（私有仓库）** 的公告采集、解析、候选整合、v1 导入、数据校验与发布辅助脚本。本文以当前 `main` 分支的实际 GitHub Actions 和脚本行为为准，供仓库开发与运维使用，不属于同步到公开仓库的 API 文档。
 
 > 当前已实现 **原神简体中文公告增量自动采集与 v1 自动发布**；原神与星穹铁道的既有 v1 数据均参与 Manifest 校验和公开同步。**星铁的 3-1/3-2 自动化代码已在 PR #16 建立，但尚未合并 main；合并之前不可宣称已正式启用。**
