@@ -66,8 +66,8 @@ def archive_git_write_allowed() -> bool:
         return False
     # Exact repository, not a name substring or a fork.
     return bool(re.fullmatch(
-        r"(?:(?:https?|ssh)://(?:git@)?|git@)github\\.com[:/]"
-        r"sirarikako/CastoriceWishBannerData(?:\\.git)?/?",
+        r"(?:(?:https?|ssh)://(?:git@)?|git@)github\.com[:/]"
+        r"sirarikako/CastoriceWishBannerData(?:\.git)?/?",
         result.stdout.strip(), flags=re.IGNORECASE,
     ))
 
