@@ -114,6 +114,15 @@ jobs:
           code=$?
           echo "code=$code" >> "$GITHUB_OUTPUT"
           exit 0
+      - name: 临时补抓缺少官方来源的人工文章（不进入 Git）
+        id: manual_source
+        shell: bash
+        run: |
+          set +e
+          python -m scripts.collect.recover_manual_raw_zh_cn --game genshin
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
       - name: 逐池整合（缺少其他公告允许继续等待）
         id: assemble
         shell: bash
@@ -162,6 +171,7 @@ jobs:
         if: always()
         env:
           GENSHIN_COLLECT_CODE: ${{ steps.collect.outputs.code }}
+          GENSHIN_MANUAL_SOURCE_CODE: ${{ steps.manual_source.outputs.code }}
           GENSHIN_ASSEMBLE_CODE: ${{ steps.assemble.outputs.code }}
           GENSHIN_PREVIEW_CODE: ${{ steps.preview.outputs.code }}
           GENSHIN_SANDBOX_CODE: ${{ steps.sandbox.outputs.code }}
@@ -246,6 +256,7 @@ jobs:
           print('采集阶段有临时来源错误，已保留 pending，等待下次运行')
           PY
           fi
+          test "${{ steps.manual_source.outputs.code }}" = 0
           test "${ASSEMBLE_CODE:-1}" = 0
           test "${PREVIEW_CODE:-1}" = 0
           test "${SANDBOX_CODE:-1}" = 0
