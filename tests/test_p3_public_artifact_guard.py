@@ -1,6 +1,6 @@
-"""P3: prevent uploading or committing full official post bodies to the Public repo.
+"""Prevent uploading or committing full official article bodies to Public Git or Artifacts.
 
-Read only staged production workflows, not the active Actions runner configuration.
+Inspect the six active production workflows directly.
 """
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-WORKFLOWS = ROOT / "deploy/production/workflows"
+WORKFLOWS = ROOT / ".github/workflows"
 NAMES = (
     "official-item-mappings-daily.yml",
     "refresh-v1-manifest.yml",
@@ -63,15 +63,14 @@ def test_public_notice_collectors_never_commit_raw_or_debug_dumps():
         assert "set -x" not in body
 
 
-def test_official_live_probe_is_disabled_without_explicit_one_shot_opt_in():
+def test_decommissioned_live_probe_cannot_run_in_ci():
+    assert not (ROOT / "tests/p3_live_official_probe.py").exists()
     assert not (ROOT / "deploy/migration/p3-live-once.flag").exists()
-    body = (ROOT / ".github/workflows/p2-staging-validate.yml").read_text(encoding="utf-8")
-    assert "hashFiles('deploy/migration/p3-live-once.flag') != ''" in body
-    assert "github.event.pull_request.head.repo.full_name == github.repository" in body
-    assert "PYTHONPATH=. python tests/p3_live_official_probe.py" in body
+    workflow = (WORKFLOWS / "p2-staging-validate.yml").read_text(encoding="utf-8")
+    assert "p3-live-once.flag" not in workflow
+    assert "p3_live_official_probe.py" not in workflow
 
-
-def test_both_games_manual_changes_trigger_staged_reassembly():
+def test_both_games_manual_changes_trigger_active_reassembly():
     genshin = (WORKFLOWS / "genshin-notices-zh-cn-daily-preview.yml").read_text(encoding="utf-8")
     starrail = (WORKFLOWS / "starrail-notices-zh-cn-daily-preview.yml").read_text(encoding="utf-8")
     for needle in (

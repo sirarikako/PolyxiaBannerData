@@ -8,10 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def workflow(name):
-    # Private 生产使用原路径；Public P2/P3 在正式切换前只能使用暂存路径。
-    active = ROOT / ".github/workflows" / name
-    staged = ROOT / "deploy/production/workflows" / name
-    return active if active.is_file() else staged
+    return ROOT / ".github/workflows" / name
 
 
 def test_official_item_mapping_daily_time():
