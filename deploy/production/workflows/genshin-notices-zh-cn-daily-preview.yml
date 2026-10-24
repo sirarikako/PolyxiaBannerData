@@ -9,6 +9,7 @@ on:
     branches: [main]
     paths:
       - 'manual/notices/genshin/zh-CN/missing/**'
+      - 'manual/notices/genshin/zh-CN/miyoushe/**'
   workflow_dispatch:
     inputs:
       retry_only:
