@@ -48,6 +48,31 @@ def load_missing(root=ROOT):
         result.append((path, obj))
     return result
 
+def verified_structured_source(root, pid):
+    """已通过官方原文解析器输出的结构化文件，可作为 raw 不持久化后的来源凭证。"""
+    for folder, prefix, fmt in (
+        ("warp-notices", "warp-notice", "starrail-warp-notice-v1"),
+        ("collab-notices", "collab-notice", "starrail-collab-notice-v1"),
+    ):
+        path = (root / "data/derived/starrail" / folder
+                / f"{prefix}_zh-CN_{pid}.json")
+        if not path.is_file():
+            continue
+        try:
+            record = json.loads(path.read_text(encoding="utf-8"))
+        except (ValueError, OSError):
+            continue
+        source = record.get("source") or {}
+        if (record.get("format") == fmt
+                and record.get("game") == "starrail"
+                and str(source.get("postId")) == pid
+                and isinstance(source.get("title"), str)
+                and bool(source["title"].strip())
+                and source.get("url") == f"https://www.miyoushe.com/sr/article/{pid}"):
+            return True
+    return False
+
+
 def load_real(root=ROOT):
     folder = root / "manual/notices/starrail/zh-CN/miyoushe"
     raw_folder = root / "data/announcements/starrail/zh-cn/miyoushe/posts"
@@ -55,7 +80,13 @@ def load_real(root=ROOT):
     for path in sorted(folder.glob("*.json")):
         obj = validate_manual(path, "starrail-notice-manual.schema.json", root)
         pid = obj["postId"]
-        if path.stem != pid or not (raw_folder / (pid + ".json")).is_file():
-            raise ValueError(f"真实帖子人工文件 {path} 缺少匹配的官方原文，不能伪造文章")
+        if path.stem != pid or not (
+            (raw_folder / (pid + ".json")).is_file()
+            or verified_structured_source(root, pid)
+        ):
+            raise ValueError(
+                f"真实帖子人工文件 {path} 缺少已验证官方来源；"
+                "需要按 postId 临时补抓，禁止凭人工数据伪造文章"
+            )
         result.append((path, obj))
     return result
