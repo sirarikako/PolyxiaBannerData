@@ -66,7 +66,7 @@ def test_public_notice_collectors_never_commit_raw_or_debug_dumps():
 def test_decommissioned_live_probe_cannot_run_in_ci():
     assert not (ROOT / "tests/p3_live_official_probe.py").exists()
     assert not (ROOT / "deploy/migration/p3-live-once.flag").exists()
-    workflow = (WORKFLOWS / "p2-staging-validate.yml").read_text(encoding="utf-8")
+    workflow = (WORKFLOWS / "public-production-safety.yml").read_text(encoding="utf-8")
     assert "p3-live-once.flag" not in workflow
     assert "p3_live_official_probe.py" not in workflow
 

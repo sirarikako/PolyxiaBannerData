@@ -48,7 +48,7 @@
 python -m scripts.release.validate_v1 --public
 python -m pytest -q tests/test_v1.py
 python -m pytest -q tests/test_public_archive_write_guard.py tests/test_deleted_official_notice_recovery.py
-python -m pytest -q tests/test_p3_no_persisted_raw.py tests/test_p3_no_raw_end_to_end.py
+python -m pytest -q tests/test_no_persisted_raw.py tests/test_no_raw_end_to_end.py
 ~~~
 
-Public PR CI 只运行离线测试，不主动抓取新公告或修改正式 v1。不要删除正式扫描 checkpoint 或未处理候选。
+Public PR 安全 CI（`.github/workflows/public-production-safety.yml`）只运行离线测试，不主动抓取新公告或修改正式 v1。不要删除正式扫描 checkpoint 或未处理候选。
