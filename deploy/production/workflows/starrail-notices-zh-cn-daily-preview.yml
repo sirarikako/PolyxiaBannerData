@@ -77,6 +77,8 @@ jobs:
             else
               python -m scripts.collect.collect_starrail_notices_zh_cn --max-pages 15
             fi
+            # 无持久 raw：只对人工引用、缺少可信结构化来源的官方文章临时补抓。
+            python -m scripts.collect.recover_manual_raw_zh_cn --game starrail
             python -m scripts.transform.assemble_starrail_warp_candidates_zh_cn > /tmp/starrail-v1-readiness.json
             python -m scripts.release.import_starrail_v1_zh_cn --isolate-invalid > /tmp/starrail-v1-preview.json
             sha256sum -c /tmp/starrail-v1-before.sha256
