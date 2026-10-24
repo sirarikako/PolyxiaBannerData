@@ -98,7 +98,9 @@ def fetch(url: str, params: dict, retries: int = 3, timeout: int = 15) -> dict:
             last = exc
         if attempt < retries - 1:
             time.sleep(1.5 * (2**attempt))
-    raise RuntimeError(f"{full_url} -> {type(last).__name__}: {last}")
+    # Preserve the transport cause so the active Genshin scanner can distinguish
+    # a transient network failure from malformed data, HTTP 4xx or verification.
+    raise RuntimeError(f"{full_url} -> {type(last).__name__}: {last}") from last
 
 
 def save_json(path: Path, data: object) -> None:

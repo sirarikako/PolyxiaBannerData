@@ -19,7 +19,7 @@ from tempfile import TemporaryDirectory
 import subprocess
 import sys
 from typing import Any
-from urllib.error import URLError
+from urllib.error import URLError, HTTPError
 
 from scripts.collect.download_genshin_notice_images_zh_cn import download_images, ImageArchiveError
 from scripts.collect.collect_miyoushe_announcements import (
@@ -41,6 +41,9 @@ CHECKPOINT = STATE_DIR / "notice-discovery_zh-CN_checkpoint.json"
 REPORT = STATE_DIR / "notice-discovery_zh-CN_report.json"
 RAW_DIR = ROOT / "data/announcements/genshin/zh-cn/miyoushe/posts"
 LIST_API = "https://bbs-api-static.miyoushe.com/painter/wapi/getNewsList"
+# Official backup verified on GitHub Runner for both announcement feeds, including
+# first two pages and identical cursors (P4 probe #40057185154).
+BACKUP_LIST_API = "https://api-takumi.mihoyo.com/post/wapi/getNewsList"
 DETAIL_API = "https://bbs-api.miyoushe.com/post/wapi/getPostFull"
 FEEDS = (1, 3)
 TZ8 = timezone(timedelta(hours=8))
@@ -54,6 +57,10 @@ class DiscoveryError(RuntimeError):
 
 class TransientSourceError(RuntimeError):
     """来源网络临时故障；仅这类单篇错误允许下次自动重试。"""
+
+
+class TransientListError(DiscoveryError):
+    """列表出现明确的网络故障，允许从第一页换官方入口重新扫描。"""
 
 
 class ManualReviewRequired(RuntimeError):
@@ -102,16 +109,38 @@ def persist(state: dict, path: Path = CHECKPOINT) -> None:
     save_json(path, state)
 
 
-def list_page(feed: int, cursor: str = "") -> tuple[list[dict], bool, str]:
-    """getNewsList 用与网页对应的 type 参数，不请求其他站点或游戏。"""
+def list_page(feed: int, cursor: str = "", *, endpoint: str = LIST_API) -> tuple[list[dict], bool, str]:
+    """读取指定官方列表源的一页。只对真实传输故障启动备用源重扫。
+
+    两种 URL 均已经过 P4 Runner 双栏目、两页 ID/游标一致性验证。
+    不自动切换未经验证的域名，更不会绕过验证码或 HTTP 429。
+    """
     if feed not in FEEDS:
         raise ValueError("不支持的公告分栏")
-    # 定时任务会再次扫描列表；列表请求失败时不在 HTTP 层重试。
-    # 只覆盖列表的重试次数，公告正文继续沿用 fetch 默认的 3 次请求。
-    data = fetch(LIST_API, {
-        "gids": 2, "type": feed, "page_size": 20,
-        "last_id": cursor, "client_type": 4,
-    }, retries=1)["data"]
+    if endpoint not in (LIST_API, BACKUP_LIST_API):
+        raise ValueError("不允许的公告列表来源")
+    params = {
+        "gids": 2, "type": feed, "page_size": 20, "last_id": cursor,
+    }
+    if endpoint == LIST_API:
+        params["client_type"] = 4
+    try:
+        # 列表失败不做原地 HTTP 重试，也不能在中途替换游标来源。
+        # 单篇详情仍沿用共享 fetch 默认的 3 次请求。
+        data = fetch(endpoint, params, retries=1)["data"]
+    except (VerificationRequired, RateLimited):
+        raise  # 验证、限流：立即停止，不访问备用源
+    except RuntimeError as exc:
+        cause = exc.__cause__
+        if isinstance(cause, HTTPError):
+            transient = cause.code in (500, 502, 503, 504)
+        else:
+            transient = isinstance(cause, (URLError, TimeoutError, ConnectionError))
+        if transient:
+            raise TransientListError(
+                f"type={feed} 官方列表网络故障：{type(cause).__name__}"
+            ) from exc
+        raise
     entries = data.get("list")
     if not isinstance(entries, list) or not isinstance(data.get("is_last"), bool):
         raise DiscoveryError(f"type={feed} 列表缺少 list / is_last")
@@ -127,6 +156,15 @@ def list_page(feed: int, cursor: str = "") -> tuple[list[dict], bool, str]:
     return posts, data["is_last"], nxt
 
 
+def initial_list_page(feed: int) -> tuple[list[dict], bool, str]:
+    """首次建立分栏基线：官方主源发生传输故障时回退一次。"""
+    try:
+        return list_page(feed)
+    except TransientListError:
+        print(f"type={feed} 主源网络故障，基线改用已验证官方备用源", flush=True)
+        return list_page(feed, endpoint=BACKUP_LIST_API)
+
+
 def classify(title: str) -> str | None:
     """只选择当前三个单篇提取器实际支持的标题类别。"""
     if version_notice_kind(title) == "release_notes":
@@ -140,7 +178,7 @@ def classify(title: str) -> str | None:
     return None
 
 
-def discover(feed: int, anchors: list[str], max_pages: int) -> tuple[list[dict], list[str], int]:
+def _discover_on(feed: int, anchors: list[str], max_pages: int, endpoint: str) -> tuple[list[dict], list[str], int]:
     """完整检查当前页；连续 3 个已知 ID 证明已与上次的列表重叠。
 
     如果限定页数内无法证明重叠，不提交新锚点，防止因漏页而跳过公告。
@@ -156,7 +194,10 @@ def discover(feed: int, anchors: list[str], max_pages: int) -> tuple[list[dict],
     fresh: list[dict] = []
     reached = False
     for page in range(1, max_pages + 1):
-        posts, is_last, nxt = list_page(feed, cursor)
+        if endpoint == LIST_API:
+            posts, is_last, nxt = list_page(feed, cursor)
+        else:
+            posts, is_last, nxt = list_page(feed, cursor, endpoint=endpoint)
         for post in posts:
             pid = str(post["post_id"])
             if pid in visible:
@@ -181,6 +222,20 @@ def discover(feed: int, anchors: list[str], max_pages: int) -> tuple[list[dict],
         f"type={feed} 检查 {max_pages} 页仍未遇到旧锚点；"
         "本分栏进度未前进，可增加 --max-pages 后重试"
     )
+
+
+
+def discover(feed: int, anchors: list[str], max_pages: int) -> tuple[list[dict], list[str], int]:
+    """网络故障时从第一页重扫备用官方源，绝不跨源复用游标。
+
+    第一个扫描结果只有完全走到旧锚点或列表末尾后才会进入 checkpoint。
+    HTTP 429 / 验证 / 无效数据不会触发备用源访问。
+    """
+    try:
+        return _discover_on(feed, anchors, max_pages, LIST_API)
+    except TransientListError:
+        print(f"type={feed} 主列表源网络故障；从第一页使用官方备用源重扫", flush=True)
+        return _discover_on(feed, anchors, max_pages, BACKUP_LIST_API)
 
 
 def enqueue(state: dict, feed: int, posts: list[dict]) -> int:
@@ -357,7 +412,7 @@ def run(*, max_pages: int = 5, checkpoint: Path = CHECKPOINT,
         key = str(feed)
         previous = state["feeds"].get(key)
         if previous is None:
-            posts, _, _ = list_page(feed)
+            posts, _, _ = initial_list_page(feed)
             state["feeds"][key] = {
                 "anchors": [str(p["post_id"]) for p in posts],
                 "lastCheckedAt": now(), "initializedOnly": True,
