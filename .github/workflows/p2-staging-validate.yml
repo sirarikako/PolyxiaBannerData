@@ -25,6 +25,7 @@ jobs:
         run: |
           python -m pytest -q \
             tests/test_p2_public_staging.py \
+            tests/test_p3_no_persisted_raw.py \
             tests/test_v1.py \
             tests/test_import_genshin_v1_zh_cn.py \
             tests/test_starrail_import_zh_cn.py \
