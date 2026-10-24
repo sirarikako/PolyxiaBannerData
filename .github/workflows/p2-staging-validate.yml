@@ -38,6 +38,18 @@ jobs:
             tests/test_genshin_missing_notices_zh_cn.py \
             tests/test_genshin_manual_postmerge_integration.py \
             tests/test_starrail_notice_scenarios_zh_cn.py
+      - name: P3 单次真实官方详情与 OCR 隔离探针（无 Git/Artifact 写入）
+        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && hashFiles('deploy/migration/p3-live-once.flag') != '' }}
+        shell: bash
+        timeout-minutes: 8
+        env:
+          PYTHONUTF8: '1'
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends tesseract-ocr tesseract-ocr-chi-sim
+          PYTHONPATH=. python tests/p3_live_official_probe.py
       - name: 严格确认排除项和生产部署隔离
         shell: bash
         run: |
