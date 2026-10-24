@@ -24,7 +24,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m pip install -r requirements.txt
       - name: 先校验游戏数据，拒绝不合法的 Manifest 刷新
         run: python -m scripts.release.validate_v1 --datasets-only
       - name: 自动计算 Manifest 哈希、数量和生成时间
@@ -32,8 +32,6 @@ jobs:
       - name: 校验正式发布数据与 Manifest
         run: |
           python -m scripts.release.validate_v1 --public
-          # 开发测试独立执行；发布仅使用稳定的 v1 合约回归。
-          python -m unittest discover -s tests -p 'test_v1.py'
       - name: 只提交 Manifest
         shell: bash
         run: |
@@ -57,8 +55,7 @@ jobs:
             python -m scripts.release.validate_v1 --datasets-only
             python -m scripts.release.refresh_v1_manifest
             python -m scripts.release.validate_v1 --public
-            python -m unittest discover -s tests -p 'test_v1.py'
-            git add -- public/v1/manifest.json
+              git add -- public/v1/manifest.json
             if git diff --cached --quiet; then
               echo 'Manifest 已由其他提交刷新。' >> "$GITHUB_STEP_SUMMARY"
               exit 0

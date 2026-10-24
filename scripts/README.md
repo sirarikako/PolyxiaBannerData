@@ -42,13 +42,15 @@
 
 缺帖人工补充模板和 Schema 参阅 [manual 说明](../manual/README.md)。获取不到官方文章时应保留既有候选、checkpoint 与正式 v1，进入 pending/人工复核，而不是把失败视作“没有新公告”。图片 OCR 只在当次 Runner 内运行，不保存完整图片。
 
-## 只读验证
+## 生产数据安全与开发测试边界
 
-~~~bash
-python -m scripts.release.validate_v1 --public
-python -m pytest -q tests/test_v1.py
-python -m pytest -q tests/test_public_archive_write_guard.py tests/test_deleted_official_notice_recovery.py
-python -m pytest -q tests/test_no_persisted_raw.py tests/test_no_raw_end_to_end.py
-~~~
+Public `main` 不包含 `tests/`、`requirements-dev.txt` 或测试用 Actions，也不会在生产任务中执行 pytest/unittest。
 
-Public PR 安全 CI（`.github/workflows/public-production-safety.yml`）只运行离线测试，不主动抓取新公告或修改正式 v1。不要删除正式扫描 checkpoint 或未处理候选。
+正式发布流程仍执行：
+
+- `python -m scripts.release.validate_v1 --datasets-only`：独立验证发布数据。
+- `python -m scripts.release.refresh_v1_manifest`：生成临时或正式 Manifest。
+- `python -m scripts.release.validate_v1 --public`：核对 Schema、Manifest 与数据哈希。
+- 发布范围、原神 2-1 保证 v1 不变、checkpoint/人工复核/Issue/Artifact 原文保护等生产守卫。
+
+开发测试与正式 YAML 的静态验收统一在 Private `CastoriceWishBannerData` 中完成。部署用的六份审核版 YAML 和运行依赖位于 Private `deploy/public-release/`；不要在 Public 单独修改代码后跳过 Private 回归。
