@@ -1,4 +1,4 @@
-name: P2 staging validation (read-only)
+name: Migration and production safety validation (read-only)
 on:
   pull_request:
     branches: [main]
@@ -58,8 +58,9 @@ jobs:
           set -euo pipefail
           test -f deploy/production/workflows/genshin-v1-auto-publish.yml
           test -f deploy/production/workflows/starrail-v1-auto-publish.yml
-          test ! -f .github/workflows/genshin-v1-auto-publish.yml
-          test ! -f .github/workflows/starrail-v1-auto-publish.yml
+          for name in official-item-mappings-daily.yml refresh-v1-manifest.yml genshin-notices-zh-cn-daily-preview.yml genshin-v1-auto-publish.yml starrail-notices-zh-cn-daily-preview.yml starrail-v1-auto-publish.yml; do
+            cmp ".github/workflows/$name" "deploy/production/workflows/$name"
+          done
           test ! -d data/derived/genshin/archive
           test ! -d data/review
           test ! -d data/announcements/genshin/zh-cn/miyoushe/images
