@@ -11,6 +11,8 @@ from datetime import datetime, timedelta, timezone
 from hashlib import sha256
 from http.client import HTTPException
 import json
+import os
+import re
 from pathlib import Path
 import signal
 import subprocess
@@ -42,6 +44,42 @@ DETAIL_SOURCES = (
     "https://bbs-api.miyoushe.com/post/wapi/getPostFull",
     "https://bbs-api.mihoyo.com/post/wapi/getPostFull",
 )
+# Historical archiver can write complete official posts. Never permit that old
+# Git-push mode in Public, even when the CLI is bypassed and git_commit() is called
+# directly. GitHub Actions always sets GITHUB_REPOSITORY; local clones are checked
+# by their actual origin remote. Unknown remotes fail closed.
+PRIVATE_DEV_REPOSITORY = "sirarikako/castoricewishbannerdata"
+
+
+def archive_git_write_allowed() -> bool:
+    current = os.environ.get("GITHUB_REPOSITORY", "").strip().lower()
+    if current and current != PRIVATE_DEV_REPOSITORY:
+        return False
+    try:
+        result = subprocess.run(
+            ["git", "remote", "get-url", "origin"], cwd=REPO_ROOT,
+            check=False, capture_output=True, text=True, timeout=10,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return False
+    if result.returncode != 0:
+        return False
+    # Exact repository, not a name substring or a fork.
+    return bool(re.fullmatch(
+        r"(?:(?:https?|ssh)://(?:git@)?|git@)github\.com[:/]"
+        r"sirarikako/CastoriceWishBannerData(?:\.git)?/?",
+        result.stdout.strip(), flags=re.IGNORECASE,
+    ))
+
+
+def require_private_archive_git_write() -> None:
+    if not archive_git_write_allowed():
+        raise PermissionError(
+            "旧公告归档的 Git 提交仅允许 Private 开发仓库；"
+            "Public/未知仓库禁止 --commit-progress 或直接 git_commit"
+        )
+
+
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; CastoriceWishBannerData/1.0)",
     "Accept": "application/json",
@@ -195,6 +233,8 @@ class Collector:
                  max_detail_requests: int = 0):
         if stage not in ("list", "details", "all", "banner-details", "version-details"):
             raise ValueError("Unsupported collection stage")
+        if commit_progress:
+            require_private_archive_git_write()
         self.stage = stage
         self.folder = folder
         self.commit_progress = commit_progress
@@ -520,6 +560,7 @@ class Collector:
             self.flush(force_commit=True)
 
     def git_commit(self) -> None:
+        require_private_archive_git_write()
         rel = self.folder.resolve().relative_to(REPO_ROOT.resolve())
         subprocess.run(["git", "add", "-A", "--", str(rel)], cwd=REPO_ROOT, check=True)
         diff = subprocess.run(["git", "diff", "--cached", "--quiet", "--", str(rel)], cwd=REPO_ROOT)
@@ -661,6 +702,8 @@ def main(argv=None) -> int:
     parser.add_argument("--max-detail-requests", type=int, default=0,
                         help="Max full post IDs attempted per run; 0 = unlimited")
     args = parser.parse_args(argv)
+    if args.commit_progress and not archive_git_write_allowed():
+        parser.error("--commit-progress 仅允许 Private 开发仓库；Public 禁止写入历史公告")
     if min(args.batch_size, args.checkpoint_seconds, args.max_minutes,
            args.max_pages, args.max_detail_failures) <= 0:
         parser.error("All numeric options must be positive")
