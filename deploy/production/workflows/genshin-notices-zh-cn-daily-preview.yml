@@ -207,6 +207,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GENSHIN_FINAL_REPORT_ONLY: '1'
           GENSHIN_COLLECT_CODE: ${{ steps.collect.outputs.code }}
+          GENSHIN_MANUAL_SOURCE_CODE: ${{ steps.manual_source.outputs.code }}
           GENSHIN_ASSEMBLE_CODE: ${{ steps.assemble.outputs.code }}
           GENSHIN_PREVIEW_CODE: ${{ steps.preview.outputs.code }}
           GENSHIN_SANDBOX_CODE: ${{ steps.sandbox.outputs.code }}
