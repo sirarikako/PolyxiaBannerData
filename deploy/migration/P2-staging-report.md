@@ -1,72 +1,66 @@
-# P2 — PolyxiaBannerData 生产迁移暂存报告（尚未切换）
+# P2 — PolyxiaBannerData 迁移验收（未切换）
 
-**分支：** `staging/p2-polyxia-production`。该分支属于 Public 仓库，**不是**正式 `main`。
+**2026-10-24 最终决定：旧公告全文 `data/announcements/**/posts/*.json` 不迁移，也不得将新取得的完整正文提交 Public Git。** 已从 P2 目标范围移除 519 篇旧正文，此项不再是迁移缺口。Runner 可临时取得需要解析的官方文章和 OCR 图片，但只将结构化结果持久化到仓库。
 
-源 Private 基线 main：`acad003dd790d267eb32ab5cd1ea6b81dc9b1ade`。
-Public 基线 main：`c9b7a6a40036b11aad1a9c690440cb5cd8a7bc2b`。
-P1 生产模板来源：Private PR #30 `feature/p1-polyxia-production-workflows`。
+## 仓库与基线
 
-## 已迁移并按 Git Blob SHA 校验的目录
+- Private 开发库：`sirarikako/CastoriceWishBannerData`。P0 基线 main：`acad003dd790d267eb32ab5cd1ea6b81dc9b1ade`，P1/P2 来源为 Draft PR #30/#31。
+- Public 生产目标：`sirarikako/PolyxiaBannerData`。P0 基线 main：`c9b7a6a40036b11aad1a9c690440cb5cd8a7bc2b`。
+- 本次仅暂存于 Public `staging/p2-polyxia-production` / Draft PR #1；未修改双方 `main`，不能提前合并或启动生产。
+- 仍由 Private `main` 唯一执行正式生产；P4 切换前必须按**当时最新** Private `main` 重新校验增量。
 
-| 内容 | 数量 | 说明 |
+## data 范围：来源 817 文件全部分类
+
+| 数据分类 | 文件数 | 最终处理 |
 | --- | ---: | --- |
-| `data/` | 156 文件 / 521,780 bytes | 公告增量 checkpoint、解析、候选、就绪报告及 README |
-| `scripts/` | 39 文件 | 现役 collect / transform / release，不含 TEMP/experiments/历史重放 |
-| `tests/` | 40 文件 | 与 v1 和现役代码相关的回归及 fixture/v1 |
-| `manual/` | 13 文件 | 当前人工设置、模板和说明，排除 `manual/archive` |
-| `deploy/production/` | 7 文件 | P1 六份正式 workflow 模板及 README；全部不是 Actions 可执行路径 |
-| `requirements-dev.txt` | 1 文件 | 保留与现有代码一致的依赖 |
+| 当前 checkpoint、解析、候选、报告及相关 README | **156** | **迁移** |
+| 旧完整公告原文 `posts/*.json` | **519** / 10,838,343 bytes | **明确不迁移，今后也不提交 Public Git** |
+| 历史图片、旧索引、归档、审核数据等 | **142** | 依原方案排除 |
+| **Private 来源 data 合计** | **817** | **817/817 已归类** |
 
-Public 原有 `public/` + `schemas/` 共 15 个 Blob 未改动。只读验证 workflow `p2-staging-validate.yml` 为新增加的 staging CI，不具备内容写入权限。
+最初讨论的 675 个 `data/` 文件包含现在明确排除的 519 篇正文。**最终 P2 的 `data/` 目标为 156 文件**；因目录说明更新，当前暂存字节数为 522,255 bytes。没有待补的旧公告。未来任何 raw 文章需要只在本轮 Runner 临时使用，不得先提交后删除（公开 Git 历史仍可见）。
 
-## 重要：当前 P2 尚未完成全部选定数据迁移
+## P2 暂存清单与 SHA 审计（2026-10-24）
 
-最终用户选择的是：排除 `data/derived/genshin/archive/`、`data/review/`、历史 `images/`、旧 `index.json`、旧 `checkpoint.json`、`collection-report.json`、`end-probe.json`，其余保留，包括官方原始帖子。
+| 目录 | 文件数 | 备注 |
+| --- | ---: | --- |
+| `data/` | 156 | 结构化及状态文件 |
+| `scripts/` | 39 | 采集、解析、整合、发布模块 |
+| `tests/` | 40 | 现役回归、fixture 与 P2 守护测试 |
+| `manual/` | 13 | 当前人工配置与模板，排除旧归档 |
+| `deploy/production/` | 7 | 六个**未启用**的 workflow + README |
+| `requirements-dev.txt` | 1 | 依赖 |
 
-固定 P0 基线的完整迁移目标：**675 个 data 文件 / 11,360,123 bytes（约 10.83 MiB）**。
+Public P2 分支共 **275 个 Git 文件**，与 Private P2 来源逐 Git Blob SHA 校验：
 
-**因公开再发布的授权和内容检查尚未完成，519 个 `data/announcements/**/posts/*.json`（10,838,343 bytes）被暂缓迁移到 Public。** 不可把“暂缓”理解为擅自修改最终目标，也不能先上传后删除：Public Git 历史中的内容仍可能保留。
+- **265 个同路径 Blob SHA 完全一致**。
+- **7 个有意修改**：`.gitignore`、仓库根 README、公告目录 README、`scripts/README.md`、生产暂存 README、原神/星铁两份采集 workflow。
+- **3 个独立新增**：只读 P2 CI、本报告及 `tests/test_p2_public_staging.py`。
+- Public 原有 `public/` 7 个文件和 `schemas/` 8 个文件 **15/15 完全未改**；根 README 仅在本暂存分支调整迁移说明，Public `main` 不变。
 
-实际运行必须考虑上述帖子和原神/星铁人工恢复对持久原文的依赖。未经解决，不得开启 2-1、3-1 的真实联网采集，也不得启动正式 v1 写入流程。
+## 安全隔离和自动验证
 
-## 生产隔离保证
+- 六份生产调度 workflow 只放在 `deploy/production/workflows/`，不在 `.github/workflows/` 中启用。
+- 唯一实际运行的 `.github/workflows/p2-staging-validate.yml` 是只读 PR CI，`contents: read`，不具备生产调度、Git push、正式发布或联网 OCR 采集能力。
+- Public `.gitignore` 忽略完整公告正文与历史图片；暂存的原神 2-1、星铁 3-1 的 `git add` 只包含各自的 `data/derived/`，不提交 raw `posts`。
+- 不迁移旧 1-2 `sync-public-data.yml`。未来的 0-1、1-1 在本库执行，2-2/3-2 校验本仓库上游并触发本仓库 Manifest。
+- `tests/test_p2_public_staging.py` 使用 `git ls-files` 检查实际跟踪文件，排除 raw 文章、旧索引、归档及内部文件，检查唯一只读 CI、六份生产工作流隔离以及 `git add` 的范围。
+- [P2 CI #40046959940](https://github.com/sirarikako/PolyxiaBannerData/actions/runs/40046959940) 在安全测试修正提交 `7f490ecf4430c2e633de0c8451d745026228fd8c` 上 **success**。后续文档修订提交以最新 CI 结果为准。
 
-- 现有 Private `main` / Public `main` 未修改，Private 仍是唯一正式数据处理方。
-- P1 六个生产 workflow 仅放在 `deploy/production/workflows/`，**未**放在 `.github/workflows/`。
-- 唯一新增的 `.github/workflows/p2-staging-validate.yml` 仅运行只读单测/校验，`contents: read`，不推送 Git、不开 Issues、不 OCR、不联网采集、不使用 `--write`。
-- 旧 `sync-public-data.yml` 不迁移；生产模板中 0-1 / 1-1 已取消旧跨仓库同步。
+## 不保存旧原文时的代码依赖（P3 前置）
 
-## P2/P4 后续验收门槛
+P2 基线 checkpoint：原神 `pending=0`、`manualReview=0`、`manualRecovered=0`；星铁 `pending=0`、`manualReview=0`。已完成来源对应的结构化数据保留，旧 raw 文件不需要为本次迁移补齐。正常新公告采集可在本轮 Runner 获取并解析详情。
 
-1. 处理完整公告原文公开权限/敏感信息问题，决定是否允许进入 Public 版本历史；或在正式改变方案前与用户明确确认变更。
-2. CI 通过后审阅迁移候选：所有 scripts/manual/derived/blob SHA 对照源分支一致，不缺少必要脚本、fixture。
-3. 验证 v1 与 Manifest；验证人工 missing、按真实 postId 补齐和三方冲突；真实 OCR/公告采集必须在隔离条件下验证。
-4. P4 时以**最新** Private main 重做增量校验，停止 Private 写入并等待运行结束后才能切换；两库禁止双写。
+但**这不等于 P3 生产兼容已通过**：
 
-## P2 安全补丁：禁止原始公告进入 Public Git 历史
+1. 原神 `scripts.transform.genshin_notice_manual_zh_cn.index_additional()` 对部分 `manualRecovered` / 解析失败的真实文章需本地 raw；当人工文件 push 触发 2-1 而网络采集被跳过时，缺少 raw 会导致恢复来源被跳过。
+2. 星铁 `scripts.transform.starrail_notice_manual_zh_cn.load_real()` 要求真实 `postId` 对应 raw 文件存在；没有持久旧公告时，人工重整合可能失败，包括长期联动确认。
+3. P3 要验证并修正按 `postId` 临时补抓、真实来源验证、接口限流/删除、候选保留及错误状态；覆盖人工 missing、旧结构化结果、OCR 临时图片、Issue 和 Artifact 是否泄漏不应公开的数据。
 
-已经在暂存版 2-1/3-1 中移除 `git add -A -- data/announcements/**/posts`，只提交结构化 `data/derived/**`。同时新增 `.gitignore` 忽略原始 `posts/` 与旧图片目录；即使未来 Runner 重新联网抓取，原文也只存在本次 Runner 工作目录，**不会因为旧的 staging 语句而进入 Public**。
+这些是 **P3 正式运行前测试要求**，不是要求复制旧全文到 Public 的理由。
 
-此改动**不代表人工恢复问题已解决**：原神 `manualRecovered` 和星铁 `load_real()` 在缺少持久化 `posts` 时可能无法恢复。P3 必须实现并测试按文章 ID 补抓及失败处理，才能允许 P4 实际启用生产调度。
+## 后续门槛
 
-测试新增 `tests/test_p2_public_staging.py`，严格检查完整原文/旧归档不在 Git、暂存工作流不提交原文；此测试由 Public 的只读 CI 执行。
-
-## P2 复核补充（2026-10-24）
-
-对 Public 暂存分支、Private P2 来源分支、Public 原 main 的完整 Git Tree 做了逐 Blob 核对：
-
-| 检查 | 结果 |
-| --- | --- |
-| Public P2 暂存 Git 文件 | **275** |
-| 与 Private P2 来源 Blob SHA 完全相同 | **267** |
-| 有意修改 | **5**：`.gitignore`、仓库 `README.md`、生产暂存说明、2-1/3-1 暂存 workflow |
-| P2 独有 | **3**：只读 CI、此迁移报告、P2 守护测试 |
-| Public 原 `main` 16 个文件 | **16/16 保留，零修改、零删除** |
-| 原始 `posts/*.json` | **519 个 / 10,838,343 bytes 尚未公开** |
-| 正式生产工作流 | **6 个，仅暂存；`.github/workflows` 中为 0 个** |
-
-**新增回归约束：** `tests/test_p2_public_staging.py` 改为检查实际 Git 索引（`git ls-files`），禁止意外加入 `posts/`、`images/`、archive、review、旧索引与内部文件；核对六个 workflow 仅暂存、唯一运行的 P2 CI 只读且无定时；核对原神/星铁 `git add` 只覆盖各自结构化 `data/derived`，以及两个 v1 发布入口继续调用本仓库 Manifest。
-
-**结论：** 已迁移的安全暂存包完整性与隔离策略可供 P2 验收，仍**不能宣告用户指定的 675 文件全部迁移完成**，也不能执行生产切换。完整公告原文的合法再发布/内容审查尚未解决；且在移除 Git 原文持久化后，人工恢复/按 `postId` 补抓必须先在 P3 中完成真实功能验证。最终 P4 仍需以最新 Private main 重核增量。
-
-本补充是审计记录，不构成上传原始文章或合并 Public main 的授权。
+- **P2**：范围确认、156 文件迁移、SHA/排除项核对、只读 CI 验证完成；保持 Draft PR，生产仍未切换。
+- **P3**：完成无持久全文模式的集成回归与必要代码修正，并审核公开 Issue、Artifact 诊断的内容边界。
+- **P4**：以最新 Private main 校验数据增量；停止 Private 定时并等待现有任务结束，避免双写；必要权限与实际流程确认后再在 Public 启用六份生产工作流、正式独立发布。切换前不可将暂存 workflow 复制至 `.github/workflows/`。
