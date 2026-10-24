@@ -1,0 +1,41 @@
+{
+  "format": "genshin-version-update-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "version": "月之八",
+  "versionName": "『空月之歌·谐谑』映夏！归乡？千灵节！",
+  "maintenance": {
+    "startAt": "2026-07-01T06:00:00+08:00",
+    "estimatedDurationHours": 5,
+    "estimatedEndAt": "2026-07-01T11:00:00+08:00"
+  },
+  "newCharacters": [
+    {
+      "name": "桑多涅",
+      "rarity": 5,
+      "title": "镜水析谬",
+      "element": "冰",
+      "weaponType": "双手剑"
+    }
+  ],
+  "newWeapons": [
+    {
+      "name": "超越之匙",
+      "rarity": 5,
+      "weaponType": "双手剑",
+      "acquisition": "wish"
+    }
+  ],
+  "source": {
+    "postId": "76345546",
+    "title": "「『空月之歌·谐谑』映夏！归乡？千灵节！」「月之八」更新说明",
+    "url": "https://www.miyoushe.com/ys/article/76345546",
+    "publishedAt": "2026-07-01T07:00:10+08:00",
+    "updatedAt": "2026-08-20T00:21:04+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/76345546.json"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": []
+  }
+}

@@ -1,0 +1,160 @@
+# 3-2：只从 main 中已保存的逐池候选及版本人工 JSON 导入；不重复联网。
+name: 3-2_星铁每日V1数据自动发布
+on:
+  workflow_run:
+    workflows:
+      - '3-1_星铁公告每日自动采集与解析'
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - 'manual/starrail_*.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+  issues: write
+
+concurrency:
+  group: starrail-v1-publish-main
+  cancel-in-progress: false
+
+jobs:
+  verify-upstream:
+    runs-on: ubuntu-latest
+    outputs:
+      should_publish: ${{ steps.gate.outputs.should_publish }}
+    steps:
+      - name: 仅在 3-1 确实执行了采集后启动 3-2
+        id: gate
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT_NAME: ${{ github.event_name }}
+          UPSTREAM_RUN_ID: ${{ github.event.workflow_run.id }}
+          UPSTREAM_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          UPSTREAM_REPOSITORY: ${{ github.event.workflow_run.head_repository.full_name }}
+          UPSTREAM_HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+        run: |
+          set -euo pipefail
+          # Prevent manual dispatch from a feature/test ref publishing checkout ref: main.
+          if [ "${GITHUB_REF:-}" != 'refs/heads/main' ]; then
+            echo 'should_publish=false' >> "$GITHUB_OUTPUT"
+            echo '非 main 分支，拒绝执行正式 v1 发布。' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          case "$EVENT_NAME" in workflow_run|workflow_dispatch|push) ;; *)
+            echo 'should_publish=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          esac
+          if [ "$EVENT_NAME" != 'workflow_run' ]; then
+            echo 'should_publish=true' >> "$GITHUB_OUTPUT"
+            echo '手动触发或星铁版本人工配置变更，允许执行发布检查。' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          # 防止其他仓库或非 main 上游触发具有写入权限的正式发布。
+          if [ "$UPSTREAM_REPOSITORY" != "$GITHUB_REPOSITORY" ] || [ "$UPSTREAM_HEAD_BRANCH" != 'main' ]; then
+            echo 'should_publish=false' >> "$GITHUB_OUTPUT"
+            echo '上游仓库或分支与生产 main 不一致，本轮拒绝发布。' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          if [ "$UPSTREAM_CONCLUSION" != 'success' ]; then
+            echo 'should_publish=false' >> "$GITHUB_OUTPUT"
+            echo '3-1 未成功完成，停止 3-2 发布。' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          jobs="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$UPSTREAM_RUN_ID/jobs?per_page=100" --paginate --jq '.jobs[] | select(.name == "collect-and-preview") | .conclusion')"
+          if grep -Fxq 'success' <<< "$jobs"; then
+            echo 'should_publish=true' >> "$GITHUB_OUTPUT"
+            echo '3-1 采集整合作业成功，执行星铁 V1 导入。' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'should_publish=false' >> "$GITHUB_OUTPUT"
+            echo '3-1 仅检查 pending、跳过了采集整合；3-2 不再空跑。' >> "$GITHUB_STEP_SUMMARY"
+          fi
+  publish:
+    needs: verify-upstream
+    if: needs.verify-upstream.outputs.should_publish == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 安装正式数据校验依赖
+        run: python -m pip install -r requirements-dev.txt
+      - name: 串行导入、全量校验、提交星铁V1与版本人工状态
+        id: publish
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python -m scripts.release.import_starrail_v1_zh_cn --isolate-invalid --write > /tmp/starrail-v1-publish.json
+            # 新池导入后旧 Manifest 尚未刷新：先校验完整数据集，再临时重算 Manifest 验证两者匹配。
+            python -m scripts.release.validate_v1 --datasets-only
+            python -m scripts.release.refresh_v1_manifest > /tmp/starrail-manifest-validation-preview.log
+            python -m scripts.release.validate_v1 --public
+            python -m unittest discover -s tests -p 'test_v1.py'
+            # 3-2 只发布 V1 与人工完成状态；Manifest 正式更新仍由 1-1 单独执行。
+            git restore -- public/v1/manifest.json
+            git add -A -- public/v1/starrail.json
+            while IFS= read -r -d '' file; do
+              git add -A -- "$file"
+            done < <(find manual -maxdepth 1 -type f -name 'starrail_*.json' -print0)
+            if git diff --cached --quiet; then
+              echo "v1_changed=false" >> "$GITHUB_OUTPUT"
+              echo "没有新的星铁V1或人工状态变更" >> "$GITHUB_STEP_SUMMARY"
+              break
+            fi
+            if git diff --cached --quiet -- public/v1/starrail.json; then
+              changed=false
+            else
+              changed=true
+            fi
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m '自动发布星铁有效卡池与人工补齐状态'
+            if git push origin HEAD:main; then
+              echo "v1_changed=$changed" >> "$GITHUB_OUTPUT"
+              echo "私有仓库星铁V1提交成功；公开发布需继续等待Manifest和同步" >> "$GITHUB_STEP_SUMMARY"
+              break
+            fi
+            if [ "$attempt" = 3 ]; then
+              echo "::error::多次冲突后仍无法推送，拒绝强制覆盖 main"
+              exit 1
+            fi
+          done
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          row=json.loads(Path("/tmp/starrail-v1-publish.json").read_text(encoding="utf-8"))
+          print("## 星铁自动发布")
+          print("- 新增卡池："+str(len(row["appended"])))
+          print("- 修订旧池："+str(len(row["updatedExistingIds"])))
+          print("- 结清人工条目："+str(len(row["completedManual"])))
+          print("- 待人工复核："+str(len(row["rejected"])))
+          for item in row["rejected"]:
+              print("  - "+str(item))
+          PY
+      - name: 显式触发1-1 Manifest自动更新
+        if: steps.publish.outputs.v1_changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run refresh-v1-manifest.yml --repo "$GITHUB_REPOSITORY" --ref main
+      - name: 通过 Issue 汇总发布问题
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python -m scripts.collect.notify_starrail_notice_problems --publication-report /tmp/starrail-v1-publish.json
+      - name: 保存正式发布报告
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: starrail-v1-publish-report
+          path: /tmp/starrail-v1-publish.json
+          if-no-files-found: ignore
+          retention-days: 30

@@ -1,0 +1,41 @@
+{
+  "format": "genshin-version-update-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "version": "月之六",
+  "versionName": "『空月之歌·旋舞』逢归的谶羽",
+  "maintenance": {
+    "startAt": "2026-04-08T06:00:00+08:00",
+    "estimatedDurationHours": 5,
+    "estimatedEndAt": "2026-04-08T11:00:00+08:00"
+  },
+  "newCharacters": [
+    {
+      "name": "莉奈娅",
+      "rarity": 5,
+      "title": "博闻异旅",
+      "element": "岩",
+      "weaponType": "弓"
+    }
+  ],
+  "newWeapons": [
+    {
+      "name": "霜结的誓金枝",
+      "rarity": 5,
+      "weaponType": "弓",
+      "acquisition": "wish"
+    }
+  ],
+  "source": {
+    "postId": "74446206",
+    "title": "「『空月之歌·旋舞』逢归的谶羽」「月之六」版本更新说明",
+    "url": "https://www.miyoushe.com/ys/article/74446206",
+    "publishedAt": "2026-04-08T07:00:12+08:00",
+    "updatedAt": "2026-07-17T23:32:52+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/74446206.json"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": []
+  }
+}

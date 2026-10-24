@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "孤灯夜访",
+  "officialWishType": "角色活动祈愿",
+  "poolType": "character_event",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "菲林斯",
+        "title": "诡灯陌影",
+        "element": "雷",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "爱诺",
+        "title": "妙械咣咣铛",
+        "element": "水",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "伊安珊",
+        "title": "熔石百炼",
+        "element": "雷",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "蓝砚",
+        "title": "翦玉编春",
+        "element": "风",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "2026/09/01 18:00",
+    "endRaw": "2026/09/22 14:59",
+    "startAt": "2026-09-01T18:00:00+08:00",
+    "endAt": "2026-09-22T14:59:00+08:00",
+    "startCondition": null
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/08/26/75276539/90249423cbaf190a0bf1b4b4c39c0efe_2233654929823629498.png",
+    "https://upload-bbs.miyoushe.com/upload/2026/08/26/75276539/9087fbc045e16e05f07eb19980954d89_8914317891316875163.png"
+  ],
+  "source": {
+    "postId": "77797176",
+    "title": "「孤灯夜访」祈愿：「诡灯陌影·菲林斯(雷)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/77797176",
+    "publishedAt": "2026-08-27T16:00:12+08:00",
+    "updatedAt": "2026-09-21T01:01:13+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/77797176.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized",
+    "times": {
+      "startRaw": "2026/09/01 18:00",
+      "endRaw": "2026/09/22 14:59",
+      "startAt": "2026-09-01T18:00:00+08:00",
+      "endAt": "2026-09-22T14:59:00+08:00",
+      "startCondition": null,
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/08/26/75276539/9087fbc045e16e05f07eb19980954d89_8914317891316875163.png",
+      "imageSha256": "aee73659eddc36db8ac3e1bfac4d6243950ef582c0897e02faa8b75582468a66",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

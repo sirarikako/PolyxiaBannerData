@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "虚星临渡",
+  "officialWishType": "角色活动祈愿",
+  "poolType": "character_event",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "丝柯克",
+        "title": "虚渊暗星",
+        "element": "冰",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "塔利雅",
+        "title": "颂礼祝祭",
+        "element": "水",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "坎蒂丝",
+        "title": "浮金的誓愿",
+        "element": "水",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "夏洛蒂",
+        "title": "朗镜索真",
+        "element": "冰",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "2026/03/17 18:00",
+    "endRaw": "2026/04/07 14:59",
+    "startAt": "2026-03-17T18:00:00+08:00",
+    "endAt": "2026-04-07T14:59:00+08:00",
+    "startCondition": null
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/03/11/75276539/496a6dc09c5974805a31217861b9be81_8535862050888002177.jpg",
+    "https://upload-bbs.miyoushe.com/upload/2026/03/11/75276539/cb3b66cb7dcd552d78222e92c3506f07_6132176458111634350.png"
+  ],
+  "source": {
+    "postId": "73885913",
+    "title": "「虚星临渡」祈愿：「虚渊暗星·丝柯克(冰)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/73885913",
+    "publishedAt": "2026-03-12T16:00:17+08:00",
+    "updatedAt": "2026-09-25T13:52:00+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/73885913.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized",
+    "times": {
+      "startRaw": "2026/03/17 18:00",
+      "endRaw": "2026/04/07 14:59",
+      "startAt": "2026-03-17T18:00:00+08:00",
+      "endAt": "2026-04-07T14:59:00+08:00",
+      "startCondition": null,
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/03/11/75276539/cb3b66cb7dcd552d78222e92c3506f07_6132176458111634350.png",
+      "imageSha256": "4a88fe04454f0683c47940dc07039acfdf2f231715ecbf72451909a7946772c7",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

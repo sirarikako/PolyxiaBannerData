@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "聚星源动",
+  "officialWishType": "角色活动祈愿-2",
+  "poolType": "character_event_2",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "伊涅芙",
+        "title": "轰隆雷鸣波",
+        "element": "雷",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "赛索斯",
+        "title": "衡明知度",
+        "element": "雷",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "菲谢尔",
+        "title": "断罪皇女！！",
+        "element": "雷",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "伊法",
+        "title": "蔚风引灵",
+        "element": "风",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "版本更新后",
+    "endRaw": "2026/02/03 17:59",
+    "startAt": null,
+    "endAt": "2026-02-03T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/01/09/75276539/c8395a0ea68e3109f9bdf26d31d49378_3561068438453466647.jpg",
+    "https://upload-bbs.miyoushe.com/upload/2026/01/09/75276539/7176f2422a97220d2c2910ebd6c8b3ce_7695863934610788704.png"
+  ],
+  "source": {
+    "postId": "72261671",
+    "title": "「聚星源动」祈愿：「轰隆雷鸣波·伊涅芙(雷)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/72261671",
+    "publishedAt": "2026-01-12T12:00:27+08:00",
+    "updatedAt": "2026-02-17T23:09:36+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/72261671.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized_conditional",
+    "times": {
+      "startRaw": "版本更新后",
+      "endRaw": "2026/02/03 17:59",
+      "startAt": null,
+      "endAt": "2026-02-03T17:59:00+08:00",
+      "startCondition": "after_version_update",
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/01/09/75276539/7176f2422a97220d2c2910ebd6c8b3ce_7695863934610788704.png",
+      "imageSha256": "f16747a4e1066ede158c1f08ed71141c9a57fc094d11ab07378a6cfdda29749d",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

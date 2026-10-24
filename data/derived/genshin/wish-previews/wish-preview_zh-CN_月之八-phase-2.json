@@ -1,0 +1,66 @@
+{
+  "format": "genshin-wish-preview-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_preview",
+  "version": "月之八",
+  "phase": 2,
+  "time": {
+    "startRaw": "2026/07/21 18:00",
+    "endRaw": "2026/08/11 14:59",
+    "startAt": "2026-07-21T18:00:00+08:00",
+    "endAt": "2026-08-11T14:59:00+08:00",
+    "startCondition": null
+  },
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "哥伦比娅",
+        "title": "空月归乡",
+        "element": "水"
+      },
+      {
+        "name": "雷电将军",
+        "title": "一心净土",
+        "element": "雷"
+      }
+    ],
+    "fourStarCharacters": [],
+    "fiveStarWeapons": [
+      {
+        "name": "帷间夜曲",
+        "weaponType": "法器"
+      },
+      {
+        "name": "薙草之稻光",
+        "weaponType": "长柄武器"
+      }
+    ],
+    "fourStarWeapons": [
+      {
+        "name": "祭礼剑",
+        "weaponType": "单手剑"
+      },
+      {
+        "name": "西风猎弓",
+        "weaponType": "弓"
+      }
+    ]
+  },
+  "additionalWishes": [],
+  "source": {
+    "postId": "76834102",
+    "title": "「月之八」版本活动祈愿预告第二期",
+    "url": "https://www.miyoushe.com/ys/article/76834102",
+    "listUrl": "https://www.miyoushe.com/ys/home/28?type=3",
+    "publishedAt": "2026-07-20T18:00:15+08:00",
+    "updatedAt": "2026-10-14T14:42:32+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe-account-75276539/posts/76834102.json",
+    "textSource": "structured_content"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "预告是整期汇总，不含可靠的单独祈愿池名称、角色武器配对或 itemId；不得直接发布到 v1"
+  }
+}

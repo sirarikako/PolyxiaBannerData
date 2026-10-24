@@ -1,0 +1,96 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "煅火的祝赐",
+  "officialWishType": "角色活动祈愿-2",
+  "poolType": "character_event_2",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "希诺宁",
+        "title": "焮火铸魂",
+        "element": "岩",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "伊安珊",
+        "title": "熔石百炼",
+        "element": "雷",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "夏沃蕾",
+        "title": "明律决罚",
+        "element": "火",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "嘉明",
+        "title": "骏猊頕首",
+        "element": "火",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "2025/12/23 18:00",
+    "endRaw": "2026/01/13 14:59",
+    "startAt": "2025-12-23T18:00:00+08:00",
+    "endAt": "2026-01-13T14:59:00+08:00",
+    "startCondition": null
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2025/12/16/75276539/272fd3fb45822c58f90c127c6863d3f7_3148484710949751720.jpg",
+    "https://upload-bbs.miyoushe.com/upload/2025/12/16/75276539/b835776efe6d3625d97cbbf0ff3c88cf_2207129944697891054.png",
+    "https://upload-bbs.miyoushe.com/upload/2021/01/05/477d4c535e965bec1791203aecdfa8e6.png"
+  ],
+  "source": {
+    "postId": "71557460",
+    "title": "「煅火的祝赐」祈愿：「焮火铸魂·希诺宁(岩)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/71557460",
+    "publishedAt": "2025-12-18T16:00:19+08:00",
+    "updatedAt": "2026-02-21T21:42:20+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/71557460.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized",
+    "times": {
+      "startRaw": "2025/12/23 18:00",
+      "endRaw": "2026/01/13 14:59",
+      "startAt": "2025-12-23T18:00:00+08:00",
+      "endAt": "2026-01-13T14:59:00+08:00",
+      "startCondition": null,
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2025/12/16/75276539/b835776efe6d3625d97cbbf0ff3c88cf_2207129944697891054.png",
+      "imageSha256": "975557ca65ab9358921620a92518211b5c1eaa41540c83897b8b23b130107ac8",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 3,
+    "warnings": []
+  }
+}

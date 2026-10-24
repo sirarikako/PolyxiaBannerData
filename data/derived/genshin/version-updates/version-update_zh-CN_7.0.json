@@ -1,0 +1,121 @@
+{
+  "format": "genshin-version-update-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "version": "7.0",
+  "versionName": "无神怜爱的雪国",
+  "maintenance": {
+    "startAt": "2026-08-12T06:00:00+08:00",
+    "estimatedDurationHours": 5,
+    "estimatedEndAt": "2026-08-12T11:00:00+08:00"
+  },
+  "newCharacters": [
+    {
+      "name": "奥黛塔",
+      "rarity": 5,
+      "title": "翾风回雪",
+      "element": "冰",
+      "weaponType": "单手剑"
+    },
+    {
+      "name": "旅行者",
+      "rarity": 5,
+      "title": null,
+      "element": "冰",
+      "weaponType": null
+    },
+    {
+      "name": "阿罗夏",
+      "rarity": 4,
+      "title": "疾掠弋缇",
+      "element": "雷",
+      "weaponType": "长柄武器"
+    }
+  ],
+  "newWeapons": [
+    {
+      "name": "白湖冬羽",
+      "rarity": 5,
+      "weaponType": "单手剑",
+      "acquisition": "wish"
+    },
+    {
+      "name": "星锋剑",
+      "rarity": 5,
+      "weaponType": "单手剑",
+      "acquisition": "quest"
+    },
+    {
+      "name": "引火之源",
+      "rarity": 4,
+      "weaponType": "单手剑",
+      "acquisition": "craft"
+    },
+    {
+      "name": "救赎之斩",
+      "rarity": 4,
+      "weaponType": "双手剑",
+      "acquisition": "craft"
+    },
+    {
+      "name": "戍望谣歌",
+      "rarity": 4,
+      "weaponType": "长柄武器",
+      "acquisition": "craft"
+    },
+    {
+      "name": "寸心余响",
+      "rarity": 4,
+      "weaponType": "法器",
+      "acquisition": "craft"
+    },
+    {
+      "name": "霜雪誓约",
+      "rarity": 4,
+      "weaponType": "弓",
+      "acquisition": "craft"
+    },
+    {
+      "name": "熔猎异端之刃",
+      "rarity": 4,
+      "weaponType": "单手剑",
+      "acquisition": "battle_pass"
+    },
+    {
+      "name": "金律铸影",
+      "rarity": 4,
+      "weaponType": "双手剑",
+      "acquisition": "battle_pass"
+    },
+    {
+      "name": "寒息",
+      "rarity": 4,
+      "weaponType": "长柄武器",
+      "acquisition": "battle_pass"
+    },
+    {
+      "name": "群王局戏",
+      "rarity": 4,
+      "weaponType": "法器",
+      "acquisition": "battle_pass"
+    },
+    {
+      "name": "悬黎千钧",
+      "rarity": 4,
+      "weaponType": "弓",
+      "acquisition": "battle_pass"
+    }
+  ],
+  "source": {
+    "postId": "77363392",
+    "title": "「无神怜爱的雪国」7.0版本更新说明",
+    "url": "https://www.miyoushe.com/ys/article/77363392",
+    "publishedAt": "2026-08-12T07:00:16+08:00",
+    "updatedAt": "2026-10-05T04:46:07+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/77363392.json"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": []
+  }
+}

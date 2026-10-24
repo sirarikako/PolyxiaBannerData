@@ -1,0 +1,112 @@
+{
+  "format": "genshin-v1-candidate-zh-CN-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "status": "ready_candidate",
+  "postId": "73885912",
+  "sourceKey": "73885912",
+  "version": "月之五",
+  "phase": 2,
+  "bannerName": "莓色香颂",
+  "poolType": "character_event_2",
+  "variant": null,
+  "existingV1Id": "gi-000267",
+  "v1Draft": {
+    "gameVersion": "月之五",
+    "phase": 2,
+    "category": "character",
+    "poolType": "character_event_2",
+    "names": {
+      "zh-CN": "莓色香颂"
+    },
+    "gachaTypes": {
+      "raw": [
+        "400"
+      ],
+      "uigf": [
+        "301"
+      ]
+    },
+    "featured": {
+      "fiveStar": [
+        {
+          "itemId": "10000112",
+          "names": {
+            "zh-CN": "爱可菲"
+          },
+          "type": "character"
+        }
+      ],
+      "fourStar": [
+        {
+          "itemId": "10000115",
+          "names": {
+            "zh-CN": "塔利雅"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000072",
+          "names": {
+            "zh-CN": "坎蒂丝"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000088",
+          "names": {
+            "zh-CN": "夏洛蒂"
+          },
+          "type": "character"
+        }
+      ]
+    },
+    "regions": [
+      {
+        "server": "cn_official",
+        "startAt": "2026-03-17T18:00:00+08:00",
+        "endAt": "2026-04-07T15:00:00+08:00"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/73969586"
+      },
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/73885912"
+      }
+    ]
+  },
+  "timeEvidence": {
+    "versionMaintenanceStartAt": "2026-02-25T06:00:00+08:00",
+    "previewEndAt": "2026-04-07T14:59:00+08:00",
+    "ocrEndAt": "2026-04-07T14:59:00+08:00",
+    "ocrStatus": "recognized",
+    "endTimeSource": "ocr",
+    "manualFile": null,
+    "ocrImageSha256": "be383c6c842077013e2219f25282735aabbf63dd2e4f22caf697758339117458",
+    "startRaw": "2026/03/17 18:00",
+    "endRaw": "2026/04/07 14:59",
+    "startCondition": null,
+    "exclusiveEndPolicy": "原公告分钟结束时间 + 1 分钟；仅候选转换"
+  },
+  "provenance": {
+    "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之五.json",
+    "versionUpdatePostId": "73521381",
+    "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之五-phase-2.json",
+    "previewPostId": "73969586",
+    "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73885912.json",
+    "noticePostId": "73885912",
+    "noticeSourceKey": "73885912"
+  },
+  "warnings": [],
+  "manualAudit": {
+    "filled": [],
+    "matched": [],
+    "file": null,
+    "sources": []
+  },
+  "note": "离线候选；不自动确定版本更新后的精确开池时间，不自动分配内部 ID，不修改正式 v1"
+}

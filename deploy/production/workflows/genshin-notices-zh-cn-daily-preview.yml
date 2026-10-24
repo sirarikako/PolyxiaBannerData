@@ -1,0 +1,264 @@
+# 长期采集入口；验证期仅保存原始公告、提取结果、checkpoint、候选和报告。
+# 绝不使用 --write 更新真实 v1；也不更新 manifest / 同步公开仓库。
+name: 2-1_原神公告每日自动采集与解析
+on:
+  schedule:
+    - cron: '17 6 * * *' # 北京时间 14:17，完整增量扫描
+    - cron: '27,37,47,57 6 * * *' # 北京时间 14:27/37/47/57，均完整增量扫描
+  push:
+    branches: [main]
+    paths:
+      - 'manual/notices/genshin/zh-CN/missing/**'
+      - 'manual/notices/genshin/zh-CN/miyoushe/**'
+  workflow_dispatch:
+    inputs:
+      retry_only:
+        description: '仅处理可自动重试的 pending（不扫描新公告）'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: genshin-notice-zh-cn-daily
+  cancel-in-progress: false
+
+jobs:
+  check-pending:
+    runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.gate.outputs.should_run }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: 判断本轮是否需要采集
+        id: gate
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          RETRY_ONLY: ${{ inputs.retry_only }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          path = Path('data/derived/genshin/notice-discovery/notice-discovery_zh-CN_checkpoint.json')
+          # 定时均完整增量扫描；只有手动 retry_only 才检查可重试 pending。
+          retry = (os.environ['EVENT_NAME'] == 'workflow_dispatch'
+                   and os.environ.get('RETRY_ONLY') == 'true')
+          if not retry:
+              should_run = True
+              reason = '定时完整增量扫描，或人工文件触发重新整合'
+          else:
+              from scripts.collect.genshin_notice_retry import pending_counts
+              if not path.is_file():
+                  raise SystemExit('pending 检查点不存在，拒绝静默跳过')
+              total, retryable = pending_counts(path)
+              should_run = retryable > 0
+              reason = (f'待处理 {total} 篇，可自动重试 {retryable} 篇'
+                        if should_run else
+                        f'待处理 {total} 篇，但无可自动重试任务，跳过后续作业')
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:
+              print(f"should_run={str(should_run).lower()}", file=output)
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
+              print('## 原神采集调度', file=summary)
+              print(f'- {reason}', file=summary)
+          PY
+  collect-and-preview:
+    needs: check-pending
+    if: needs.check-pending.outputs.should_run == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 安装解析和校验依赖
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-chi-sim
+          python -m pip install -r requirements-dev.txt pytest
+      - name: 运行采集、人工合并、整合与通知回归测试
+        run: |
+          python -m pytest -q tests/test_collect_genshin_notices_zh_cn.py tests/test_notify_genshin_notice_problems.py tests/test_genshin_notice_manual_zh_cn.py
+          python -m unittest discover -s tests -p 'test_assemble_genshin_wish_candidates_zh_cn.py'
+          python -m unittest discover -s tests -p 'test_import_genshin_v1_zh_cn.py'
+          # 新增缺帖人工源专项测试：所有模拟数据位于临时目录，不写正式 V1。
+          python -m pytest -q tests/test_genshin_missing_notices_zh_cn.py tests/test_genshin_manual_postmerge_integration.py
+          # OCR 日期拆分（含68917812、73475919）与条件时间专项回归
+          python -m pytest -q tests/test_genshin_wish_conditional_ocr_zh_cn.py
+      - name: 记录真实 v1 哈希，确保采集期间不写入
+        run: sha256sum public/v1/genshin.json > /tmp/genshin-v1-original.sha256
+      - name: 增量获取两类公告并执行三个解析器
+        id: collect
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        shell: bash
+        run: |
+          set +e
+          if [ "$EVENT_NAME" = 'push' ]; then
+            echo '人工文件触发：跳过网络采集，直接使用已持久化的公告整合'
+          elif [ "${{ inputs.retry_only }}" = 'true' ]; then
+            python -m scripts.collect.collect_genshin_notices_zh_cn --retry-only
+          else
+            python -m scripts.collect.collect_genshin_notices_zh_cn --max-pages 15
+          fi
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: 临时补抓缺少官方来源的人工文章（不进入 Git）
+        id: manual_source
+        shell: bash
+        run: |
+          set +e
+          python -m scripts.collect.recover_manual_raw_zh_cn --game genshin
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: 逐池整合（缺少其他公告允许继续等待）
+        id: assemble
+        shell: bash
+        run: |
+          set +e
+          python -m scripts.transform.assemble_genshin_wish_candidates_zh_cn
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: 只读预览正式导入结果（绝不传 --write）
+        if: steps.assemble.outputs.code == '0'
+        id: preview
+        shell: bash
+        run: |
+          set +e
+          python -m scripts.release.import_genshin_v1_zh_cn > /tmp/genshin-v1-preview.json
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          if [ "$code" -eq 0 ]; then
+            cat /tmp/genshin-v1-preview.json
+          fi
+          exit 0
+      - name: 在临时副本测试真实 v1 导入写入（绝不写仓库）
+        if: steps.assemble.outputs.code == '0' && steps.preview.outputs.code == '0'
+        id: sandbox
+        shell: bash
+        run: |
+          set +e
+          scratch="$(mktemp -d /tmp/genshin-import-XXXXXX)"
+          mkdir -p "$scratch/public/v1" "$scratch/data/derived/genshin"
+          cp public/v1/genshin.json "$scratch/public/v1/genshin.json"
+          if test -d data/derived/genshin/v1-candidates; then
+            cp -a data/derived/genshin/v1-candidates "$scratch/data/derived/genshin/"
+          fi
+          cp -a manual "$scratch/manual"
+          python -m scripts.release.import_genshin_v1_zh_cn --root "$scratch" --write > /tmp/genshin-v1-sandbox.json
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          if [ "$code" -eq 0 ]; then cat /tmp/genshin-v1-sandbox.json; fi
+          exit 0
+      - name: 沙箱v1数据校验通过后结清人工复核状态
+        if: steps.sandbox.outputs.code == '0'
+        run: python -m scripts.collect.reconcile_genshin_manual_review_zh_cn
+      - name: 汇总最终 v1 预览、人工差异和未解决异常
+        id: final_review
+        if: always()
+        env:
+          GENSHIN_COLLECT_CODE: ${{ steps.collect.outputs.code }}
+          GENSHIN_MANUAL_SOURCE_CODE: ${{ steps.manual_source.outputs.code }}
+          GENSHIN_ASSEMBLE_CODE: ${{ steps.assemble.outputs.code }}
+          GENSHIN_PREVIEW_CODE: ${{ steps.preview.outputs.code }}
+          GENSHIN_SANDBOX_CODE: ${{ steps.sandbox.outputs.code }}
+        run: |
+          python -m scripts.release.report_genshin_v1_preview_zh_cn
+          cat data/derived/genshin/v1-readiness/v1-final-review_zh-CN.json
+      - name: 检查正式数据完全未变
+        if: always()
+        run: |
+          set -euo pipefail
+          sha256sum --check /tmp/genshin-v1-original.sha256
+          git diff --exit-code -- public/v1 schemas manual
+      - name: 即使解析失败也保存 checkpoint 和可复用公告
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -A -- data/derived/genshin
+          if git diff --cached --quiet; then
+            echo '本轮没有新增公告或状态变更。' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m '自动保存原神简中公告采集状态与候选'
+          # 若 main 被其他任务更新，重放仅涉及采集数据的提交；不进行强制推送。
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
+      - name: 仅依据最终 v1 诊断创建去重人工复核 Issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GENSHIN_FINAL_REPORT_ONLY: '1'
+          GENSHIN_COLLECT_CODE: ${{ steps.collect.outputs.code }}
+          GENSHIN_MANUAL_SOURCE_CODE: ${{ steps.manual_source.outputs.code }}
+          GENSHIN_ASSEMBLE_CODE: ${{ steps.assemble.outputs.code }}
+          GENSHIN_PREVIEW_CODE: ${{ steps.preview.outputs.code }}
+          GENSHIN_SANDBOX_CODE: ${{ steps.sandbox.outputs.code }}
+        run: |
+          set -euo pipefail
+          python -m scripts.collect.notify_genshin_notice_problems
+      - name: 上传调试结果
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: genshin-notice-zh-cn-preview
+          path: |
+            /tmp/genshin-v1-preview.json
+            data/derived/genshin/notice-discovery/*report.json
+            data/derived/genshin/v1-readiness/*.json
+            /tmp/genshin-v1-sandbox.json
+          if-no-files-found: warn
+          retention-days: 14
+      - name: 标记异常（不将正常缺公告视为错误）
+        if: always()
+        shell: bash
+        env:
+          COLLECT_CODE: ${{ steps.collect.outputs.code }}
+          ASSEMBLE_CODE: ${{ steps.assemble.outputs.code }}
+          PREVIEW_CODE: ${{ steps.preview.outputs.code }}
+          SANDBOX_CODE: ${{ steps.sandbox.outputs.code }}
+        run: |
+          {
+            echo '## 原神简中每日安全预览'
+            echo "- 采集状态：${COLLECT_CODE:-未运行}"
+            echo "- 整合状态：${ASSEMBLE_CODE:-未运行}"
+            echo "- v1 预览状态：${PREVIEW_CODE:-未运行}"
+            echo "- 临时副本导入状态：${SANDBOX_CODE:-未运行}"
+            echo '- 正式 v1：未修改'
+            echo '- 人工数据只补缺和比对；最终 v1 诊断报告统一决定是否通知'
+          echo '- 沙箱写入仅在 /tmp 目录执行，真实 v1 发布开关保持关闭'
+          } >> "$GITHUB_STEP_SUMMARY"
+          # 单篇来源网络临时失败保留 pending，不把整个日报误报成永久错误。
+          if [ "${COLLECT_CODE:-1}" != 0 ]; then
+            python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path('data/derived/genshin/notice-discovery/notice-discovery_zh-CN_checkpoint.json')
+          state = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
+          if not state.get('pending'):
+              raise SystemExit('采集阶段失败且无可恢复 pending，请检查 Action')
+          print('采集阶段有临时来源错误，已保留 pending，等待下次运行')
+          PY
+          fi
+          test "${{ steps.manual_source.outputs.code }}" = 0
+          test "${ASSEMBLE_CODE:-1}" = 0
+          test "${PREVIEW_CODE:-1}" = 0
+          test "${SANDBOX_CODE:-1}" = 0

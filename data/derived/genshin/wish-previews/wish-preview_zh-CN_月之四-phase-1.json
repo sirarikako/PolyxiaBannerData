@@ -1,0 +1,94 @@
+{
+  "format": "genshin-wish-preview-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_preview",
+  "version": "月之四",
+  "phase": 1,
+  "time": {
+    "startRaw": "2026/01/14 「月之四」版本更新后",
+    "endRaw": "2026/02/03 17:59",
+    "startAt": null,
+    "endAt": "2026-02-03T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "哥伦比娅",
+        "title": "空月归乡",
+        "element": "水"
+      },
+      {
+        "name": "伊涅芙",
+        "title": "轰隆雷鸣波",
+        "element": "雷"
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "赛索斯",
+        "title": "衡明知度",
+        "element": "雷"
+      },
+      {
+        "name": "菲谢尔",
+        "title": "断罪皇女！！",
+        "element": "雷"
+      },
+      {
+        "name": "伊法",
+        "title": "蔚风引灵",
+        "element": "风"
+      }
+    ],
+    "fiveStarWeapons": [
+      {
+        "name": "帷间夜曲",
+        "weaponType": "法器"
+      },
+      {
+        "name": "支离轮光",
+        "weaponType": "长柄武器"
+      }
+    ],
+    "fourStarWeapons": [
+      {
+        "name": "镇山之钉",
+        "weaponType": "长柄武器"
+      },
+      {
+        "name": "乘浪的回旋",
+        "weaponType": "法器"
+      },
+      {
+        "name": "幽夜华尔兹",
+        "weaponType": "弓"
+      },
+      {
+        "name": "笛剑",
+        "weaponType": "单手剑"
+      },
+      {
+        "name": "祭礼大剑",
+        "weaponType": "双手剑"
+      }
+    ]
+  },
+  "additionalWishes": [],
+  "source": {
+    "postId": "72287317",
+    "title": "「月之四」版本活动祈愿预告第一期",
+    "url": "https://www.miyoushe.com/ys/article/72287317",
+    "listUrl": "https://www.miyoushe.com/ys/home/28?type=3",
+    "publishedAt": "2026-01-13T18:00:11+08:00",
+    "updatedAt": "2026-05-11T22:49:14+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/72287317.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "预告是整期汇总，不含可靠的单独祈愿池名称、角色武器配对或 itemId；不得直接发布到 v1"
+  }
+}

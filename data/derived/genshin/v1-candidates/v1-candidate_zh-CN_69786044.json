@@ -1,0 +1,114 @@
+{
+  "format": "genshin-v1-candidate-zh-CN-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "status": "ready_candidate",
+  "postId": "69786044",
+  "sourceKey": "69786044",
+  "version": "月之二",
+  "phase": 1,
+  "bannerName": "赤砂的诱言",
+  "poolType": "character_event",
+  "variant": null,
+  "existingV1Id": "gi-000245",
+  "v1Draft": {
+    "gameVersion": "月之二",
+    "phase": 1,
+    "category": "character",
+    "poolType": "character_event",
+    "names": {
+      "zh-CN": "赤砂的诱言"
+    },
+    "gachaTypes": {
+      "raw": [
+        "301"
+      ],
+      "uigf": [
+        "301"
+      ]
+    },
+    "featured": {
+      "fiveStar": [
+        {
+          "itemId": "10000122",
+          "names": {
+            "zh-CN": "奈芙尔"
+          },
+          "type": "character"
+        }
+      ],
+      "fourStar": [
+        {
+          "itemId": "10000025",
+          "names": {
+            "zh-CN": "行秋"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000067",
+          "names": {
+            "zh-CN": "柯莱"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000077",
+          "names": {
+            "zh-CN": "瑶瑶"
+          },
+          "type": "character"
+        }
+      ]
+    },
+    "regions": [
+      {
+        "server": "cn_official",
+        "startAt": null,
+        "endAt": "2025-11-11T18:00:00+08:00"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/69784376"
+      },
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/69786044"
+      }
+    ]
+  },
+  "timeEvidence": {
+    "versionMaintenanceStartAt": "2025-10-22T06:00:00+08:00",
+    "previewEndAt": "2025-11-11T17:59:00+08:00",
+    "ocrEndAt": "2025-11-11T17:59:00+08:00",
+    "ocrStatus": "recognized_conditional",
+    "endTimeSource": "ocr",
+    "manualFile": null,
+    "ocrImageSha256": "85a9d5e32b6f759ee0dd017eb861851556e4a49caabd78e80582d4a6dd0b1531",
+    "startRaw": "版本更新后",
+    "endRaw": "2025/11/11 17:59",
+    "startCondition": "after_version_update",
+    "exclusiveEndPolicy": "原公告分钟结束时间 + 1 分钟；仅候选转换"
+  },
+  "provenance": {
+    "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之二.json",
+    "versionUpdatePostId": "69831610",
+    "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之二-phase-1.json",
+    "previewPostId": "69784376",
+    "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_69786044.json",
+    "noticePostId": "69786044",
+    "noticeSourceKey": "69786044"
+  },
+  "warnings": [
+    "conditional_start_time"
+  ],
+  "manualAudit": {
+    "filled": [],
+    "matched": [],
+    "file": null,
+    "sources": []
+  },
+  "note": "离线候选；不自动确定版本更新后的精确开池时间，不自动分配内部 ID，不修改正式 v1"
+}

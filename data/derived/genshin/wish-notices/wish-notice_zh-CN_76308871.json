@@ -1,0 +1,152 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "辉天的星告",
+  "officialWishType": "溯光祈愿",
+  "poolType": "chronicled",
+  "version": null,
+  "phase": null,
+  "variant": "special_recollection",
+  "up": {
+    "fiveStarCharacters": [],
+    "fourStarCharacters": [],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": {
+    "fiveStarCharacters": [
+      "梦见月瑞希",
+      "莱欧斯利",
+      "赛诺",
+      "八重神子",
+      "七七"
+    ],
+    "fourStarCharacters": [
+      "布伦妮",
+      "叶洛亚",
+      "雅珂达",
+      "爱诺",
+      "塔利雅",
+      "伊法",
+      "伊安珊",
+      "蓝砚",
+      "欧洛伦",
+      "卡齐娜",
+      "赛索斯",
+      "嘉明",
+      "夏沃蕾",
+      "夏洛蒂",
+      "菲米尼",
+      "琳妮特",
+      "卡维",
+      "米卡",
+      "瑶瑶",
+      "珐露珊",
+      "莱依拉",
+      "坎蒂丝",
+      "多莉",
+      "柯莱",
+      "久岐忍",
+      "云堇",
+      "绮良良",
+      "鹿野院平藏",
+      "九条裟罗",
+      "五郎",
+      "早柚",
+      "托马",
+      "烟绯",
+      "罗莎莉亚",
+      "辛焱",
+      "砂糖",
+      "迪奥娜",
+      "重云",
+      "诺艾尔",
+      "班尼特",
+      "菲谢尔",
+      "凝光",
+      "行秋",
+      "北斗",
+      "香菱",
+      "安柏",
+      "雷泽",
+      "凯亚",
+      "芭芭拉",
+      "丽莎"
+    ],
+    "fiveStarWeapons": [
+      "寝正月初晴",
+      "金流监督",
+      "赤沙之杖",
+      "神乐之真意",
+      "天空之刃"
+    ],
+    "fourStarWeapons": [
+      "弓藏",
+      "祭礼弓",
+      "绝弦",
+      "西风猎弓",
+      "昭心",
+      "祭礼残章",
+      "流浪乐章",
+      "西风秘典",
+      "西风长枪",
+      "匣里灭辰",
+      "雨裁",
+      "祭礼大剑",
+      "钟剑",
+      "西风大剑",
+      "匣里龙吟",
+      "祭礼剑",
+      "笛剑",
+      "西风剑"
+    ]
+  },
+  "time": {
+    "startRaw": "版本更新后",
+    "endRaw": "2026/07/21 17:59",
+    "startAt": null,
+    "endAt": "2026-07-21T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "rules": {
+    "limitedNotInStandard": null,
+    "characterEventPityShared": true,
+    "characterTrial": null
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/06/25/75276539/35807bc0f5f6e1cc243aa4e8b7e8a88b_1597147890458532485.jpg",
+    "https://upload-bbs.miyoushe.com/upload/2026/06/25/75276539/9aeec6b19cfd3e662d5f07c22ba0c398_7486449549504691280.png"
+  ],
+  "source": {
+    "postId": "76308871",
+    "title": "「辉天的星告」祈愿：溯光祈愿开启！",
+    "url": "https://www.miyoushe.com/ys/article/76308871",
+    "publishedAt": "2026-06-29T12:00:21+08:00",
+    "updatedAt": "2026-09-24T22:19:57+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/76308871.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized_conditional",
+    "times": {
+      "startRaw": "版本更新后",
+      "endRaw": "2026/07/21 17:59",
+      "startAt": null,
+      "endAt": "2026-07-21T17:59:00+08:00",
+      "startCondition": "after_version_update",
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/06/25/75276539/9aeec6b19cfd3e662d5f07c22ba0c398_7486449549504691280.png",
+      "imageSha256": "f7f7e95add8663d11646541d35a0bafe621a1ca63db522def2b18201bb483f35",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

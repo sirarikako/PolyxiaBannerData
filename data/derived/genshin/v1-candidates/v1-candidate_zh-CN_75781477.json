@@ -1,0 +1,134 @@
+{
+  "format": "genshin-v1-candidate-zh-CN-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "status": "ready_candidate",
+  "postId": "75781477",
+  "sourceKey": "75781477",
+  "version": "月之七",
+  "phase": 2,
+  "bannerName": "神铸赋形",
+  "poolType": "weapon_event",
+  "variant": null,
+  "existingV1Id": "gi-000282",
+  "v1Draft": {
+    "gameVersion": "月之七",
+    "phase": 2,
+    "category": "weapon",
+    "poolType": "weapon_event",
+    "names": {
+      "zh-CN": "神铸赋形"
+    },
+    "gachaTypes": {
+      "raw": [
+        "302"
+      ],
+      "uigf": [
+        "302"
+      ]
+    },
+    "featured": {
+      "fiveStar": [
+        {
+          "itemId": "13517",
+          "names": {
+            "zh-CN": "灾悔"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "12514",
+          "names": {
+            "zh-CN": "焚曜千阳"
+          },
+          "type": "weapon"
+        }
+      ],
+      "fourStar": [
+        {
+          "itemId": "11410",
+          "names": {
+            "zh-CN": "暗巷闪光"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "14410",
+          "names": {
+            "zh-CN": "暗巷的酒与诗"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "15410",
+          "names": {
+            "zh-CN": "暗巷猎手"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "12405",
+          "names": {
+            "zh-CN": "雨裁"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "13407",
+          "names": {
+            "zh-CN": "西风长枪"
+          },
+          "type": "weapon"
+        }
+      ]
+    },
+    "regions": [
+      {
+        "server": "cn_official",
+        "startAt": "2026-06-09T18:00:00+08:00",
+        "endAt": "2026-06-30T15:00:00+08:00"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/75880451"
+      },
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/75781477"
+      }
+    ],
+    "fatePointLimit": 1
+  },
+  "timeEvidence": {
+    "versionMaintenanceStartAt": "2026-05-20T06:00:00+08:00",
+    "previewEndAt": "2026-06-30T14:59:00+08:00",
+    "ocrEndAt": "2026-06-30T14:59:00+08:00",
+    "ocrStatus": "recognized",
+    "endTimeSource": "ocr",
+    "manualFile": null,
+    "ocrImageSha256": "7c6baf972c42be28b68f4fb66f6ece0ae904c5b96db09a581e1e5f9666b47365",
+    "startRaw": "2026/06/09 18:00",
+    "endRaw": "2026/06/30 14:59",
+    "startCondition": null,
+    "exclusiveEndPolicy": "原公告分钟结束时间 + 1 分钟；仅候选转换"
+  },
+  "provenance": {
+    "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之七.json",
+    "versionUpdatePostId": "75440954",
+    "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之七-phase-2.json",
+    "previewPostId": "75880451",
+    "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75781477.json",
+    "noticePostId": "75781477",
+    "noticeSourceKey": "75781477"
+  },
+  "warnings": [],
+  "manualAudit": {
+    "filled": [],
+    "matched": [],
+    "file": null,
+    "sources": []
+  },
+  "note": "离线候选；不自动确定版本更新后的精确开池时间，不自动分配内部 ID，不修改正式 v1"
+}

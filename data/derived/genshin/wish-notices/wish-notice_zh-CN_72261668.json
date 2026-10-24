@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "渊海界令",
+  "officialWishType": "角色活动祈愿-2",
+  "poolType": "character_event_2",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "那维莱特",
+        "title": "谕告的潮音",
+        "element": "水",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "叶洛亚",
+        "title": "魇夜燃芯",
+        "element": "岩",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "爱诺",
+        "title": "妙械咣咣铛",
+        "element": "水",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "五郎",
+        "title": "戎犬锵锵",
+        "element": "岩",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "2026/02/03 18:00",
+    "endRaw": "2026/02/24 14:59",
+    "startAt": "2026-02-03T18:00:00+08:00",
+    "endAt": "2026-02-24T14:59:00+08:00",
+    "startCondition": null
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/01/09/75276539/6aa559ed83bff38b2144021f1e869f0a_2058012183327703563.jpg",
+    "https://upload-bbs.miyoushe.com/upload/2026/01/09/75276539/f3667dd2e9190961ec951cabc751cea4_2043927036071594962.png"
+  ],
+  "source": {
+    "postId": "72261668",
+    "title": "「渊海界令」祈愿：「谕告的潮音·那维莱特(水)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/72261668",
+    "publishedAt": "2026-01-12T12:00:24+08:00",
+    "updatedAt": "2026-02-23T11:42:07+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/72261668.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized",
+    "times": {
+      "startRaw": "2026/02/03 18:00",
+      "endRaw": "2026/02/24 14:59",
+      "startAt": "2026-02-03T18:00:00+08:00",
+      "endAt": "2026-02-24T14:59:00+08:00",
+      "startCondition": null,
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/01/09/75276539/f3667dd2e9190961ec951cabc751cea4_2043927036071594962.png",
+      "imageSha256": "6a66c9aeb69fa6837055213f6cc48aa1e9f5924eff9c9b2d21a5cfd8bcf94308",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

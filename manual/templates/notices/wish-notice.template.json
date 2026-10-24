@@ -1,0 +1,17 @@
+{
+  "format": "genshin-notice-manual-v1",
+  "postId": "78782590",
+  "data": {
+    "bannerName": "莓色香颂",
+    "time": {
+      "endAt": "2026-11-03T14:59:00+08:00"
+    },
+    "up": {
+      "fourStarCharacters": [
+        "塔利雅",
+        "坎蒂丝",
+        "米卡"
+      ]
+    }
+  }
+}

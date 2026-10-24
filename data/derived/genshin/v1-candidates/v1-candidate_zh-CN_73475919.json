@@ -1,0 +1,197 @@
+{
+  "format": "genshin-v1-candidate-zh-CN-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "status": "ready_candidate",
+  "postId": "73475919",
+  "sourceKey": "73475919",
+  "version": "月之五",
+  "phase": 1,
+  "bannerName": "晨风之诗",
+  "poolType": "chronicled",
+  "variant": "chronicled",
+  "existingV1Id": "gi-000266",
+  "v1Draft": {
+    "gameVersion": "月之五",
+    "phase": 1,
+    "category": "chronicled",
+    "poolType": "chronicled",
+    "names": {
+      "zh-CN": "晨风之诗"
+    },
+    "gachaTypes": {
+      "raw": null,
+      "uigf": [
+        "500"
+      ]
+    },
+    "featured": {
+      "fiveStar": [
+        {
+          "itemId": "10000051",
+          "names": {
+            "zh-CN": "优菈"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000041",
+          "names": {
+            "zh-CN": "莫娜"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000038",
+          "names": {
+            "zh-CN": "阿贝多"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000029",
+          "names": {
+            "zh-CN": "可莉"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000016",
+          "names": {
+            "zh-CN": "迪卢克"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000003",
+          "names": {
+            "zh-CN": "琴"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "11502",
+          "names": {
+            "zh-CN": "天空之刃"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "11501",
+          "names": {
+            "zh-CN": "风鹰剑"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "12503",
+          "names": {
+            "zh-CN": "松籁响起之时"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "12502",
+          "names": {
+            "zh-CN": "狼的末路"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "12501",
+          "names": {
+            "zh-CN": "天空之傲"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "13502",
+          "names": {
+            "zh-CN": "天空之脊"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "14502",
+          "names": {
+            "zh-CN": "四风原典"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "14501",
+          "names": {
+            "zh-CN": "天空之卷"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "15503",
+          "names": {
+            "zh-CN": "终末嗟叹之诗"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "15501",
+          "names": {
+            "zh-CN": "天空之翼"
+          },
+          "type": "weapon"
+        }
+      ],
+      "fourStar": []
+    },
+    "regions": [
+      {
+        "server": "cn_official",
+        "startAt": null,
+        "endAt": "2026-03-17T18:00:00+08:00"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/73483205"
+      },
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/73475919"
+      }
+    ],
+    "variant": "chronicled",
+    "fatePointLimit": 1
+  },
+  "timeEvidence": {
+    "versionMaintenanceStartAt": "2026-02-25T06:00:00+08:00",
+    "previewEndAt": "2026-03-17T17:59:00+08:00",
+    "ocrEndAt": "2026-03-17T17:59:00+08:00",
+    "ocrStatus": "recognized_conditional",
+    "endTimeSource": "ocr",
+    "manualFile": null,
+    "ocrImageSha256": "ec939e5b3ebe4952fc9ede7a0c59642c4406670c0c088bcbf430ceb54f656e26",
+    "startRaw": "版本更新后",
+    "endRaw": "2026/03/1 7 17:59",
+    "startCondition": "after_version_update",
+    "exclusiveEndPolicy": "原公告分钟结束时间 + 1 分钟；仅候选转换"
+  },
+  "provenance": {
+    "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之五.json",
+    "versionUpdatePostId": "73521381",
+    "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之五-phase-1.json",
+    "previewPostId": "73483205",
+    "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73475919.json",
+    "noticePostId": "73475919",
+    "noticeSourceKey": "73475919"
+  },
+  "warnings": [
+    "conditional_start_time"
+  ],
+  "manualAudit": {
+    "filled": [],
+    "matched": [],
+    "file": null,
+    "sources": []
+  },
+  "note": "离线候选；不自动确定版本更新后的精确开池时间，不自动分配内部 ID，不修改正式 v1"
+}

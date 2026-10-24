@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "game": "genshin",
+  "generatedAt": "2026-10-13T23:30:00+08:00",
+  "banners": [
+    {
+      "id": "gi-000001",
+      "gameVersion": null,
+      "phase": 2,
+      "category": "character",
+      "poolType": "character_event_2",
+      "names": {
+        "zh-CN": "【虚构测试】限定卡池",
+        "en-US": "FICTIONAL FIXTURE — NOT A REAL BANNER"
+      },
+      "gachaTypes": {
+        "raw": [
+          "400"
+        ],
+        "uigf": [
+          "301"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": null,
+            "type": "character",
+            "names": {
+              "zh-CN": "【虚构】五星角色"
+            }
+          }
+        ],
+        "fourStar": null
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2030-01-01T10:00:00+08:00",
+          "endAt": "2030-01-20T10:00:00+08:00"
+        },
+        {
+          "server": "cn_channel",
+          "startAt": "2030-01-01T11:00:00+08:00",
+          "endAt": "2030-01-20T11:00:00+08:00"
+        },
+        {
+          "server": "asia",
+          "startAt": "2030-01-01T12:00:00+08:00",
+          "endAt": "2030-01-20T12:00:00+08:00"
+        },
+        {
+          "server": "europe",
+          "startAt": "2030-01-01T13:00:00+08:00",
+          "endAt": "2030-01-20T13:00:00+08:00"
+        },
+        {
+          "server": "america",
+          "startAt": "2030-01-01T14:00:00+08:00",
+          "endAt": "2030-01-20T14:00:00+08:00"
+        },
+        {
+          "server": "tw_hk_mo",
+          "startAt": "2030-01-01T15:00:00+08:00",
+          "endAt": "2030-01-20T15:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "fixture",
+          "externalId": "synthetic-do-not-publish"
+        }
+      ]
+    }
+  ]
+}

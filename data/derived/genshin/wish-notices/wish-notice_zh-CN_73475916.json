@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "北风的凯旋歌",
+  "officialWishType": "角色活动祈愿",
+  "poolType": "character_event",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "法尔伽",
+        "title": "北风骑士",
+        "element": "风",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "班尼特",
+        "title": "命运试金石",
+        "element": "火",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "香菱",
+        "title": "万民百味",
+        "element": "火",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "砂糖",
+        "title": "无害甜度",
+        "element": "风",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "版本更新后",
+    "endRaw": "2026/03/17 17:59",
+    "startAt": null,
+    "endAt": "2026-03-17T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/02/13/75276539/509fc778ebcdf9a8fdc546c1b675b513_352504098157454480.jpg",
+    "https://upload-bbs.miyoushe.com/upload/2026/02/13/75276539/291f9acf0387940cdad4f41e780af952_261929270079023854.png"
+  ],
+  "source": {
+    "postId": "73475916",
+    "title": "「北风的凯旋歌」祈愿：「北风骑士·法尔伽(风)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/73475916",
+    "publishedAt": "2026-02-23T12:00:11+08:00",
+    "updatedAt": "2026-08-21T10:22:00+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/73475916.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized_conditional",
+    "times": {
+      "startRaw": "版本更新后",
+      "endRaw": "2026/03/17 17:59",
+      "startAt": null,
+      "endAt": "2026-03-17T17:59:00+08:00",
+      "startCondition": "after_version_update",
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/02/13/75276539/291f9acf0387940cdad4f41e780af952_261929270079023854.png",
+      "imageSha256": "d4f2fb78477ac44f88b2f5ea18fc3c9f5e9f8d969233a73d864e933189ef6d8c",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

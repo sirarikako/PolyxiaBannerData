@@ -1,0 +1,29 @@
+{
+  "format": "genshin-missing-notice-v1",
+  "noticeType": "wish_notice",
+  "identity": {
+    "version": "7.1",
+    "phase": 2,
+    "poolType": "character_event_2"
+  },
+  "data": {
+    "bannerName": "莓色香颂",
+    "time": {
+      "startAt": "2026-10-13T18:00:00+08:00",
+      "endAt": "2026-11-03T14:59:00+08:00"
+    },
+    "up": {
+      "fiveStarCharacters": [
+        "爱可菲"
+      ],
+      "fourStarCharacters": [
+        "塔利雅",
+        "坎蒂丝",
+        "米卡"
+      ]
+    }
+  },
+  "evidence": {
+    "summary": "格式示例：这并不表示 7.1 的公告实际缺失；正式使用须记录真实核对结论。"
+  }
+}

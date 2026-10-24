@@ -1,0 +1,155 @@
+{
+  "format": "genshin-v1-candidate-zh-CN-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "status": "ready_candidate",
+  "postId": "76308871",
+  "sourceKey": "76308871",
+  "version": "月之八",
+  "phase": 1,
+  "bannerName": "辉天的星告",
+  "poolType": "chronicled",
+  "variant": "special_recollection",
+  "existingV1Id": "gi-000286",
+  "v1Draft": {
+    "gameVersion": "月之八",
+    "phase": 1,
+    "category": "chronicled",
+    "poolType": "chronicled",
+    "names": {
+      "zh-CN": "辉天的星告"
+    },
+    "gachaTypes": {
+      "raw": null,
+      "uigf": [
+        "500"
+      ]
+    },
+    "featured": {
+      "fiveStar": [
+        {
+          "itemId": "10000109",
+          "names": {
+            "zh-CN": "梦见月瑞希"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000086",
+          "names": {
+            "zh-CN": "莱欧斯利"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000071",
+          "names": {
+            "zh-CN": "赛诺"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000058",
+          "names": {
+            "zh-CN": "八重神子"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000035",
+          "names": {
+            "zh-CN": "七七"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "14518",
+          "names": {
+            "zh-CN": "寝正月初晴"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "14513",
+          "names": {
+            "zh-CN": "金流监督"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "13511",
+          "names": {
+            "zh-CN": "赤沙之杖"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "14509",
+          "names": {
+            "zh-CN": "神乐之真意"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "11502",
+          "names": {
+            "zh-CN": "天空之刃"
+          },
+          "type": "weapon"
+        }
+      ],
+      "fourStar": []
+    },
+    "regions": [
+      {
+        "server": "cn_official",
+        "startAt": null,
+        "endAt": "2026-07-21T18:00:00+08:00"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/76328614"
+      },
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/76308871"
+      }
+    ],
+    "variant": "special_recollection",
+    "fatePointLimit": 1
+  },
+  "timeEvidence": {
+    "versionMaintenanceStartAt": "2026-07-01T06:00:00+08:00",
+    "previewEndAt": "2026-07-21T17:59:00+08:00",
+    "ocrEndAt": "2026-07-21T17:59:00+08:00",
+    "ocrStatus": "recognized_conditional",
+    "endTimeSource": "ocr",
+    "manualFile": null,
+    "ocrImageSha256": "f7f7e95add8663d11646541d35a0bafe621a1ca63db522def2b18201bb483f35",
+    "startRaw": "版本更新后",
+    "endRaw": "2026/07/21 17:59",
+    "startCondition": "after_version_update",
+    "exclusiveEndPolicy": "原公告分钟结束时间 + 1 分钟；仅候选转换"
+  },
+  "provenance": {
+    "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之八.json",
+    "versionUpdatePostId": "76345546",
+    "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之八-phase-1.json",
+    "previewPostId": "76328614",
+    "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76308871.json",
+    "noticePostId": "76308871",
+    "noticeSourceKey": "76308871"
+  },
+  "warnings": [
+    "conditional_start_time"
+  ],
+  "manualAudit": {
+    "filled": [],
+    "matched": [],
+    "file": null,
+    "sources": []
+  },
+  "note": "离线候选；不自动确定版本更新后的精确开池时间，不自动分配内部 ID，不修改正式 v1"
+}

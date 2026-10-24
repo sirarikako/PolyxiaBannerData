@@ -1,0 +1,136 @@
+{
+  "format": "genshin-v1-candidate-zh-CN-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "status": "ready_candidate",
+  "postId": "72261670",
+  "sourceKey": "72261670",
+  "version": "月之四",
+  "phase": 1,
+  "bannerName": "神铸赋形",
+  "poolType": "weapon_event",
+  "variant": null,
+  "existingV1Id": "gi-000259",
+  "v1Draft": {
+    "gameVersion": "月之四",
+    "phase": 1,
+    "category": "weapon",
+    "poolType": "weapon_event",
+    "names": {
+      "zh-CN": "神铸赋形"
+    },
+    "gachaTypes": {
+      "raw": [
+        "302"
+      ],
+      "uigf": [
+        "302"
+      ]
+    },
+    "featured": {
+      "fiveStar": [
+        {
+          "itemId": "14522",
+          "names": {
+            "zh-CN": "帷间夜曲"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "13515",
+          "names": {
+            "zh-CN": "支离轮光"
+          },
+          "type": "weapon"
+        }
+      ],
+      "fourStar": [
+        {
+          "itemId": "13430",
+          "names": {
+            "zh-CN": "镇山之钉"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "14430",
+          "names": {
+            "zh-CN": "乘浪的回旋"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "15412",
+          "names": {
+            "zh-CN": "幽夜华尔兹"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "11402",
+          "names": {
+            "zh-CN": "笛剑"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "12403",
+          "names": {
+            "zh-CN": "祭礼大剑"
+          },
+          "type": "weapon"
+        }
+      ]
+    },
+    "regions": [
+      {
+        "server": "cn_official",
+        "startAt": null,
+        "endAt": "2026-02-03T18:00:00+08:00"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/72287317"
+      },
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/72261670"
+      }
+    ],
+    "fatePointLimit": 1
+  },
+  "timeEvidence": {
+    "versionMaintenanceStartAt": "2026-01-14T06:00:00+08:00",
+    "previewEndAt": "2026-02-03T17:59:00+08:00",
+    "ocrEndAt": "2026-02-03T17:59:00+08:00",
+    "ocrStatus": "recognized_conditional",
+    "endTimeSource": "ocr",
+    "manualFile": null,
+    "ocrImageSha256": "c39503613c6352e5bd35c0942e7677b2e2dce9361497c82dec82667f4f6f65bd",
+    "startRaw": "版本更新后",
+    "endRaw": "2026/02/03 17:59",
+    "startCondition": "after_version_update",
+    "exclusiveEndPolicy": "原公告分钟结束时间 + 1 分钟；仅候选转换"
+  },
+  "provenance": {
+    "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之四.json",
+    "versionUpdatePostId": "72299859",
+    "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之四-phase-1.json",
+    "previewPostId": "72287317",
+    "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261670.json",
+    "noticePostId": "72261670",
+    "noticeSourceKey": "72261670"
+  },
+  "warnings": [
+    "conditional_start_time"
+  ],
+  "manualAudit": {
+    "filled": [],
+    "matched": [],
+    "file": null,
+    "sources": []
+  },
+  "note": "离线候选；不自动确定版本更新后的精确开池时间，不自动分配内部 ID，不修改正式 v1"
+}

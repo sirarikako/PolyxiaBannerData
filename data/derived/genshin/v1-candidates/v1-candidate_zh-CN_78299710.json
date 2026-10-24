@@ -1,0 +1,114 @@
+{
+  "format": "genshin-v1-candidate-zh-CN-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "status": "ready_candidate",
+  "postId": "78299710",
+  "sourceKey": "78299710",
+  "version": "7.1",
+  "phase": 1,
+  "bannerName": "煦风欢舞时",
+  "poolType": "character_event",
+  "variant": null,
+  "existingV1Id": "gi-000296",
+  "v1Draft": {
+    "gameVersion": "7.1",
+    "phase": 1,
+    "category": "character",
+    "poolType": "character_event",
+    "names": {
+      "zh-CN": "煦风欢舞时"
+    },
+    "gachaTypes": {
+      "raw": [
+        "301"
+      ],
+      "uigf": [
+        "301"
+      ]
+    },
+    "featured": {
+      "fiveStar": [
+        {
+          "itemId": "10000143",
+          "names": {
+            "zh-CN": "薇斯纳"
+          },
+          "type": "character"
+        }
+      ],
+      "fourStar": [
+        {
+          "itemId": "10000039",
+          "names": {
+            "zh-CN": "迪奥娜"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000076",
+          "names": {
+            "zh-CN": "珐露珊"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000036",
+          "names": {
+            "zh-CN": "重云"
+          },
+          "type": "character"
+        }
+      ]
+    },
+    "regions": [
+      {
+        "server": "cn_official",
+        "startAt": null,
+        "endAt": "2026-10-13T18:00:00+08:00"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/78324485"
+      },
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/78299710"
+      }
+    ]
+  },
+  "timeEvidence": {
+    "versionMaintenanceStartAt": "2026-09-23T06:00:00+08:00",
+    "previewEndAt": "2026-10-13T17:59:00+08:00",
+    "ocrEndAt": "2026-10-13T17:59:00+08:00",
+    "ocrStatus": "recognized_conditional",
+    "endTimeSource": "ocr",
+    "manualFile": null,
+    "ocrImageSha256": "8f40a3888f26e07706df1a78ee7b864c10f72e38d3b3a96fd776649699b1f217",
+    "startRaw": "7.1版本更新后",
+    "endRaw": "2026/10/13 17:59",
+    "startCondition": "after_version_update",
+    "exclusiveEndPolicy": "原公告分钟结束时间 + 1 分钟；仅候选转换"
+  },
+  "provenance": {
+    "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.1.json",
+    "versionUpdatePostId": "78335167",
+    "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.1-phase-1.json",
+    "previewPostId": "78324485",
+    "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78299710.json",
+    "noticePostId": "78299710",
+    "noticeSourceKey": "78299710"
+  },
+  "warnings": [
+    "conditional_start_time"
+  ],
+  "manualAudit": {
+    "filled": [],
+    "matched": [],
+    "file": null,
+    "sources": []
+  },
+  "note": "离线候选；不自动确定版本更新后的精确开池时间，不自动分配内部 ID，不修改正式 v1"
+}

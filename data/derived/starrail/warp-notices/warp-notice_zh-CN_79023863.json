@@ -1,0 +1,114 @@
+{
+  "format": "starrail-warp-notice-v1",
+  "game": "starrail",
+  "locale": "zh-CN",
+  "version": "4.6",
+  "phase": 2,
+  "banners": [
+    {
+      "bannerName": "沧海萃珠",
+      "poolType": "character_event",
+      "featured": {
+        "fiveStar": [
+          "真珠"
+        ],
+        "fourStar": [
+          "青雀",
+          "雪衣",
+          "米沙"
+        ]
+      },
+      "time": {
+        "startAt": "2026-09-28T06:00:00+08:00",
+        "endAt": "2026-11-10T15:00:00+08:00",
+        "startDate": null,
+        "startRaw": "2026/09/28 4.6版本更新后",
+        "endRaw": "2026/11/10 15:00",
+        "startCondition": "after_version_update",
+        "startDerived": true,
+        "endRule": "exact_boundary"
+      }
+    },
+    {
+      "bannerName": "流光定影•献给明日的色彩",
+      "poolType": "light_cone_event",
+      "featured": {
+        "fiveStar": [
+          "献给明日的色彩"
+        ],
+        "fourStar": [
+          "一场术后对话",
+          "与行星相会",
+          "无边曼舞"
+        ]
+      },
+      "time": {
+        "startAt": "2026-09-28T06:00:00+08:00",
+        "endAt": "2026-11-10T15:00:00+08:00",
+        "startDate": null,
+        "startRaw": "2026/09/28 4.6版本更新后",
+        "endRaw": "2026/11/10 15:00",
+        "startCondition": "after_version_update",
+        "startDerived": true,
+        "endRule": "exact_boundary"
+      }
+    },
+    {
+      "bannerName": "我身即刃",
+      "poolType": "character_event",
+      "featured": {
+        "fiveStar": [
+          "千冶•刃"
+        ],
+        "fourStar": [
+          "青雀",
+          "雪衣",
+          "米沙"
+        ]
+      },
+      "time": {
+        "startAt": "2026-10-21T12:00:00+08:00",
+        "endAt": "2026-11-10T15:00:00+08:00",
+        "startDate": null,
+        "startRaw": "2026/10/21 12:00",
+        "endRaw": "2026/11/10 15:00",
+        "startCondition": null,
+        "startDerived": false,
+        "endRule": "exact_boundary"
+      }
+    },
+    {
+      "bannerName": "溯回忆象•灼尽炼狱的新骸",
+      "poolType": "light_cone_event",
+      "featured": {
+        "fiveStar": [
+          "灼尽炼狱的新骸"
+        ],
+        "fourStar": [
+          "一场术后对话",
+          "与行星相会",
+          "无边曼舞"
+        ]
+      },
+      "time": {
+        "startAt": "2026-10-21T12:00:00+08:00",
+        "endAt": "2026-11-10T15:00:00+08:00",
+        "startDate": null,
+        "startRaw": "2026/10/21 12:00",
+        "endRaw": "2026/11/10 15:00",
+        "startCondition": null,
+        "startDerived": false,
+        "endRule": "exact_boundary"
+      }
+    }
+  ],
+  "source": {
+    "postId": "79023863",
+    "title": "4.6版本活动跃迁（其二）",
+    "url": "https://www.miyoushe.com/sr/article/79023863"
+  },
+  "review": {
+    "warnings": [],
+    "status": "parsed"
+  }
+}

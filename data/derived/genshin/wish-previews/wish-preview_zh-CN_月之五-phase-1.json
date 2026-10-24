@@ -1,0 +1,63 @@
+{
+  "format": "genshin-wish-preview-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_preview",
+  "version": "月之五",
+  "phase": 1,
+  "time": {
+    "startRaw": "2026/02/25 「月之五」版本更新后",
+    "endRaw": "2026/03/17 17:59",
+    "startAt": null,
+    "endAt": "2026-03-17T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "法尔伽",
+        "title": "北风骑士",
+        "element": "风"
+      },
+      {
+        "name": "菲林斯",
+        "title": "诡灯陌影",
+        "element": "雷"
+      }
+    ],
+    "fourStarCharacters": [],
+    "fiveStarWeapons": [
+      {
+        "name": "狼的武功歌",
+        "weaponType": "双手剑"
+      },
+      {
+        "name": "血染荒城",
+        "weaponType": "长柄武器"
+      }
+    ],
+    "fourStarWeapons": []
+  },
+  "additionalWishes": [
+    {
+      "name": "晨风之诗",
+      "kind": "chronicled",
+      "noticeType": "集录祈愿"
+    }
+  ],
+  "source": {
+    "postId": "73483205",
+    "title": "「月之五」版本活动祈愿预告第一期",
+    "url": "https://www.miyoushe.com/ys/article/73483205",
+    "listUrl": "https://www.miyoushe.com/ys/home/28?type=3",
+    "publishedAt": "2026-02-23T18:05:09+08:00",
+    "updatedAt": "2026-03-29T11:40:38+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/73483205.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "预告是整期汇总，不含可靠的单独祈愿池名称、角色武器配对或 itemId；不得直接发布到 v1"
+  }
+}

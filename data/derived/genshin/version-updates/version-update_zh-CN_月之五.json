@@ -1,0 +1,41 @@
+{
+  "format": "genshin-version-update-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "version": "月之五",
+  "versionName": "『空月之歌·变奏』捕风的归客",
+  "maintenance": {
+    "startAt": "2026-02-25T06:00:00+08:00",
+    "estimatedDurationHours": 5,
+    "estimatedEndAt": "2026-02-25T11:00:00+08:00"
+  },
+  "newCharacters": [
+    {
+      "name": "法尔伽",
+      "rarity": 5,
+      "title": "北风骑士",
+      "element": "风",
+      "weaponType": "双手剑"
+    }
+  ],
+  "newWeapons": [
+    {
+      "name": "狼的武功歌",
+      "rarity": 5,
+      "weaponType": "双手剑",
+      "acquisition": "wish"
+    }
+  ],
+  "source": {
+    "postId": "73521381",
+    "title": "「『空月之歌·变奏』捕风的归客」「月之五」版本更新说明",
+    "url": "https://www.miyoushe.com/ys/article/73521381",
+    "publishedAt": "2026-02-25T07:00:12+08:00",
+    "updatedAt": "2026-06-12T17:52:47+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/73521381.json"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": []
+  }
+}

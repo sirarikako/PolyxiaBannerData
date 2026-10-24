@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "素霓伣天",
+  "officialWishType": "角色活动祈愿-2",
+  "poolType": "character_event_2",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "夜兰",
+        "title": "兰生幽谷",
+        "element": "水",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "爱诺",
+        "title": "妙械咣咣铛",
+        "element": "水",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "砂糖",
+        "title": "无害甜度",
+        "element": "风",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "多莉",
+        "title": "梦园藏金",
+        "element": "雷",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "2025/09/30 18:00",
+    "endRaw": "2025/10/21 14:59",
+    "startAt": "2025-09-30T18:00:00+08:00",
+    "endAt": "2025-10-21T14:59:00+08:00",
+    "startCondition": null
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2025/09/24/75276539/f7b231048594f64bdec5576c5724fefd_6569615971826978391.png",
+    "https://upload-bbs.miyoushe.com/upload/2025/09/24/75276539/a954be1b038a2d304870a6a2ba2440ee_3354936635529216961.png"
+  ],
+  "source": {
+    "postId": "68917811",
+    "title": "「素霓伣天」祈愿：「兰生幽谷·夜兰(水)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/68917811",
+    "publishedAt": "2025-09-25T16:00:17+08:00",
+    "updatedAt": "2025-11-21T23:25:03+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/68917811.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized",
+    "times": {
+      "startRaw": "2025/09/30 18:00",
+      "endRaw": "2025/10/21 14:59",
+      "startAt": "2025-09-30T18:00:00+08:00",
+      "endAt": "2025-10-21T14:59:00+08:00",
+      "startCondition": null,
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2025/09/24/75276539/a954be1b038a2d304870a6a2ba2440ee_3354936635529216961.png",
+      "imageSha256": "94c4c08e70f246a86eba3006e6c7058c5817bb691602752f4f2bf93c553b70b7",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

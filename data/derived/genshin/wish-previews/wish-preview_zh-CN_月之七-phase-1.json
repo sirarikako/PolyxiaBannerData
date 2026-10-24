@@ -1,0 +1,66 @@
+{
+  "format": "genshin-wish-preview-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_preview",
+  "version": "月之七",
+  "phase": 1,
+  "time": {
+    "startRaw": "2026/05/20「月之七」版本更新后",
+    "endRaw": "2026/06/09 17:59",
+    "startAt": null,
+    "endAt": "2026-06-09T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "尼可",
+        "title": "喧寂于心",
+        "element": "火"
+      },
+      {
+        "name": "杜林",
+        "title": "『不熄灭的火』",
+        "element": "火"
+      }
+    ],
+    "fourStarCharacters": [],
+    "fiveStarWeapons": [
+      {
+        "name": "尘光七谕",
+        "weaponType": "法器"
+      },
+      {
+        "name": "黑蚀",
+        "weaponType": "单手剑"
+      }
+    ],
+    "fourStarWeapons": [
+      {
+        "name": "织月者的曙色",
+        "weaponType": "单手剑"
+      },
+      {
+        "name": "幽夜华尔兹",
+        "weaponType": "弓"
+      }
+    ]
+  },
+  "additionalWishes": [],
+  "source": {
+    "postId": "75425444",
+    "title": "「月之七」版本活动祈愿预告第一期",
+    "url": "https://www.miyoushe.com/ys/article/75425444",
+    "listUrl": "https://www.miyoushe.com/ys/home/28?type=3",
+    "publishedAt": "2026-05-19T12:05:11+08:00",
+    "updatedAt": "2026-09-18T17:22:25+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe-account-75276539/posts/75425444.json",
+    "textSource": "structured_content"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "预告是整期汇总，不含可靠的单独祈愿池名称、角色武器配对或 itemId；不得直接发布到 v1"
+  }
+}

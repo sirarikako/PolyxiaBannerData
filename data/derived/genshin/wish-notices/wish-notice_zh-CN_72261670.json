@@ -1,0 +1,109 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "神铸赋形",
+  "officialWishType": "武器活动祈愿",
+  "poolType": "weapon_event",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [],
+    "fourStarCharacters": [],
+    "fiveStarWeapons": [
+      {
+        "name": "帷间夜曲",
+        "weaponType": "法器",
+        "rarity": 5,
+        "limited": true
+      },
+      {
+        "name": "支离轮光",
+        "weaponType": "长柄武器",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarWeapons": [
+      {
+        "name": "镇山之钉",
+        "weaponType": "长柄武器",
+        "rarity": 4,
+        "limited": true
+      },
+      {
+        "name": "乘浪的回旋",
+        "weaponType": "法器",
+        "rarity": 4,
+        "limited": true
+      },
+      {
+        "name": "幽夜华尔兹",
+        "weaponType": "弓",
+        "rarity": 4,
+        "limited": true
+      },
+      {
+        "name": "笛剑",
+        "weaponType": "单手剑",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "祭礼大剑",
+        "weaponType": "双手剑",
+        "rarity": 4,
+        "limited": null
+      }
+    ]
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "版本更新后",
+    "endRaw": "2026/02/03 17:59",
+    "startAt": null,
+    "endAt": "2026-02-03T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": null,
+    "characterTrial": null
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/01/09/75276539/5d20861aa8e97dec5e0ebc604c8f5373_2924942186117579270.jpg",
+    "https://upload-bbs.miyoushe.com/upload/2026/01/09/75276539/4d21a6ebdae5523ed6f9ce10f06b09b1_6364715479595908547.png"
+  ],
+  "source": {
+    "postId": "72261670",
+    "title": "祈愿：「法器·帷间夜曲」「长柄武器·支离轮光」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/72261670",
+    "publishedAt": "2026-01-12T12:00:26+08:00",
+    "updatedAt": "2026-02-17T23:09:31+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/72261670.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized_conditional",
+    "times": {
+      "startRaw": "版本更新后",
+      "endRaw": "2026/02/03 17:59",
+      "startAt": null,
+      "endAt": "2026-02-03T17:59:00+08:00",
+      "startCondition": "after_version_update",
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/01/09/75276539/4d21a6ebdae5523ed6f9ce10f06b09b1_6364715479595908547.png",
+      "imageSha256": "c39503613c6352e5bd35c0942e7677b2e2dce9361497c82dec82667f4f6f65bd",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "苍林月祷",
+  "officialWishType": "角色活动祈愿",
+  "poolType": "character_event",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "菈乌玛",
+        "title": "永月的祀歌",
+        "element": "草",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "芭芭拉",
+        "title": "闪耀偶像",
+        "element": "水",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "久岐忍",
+        "title": "烦恼刈除",
+        "element": "雷",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "卡维",
+        "title": "天穹之镜",
+        "element": "草",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "版本更新后",
+    "endRaw": "2025/09/30 17:59",
+    "startAt": null,
+    "endAt": "2025-09-30T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2025/09/05/75276539/bc56c44f9d06f61b87e10043fb71ee37_5703340767972220176.png",
+    "https://upload-bbs.miyoushe.com/upload/2025/09/05/75276539/98cab876460ec9f46420b50ae3a9bbb0_2322143325556669675.png"
+  ],
+  "source": {
+    "postId": "68312649",
+    "title": "「苍林月祷」祈愿：「永月的祀歌·菈乌玛(草)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/68312649",
+    "publishedAt": "2025-09-08T12:00:16+08:00",
+    "updatedAt": "2026-06-18T10:27:41+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/68312649.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized_conditional",
+    "times": {
+      "startRaw": "版本更新后",
+      "endRaw": "2025/09/30 17:59",
+      "startAt": null,
+      "endAt": "2025-09-30T17:59:00+08:00",
+      "startCondition": "after_version_update",
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2025/09/05/75276539/98cab876460ec9f46420b50ae3a9bbb0_2322143325556669675.png",
+      "imageSha256": "420b4d0c77a34d0ea5ab39b4a53e1ebaaecbc3b4fccca2b7debc59ca43edb873",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}
