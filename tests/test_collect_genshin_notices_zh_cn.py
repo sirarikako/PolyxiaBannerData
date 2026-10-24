@@ -342,3 +342,109 @@ def test_retry_check_only_transient_pending():
     assert is_retryable_pending({"lastError": "图片请求临时失败：timeout"})
     assert not is_retryable_pending({"lastError": "OCR unresolved"})
     assert not is_retryable_pending({"lastError": "米游社要求验证或出现限流，已停止"})
+
+
+
+def test_verified_backup_news_api_uses_no_painter_client_parameter():
+    body = {"data": {"list": [{"post": post("98")}],
+                     "is_last": True, "last_id": ""}}
+    with patch.object(collector, "fetch", return_value=body) as req:
+        posts, is_last, cursor = collector.list_page(
+            3, "prior-cursor", endpoint=collector.BACKUP_LIST_API)
+    assert [x["post_id"] for x in posts] == ["98"]
+    assert is_last and cursor == ""
+    req.assert_called_once_with(
+        collector.BACKUP_LIST_API,
+        {"gids": 2, "type": 3, "page_size": 20, "last_id": "prior-cursor"},
+        retries=1,
+    )
+
+
+def test_news_list_transient_transport_cause_is_not_malformed_data():
+    from urllib.error import URLError
+    from scripts.collect import collect_miyoushe_announcements as shared
+
+    with patch.object(shared, "urlopen", side_effect=URLError("timed out")):
+        with pytest.raises(collector.TransientListError, match="URLError"):
+            collector.list_page(1)
+
+
+def test_fallback_restarts_at_first_page_after_second_page_timeout():
+    old = [post("5"), post("4"), post("3")]
+    first = ([post("99"), post("98")], False, "primary-page2")
+    backup_first = ([post("99"), post("98")], False, "backup-page2")
+    backup_second = (old, True, "")
+    with patch.object(collector, "list_page", side_effect=[
+        first, collector.TransientListError("timeout"), backup_first, backup_second,
+    ]) as req:
+        found, anchors, pages = collector.discover(1, ["5", "4", "3"], 5)
+    assert [p["post_id"] for p in found] == ["99", "98"]
+    assert anchors == ["99", "98", "5", "4", "3"]
+    assert pages == 2
+    assert req.call_args_list == [
+        __import__("unittest.mock", fromlist=["call"]).call(1, ""),
+        __import__("unittest.mock", fromlist=["call"]).call(1, "primary-page2"),
+        __import__("unittest.mock", fromlist=["call"]).call(
+            1, "", endpoint=collector.BACKUP_LIST_API),
+        __import__("unittest.mock", fromlist=["call"]).call(
+            1, "backup-page2", endpoint=collector.BACKUP_LIST_API),
+    ]
+
+
+def test_first_run_can_use_backup_without_historical_rescan():
+    with patch.object(collector, "list_page", side_effect=[
+        collector.TransientListError("timeout"),
+        ([post("9"), post("8")], False, "next"),
+    ]) as req:
+        posts, is_last, cursor = collector.initial_list_page(3)
+    assert [p["post_id"] for p in posts] == ["9", "8"]
+    assert not is_last and cursor == "next"
+    assert req.call_count == 2
+    assert req.call_args_list[-1].kwargs["endpoint"] == collector.BACKUP_LIST_API
+
+
+@pytest.mark.parametrize("reason", [
+    collector.VerificationRequired("captcha"), collector.RateLimited("429"),
+    collector.DiscoveryError("malformed list"),
+])
+def test_challenge_or_bad_data_does_not_use_backup(reason):
+    with patch.object(collector, "list_page", side_effect=reason) as req:
+        with pytest.raises(type(reason)):
+            collector.discover(1, ["5", "4", "3"], 3)
+    req.assert_called_once_with(1, "")
+
+
+def test_both_official_hosts_failing_cannot_advance_checkpoint(tmp_path):
+    import json
+    cp = tmp_path / "checkpoint.json"
+    report = tmp_path / "report.json"
+    state = collector.fresh_state()
+    state["feeds"]["1"] = {"anchors": ["5", "4", "3"],
+                           "lastCheckedAt": "2026-10-23T19:51:31+08:00",
+                           "initializedOnly": False}
+    cp.write_text(json.dumps(state, ensure_ascii=False), encoding="utf-8")
+    before = cp.read_bytes()
+    with patch.object(collector, "list_page",
+                      side_effect=collector.TransientListError("timeout")) as req:
+        with pytest.raises(collector.TransientListError):
+            collector.run(checkpoint=cp, report_path=report)
+    assert req.call_count == 2
+    assert cp.read_bytes() == before
+    assert not report.exists()
+
+
+def test_no_fallback_on_http_403_or_404():
+    from urllib.error import HTTPError
+
+    for code in (403, 404):
+        exc = HTTPError(collector.LIST_API, code, "denied", {}, None)
+        with patch.object(collector, "fetch") as http:
+            http.side_effect = RuntimeError("invalid endpoint")
+            try:
+                raise http.side_effect from exc
+            except RuntimeError as caught:
+                http.side_effect = caught
+            with pytest.raises(RuntimeError) as raised:
+                collector.list_page(1)
+            assert type(raised.value) is RuntimeError
+        http.assert_called_once()
