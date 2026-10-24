@@ -194,3 +194,38 @@ def test_fetch_network_failure_does_not_clear_manual_checkpoint(tmp_path):
         recover("genshin", tmp_path, fails)
     assert (tmp_path / G_STATE).read_bytes() == before
     assert "error" in index_additional(tmp_path, [], "wish_notice")[0]
+
+
+def test_manual_source_failure_keeps_public_issue_guard_closed(tmp_path, monkeypatch):
+    from unittest.mock import patch
+    from scripts.collect import notify_genshin_notice_problems as notify
+    from scripts.release.report_genshin_v1_preview_zh_cn import generate
+
+    save(tmp_path, G_STATE, {
+        "format": "genshin-notice-discovery-v1",
+        "game": "genshin", "locale": "zh-CN",
+        "pending": {}, "manualReview": {}, "manualRecovered": {},
+        "completed": {}, "feeds": {},
+    })
+    final = generate(tmp_path, stage_results={"manual_source": "1"})
+    assert "workflow-manual_source" in final["notifications"]
+    assert final["counts"]["blocking"] >= 1
+
+    save(tmp_path, notify.FINAL, {"notifications": {}})
+    for stage in ("COLLECT", "ASSEMBLE", "PREVIEW", "SANDBOX"):
+        monkeypatch.setenv("GENSHIN_" + stage + "_CODE", "0")
+    monkeypatch.setenv("GENSHIN_MANUAL_SOURCE_CODE", "1")
+    with patch.object(notify, "gh") as github:
+        out = notify.notify(tmp_path, "sirarikako/PolyxiaBannerData",
+                            "sirarikako", "", dry_run=False)
+    assert out["closed"] == []
+    github.assert_not_called()
+
+
+def test_source_recovery_does_not_embed_raw_in_public_report(tmp_path):
+    pid = "99320001"
+    star_manual(tmp_path, pid)
+    report = recover("starrail", tmp_path, lambda *_: starrail_doc())
+    assert report == {"game": "starrail", "requested": 1,
+                      "fetched": [pid], "failed": [], "temporaryOnly": True}
+    assert "虚构测试正文" not in json.dumps(report, ensure_ascii=False)
