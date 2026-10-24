@@ -29,10 +29,10 @@ def _tracked():
 def test_only_six_production_workflows_and_readonly_ci_are_deployed():
     tracked = _tracked()
     assert {p for p in tracked if p.startswith(".github/workflows/")} == {
-        ".github/workflows/p2-staging-validate.yml",
+        ".github/workflows/public-production-safety.yml",
         *{".github/workflows/" + name for name in EXPECTED_PRODUCTION},
     }
-    workflow = (PRODUCTION / "p2-staging-validate.yml").read_text(encoding="utf-8")
+    workflow = (PRODUCTION / "public-production-safety.yml").read_text(encoding="utf-8")
     assert "permissions:\n  contents: read" in workflow
     assert "  pull_request:" in workflow
     assert "  schedule:" not in workflow
