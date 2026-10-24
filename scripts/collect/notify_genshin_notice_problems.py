@@ -152,7 +152,7 @@ def notify(root: Path, repository: str, owner: str, run_url: str, *, dry_run: bo
     result = {"total": len(problems), "created": [], "existing": [],
               "updated": [], "reopened": [], "closed": [], "dryRun": dry_run}
     healthy = (root / FINAL).is_file() and all(
-        os.environ.get(key) == "0"
+        os.environ.get(key, "0") == "0"
         for key in ("GENSHIN_COLLECT_CODE", "GENSHIN_MANUAL_SOURCE_CODE", "GENSHIN_ASSEMBLE_CODE",
                     "GENSHIN_PREVIEW_CODE", "GENSHIN_SANDBOX_CODE"))
     if dry_run or (not problems and not healthy):
