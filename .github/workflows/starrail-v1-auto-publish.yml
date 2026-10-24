@@ -87,7 +87,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: 安装正式数据校验依赖
-        run: python -m pip install -r requirements-dev.txt
+        run: python -m pip install -r requirements.txt
       - name: 串行导入、全量校验、提交星铁V1与版本人工状态
         id: publish
         shell: bash
@@ -101,7 +101,6 @@ jobs:
             python -m scripts.release.validate_v1 --datasets-only
             python -m scripts.release.refresh_v1_manifest > /tmp/starrail-manifest-validation-preview.log
             python -m scripts.release.validate_v1 --public
-            python -m unittest discover -s tests -p 'test_v1.py'
             # 3-2 只发布 V1 与人工完成状态；Manifest 正式更新仍由 1-1 单独执行。
             git restore -- public/v1/manifest.json
             git add -A -- public/v1/starrail.json

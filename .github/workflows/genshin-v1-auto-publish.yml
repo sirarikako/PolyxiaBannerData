@@ -91,7 +91,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: 安装正式数据校验依赖
-        run: python -m pip install -r requirements-dev.txt
+        run: python -m pip install -r requirements.txt
       - name: 逐池导入、验证并提交（冲突时重新计算新 ID）
         id: publish
         shell: bash
@@ -107,7 +107,6 @@ jobs:
             # 在 Runner 临时重算 Manifest，再进行完整合约/哈希验证。
             python -m scripts.release.refresh_v1_manifest > /tmp/genshin-manifest-validation-preview.log
             python -m scripts.release.validate_v1 --public
-            python -m unittest discover -s tests -p 'test_v1.py'
             # 2-2 只提交 V1/人工状态；Manifest 的正式提交仍由 1-1 管理。
             git restore -- public/v1/manifest.json
 

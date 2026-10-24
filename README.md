@@ -28,13 +28,19 @@ GitHub Raw 可直接读取：
 - `scripts/`：采集、OCR、结构化整合与发布代码，参阅 [脚本说明](scripts/README.md)
 - `data/derived/`：持久保存的结构化公告、checkpoint、候选与诊断
 - `manual/`：人工补充与版本修正
-- `tests/`：发布合约、无原文恢复、防止数据泄露的测试
+- **完整开发/回归测试仅位于 Private**；Public 仅执行正式业务和数据校验
 
 **完整公告原文与 OCR 图片只在 GitHub Actions Runner 当次临时使用，不提交 Public Git。** 不允许将 `data/announcements/**/posts/`、图片或旧归档 JSON 加入 Git/公开 Artifact；但结构化结果及来源核验状态仍会写入 `data/derived/`。
 
 - [原神结构化数据目录](data/derived/genshin/README.md)
-- [P4 切换验收记录](deploy/migration/P4-production-cutover-report.md)
+- 已验收生产工作流和运行依赖由 Private `deploy/public-release/` 发布；P4 历史切换报告保留在 Git 历史
 
 ## 使用说明 / Notes
 
 本仓库不是 HoYoverse 官方项目，提供的是卡池元数据，不是个人抽卡记录；抽卡记录 UIGF 与这里的元数据用途不同。
+
+## 开发与发布约定
+
+开发与回归测试只在 Private `CastoriceWishBannerData` 执行，审核通过后将该库 `deploy/public-release/workflows/` 中的六份 YAML 和 `requirements.txt` 原样发布到 Public；Public 不保留 `tests/`、`pytest` 或 PR 测试 Action。
+
+本仓库的生产 Actions 仍执行 **Schema/v1/Manifest 校验、写入范围与 checkpoint 保护**，这些属于生产数据完整性要求，并非开发测试。

@@ -28,10 +28,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: 验证 ItemID 更新器回归
-        run: |
-          python -m unittest discover -s tests -p 'test_refresh_official_item_mappings.py' -v
-          python -m unittest discover -s tests -p 'test_notify_official_itemid_conflicts.py' -v
       - name: 保存 v1 原始哈希
         run: sha256sum public/v1/genshin.json public/v1/starrail.json public/v1/manifest.json > /tmp/v1-original-itemid.txt
       - name: 匿名查询官方目录并仅补全 item-mappings
