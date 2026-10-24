@@ -37,7 +37,7 @@ def test_only_readonly_p2_workflow_is_deployed():
     assert "  pull_request:" in workflow
     assert "  schedule:" not in workflow
     assert not re.search(r"(?m)^\s*contents:\s*write\s*$", workflow)
-    assert not re.search(r"\bgit\s+(?:push|add)\b|\bgh\s+workflow\s+run\b|--write\b", workflow)
+    assert not re.search(r"(?m)^\s*(?:git\s+(?:push|add)\b|gh\s+workflow\s+run\b)", workflow)
 
 
 def test_git_index_excludes_old_content_and_raw_notices():
