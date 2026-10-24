@@ -1,6 +1,6 @@
 # P1 — Polyxia 生产工作流暂存（尚未启用）
 
-本目录准备供 P2 / P4 部署到 **Public `sirarikako/PolyxiaBannerData`** 的正式 GitHub Actions 工作流。
+本目录暂存六个准备在 P4 切换后部署到 **Public `sirarikako/PolyxiaBannerData`** 的正式 GitHub Actions 工作流。
 
 **注意：** 当前六个 YAML 位于 `deploy/production/workflows/`，不是 `.github/workflows/`。Private 仍以旧工作流执行正式调度，本次 P1 不修改任何仓库的 `main`，不启用新的生产定时任务。
 
@@ -21,8 +21,8 @@
 
 ## P2 / P4 部署前置条件
 
-1. 审查全部拟公开 `posts/*.json` 的内容、相关使用条款与版权、隐私字段，未经确认不得直接写入公开 Git 历史。
-2. 检查现有 Issue 通知与 Artifact，在 Public 中是否会暴露不应公开的人工证据、原文或诊断信息；需要时先调整隐私边界。
+1. **迁移范围已确定**：不迁移 Private 旧公告全文 `data/announcements/**/posts/*.json`，Public 也不持久提交未来采集的完整原文。Runner 仅在本次处理时临时使用原文和图片；必须保持 `.gitignore` 与 2-1/3-1 的 Git 暂存防护。
+2. P3 必须修正或验证「缺少持久原文」时的原神 `manualRecovered` / 人工推送重新整合、星铁 `load_real()` / 联动公告等路径；按需获取真实 `postId` 的公告详情时应验证来源，并在获取失败时保留可恢复状态而非静默丢失候选。检查现有 Issue 通知与 Artifact，在 Public 中是否会暴露不应公开的人工证据、原文或诊断信息；需要时先调整隐私边界。
 3. 在 Public 的临时分支准备 `scripts/`、`tests/`、`manual/`、按 P0 筛选规则得到的 `data/`、依赖与这些暂存工作流；现有 `public/`、`schemas/`、人工 completed 状态不得简单被旧文件覆盖。
 4. **不能仅把六个 YAML 放进 Public 的 main。** 必须先完成隔离回归测试，再于 P4 停止 Private 旧调度、等待旧运行结束、重新核对 P0 之后的 checkpoint、候选与正式 v1 增量。确保不会双写。
 5. Public 正式部署时才将这六个 YAML 复制为 `.github/workflows/<同名>.yml`。检查 GITHUB_TOKEN 内容/Issue/Actions 写入权限（按需授权），无需旧跨库 `CASTORICEBANNERDATA_TOKEN`。
