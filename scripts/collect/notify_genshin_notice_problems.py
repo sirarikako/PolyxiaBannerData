@@ -97,6 +97,7 @@ def notices_to_review(root: Path = ROOT) -> dict[str, dict]:
     # 集成/导入器崩溃没有对应文章时也需通知。
     stage_results = {
         "collect": os.environ.get("GENSHIN_COLLECT_CODE"),
+        "manual_source": os.environ.get("GENSHIN_MANUAL_SOURCE_CODE"),
         "assemble": os.environ.get("GENSHIN_ASSEMBLE_CODE"),
         "preview": os.environ.get("GENSHIN_PREVIEW_CODE"),
     }
@@ -152,7 +153,7 @@ def notify(root: Path, repository: str, owner: str, run_url: str, *, dry_run: bo
               "updated": [], "reopened": [], "closed": [], "dryRun": dry_run}
     healthy = (root / FINAL).is_file() and all(
         os.environ.get(key) == "0"
-        for key in ("GENSHIN_COLLECT_CODE", "GENSHIN_ASSEMBLE_CODE",
+        for key in ("GENSHIN_COLLECT_CODE", "GENSHIN_MANUAL_SOURCE_CODE", "GENSHIN_ASSEMBLE_CODE",
                     "GENSHIN_PREVIEW_CODE", "GENSHIN_SANDBOX_CODE"))
     if dry_run or (not problems and not healthy):
         result["candidates"] = [
