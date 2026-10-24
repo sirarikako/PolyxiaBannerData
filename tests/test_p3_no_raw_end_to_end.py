@@ -70,7 +70,7 @@ def test_real_starrail_structured_source_and_manual_reassemble_twice_without_pos
     second = assemble_starrail(tmp_path, write=True)
     assert first["ready"] == second["ready"]
     assert len(first["rows"]) == len(second["rows"]) == 4
-    assert any(r.get("manualData") and r["sourceKey"].startswith(pid + "-")
+    assert any(r.get("manualRecovery") and r["sourceKey"].startswith(pid + "-")
                for r in first["rows"])
     assert not (tmp_path / "data/announcements/starrail/zh-cn/miyoushe/posts").exists()
     # Check for deterministic regenerated candidates; no hidden original archive input.
