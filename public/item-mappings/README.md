@@ -7,7 +7,13 @@
 | 游戏 | 语言 | 文件 |
 | --- | --- | --- |
 | 原神 | 简体中文（`zh-CN`） | [genshin/zh-CN.json](./genshin/zh-CN.json) |
+| 原神 | 繁体中文（`zh-TW`） | [genshin/zh-TW.json](./genshin/zh-TW.json) |
+| 原神 | 英文（`en-US`） | [genshin/en-US.json](./genshin/en-US.json) |
+| 原神 | 日文（`ja-JP`） | [genshin/ja-JP.json](./genshin/ja-JP.json) |
 | 崩坏：星穹铁道 | 简体中文（`zh-CN`） | [starrail/zh-CN.json](./starrail/zh-CN.json) |
+| 崩坏：星穹铁道 | 繁体中文（`zh-TW`） | [starrail/zh-TW.json](./starrail/zh-TW.json) |
+| 崩坏：星穹铁道 | 英文（`en-US`） | [starrail/en-US.json](./starrail/en-US.json) |
+| 崩坏：星穹铁道 | 日文（`ja-JP`） | [starrail/ja-JP.json](./starrail/ja-JP.json) |
 
 ## 数据格式
 
@@ -43,3 +49,5 @@ item_name = id_to_name.get(10000022)
 ```
 
 **注意：** 原神与星铁的物品 ID 应分别使用对应游戏的对照表；对照表不代表游戏完整物品库，未查到的物品不能直接判定为无效。
+
+三种国际服语言使用官方国际服名称，非自动翻译。各语言文件中的名称可能不同，但对应的 ItemID 仍按同游戏同一物品关联。**同名不同 ID 属于合法情况**；由于格式仅允许一个名称对应一个整数 ID，同名的多个物品无法全部用这一格式表达，保留既有已发布的名称映射，不覆盖原条目。

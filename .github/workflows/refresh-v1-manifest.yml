@@ -5,8 +5,10 @@ on:
     paths:
       - 'public/v1/genshin.json'
       - 'public/v1/starrail.json'
-      - '.github/workflows/refresh-v1-manifest.yml'
-      - 'scripts/release/**'
+      # 仅直接的 v1 计算与校验变动会触发；官方 ItemID、多语言映射脚本不触发 Manifest。
+      # YAML 本身的改动用 workflow_dispatch 手动验证，避免配置维护时刷新正式 Manifest。
+      - 'scripts/release/refresh_v1_manifest.py'
+      - 'scripts/release/validate_v1.py'
   workflow_dispatch:
 permissions:
   contents: write
