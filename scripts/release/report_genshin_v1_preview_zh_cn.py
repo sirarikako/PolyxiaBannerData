@@ -208,6 +208,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     stages = {
         "collect": os.environ.get("GENSHIN_COLLECT_CODE"),
+        "manual_source": os.environ.get("GENSHIN_MANUAL_SOURCE_CODE"),
         "assemble": os.environ.get("GENSHIN_ASSEMBLE_CODE"),
         "preview": os.environ.get("GENSHIN_PREVIEW_CODE"),
         "sandbox": os.environ.get("GENSHIN_SANDBOX_CODE"),
