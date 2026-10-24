@@ -3,13 +3,15 @@
   "game": "genshin",
   "locale": "zh-CN",
   "publicationEnabled": false,
-  "blockingNotifications": [],
+  "blockingNotifications": [
+    "workflow-collect"
+  ],
   "counts": {
     "ready": 53,
     "waiting": 7,
     "conflict": 0,
-    "requiresAttention": 0,
-    "blocking": 0,
+    "requiresAttention": 1,
+    "blocking": 1,
     "warnings": 0,
     "wouldAppend": 0,
     "wouldUpdateExisting": 0
@@ -19,5 +21,18 @@
     "appended": [],
     "updatedExistingIds": []
   },
-  "notifications": {}
+  "notifications": {
+    "workflow-collect": {
+      "kind": "workflow",
+      "status": "script_failed",
+      "severity": "blocking",
+      "reasons": [
+        "collect 阶段运行失败，退出码 1，检查 Action 日志"
+      ],
+      "differences": [],
+      "missing": [],
+      "manualFile": null,
+      "file": null
+    }
+  }
 }
