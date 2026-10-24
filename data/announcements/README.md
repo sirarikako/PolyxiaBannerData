@@ -1,5 +1,7 @@
 # 游戏公告原始数据归档
 
+> **Public P2 范围说明（2026-10-24）**：此文是 Private 早期历史采集归档的说明，下面 `pages/`、`posts/`、`index.json` 等树形结构与手动归档 Action **不随迁移进入 Public**。正式生产仅保存结构化解析结果、checkpoint 与候选等 `data/derived/` 数据；新公告原文和 OCR 图片仅在 Runner 运行期间临时使用，不能提交公开 Git。见 [`P2 迁移报告`](../../deploy/migration/P2-staging-report.md)。
+
 所有原始公告严格按 **游戏 → 语言 → 来源** 隔离，不写入 `public/v1/`，也不自动把原始公告当作已经核验的卡池数据。
 
 ```text
