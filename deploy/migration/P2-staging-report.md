@@ -12,7 +12,7 @@ P1 生产模板来源：Private PR #30 `feature/p1-polyxia-production-workflows`
 | --- | ---: | --- |
 | `data/` | 156 文件 / 521,780 bytes | 公告增量 checkpoint、解析、候选、就绪报告及 README |
 | `scripts/` | 39 文件 | 现役 collect / transform / release，不含 TEMP/experiments/历史重放 |
-| `tests/` | 39 文件 | 与 v1 和现役代码相关的回归及 fixture/v1 |
+| `tests/` | 40 文件 | 与 v1 和现役代码相关的回归及 fixture/v1 |
 | `manual/` | 13 文件 | 当前人工设置、模板和说明，排除 `manual/archive` |
 | `deploy/production/` | 7 文件 | P1 六份正式 workflow 模板及 README；全部不是 Actions 可执行路径 |
 | `requirements-dev.txt` | 1 文件 | 保留与现有代码一致的依赖 |
@@ -50,3 +50,23 @@ Public 原有 `public/` + `schemas/` 共 15 个 Blob 未改动。只读验证 wo
 此改动**不代表人工恢复问题已解决**：原神 `manualRecovered` 和星铁 `load_real()` 在缺少持久化 `posts` 时可能无法恢复。P3 必须实现并测试按文章 ID 补抓及失败处理，才能允许 P4 实际启用生产调度。
 
 测试新增 `tests/test_p2_public_staging.py`，严格检查完整原文/旧归档不在 Git、暂存工作流不提交原文；此测试由 Public 的只读 CI 执行。
+
+## P2 复核补充（2026-10-24）
+
+对 Public 暂存分支、Private P2 来源分支、Public 原 main 的完整 Git Tree 做了逐 Blob 核对：
+
+| 检查 | 结果 |
+| --- | --- |
+| Public P2 暂存 Git 文件 | **275** |
+| 与 Private P2 来源 Blob SHA 完全相同 | **267** |
+| 有意修改 | **5**：`.gitignore`、仓库 `README.md`、生产暂存说明、2-1/3-1 暂存 workflow |
+| P2 独有 | **3**：只读 CI、此迁移报告、P2 守护测试 |
+| Public 原 `main` 16 个文件 | **16/16 保留，零修改、零删除** |
+| 原始 `posts/*.json` | **519 个 / 10,838,343 bytes 尚未公开** |
+| 正式生产工作流 | **6 个，仅暂存；`.github/workflows` 中为 0 个** |
+
+**新增回归约束：** `tests/test_p2_public_staging.py` 改为检查实际 Git 索引（`git ls-files`），禁止意外加入 `posts/`、`images/`、archive、review、旧索引与内部文件；核对六个 workflow 仅暂存、唯一运行的 P2 CI 只读且无定时；核对原神/星铁 `git add` 只覆盖各自结构化 `data/derived`，以及两个 v1 发布入口继续调用本仓库 Manifest。
+
+**结论：** 已迁移的安全暂存包完整性与隔离策略可供 P2 验收，仍**不能宣告用户指定的 675 文件全部迁移完成**，也不能执行生产切换。完整公告原文的合法再发布/内容审查尚未解决；且在移除 Git 原文持久化后，人工恢复/按 `postId` 补抓必须先在 P3 中完成真实功能验证。最终 P4 仍需以最新 Private main 重核增量。
+
+本补充是审计记录，不构成上传原始文章或合并 Public main 的授权。
