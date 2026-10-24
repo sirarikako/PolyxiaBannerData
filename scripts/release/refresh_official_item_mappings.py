@@ -110,12 +110,12 @@ def parse_catalog(value: object, category: str) -> list[tuple[int, str]]:
 
 
 def request_json(url: str, *, method: str = "GET", payload: dict | None = None,
-                 is_international: bool = False) -> dict:
+                 is_international: bool = False, lang: str = "zh-cn") -> dict:
     headers = {
         "Accept": "application/json",
         "Content-Type": "application/json",
         "User-Agent": "CastoriceWishBannerData-ItemMappings/1.0 (+daily; no account data)",
-        "x-rpc-lang": "zh-cn",
+        "x-rpc-lang": lang,
         "Referer": ("https://act.hoyolab.com/" if is_international else
                     "https://act.mihoyo.com/"),
     }
@@ -143,11 +143,11 @@ def request_json(url: str, *, method: str = "GET", payload: dict | None = None,
 
 
 def _config_catalog(key: str, *, is_international: bool,
-                    requester: Callable[..., dict]) -> list[tuple[int, str]]:
+                    requester: Callable[..., dict], lang: str = "zh-cn") -> list[tuple[int, str]]:
     if key.startswith("genshin"):
         if is_international:
-            url = f"{INTL_HOST}/event/simulatoros/config?lang=zh-cn"
-            data = requester(url, is_international=True)
+            url = f"{INTL_HOST}/event/simulatoros/config?{urlencode({'lang': lang})}"
+            data = requester(url, is_international=True, **({"lang": lang} if lang != "zh-cn" else {}))
         else:
             url = f"{CN_HOST}/event/platsimulator/config?gids=2&game=hk4e"
             data = requester(url, method="POST", payload={})
@@ -159,11 +159,11 @@ def _config_catalog(key: str, *, is_international: bool,
             fingerprints: set[tuple[tuple[int, str], ...]] = set()
             for page in range(1, PAGE_LIMIT + 1):
                 query = urlencode({
-                    "game": "hkrpg", "lang": "zh-cn", "tab_from": "TabAll",
+                    "game": "hkrpg", "lang": lang, "tab_from": "TabAll",
                     "page": page, "size": PAGE_SIZE,
                 })
                 data = requester(f"{INTL_HOST}/event/rpgcalc/{endpoint}/list?{query}",
-                                 is_international=True)
+                                 is_international=True, **({"lang": lang} if lang != "zh-cn" else {}))
                 batch = data.get("list")
                 if not isinstance(batch, list):
                     raise CatalogUnavailable(f"{key}: 国际服分页缺少 data.list")
@@ -327,15 +327,19 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=ROOT)
     parser.add_argument("--write", action="store_true", help="通过校验后写入 item-mappings（默认只预览）")
+    parser.add_argument("--with-locales", action="store_true", help="同时更新繁中、英文、日文（与简中独立校验）")
     parser.add_argument("--report", type=Path, help="可选：输出报告 JSON（不保存 API 原始响应）")
     args = parser.parse_args(argv)
     report = refresh(args.root.resolve(), write=args.write)
+    if args.with_locales:
+        from scripts.release.refresh_official_item_mappings_locales import refresh_locales
+        report["localized"] = refresh_locales(args.root.resolve(), write=args.write)
     encoded = json.dumps(report, ensure_ascii=False, indent=2) + "\n"
     print(encoded, end="")
     if args.report:
         args.report.parent.mkdir(parents=True, exist_ok=True)
         args.report.write_text(encoded, encoding="utf-8")
-    return 2 if report["blockedGames"] else 0
+    return 2 if report["blockedGames"] or report.get("localized", {}).get("blockedLocales") else 0
 
 
 if __name__ == "__main__":
