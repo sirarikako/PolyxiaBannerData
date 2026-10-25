@@ -1,5 +1,9 @@
 # PolyxiaBannerData
 
+<p align="center">
+  <img src="assets/polyxia.png" alt="Polyxia" width="250">
+</p>
+
 原神（Genshin Impact）与崩坏：星穹铁道（Honkai: Star Rail）的公开卡池情报与 JSON Schema 仓库。
 
 Public, versioned gacha-banner metadata for Genshin Impact and Honkai: Star Rail.
