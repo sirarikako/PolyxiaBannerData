@@ -22,10 +22,10 @@ jobs:
       PYTHONUTF8: '1'
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: main
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
       - name: 保存 v1 原始哈希
@@ -111,7 +111,7 @@ jobs:
           PY
       - name: 保存更新报告 Artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: official-itemid-daily-report
           path: /tmp/itemid-daily-report.json
