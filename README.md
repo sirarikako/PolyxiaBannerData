@@ -12,6 +12,7 @@ Public, versioned gacha-banner metadata for Genshin Impact and Honkai: Star Rail
 | [原神 v1](public/v1/genshin.json) | 原神卡池 |
 | [星铁 v1](public/v1/starrail.json) | 星铁卡池 |
 | [JSON Schema](schemas/public/v1/) | v1 数据格式 |
+| [物品 ID 对照表](public/item-mappings/README.md) | 按游戏与语言查询物品名称和 ID |
 
 GitHub Raw 可直接读取：
 - [Manifest](https://raw.githubusercontent.com/sirarikako/PolyxiaBannerData/main/public/v1/manifest.json)
@@ -20,27 +21,20 @@ GitHub Raw 可直接读取：
 
 客户端应固定支持的 API 版本（如 `v1`），并按 Manifest 的记录使用文件。
 
-## 生产和维护 / Production
+## 生产与维护 / Production
 
-**本仓库已独立执行卡池采集、解析、发布及 Manifest 更新。** 旧 Private → Public 的 1-2 跨仓库同步已取消，`CastoriceWishBannerData` 保留为 Private 开发仓库，不执行生产。
+本仓库**独立运行**公告采集、解析、卡池数据发布、物品 ID 更新和 Manifest 校验，不依赖其他仓库同步生成的数据。
 
-- `.github/workflows/`：六份正式生产 Action（0-1、1-1、2-1/2-2、3-1/3-2）及只读安全测试
-- `scripts/`：采集、OCR、结构化整合与发布代码，参阅 [脚本说明](scripts/README.md)
-- `data/derived/`：持久保存的结构化公告、checkpoint、候选与诊断
-- `manual/`：人工补充与版本修正
-- **完整开发/回归测试仅位于 Private**；Public 仅执行正式业务和数据校验
+- `.github/workflows/`：六份正式生产 Actions（0-1、1-1、2-1/2-2、3-1/3-2）。
+- `scripts/`：采集、OCR、候选整合、校验与发布代码；参见[生产脚本说明](scripts/README.md)。
+- `data/derived/`：结构化公告、增量 checkpoint、候选和诊断数据。
+- `manual/`：人工补充、核对及版本修正。
+- `public/` 与 `schemas/public/`：供客户端使用的正式数据及其格式定义。
 
-**完整公告原文与 OCR 图片只在 GitHub Actions Runner 当次临时使用，不提交 Public Git。** 不允许将 `data/announcements/**/posts/`、图片或旧归档 JSON 加入 Git/公开 Artifact；但结构化结果及来源核验状态仍会写入 `data/derived/`。
+**开发与回归测试在私有仓库进行；验证通过后将代码和工作流变更部署到本仓库。** 本仓库的生产 Actions 仍会执行正式数据校验和发布安全检查。
 
-- [原神结构化数据目录](data/derived/genshin/README.md)
-- 已验收生产工作流和运行依赖由 Private `deploy/public-release/` 发布；P4 历史切换报告保留在 Git 历史
+完整官方公告原文与 OCR 图片仅在当次 GitHub Actions Runner 临时使用，不提交本仓库，也不上传公开 Artifact。长期保留的中间结果位于 `data/derived/`。
 
 ## 使用说明 / Notes
 
-本仓库不是 HoYoverse 官方项目，提供的是卡池元数据，不是个人抽卡记录；抽卡记录 UIGF 与这里的元数据用途不同。
-
-## 开发与发布约定
-
-开发与回归测试只在 Private `CastoriceWishBannerData` 执行，审核通过后将该库 `deploy/public-release/workflows/` 中的六份 YAML 和 `requirements.txt` 原样发布到 Public；Public 不保留 `tests/`、`pytest` 或 PR 测试 Action。
-
-本仓库的生产 Actions 仍执行 **Schema/v1/Manifest 校验、写入范围与 checkpoint 保护**，这些属于生产数据完整性要求，并非开发测试。
+本仓库并非 HoYoverse 官方项目。这里提供的是卡池元数据，不包含玩家个人抽卡记录或保底进度；UIGF 抽卡记录与本项目数据用途不同。
