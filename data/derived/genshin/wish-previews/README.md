@@ -1,20 +1,18 @@
-# 原神简体中文祈愿预告候选
+# 原神简体中文祈愿预告结构化数据
 
-本目录保存米游社「活动祈愿预告」按文章解析得到的内部候选 JSON。命名与版本更新公告的 `version-update_zh-CN_7.1.json` 一致，采用「类型_语言_版本-期数」规则，与正式「祈愿公告」区分，不直接发布至 `public/v1/`。
+本目录保存米游社「活动祈愿预告」按版本、期数解析的结构化 JSON，例如 `wish-preview_zh-CN_7.1-phase-2.json`。这些文件是候选整合的输入，**不直接发布到** `public/v1/`。
 
-- 解析脚本：`scripts/transform/build_genshin_wish_preview_zh_cn.py`
-- 原始正文：`data/announcements/genshin/zh-cn/miyoushe/posts/<post_id>.json` 或 `data/announcements/genshin/zh-cn/miyoushe-account-75276539/posts/<post_id>.json`（与已有米游社归档共用）
-- 本目录输出：`wish-preview_zh-CN_<version>-phase-<n>.json`，例如 `wish-preview_zh-CN_7.1-phase-2.json`。
-- 若以后新增按期生成的正式祈愿公告候选，应采用 `wish-announcement_zh-CN_<version>-phase-<n>.json`，不要覆盖预告。
-- 第一期开头为「版本更新后」时，只保留 `time.startRaw` 和 `time.startCondition`，不猜测实际开服时刻。
-- `time.startAt` / `time.endAt` 是按米游社简体中文国服时间解释的原文时刻（UTC+08:00），不是转换为排他结束时间；正式 v1 仍需单独核验。
-- 未能从正文找到的四星或图片中信息保持空数组，记录到 `review.warnings`；不以配对顺序推断每个角色池或武器池的归属。
+- 解析脚本：`scripts/transform/build_genshin_wish_preview_zh_cn.py`。
+- 输入：真实官方文章 JSON，由生产 2-1 工作流当次临时取得；也可通过 `--input` 指定本地文件。
+- 文件命名：`wish-preview_zh-CN_<version>-phase-<n>.json`。
+- 第一期开头为「版本更新后」时，保留原始条件，不猜测具体开服时刻。
+- 时间按照国服公告原文的 UTC+08:00 解释；不能直接替代 v1 的独占结束边界。
+- 公告没有明确给出的名单或图片信息不得通过配对顺序猜测，缺项须留待其他公告或人工核对。
 
-手动按文章采集并转换：
+手动转换（需要真实输入文件）：
 
 ```bash
-python -m scripts.transform.build_genshin_wish_preview_zh_cn --post-id 78879329
-python -m unittest discover -s tests -p 'test_build_genshin_wish_preview.py' -v
+python -m scripts.transform.build_genshin_wish_preview_zh_cn --post-id 78879329 --input /path/to/78879329.json
 ```
 
-若两种米游社归档均无缓存，首次执行会访问文章详情接口并保存原始响应；如果已有归档，则默认离线重用。若详情接口要求验证或限制频率，程序停止而非绕过。现有临时手动 Action `.github/workflows/TEMP-genshin-wish-preview-zh-cn-test.yml` 会离线核对 5 个版本的 10 篇真实归档，并在全部测试通过后将候选 JSON 提交到本目录，同时上传短期 Artifact；不设定时任务、不修改 `public/v1/` 或公开数据。没有获取到真实原文的文章不应生成模拟数据。
+完整官方文章只在当次执行临时使用，不作为公开仓库持久文件保存。生产扫描、候选合并与发布见 [脚本说明](../../../scripts/README.md)。
