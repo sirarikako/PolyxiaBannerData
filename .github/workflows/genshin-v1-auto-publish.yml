@@ -82,12 +82,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: main
           fetch-depth: 0
           persist-credentials: true
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
       - name: 安装正式数据校验依赖
@@ -164,7 +164,7 @@ jobs:
           fi
       - name: 保存发布报告
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: genshin-v1-publish-report
           path: /tmp/genshin-v1-publish.json
