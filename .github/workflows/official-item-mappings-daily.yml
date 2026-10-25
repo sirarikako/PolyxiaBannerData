@@ -1,4 +1,4 @@
-# Polyxia 单仓生产：国服优先、国际服回退，直接更新本仓库 ItemID，绝不修改现有 v1。
+# Polyxia 单仓生产部署模板：简中国服优先、国际服回退；三种新语言仅用国际服。正式启用前需私有库测试。
 name: 0-1_官方ItemID每日自动更新
 on:
   schedule:
@@ -35,7 +35,7 @@ jobs:
         shell: bash
         run: |
           set +e
-          python -m scripts.release.refresh_official_item_mappings --write --report /tmp/itemid-daily-report.json
+          python -m scripts.release.refresh_official_item_mappings --with-locales --write --report /tmp/itemid-daily-report.json
           code=$?
           set -e
           if [ "$code" -ne 0 ] && [ "$code" -ne 2 ]; then
@@ -51,17 +51,26 @@ jobs:
           set -euo pipefail
           sha256sum --check /tmp/v1-original-itemid.txt
           git diff --exit-code -- public/v1 schemas manual
-          other="$(git diff --name-only | grep -vE '^public/item-mappings/(genshin|starrail)/zh-CN[.]json$' || true)"
-          if [ -n "$other" ]; then
-            echo "::error::存在不允许的修改 $other"
-            exit 1
-          fi
-          git add -- public/item-mappings/genshin/zh-CN.json public/item-mappings/starrail/zh-CN.json
+          # 先暂存 8 份允许的物品名称文件，再检查整个工作区（包括未追踪文件）。
+          git add -A -- public/item-mappings/genshin public/item-mappings/starrail
+          python - <<'PY'
+          import re
+          import subprocess
+          status = subprocess.check_output(
+              ["git", "status", "--porcelain", "--untracked-files=all"], text=True
+          )
+          allowed = re.compile(
+              r"^public/item-mappings/(genshin|starrail)/(zh-CN|zh-TW|en-US|ja-JP)\.json$"
+          )
+          bad = [line for line in status.splitlines() if not allowed.fullmatch(line[3:])]
+          if bad:
+              raise SystemExit("检测到超范围文件变更: " + repr(bad))
+          PY
           if git diff --cached --quiet; then
             echo 'changed=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m '自动补齐官方简体中文 ItemID 对照表'
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m '自动补齐官方多语言 ItemID 对照表'
           git push origin HEAD:main
           echo 'changed=true' >> "$GITHUB_OUTPUT"
       - name: 冲突 Issue 通知、自动指派和完整复核后自动关闭
@@ -73,6 +82,33 @@ jobs:
             exit 0
           fi
           python -m scripts.release.notify_official_itemid_conflicts --report /tmp/itemid-daily-report.json
+          python -m scripts.release.notify_official_itemid_locale_conflicts --report /tmp/itemid-daily-report.json
+      - name: 汇总新语言异常（不关闭简中冲突 Issue）
+        if: always()
+        shell: bash
+        run: |
+          if [ ! -f /tmp/itemid-daily-report.json ]; then exit 0; fi
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          data = json.loads(Path('/tmp/itemid-daily-report.json').read_text())
+          localized = data.get('localized', {})
+          summary = ['### 国际服多语言 ItemID 更新', '']
+          for row in localized.get('results', []):
+              summary.append(
+                  f"- {row['game']}/{row['locale']}: {row['status']}, "
+                  f"已有 {row['oldCount']}, 新增 {row['newEntries']}, "
+                  f"覆盖率 {row.get('baselineCoverage', 'n/a')}; "
+                  f"{row.get('reason', '')}"
+              )
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as out:
+              out.write('\n'.join(summary) + '\n')
+          for key, reason in localized.get('blockedLocales', {}).items():
+              print(f'::warning::多语言更新阻断 {key}: {reason}')
+          for key, reason in localized.get('unavailableLocales', {}).items():
+              print(f'::warning::国际服临时不可用 {key}: {reason}')
+          PY
       - name: 保存更新报告 Artifact
         if: always()
         uses: actions/upload-artifact@v4
