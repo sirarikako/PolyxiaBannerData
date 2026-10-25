@@ -1,6 +1,6 @@
 # 星铁公告人工补齐使用说明
 
-**范围：星铁简体中文米游社，正式代码暂位于 PR #16 开发分支。**
+**范围：星铁简体中文米游社；由本仓库正式 3-1／3-2 流程处理。**
 
 ## 一、完全缺少官方帖子
 
@@ -16,7 +16,7 @@ Schema：`schemas/manual/starrail-missing-warp.schema.json`。
 
 ## 二、已有真实官方帖子但解析不足
 
-路径：`manual/notices/starrail/zh-CN/miyoushe/<文章ID>.json`，格式 `starrail-notice-manual-v1`。文章的原始 JSON 必须真实存在于 `data/announcements/starrail/zh-cn/miyoushe/posts/`，无法取得原文就使用上述 missing 格式。
+路径：`manual/notices/starrail/zh-CN/miyoushe/<文章ID>.json`，格式 `starrail-notice-manual-v1`。当次执行必须能取得对应真实官方原文；无法重新取得原文就使用上述 missing 格式。
 
 `banners[]` 每项填写 `identity`（版本、首次期数、池种、池名），和只需补充/核对的 `data.featured`、`data.time`。同名多池时可通过 `identity.fiveStarName` 唯一定位。
 
@@ -30,6 +30,6 @@ Schema：`schemas/manual/starrail-notice-manual.schema.json`。
 
 版本级人工的 `upcoming` 仅在首次追加前合并，处理完成后随同正式 V1 在同一次 Git 提交中标记 `completed`。原始公告采集不会直接写正式 V1。
 
-候选由 3-1 生成，经 3-2 安全导入，之后仍需要 1-1 Manifest 与 1-2 公开仓库同步全部成功，才能算公开发布完成。
+候选由 3-1 生成，经 3-2 在本仓库安全导入；正式数据提交后由本仓库 1-1 更新 Manifest，校验成功才算发布完成。
 
-请勿将虚构示例 JSON 提交为真实人工来源。PR 尚未合并时所有上线动作均未生效。
+请勿将虚构示例 JSON 提交为真实人工来源。

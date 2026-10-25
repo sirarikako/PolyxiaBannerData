@@ -1,6 +1,6 @@
 # 数据采集、候选整合与生产发布
 
-**这是 PolyxiaBannerData Public 正式生产的说明。** Private `CastoriceWishBannerData` 用于开发/测试；不再采用旧的 1-2 跨库镜像同步。
+本仓库独立执行正式采集与发布；代码及工作流的开发、回归测试在私有仓库完成，验证后部署到此处。
 
 ## GitHub Actions
 
@@ -15,7 +15,7 @@
 
 正式正常扫描时间按 UTC：0-1 为 05:17（UTC+8 13:17），原神 2-1 为 06:17、06:27/37/47/57（UTC+8 14:17 开始），星铁 3-1 为 07:17、07:27/37/47/57（UTC+8 15:17 开始）；以正式 workflow 的 cron 为准，GitHub 定时可能延迟。
 
-成功的上游采集可以通过 `workflow_run` 触发对应 2-2/3-2；v1 有真实变化时显式 `workflow_dispatch` 1-1。GitHub `GITHUB_TOKEN` 的防递归机制可能影响手动调度测试，不等同于自然上游触发。1-1 不再调用 1-2 跨仓库同步。
+成功的上游采集可以通过 `workflow_run` 触发对应 2-2/3-2；v1 有真实变化时显式 `workflow_dispatch` 1-1。GitHub `GITHUB_TOKEN` 的防递归机制可能影响手动调度测试，不等同于自然上游触发。1-1 在本仓库内维护 Manifest。
 
 ## 数据生命周期
 
@@ -53,4 +53,4 @@ Public `main` 不包含 `tests/`、`requirements-dev.txt` 或测试用 Actions�
 - `python -m scripts.release.validate_v1 --public`：核对 Schema、Manifest 与数据哈希。
 - 发布范围、原神 2-1 保证 v1 不变、checkpoint/人工复核/Issue/Artifact 原文保护等生产守卫。
 
-开发测试与正式 YAML 的静态验收统一在 Private `CastoriceWishBannerData` 中完成。部署用的六份审核版 YAML 和运行依赖位于 Private `deploy/public-release/`；不要在 Public 单独修改代码后跳过 Private 回归。
+代码或 Actions 变更先完成私有仓库中的开发与验证，再部署到本仓库；不应绕过验证直接修改正式运行逻辑。
