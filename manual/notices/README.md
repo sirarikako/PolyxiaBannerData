@@ -4,7 +4,7 @@
 
 | 场景 | 人工文件位置 | 格式标记 | 是否必须有官方原始帖子 |
 | --- | --- | --- | --- |
-| **已有真实文章 ID**，但 OCR、解析或字段不完整 | `manual/notices/genshin/zh-CN/miyoushe/<文章ID>.json` | `genshin-notice-manual-v1` | 是；可用已保存原文恢复解析 |
+| **已有真实文章 ID**，但 OCR、解析或字段不完整 | `manual/notices/genshin/zh-CN/miyoushe/<文章ID>.json` | `genshin-notice-manual-v1` | 是；可在当次执行中取得真实原文以恢复解析 |
 | **尚无真实帖子／取不到文章 ID 或原始 JSON** | `manual/notices/genshin/zh-CN/missing/<逻辑身份>.json` | `genshin-missing-notice-v1` | **否**；只使用人工核对的身份及证据，绝不虚构 postId |
 
 两种来源分别由真实帖子人工读取器和缺帖人工读取器处理。缺帖来源满足字段完整性、公告关联和正式 V1 校验后才能发布；详细格式参见 [缺帖人工来源说明](genshin/zh-CN/missing/README.md)。
@@ -27,8 +27,8 @@
 - 列表可写成 `["角色甲","角色乙"]` 或 `[{"name":"角色甲"}]`；名单是一整项完整列表，不支持按索引合并；比较忽略顺序和自动结果额外属性。自动 `[]` 不等同缺失，人工非空名单与之不一致会报告冲突。
 - 时间用原公告的 `+08:00` 分钟，不能直接复制 v1 的独占结束时间。人工 `null` 表示未知／不参与覆盖，`[]` 是明确空名单。
 - 禁止从人工字段设置 `source`、`game`、`locale`、`imageTimeRecognition`、`review` 或伪造官方采集证明。
-- 文件长期参与补缺与比较，不需要单条 `completed`。OCR/解析失败时仍保留原始解析状态；真实原文已保存且字段足够，才可恢复候选。
-- 原始文章未保存时，本类文件不能恢复解析，也不能借 `postId` 伪装已有来源；应采用第二类 `missing` 设计。
+- 文件长期参与补缺与比较，不需要单条 `completed`。OCR/解析失败时仍保留原始解析状态；在当次执行中可取得真实原文且字段足够，才可恢复候选。
+- 无法重新取得真实官方文章时，本类文件不能伪装已有来源，应采用第二类 `missing` 设计。
 
 相关 Schema：[`genshin-notice-manual.schema.json`](../../schemas/manual/genshin-notice-manual.schema.json)。
 
@@ -59,7 +59,7 @@ Schema：[`genshin-missing-notice.schema.json`](../../schemas/manual/genshin-mis
 以下是缺帖人工来源与现有自动公告流水线的协作规则：
 
 1. 缺帖人工数据已足够且其他必需数据、发布校验通过时，允许先形成候选，经 2-2 发布正式 v1；不必等帖子实际出现。**人工发布不结清下载 `pending`**。
-2. 原本存在的临时下载 `checkpoint.pending` 继续重试；只要没有实际文章 ID，就没有可重试的下载任务，正常公告列表继续发现即可。约定日内 18:17 主采集，18:27、18:37、18:47、18:57 有条件重试。
+2. 原本存在的临时下载 `checkpoint.pending` 继续重试；只要没有实际文章 ID，就没有可重试的下载任务，正常公告列表继续发现即可。具体日内采集与重试时间以现役 2-1 workflow 的 cron 为准。
 3. 以后官方公告取得且成功解析，按业务 `identity` 与既有人工源匹配并逐字段核对；成功下载应从 `pending` 移除。**人工一致**则核对完成；**不一致**则记录差异并进入 Issue 流程。
 4. 关键差异（版本、期数、池种、时间、UP 等）阻断**受影响池今后的自动改写**，但已发布的 v1 保持不动、不回滚，其他合法卡池不受影响。非关键差异也要 Issue 提醒，但不阻断其他池。
 5. **已发布 v1 也要拿来与人工、官方三方比较**，不能因为候选后来转为 conflict 就跳过核对。确认确需修改时，必须在 `manual/genshin_<版本>.json` 的 `existing` 使用正式内部 ID 定向修订，不能由重新出现的官方公告或 `upcoming` 反向覆盖。
