@@ -26,7 +26,7 @@ concurrency:
 
 jobs:
   check-pending:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     outputs:
       should_run: ${{ steps.gate.outputs.should_run }}
     steps:
@@ -44,7 +44,7 @@ jobs:
   collect-and-preview:
     needs: check-pending
     if: needs.check-pending.outputs.should_run == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v5
