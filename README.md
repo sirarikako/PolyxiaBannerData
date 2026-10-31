@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/Polyxia_250px.png" alt="Polyxia">
+  <img src="assets/Polyxia_Color_500px.png" alt="Polyxia">
 </p>
 
 # PolyxiaBannerData
