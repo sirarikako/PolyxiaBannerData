@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "众水的颂诗",
+  "officialWishType": "角色活动祈愿-2",
+  "poolType": "character_event_2",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "芙宁娜",
+        "title": "不休独舞",
+        "element": "水",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "瓦列里",
+        "title": "霆骇军垒",
+        "element": "雷",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "夏洛蒂",
+        "title": "朗镜索真",
+        "element": "冰",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "罗莎莉亚",
+        "title": "棘冠恩典",
+        "element": "冰",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "7.2版本更新后",
+    "endRaw": "2026/11/24 17:59",
+    "startAt": null,
+    "endAt": "2026-11-24T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/10/29/75276539/df6d56071df3972b3f2a64dc124d2260_6391127053568931267.png",
+    "https://upload-bbs.miyoushe.com/upload/2026/10/29/75276539/aebb3903c4feb4855ef88d68dde4f71d_1487480809645420307.png"
+  ],
+  "source": {
+    "postId": "79287291",
+    "title": "「众水的颂诗」祈愿：「不休独舞·芙宁娜(水)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/79287291",
+    "publishedAt": "2026-11-02T12:00:25+08:00",
+    "updatedAt": "2026-11-03T00:13:03+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/79287291.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized_conditional",
+    "times": {
+      "startRaw": "7.2版本更新后",
+      "endRaw": "2026/11/24 17:59",
+      "startAt": null,
+      "endAt": "2026-11-24T17:59:00+08:00",
+      "startCondition": "after_version_update",
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/10/29/75276539/aebb3903c4feb4855ef88d68dde4f71d_1487480809645420307.png",
+      "imageSha256": "d1835f0a8ce01b908c37bbca4fc5ff47541dc3cbaacbbd53fa85f3d9d74ea349",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

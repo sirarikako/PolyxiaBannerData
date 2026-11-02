@@ -26,7 +26,7 @@
         "78782593",
         "78782590"
       ],
-      "lastCheckedAt": "2026-11-03T00:04:20+08:00",
+      "lastCheckedAt": "2026-11-03T00:26:16+08:00",
       "initializedOnly": false
     },
     "3": {
@@ -52,22 +52,11 @@
         "79158988",
         "79158977"
       ],
-      "lastCheckedAt": "2026-11-03T00:06:24+08:00",
+      "lastCheckedAt": "2026-11-03T00:26:17+08:00",
       "initializedOnly": false
     }
   },
-  "pending": {
-    "79287291": {
-      "kind": "wish_notice",
-      "title": "「众水的颂诗」祈愿：「不休独舞·芙宁娜(水)」概率UP！",
-      "feeds": [
-        1
-      ],
-      "discoveredAt": "2026-11-03T00:04:20+08:00",
-      "attempts": 1,
-      "lastError": "图片请求临时失败：<urlopen error timed out>"
-    }
-  },
+  "pending": {},
   "manualReview": {},
   "manualRecovered": {},
   "completed": {
@@ -612,7 +601,13 @@
       "title": "「万序衍盈」祈愿：「列律名虚·米提亚(雷)」概率UP！",
       "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287292.json",
       "completedAt": "2026-11-03T00:15:03+08:00"
+    },
+    "79287291": {
+      "kind": "wish_notice",
+      "title": "「众水的颂诗」祈愿：「不休独舞·芙宁娜(水)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287291.json",
+      "completedAt": "2026-11-03T00:26:25+08:00"
     }
   },
-  "updatedAt": "2026-11-03T00:15:03+08:00"
+  "updatedAt": "2026-11-03T00:26:25+08:00"
 }

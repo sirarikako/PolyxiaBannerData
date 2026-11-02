@@ -6,7 +6,7 @@
   "blockingNotifications": [],
   "counts": {
     "ready": 53,
-    "waiting": 8,
+    "waiting": 9,
     "conflict": 0,
     "requiresAttention": 0,
     "blocking": 0,

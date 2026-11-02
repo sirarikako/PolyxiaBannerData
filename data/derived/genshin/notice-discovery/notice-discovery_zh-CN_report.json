@@ -2,33 +2,28 @@
   "format": "genshin-notice-discovery-report-v1",
   "game": "genshin",
   "locale": "zh-CN",
-  "startedAt": "2026-11-03T00:02:17+08:00",
+  "startedAt": "2026-11-03T00:26:12+08:00",
   "feeds": {
     "1": {
       "initialized": false,
       "pages": 1,
-      "newPosts": 13,
-      "matched": 2
+      "newPosts": 0,
+      "matched": 0
     },
     "3": {
       "initialized": false,
       "pages": 1,
-      "newPosts": 4,
+      "newPosts": 0,
       "matched": 0
     }
   },
-  "enqueued": 2,
+  "enqueued": 0,
   "succeeded": [
-    "79287292"
+    "79287291"
   ],
-  "failed": [
-    {
-      "postId": "79287291",
-      "error": "图片请求临时失败：<urlopen error timed out>"
-    }
-  ],
+  "failed": [],
   "reviewNeeded": [],
-  "pendingCount": 1,
+  "pendingCount": 0,
   "manualReviewCount": 0,
-  "finishedAt": "2026-11-03T00:15:03+08:00"
+  "finishedAt": "2026-11-03T00:26:25+08:00"
 }
