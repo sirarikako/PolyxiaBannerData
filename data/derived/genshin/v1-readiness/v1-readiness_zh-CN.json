@@ -6,11 +6,11 @@
   "counts": {
     "versionUpdateFiles": 10,
     "previewFiles": 18,
-    "noticeFiles": 60,
-    "evaluatedNotices": 60,
+    "noticeFiles": 61,
+    "evaluatedNotices": 61,
     "statuses": {
       "ready_candidate": 53,
-      "waiting": 7
+      "waiting": 8
     }
   },
   "sourceErrors": [],
@@ -1633,6 +1633,32 @@
       "endTimeEvidence": "ocr",
       "manualAudits": [],
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_78782593.json"
+    },
+    {
+      "postId": "79287292",
+      "sourceKey": "79287292",
+      "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287292.json",
+      "status": "waiting",
+      "issues": [
+        "unmatched_end_time"
+      ],
+      "warnings": [],
+      "version": null,
+      "phase": null,
+      "previewFile": null,
+      "versionUpdateFile": null,
+      "existingV1Id": null,
+      "manualDifferences": [],
+      "blockingDifferences": [],
+      "warningDifferences": [],
+      "manualFilled": [],
+      "manualMatched": [],
+      "manualFile": null,
+      "manualSourceKey": null,
+      "manualIdentity": null,
+      "manualEvidence": null,
+      "recoveredFromRaw": false,
+      "endTimeEvidence": "ocr"
     }
   ]
 }

@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "万序衍盈",
+  "officialWishType": "角色活动祈愿",
+  "poolType": "character_event",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "米提亚",
+        "title": "列律名虚",
+        "element": "雷",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "瓦列里",
+        "title": "霆骇军垒",
+        "element": "雷",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "夏洛蒂",
+        "title": "朗镜索真",
+        "element": "冰",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "罗莎莉亚",
+        "title": "棘冠恩典",
+        "element": "冰",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "7.2版本更新后",
+    "endRaw": "2026/11/24 17:59",
+    "startAt": null,
+    "endAt": "2026-11-24T17:59:00+08:00",
+    "startCondition": "after_version_update"
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/10/29/75276539/f8942892de197ac5527cdb31a13e28fd_8535114736042281317.png",
+    "https://upload-bbs.miyoushe.com/upload/2026/10/29/75276539/4180e0f7532f9a1b044557ae3dd4b6dd_4246435002183508614.png"
+  ],
+  "source": {
+    "postId": "79287292",
+    "title": "「万序衍盈」祈愿：「列律名虚·米提亚(雷)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/79287292",
+    "publishedAt": "2026-11-02T12:00:26+08:00",
+    "updatedAt": "2026-11-03T00:05:51+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/79287292.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized_conditional",
+    "times": {
+      "startRaw": "7.2版本更新后",
+      "endRaw": "2026/11/24 17:59",
+      "startAt": null,
+      "endAt": "2026-11-24T17:59:00+08:00",
+      "startCondition": "after_version_update",
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/10/29/75276539/4180e0f7532f9a1b044557ae3dd4b6dd_4246435002183508614.png",
+      "imageSha256": "2bb7c0fdb5b32f577053c70f50bd9286e22fe3fc6199a9e98b54e05f881922e3",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}
