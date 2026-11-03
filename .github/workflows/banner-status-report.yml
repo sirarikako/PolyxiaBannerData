@@ -1,0 +1,61 @@
+# 公开运营仓库独立状态总览：只读已持久化 JSON，不执行公告抓取和 V1 发布。
+name: 4-1_卡池公告识别状态一览
+on:
+  schedule:
+    - cron: '17 8 * * *' # 北京时间每天16:17
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/release/generate_banner_status.py'
+      - '.github/workflows/banner-status-report.yml'
+      - 'data/README-banner-status.md'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: banner-status-report-main
+  cancel-in-progress: false
+
+jobs:
+  report:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-26.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: 仅汇总公开仓库已保存的公告与V1结构化数据
+        run: python -m scripts.release.generate_banner_status
+      - name: 仅提交 Markdown 诊断总览
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            git add -- data/BANNER_STATUS.md
+            if git diff --cached --quiet; then
+              echo '当前状态报告没有变化。' >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            git -c user.name='github-actions[bot]' \
+                -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+                commit -m '自动更新公告识别状态一览'
+            if git push origin HEAD:main; then
+              echo '已更新 data/BANNER_STATUS.md。' >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            if [ "$attempt" = 3 ]; then
+              echo '::error::连续三次推送冲突，未覆盖 main'
+              exit 1
+            fi
+            git fetch origin main
+            git reset --hard origin/main
+            python -m scripts.release.generate_banner_status
+          done
