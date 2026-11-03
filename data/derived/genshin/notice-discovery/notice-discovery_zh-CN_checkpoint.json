@@ -5,6 +5,9 @@
   "feeds": {
     "1": {
       "anchors": [
+        "79311123",
+        "79310730",
+        "79310357",
         "79287292",
         "79287291",
         "79287289",
@@ -21,16 +24,15 @@
         "79232315",
         "79098964",
         "79002868",
-        "78982011",
-        "78817337",
-        "78782593",
-        "78782590"
+        "78982011"
       ],
-      "lastCheckedAt": "2026-11-03T00:26:16+08:00",
+      "lastCheckedAt": "2026-11-03T18:48:26+08:00",
       "initializedOnly": false
     },
     "3": {
       "anchors": [
+        "79312623",
+        "79308008",
         "79287467",
         "79287312",
         "79287310",
@@ -48,11 +50,9 @@
         "79179222",
         "79174869",
         "79174858",
-        "79159064",
-        "79158988",
-        "79158977"
+        "79159064"
       ],
-      "lastCheckedAt": "2026-11-03T00:26:17+08:00",
+      "lastCheckedAt": "2026-11-03T18:50:29+08:00",
       "initializedOnly": false
     }
   },
@@ -607,7 +607,21 @@
       "title": "「众水的颂诗」祈愿：「不休独舞·芙宁娜(水)」概率UP！",
       "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287291.json",
       "completedAt": "2026-11-03T00:26:25+08:00"
+    },
+    "79287289": {
+      "kind": "wish_notice",
+      "title": "神铸赋形：「法器·秘星典谕」「单手剑·静水流涌之辉」概率UP",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287289.json",
+      "completedAt": "2026-11-03T18:50:41+08:00"
+    },
+    "79312623": {
+      "kind": "wish_preview",
+      "title": "7.2版本活动祈愿预告第一期",
+      "outputFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
+      "completedAt": "2026-11-03T18:50:43+08:00"
     }
   },
-  "updatedAt": "2026-11-03T00:26:25+08:00"
+  "updatedAt": "2026-11-03T18:50:43+08:00",
+  "unrecognized": {},
+  "pairingSince": "2026-10-31"
 }

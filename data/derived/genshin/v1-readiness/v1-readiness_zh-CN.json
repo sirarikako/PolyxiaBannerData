@@ -5,12 +5,12 @@
   "policy": "按公告逐池匹配；关键人工差异阻断；普通差异在最终报告通知，不阻断发布",
   "counts": {
     "versionUpdateFiles": 10,
-    "previewFiles": 18,
-    "noticeFiles": 62,
-    "evaluatedNotices": 62,
+    "previewFiles": 19,
+    "noticeFiles": 63,
+    "evaluatedNotices": 63,
     "statuses": {
       "ready_candidate": 53,
-      "waiting": 9
+      "waiting": 10
     }
   },
   "sourceErrors": [],
@@ -1635,17 +1635,17 @@
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_78782593.json"
     },
     {
-      "postId": "79287291",
-      "sourceKey": "79287291",
-      "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287291.json",
+      "postId": "79287289",
+      "sourceKey": "79287289",
+      "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287289.json",
       "status": "waiting",
       "issues": [
-        "unmatched_end_time"
+        "waiting_version_update"
       ],
       "warnings": [],
-      "version": null,
-      "phase": null,
-      "previewFile": null,
+      "version": "7.2",
+      "phase": 1,
+      "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
       "versionUpdateFile": null,
       "existingV1Id": null,
       "manualDifferences": [],
@@ -1658,7 +1658,35 @@
       "manualIdentity": null,
       "manualEvidence": null,
       "recoveredFromRaw": false,
-      "endTimeEvidence": "ocr"
+      "endTimeEvidence": "ocr",
+      "manualAudits": []
+    },
+    {
+      "postId": "79287291",
+      "sourceKey": "79287291",
+      "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287291.json",
+      "status": "waiting",
+      "issues": [
+        "waiting_version_update"
+      ],
+      "warnings": [],
+      "version": "7.2",
+      "phase": 1,
+      "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
+      "versionUpdateFile": null,
+      "existingV1Id": null,
+      "manualDifferences": [],
+      "blockingDifferences": [],
+      "warningDifferences": [],
+      "manualFilled": [],
+      "manualMatched": [],
+      "manualFile": null,
+      "manualSourceKey": null,
+      "manualIdentity": null,
+      "manualEvidence": null,
+      "recoveredFromRaw": false,
+      "endTimeEvidence": "ocr",
+      "manualAudits": []
     },
     {
       "postId": "79287292",
@@ -1666,12 +1694,12 @@
       "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287292.json",
       "status": "waiting",
       "issues": [
-        "unmatched_end_time"
+        "waiting_version_update"
       ],
       "warnings": [],
-      "version": null,
-      "phase": null,
-      "previewFile": null,
+      "version": "7.2",
+      "phase": 1,
+      "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
       "versionUpdateFile": null,
       "existingV1Id": null,
       "manualDifferences": [],
@@ -1684,7 +1712,8 @@
       "manualIdentity": null,
       "manualEvidence": null,
       "recoveredFromRaw": false,
-      "endTimeEvidence": "ocr"
+      "endTimeEvidence": "ocr",
+      "manualAudits": []
     }
   ]
 }
