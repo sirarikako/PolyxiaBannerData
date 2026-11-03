@@ -455,7 +455,7 @@ def run(*, max_pages: int = 5, checkpoint: Path = CHECKPOINT,
             if not isinstance(previous.get("anchors"), list):
                 raise DiscoveryError(f"type={feed} 检查点缺少 anchors")
             handled = (set(state["completed"]) | set(state["pending"])
-                       | set(state["manualReview"]) | set(state["unrecognized"]))
+                       | set(state["manualReview"]))
             new_posts, anchors, pages = discover(feed, previous["anchors"], max_pages,
                                                  handled=handled)
             new_count = enqueue(state, feed, new_posts)
