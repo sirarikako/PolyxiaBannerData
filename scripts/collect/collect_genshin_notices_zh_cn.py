@@ -81,6 +81,8 @@ def fresh_state() -> dict:
         "manualReview": {},
         "manualRecovered": {},
         "completed": {},
+        "unrecognized": {},
+        "pairingSince": (datetime.now(TZ8).date() - timedelta(days=3)).isoformat(),
         "updatedAt": None,
     }
 
@@ -94,12 +96,15 @@ def load_state(path: Path = CHECKPOINT) -> dict:
         state["manualReview"] = {}
     if isinstance(state, dict) and "manualRecovered" not in state:
         state["manualRecovered"] = {}
+    if isinstance(state, dict):
+        state.setdefault("unrecognized", {})
+        state.setdefault("pairingSince", (datetime.now(TZ8).date() - timedelta(days=3)).isoformat())
     if (not isinstance(state, dict)
             or state.get("format") != "genshin-notice-discovery-v1"
             or state.get("game") != "genshin"
             or state.get("locale") != "zh-CN"
             or not all(isinstance(state.get(key), dict)
-                       for key in ("feeds", "pending", "completed", "manualReview", "manualRecovered"))):
+                       for key in ("feeds", "pending", "completed", "manualReview", "manualRecovered", "unrecognized"))):
         raise DiscoveryError("检查点格式错误；请先修复，不可自动重置进度")
     return state
 
@@ -178,7 +183,8 @@ def classify(title: str) -> str | None:
     return None
 
 
-def _discover_on(feed: int, anchors: list[str], max_pages: int, endpoint: str) -> tuple[list[dict], list[str], int]:
+def _discover_on(feed: int, anchors: list[str], max_pages: int, endpoint: str,
+                 handled: set[str] | None = None) -> tuple[list[dict], list[str], int]:
     """完整检查当前页；连续 3 个已知 ID 证明已与上次的列表重叠。
 
     如果限定页数内无法证明重叠，不提交新锚点，防止因漏页而跳过公告。
@@ -206,6 +212,17 @@ def _discover_on(feed: int, anchors: list[str], max_pages: int, endpoint: str) -
             if not reached:
                 if pid in known:
                     streak += 1
+                    # Recent already-anchored posts skipped by an older title matcher
+                    # must be reconsidered without resetting the checkpoint.
+                    try:
+                        posted = int(post.get("created_at") or 0)
+                    except (TypeError, ValueError):
+                        posted = 0
+                    recent = posted >= int((datetime.now(TZ8) - timedelta(days=7)).timestamp())
+                    title = str(post.get("subject") or "")
+                    if (handled is not None and pid not in handled and recent
+                            and (classify(title) or suspicious_title(title))):
+                        fresh.append(post)
                 else:
                     streak = 0
                     fresh.append(post)
@@ -225,17 +242,25 @@ def _discover_on(feed: int, anchors: list[str], max_pages: int, endpoint: str) -
 
 
 
-def discover(feed: int, anchors: list[str], max_pages: int) -> tuple[list[dict], list[str], int]:
+def discover(feed: int, anchors: list[str], max_pages: int,
+             handled: set[str] | None = None) -> tuple[list[dict], list[str], int]:
     """网络故障时从第一页重扫备用官方源，绝不跨源复用游标。
 
     第一个扫描结果只有完全走到旧锚点或列表末尾后才会进入 checkpoint。
     HTTP 429 / 验证 / 无效数据不会触发备用源访问。
     """
     try:
-        return _discover_on(feed, anchors, max_pages, LIST_API)
+        return _discover_on(feed, anchors, max_pages, LIST_API, handled=handled)
     except TransientListError:
         print(f"type={feed} 主列表源网络故障；从第一页使用官方备用源重扫", flush=True)
-        return _discover_on(feed, anchors, max_pages, BACKUP_LIST_API)
+        return _discover_on(feed, anchors, max_pages, BACKUP_LIST_API, handled=handled)
+
+
+def suspicious_title(title: str) -> bool:
+    """Potential formal wish notice not recognized by a supported parser."""
+    return (isinstance(title, str) and "预告" not in title
+            and "概率UP" in title.upper()
+            and ("祈愿" in title or "神铸赋形" in title))
 
 
 def enqueue(state: dict, feed: int, posts: list[dict]) -> int:
@@ -245,7 +270,14 @@ def enqueue(state: dict, feed: int, posts: list[dict]) -> int:
         title = str(post.get("subject") or "")
         kind = classify(title)
         if not kind:
+            if (suspicious_title(title) and pid not in state["completed"]
+                    and pid not in state["pending"] and pid not in state["manualReview"]
+                    and pid not in state["unrecognized"]):
+                state["unrecognized"][pid] = {
+                    "title": title, "feeds": [feed], "discoveredAt": now(),
+                }
             continue
+        state["unrecognized"].pop(pid, None)
         if pid in state["completed"] or pid in state["manualReview"]:
             continue
         if pid not in state["pending"]:
@@ -405,7 +437,7 @@ def run(*, max_pages: int = 5, checkpoint: Path = CHECKPOINT,
         "game": "genshin", "locale": "zh-CN",
         "startedAt": now(), "feeds": {}, "enqueued": 0,
         "succeeded": [], "failed": [], "reviewNeeded": [],
-        "pendingCount": 0, "manualReviewCount": 0,
+        "pendingCount": 0, "manualReviewCount": 0, "unrecognizedCount": 0,
     }
     # 两个栏目独立推进。某栏目读取失败时，不覆盖它上次的检查位置。
     for feed in (() if pending_only or retry_only else FEEDS):
@@ -422,7 +454,10 @@ def run(*, max_pages: int = 5, checkpoint: Path = CHECKPOINT,
         else:
             if not isinstance(previous.get("anchors"), list):
                 raise DiscoveryError(f"type={feed} 检查点缺少 anchors")
-            new_posts, anchors, pages = discover(feed, previous["anchors"], max_pages)
+            handled = (set(state["completed"]) | set(state["pending"])
+                       | set(state["manualReview"]))
+            new_posts, anchors, pages = discover(feed, previous["anchors"], max_pages,
+                                                 handled=handled)
             new_count = enqueue(state, feed, new_posts)
             state["feeds"][key] = {
                 "anchors": anchors, "lastCheckedAt": now(), "initializedOnly": False,
@@ -477,6 +512,7 @@ def run(*, max_pages: int = 5, checkpoint: Path = CHECKPOINT,
         persist(state, checkpoint)
     report["pendingCount"] = len(state["pending"])
     report["manualReviewCount"] = len(state["manualReview"])
+    report["unrecognizedCount"] = len(state["unrecognized"])
     report["finishedAt"] = now()
     save_json(report_path, report)
     return report

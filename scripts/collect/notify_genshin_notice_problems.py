@@ -8,6 +8,8 @@ from __future__ import annotations
 
 import argparse
 from collections import defaultdict
+
+from scripts.collect.audit_genshin_wish_pairing_zh_cn import pairing_warnings, unrecognized_warnings
 import hashlib
 import json
 import os
@@ -114,6 +116,10 @@ def notices_to_review(root: Path = ROOT) -> dict[str, dict]:
 
 
 def issue_title(pid: str) -> str:
+    if pid.startswith("pairing-"):
+        return f"{PREFIX} 同日角色/武器祈愿缺失 {pid.removeprefix('pairing-')}"
+    if pid.startswith("unmatched-"):
+        return f"{PREFIX} 未识别祈愿标题 #{pid.removeprefix('unmatched-')}"
     if pid.startswith("workflow-"):
         return f"{PREFIX} 流程异常 {pid.removeprefix('workflow-')}"
     return f"{PREFIX} 公告 #{pid}"
@@ -149,6 +155,9 @@ def notify(root: Path, repository: str, owner: str, run_url: str, *, dry_run: bo
     if os.environ.get("GENSHIN_FINAL_REPORT_ONLY") == "1" and not (root / FINAL).is_file():
         raise RuntimeError("缺少 v1 最终复核报告，禁止退回旧的解析阶段通知")
     problems = (final_notices_to_review(root) if (root / FINAL).is_file() else notices_to_review(root))
+    # Discovery-stage warnings must survive final-report-only mode.
+    problems.update(pairing_warnings(root))
+    problems.update(unrecognized_warnings(root))
     result = {"total": len(problems), "created": [], "existing": [],
               "updated": [], "reopened": [], "closed": [], "dryRun": dry_run}
     healthy = (root / FINAL).is_file() and all(
@@ -183,10 +192,13 @@ def notify(root: Path, repository: str, owner: str, run_url: str, *, dry_run: bo
         number = str(issue["number"])
         result["existing"].append({"postId": pid, "issue": issue["number"]})
         reopened = issue.get("state", "").upper() == "CLOSED"
+        marker = f"<!-- genshin-notice-fingerprint:{fingerprint(info)} -->"
+        if reopened and info.get("severity") == "warning" and marker in (issue.get("body") or ""):
+            # A manually closed unchanged warning acknowledges an official exception.
+            continue
         if reopened:
             gh("issue", "reopen", number, "--repo", repository)
             result["reopened"].append(issue["number"])
-        marker = f"<!-- genshin-notice-fingerprint:{fingerprint(info)} -->"
         changed = marker not in (issue.get("body") or "")
         if changed:
             gh("issue", "edit", number, "--repo", repository, "--body", body)

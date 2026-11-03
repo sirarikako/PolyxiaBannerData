@@ -25,7 +25,7 @@ OUTPUT = ROOT / "data/derived/genshin/wish-notices"
 DETAIL_API = "https://bbs-api.miyoushe.com/post/wapi/getPostFull"
 TZ8 = timezone(timedelta(hours=8))
 
-TITLE = re.compile(r"^(?:「(?P<name>[^」]{1,100})」\s*祈愿\s*[：:]|「神铸赋形」\s*[：:]|祈愿\s*[：:])")
+TITLE = re.compile(r"^(?:「(?P<name>[^」]{1,100})」\s*祈愿\s*[：:]|(?:「神铸赋形」|神铸赋形)\s*[：:]|祈愿\s*[：:])")
 UP_GROUP = re.compile(
     r"(?P<limited>限定)?\s*(?P<rarity>[45])星(?P<kind>角色|武器)\s*"
     r"(?P<labels>(?:「[^」\n]{1,120}」\s*)+)"
