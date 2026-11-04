@@ -11,31 +11,12 @@
     "requiresAttention": 0,
     "blocking": 0,
     "warnings": 0,
-    "wouldAppend": 3,
+    "wouldAppend": 0,
     "wouldUpdateExisting": 0
   },
   "preview": {
     "mode": "dry-run",
-    "appended": [
-      {
-        "id": "gi-000302",
-        "postId": "79287292",
-        "name": "万序衍盈",
-        "manual": false
-      },
-      {
-        "id": "gi-000303",
-        "postId": "79287291",
-        "name": "众水的颂诗",
-        "manual": false
-      },
-      {
-        "id": "gi-000304",
-        "postId": "79287289",
-        "name": "神铸赋形",
-        "manual": false
-      }
-    ],
+    "appended": [],
     "updatedExistingIds": []
   },
   "notifications": {}

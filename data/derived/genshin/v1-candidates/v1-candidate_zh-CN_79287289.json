@@ -10,7 +10,7 @@
   "bannerName": "神铸赋形",
   "poolType": "weapon_event",
   "variant": null,
-  "existingV1Id": null,
+  "existingV1Id": "gi-000304",
   "v1Draft": {
     "gameVersion": "7.2",
     "phase": 1,
@@ -30,7 +30,7 @@
     "featured": {
       "fiveStar": [
         {
-          "itemId": null,
+          "itemId": "14525",
           "names": {
             "zh-CN": "秘星典谕"
           },
@@ -124,7 +124,6 @@
     "noticeSourceKey": "79287289"
   },
   "warnings": [
-    "missing_item_ids",
     "conditional_start_time"
   ],
   "manualAudit": {

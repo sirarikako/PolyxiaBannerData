@@ -1641,14 +1641,13 @@
       "status": "ready_candidate",
       "issues": [],
       "warnings": [
-        "missing_item_ids",
         "conditional_start_time"
       ],
       "version": "7.2",
       "phase": 1,
       "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
       "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
-      "existingV1Id": null,
+      "existingV1Id": "gi-000304",
       "manualDifferences": [],
       "blockingDifferences": [],
       "warningDifferences": [],
@@ -1661,9 +1660,6 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
-      "missingItemNames": [
-        "秘星典谕"
-      ],
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_79287289.json"
     },
     {
@@ -1673,14 +1669,13 @@
       "status": "ready_candidate",
       "issues": [],
       "warnings": [
-        "missing_item_ids",
         "conditional_start_time"
       ],
       "version": "7.2",
       "phase": 1,
       "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
       "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
-      "existingV1Id": null,
+      "existingV1Id": "gi-000303",
       "manualDifferences": [],
       "blockingDifferences": [],
       "warningDifferences": [],
@@ -1693,9 +1688,6 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
-      "missingItemNames": [
-        "瓦列里"
-      ],
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_79287291.json"
     },
     {
@@ -1705,14 +1697,13 @@
       "status": "ready_candidate",
       "issues": [],
       "warnings": [
-        "missing_item_ids",
         "conditional_start_time"
       ],
       "version": "7.2",
       "phase": 1,
       "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
       "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
-      "existingV1Id": null,
+      "existingV1Id": "gi-000302",
       "manualDifferences": [],
       "blockingDifferences": [],
       "warningDifferences": [],
@@ -1725,10 +1716,6 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
-      "missingItemNames": [
-        "瓦列里",
-        "米提亚"
-      ],
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_79287292.json"
     }
   ]

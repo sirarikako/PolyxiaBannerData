@@ -10,7 +10,7 @@
   "bannerName": "万序衍盈",
   "poolType": "character_event",
   "variant": null,
-  "existingV1Id": null,
+  "existingV1Id": "gi-000302",
   "v1Draft": {
     "gameVersion": "7.2",
     "phase": 1,
@@ -30,7 +30,7 @@
     "featured": {
       "fiveStar": [
         {
-          "itemId": null,
+          "itemId": "10000136",
           "names": {
             "zh-CN": "米提亚"
           },
@@ -39,7 +39,7 @@
       ],
       "fourStar": [
         {
-          "itemId": null,
+          "itemId": "10000137",
           "names": {
             "zh-CN": "瓦列里"
           },
@@ -102,7 +102,6 @@
     "noticeSourceKey": "79287292"
   },
   "warnings": [
-    "missing_item_ids",
     "conditional_start_time"
   ],
   "manualAudit": {
