@@ -68,25 +68,28 @@ jobs:
           }
 
           find_downstream() {
-            local workflow="$1" expected="$2" event="$3" run_id i
-            for ((i=0; i<120; i++)); do
-              run_id="$(gh api \
+            local workflow="$1" expected="$2" event="$3" run_id i candidates names
+            for ((i=0; i<60; i++)); do
+              # 只检查本次总控启动之后的运行；Job 名中含精确的上游 Run ID。
+              candidates="$(gh api \
                 "repos/$REPO/actions/workflows/$workflow/runs?event=$event&per_page=100" \
-                --jq ".workflow_runs[] | select(.display_title == \"$expected\") | .id" \
-                | head -n 1)"
-              if [[ "$run_id" =~ ^[0-9]+$ ]]; then
-                echo "$run_id"
-                return 0
-              fi
-              if (( i % 12 == 0 )); then
-                echo "等待自动触发 $workflow [$expected]" >&2
+                --jq ".workflow_runs[] | select(.created_at >= \"$RUN_STARTED_AT\") | .id")"
+              for run_id in $candidates; do
+                names="$(gh api "repos/$REPO/actions/runs/$run_id/jobs?per_page=100" \
+                  --jq '.jobs[].name')"
+                if grep -Fxq "$expected" <<< "$names"; then
+                  echo "$run_id"
+                  return 0
+                fi
+              done
+              if (( i % 8 == 0 )); then
+                echo "等待自动触发 $workflow (上游关联: $expected)" >&2
               fi
               sleep 15
             done
-            echo "::error::未找到与 $expected 关联的自动运行；拒绝把别的运行当成完成" >&2
+            echo "::error::15 分钟内未找到与 $expected 对应的自动运行，拒绝误认其他运行" >&2
             exit 1
           }
-
           run_entrance() {
             local workflow="$1" label="$2" run_id
             note "### $label"
@@ -101,10 +104,10 @@ jobs:
             local publisher_id publish_status manifest_status manifest_id
             if [ "$game" = genshin ]; then
               publisher_file=genshin-v1-auto-publish.yml
-              publisher_title="3-2_原神发布 [upstream=$upstream_id]"
+              publisher_title="verify-upstream [upstream=$upstream_id]"
             else
               publisher_file=starrail-v1-auto-publish.yml
-              publisher_title="4-2_星铁发布 [upstream=$upstream_id]"
+              publisher_title="verify-upstream [upstream=$upstream_id]"
             fi
             publisher_id="$(find_downstream "$publisher_file" "$publisher_title" workflow_run)"
             wait_run "$publisher_id" "$publisher_title"
@@ -123,7 +126,7 @@ jobs:
             case "$manifest_status" in
               success)
                 manifest_id="$(find_downstream refresh-v1-manifest.yml \
-                  "2-1_Manifest刷新 [publisher=$publisher_id]" workflow_dispatch)"
+                  "refresh [publisher=$publisher_id]" workflow_dispatch)"
                 wait_run "$manifest_id" "2-1 Manifest ($game)"
                 ;;
               skipped)
@@ -136,6 +139,7 @@ jobs:
             esac
           }
 
+          RUN_STARTED_AT="$(gh api "repos/$REPO/actions/runs/$GITHUB_RUN_ID" --jq '.created_at')"
           note "## 版本更新人工顺序运行"
           note "只派发 1-1、3-1、4-1、5-1；3-2、4-2 和 2-1 仅等待自动链。"
           run_entrance official-item-mappings-daily.yml "1-1 官方 ItemID"
