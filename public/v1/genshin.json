@@ -24162,9 +24162,238 @@
           "url": "https://www.miyoushe.com/ys/article/78782593"
         }
       ]
+    },
+    {
+      "gameVersion": "7.2",
+      "phase": 1,
+      "category": "character",
+      "poolType": "character_event",
+      "names": {
+        "zh-CN": "万序衍盈"
+      },
+      "gachaTypes": {
+        "raw": [
+          "301"
+        ],
+        "uigf": [
+          "301"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": null,
+            "names": {
+              "zh-CN": "米提亚"
+            },
+            "type": "character"
+          }
+        ],
+        "fourStar": [
+          {
+            "itemId": null,
+            "names": {
+              "zh-CN": "瓦列里"
+            },
+            "type": "character"
+          },
+          {
+            "itemId": "10000088",
+            "names": {
+              "zh-CN": "夏洛蒂"
+            },
+            "type": "character"
+          },
+          {
+            "itemId": "10000045",
+            "names": {
+              "zh-CN": "罗莎莉亚"
+            },
+            "type": "character"
+          }
+        ]
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-11-04T06:00:00+08:00",
+          "endAt": "2026-11-24T18:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/ys/article/79312623"
+        },
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/ys/article/79287292"
+        }
+      ],
+      "id": "gi-000302"
+    },
+    {
+      "gameVersion": "7.2",
+      "phase": 1,
+      "category": "character",
+      "poolType": "character_event_2",
+      "names": {
+        "zh-CN": "众水的颂诗"
+      },
+      "gachaTypes": {
+        "raw": [
+          "400"
+        ],
+        "uigf": [
+          "301"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": "10000089",
+            "names": {
+              "zh-CN": "芙宁娜"
+            },
+            "type": "character"
+          }
+        ],
+        "fourStar": [
+          {
+            "itemId": null,
+            "names": {
+              "zh-CN": "瓦列里"
+            },
+            "type": "character"
+          },
+          {
+            "itemId": "10000088",
+            "names": {
+              "zh-CN": "夏洛蒂"
+            },
+            "type": "character"
+          },
+          {
+            "itemId": "10000045",
+            "names": {
+              "zh-CN": "罗莎莉亚"
+            },
+            "type": "character"
+          }
+        ]
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-11-04T06:00:00+08:00",
+          "endAt": "2026-11-24T18:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/ys/article/79312623"
+        },
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/ys/article/79287291"
+        }
+      ],
+      "id": "gi-000303"
+    },
+    {
+      "gameVersion": "7.2",
+      "phase": 1,
+      "category": "weapon",
+      "poolType": "weapon_event",
+      "names": {
+        "zh-CN": "神铸赋形"
+      },
+      "gachaTypes": {
+        "raw": [
+          "302"
+        ],
+        "uigf": [
+          "302"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": null,
+            "names": {
+              "zh-CN": "秘星典谕"
+            },
+            "type": "weapon"
+          },
+          {
+            "itemId": "11513",
+            "names": {
+              "zh-CN": "静水流涌之辉"
+            },
+            "type": "weapon"
+          }
+        ],
+        "fourStar": [
+          {
+            "itemId": "11427",
+            "names": {
+              "zh-CN": "船坞长剑"
+            },
+            "type": "weapon"
+          },
+          {
+            "itemId": "13427",
+            "names": {
+              "zh-CN": "勘探钻机"
+            },
+            "type": "weapon"
+          },
+          {
+            "itemId": "14434",
+            "names": {
+              "zh-CN": "霜辰"
+            },
+            "type": "weapon"
+          },
+          {
+            "itemId": "12405",
+            "names": {
+              "zh-CN": "雨裁"
+            },
+            "type": "weapon"
+          },
+          {
+            "itemId": "15405",
+            "names": {
+              "zh-CN": "弓藏"
+            },
+            "type": "weapon"
+          }
+        ]
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-11-04T06:00:00+08:00",
+          "endAt": "2026-11-24T18:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/ys/article/79312623"
+        },
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/ys/article/79287289"
+        }
+      ],
+      "fatePointLimit": 1,
+      "id": "gi-000304"
     }
   ],
   "game": "genshin",
-  "generatedAt": "2026-10-15T22:45:00+08:00",
+  "generatedAt": "2026-11-04T11:22:57+08:00",
   "schemaVersion": 1
 }
