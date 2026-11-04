@@ -1,5 +1,4 @@
 name: 2-1_V1 Manifest自动更新
-run-name: '2-1_Manifest刷新 [publisher=${{ inputs.publisher_run_id }}]'
 on:
   push:
     branches: [main]
@@ -23,6 +22,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   refresh:
+    name: 'refresh [publisher=${{ inputs.publisher_run_id }}]'
     runs-on: ubuntu-26.04
     timeout-minutes: 15
     steps:
