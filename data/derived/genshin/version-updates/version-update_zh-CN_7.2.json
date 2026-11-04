@@ -1,0 +1,50 @@
+{
+  "format": "genshin-version-update-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "version": "7.2",
+  "versionName": "坏灭肇始之时",
+  "maintenance": {
+    "startAt": "2026-11-04T06:00:00+08:00",
+    "estimatedDurationHours": 5,
+    "estimatedEndAt": "2026-11-04T11:00:00+08:00"
+  },
+  "newCharacters": [
+    {
+      "name": "米提亚",
+      "rarity": 5,
+      "title": "列律名虚",
+      "element": "雷",
+      "weaponType": "法器"
+    },
+    {
+      "name": "瓦列里",
+      "rarity": 4,
+      "title": "霆骇军垒",
+      "element": "雷",
+      "weaponType": "单手剑"
+    }
+  ],
+  "newWeapons": [
+    {
+      "name": "秘星典谕",
+      "rarity": 5,
+      "weaponType": "法器",
+      "acquisition": "unknown"
+    }
+  ],
+  "source": {
+    "postId": "79322732",
+    "title": "「坏灭肇始之时」7.2版本更新说明",
+    "url": "https://www.miyoushe.com/ys/article/79322732",
+    "publishedAt": "2026-11-04T07:00:11+08:00",
+    "updatedAt": "2026-11-04T11:16:40+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/79322732.json"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [
+      "有武器无法确认获取方式，不能视为祈愿武器"
+    ]
+  }
+}

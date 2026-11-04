@@ -4,13 +4,13 @@
   "locale": "zh-CN",
   "policy": "按公告逐池匹配；关键人工差异阻断；普通差异在最终报告通知，不阻断发布",
   "counts": {
-    "versionUpdateFiles": 10,
+    "versionUpdateFiles": 11,
     "previewFiles": 19,
     "noticeFiles": 63,
     "evaluatedNotices": 63,
     "statuses": {
-      "ready_candidate": 53,
-      "waiting": 10
+      "ready_candidate": 56,
+      "waiting": 7
     }
   },
   "sourceErrors": [],
@@ -1638,15 +1638,16 @@
       "postId": "79287289",
       "sourceKey": "79287289",
       "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287289.json",
-      "status": "waiting",
-      "issues": [
-        "waiting_version_update"
+      "status": "ready_candidate",
+      "issues": [],
+      "warnings": [
+        "missing_item_ids",
+        "conditional_start_time"
       ],
-      "warnings": [],
       "version": "7.2",
       "phase": 1,
       "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
-      "versionUpdateFile": null,
+      "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
       "existingV1Id": null,
       "manualDifferences": [],
       "blockingDifferences": [],
@@ -1659,21 +1660,26 @@
       "manualEvidence": null,
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
-      "manualAudits": []
+      "manualAudits": [],
+      "missingItemNames": [
+        "秘星典谕"
+      ],
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_79287289.json"
     },
     {
       "postId": "79287291",
       "sourceKey": "79287291",
       "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287291.json",
-      "status": "waiting",
-      "issues": [
-        "waiting_version_update"
+      "status": "ready_candidate",
+      "issues": [],
+      "warnings": [
+        "missing_item_ids",
+        "conditional_start_time"
       ],
-      "warnings": [],
       "version": "7.2",
       "phase": 1,
       "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
-      "versionUpdateFile": null,
+      "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
       "existingV1Id": null,
       "manualDifferences": [],
       "blockingDifferences": [],
@@ -1686,21 +1692,26 @@
       "manualEvidence": null,
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
-      "manualAudits": []
+      "manualAudits": [],
+      "missingItemNames": [
+        "瓦列里"
+      ],
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_79287291.json"
     },
     {
       "postId": "79287292",
       "sourceKey": "79287292",
       "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287292.json",
-      "status": "waiting",
-      "issues": [
-        "waiting_version_update"
+      "status": "ready_candidate",
+      "issues": [],
+      "warnings": [
+        "missing_item_ids",
+        "conditional_start_time"
       ],
-      "warnings": [],
       "version": "7.2",
       "phase": 1,
       "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
-      "versionUpdateFile": null,
+      "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
       "existingV1Id": null,
       "manualDifferences": [],
       "blockingDifferences": [],
@@ -1713,7 +1724,12 @@
       "manualEvidence": null,
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
-      "manualAudits": []
+      "manualAudits": [],
+      "missingItemNames": [
+        "瓦列里",
+        "米提亚"
+      ],
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_79287292.json"
     }
   ]
 }

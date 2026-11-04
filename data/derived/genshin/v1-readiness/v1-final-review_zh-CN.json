@@ -5,18 +5,37 @@
   "publicationEnabled": false,
   "blockingNotifications": [],
   "counts": {
-    "ready": 53,
-    "waiting": 10,
+    "ready": 56,
+    "waiting": 7,
     "conflict": 0,
     "requiresAttention": 0,
     "blocking": 0,
     "warnings": 0,
-    "wouldAppend": 0,
+    "wouldAppend": 3,
     "wouldUpdateExisting": 0
   },
   "preview": {
     "mode": "dry-run",
-    "appended": [],
+    "appended": [
+      {
+        "id": "gi-000302",
+        "postId": "79287292",
+        "name": "万序衍盈",
+        "manual": false
+      },
+      {
+        "id": "gi-000303",
+        "postId": "79287291",
+        "name": "众水的颂诗",
+        "manual": false
+      },
+      {
+        "id": "gi-000304",
+        "postId": "79287289",
+        "name": "神铸赋形",
+        "manual": false
+      }
+    ],
     "updatedExistingIds": []
   },
   "notifications": {}

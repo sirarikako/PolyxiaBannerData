@@ -1,0 +1,115 @@
+{
+  "format": "genshin-v1-candidate-zh-CN-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "status": "ready_candidate",
+  "postId": "79287292",
+  "sourceKey": "79287292",
+  "version": "7.2",
+  "phase": 1,
+  "bannerName": "万序衍盈",
+  "poolType": "character_event",
+  "variant": null,
+  "existingV1Id": null,
+  "v1Draft": {
+    "gameVersion": "7.2",
+    "phase": 1,
+    "category": "character",
+    "poolType": "character_event",
+    "names": {
+      "zh-CN": "万序衍盈"
+    },
+    "gachaTypes": {
+      "raw": [
+        "301"
+      ],
+      "uigf": [
+        "301"
+      ]
+    },
+    "featured": {
+      "fiveStar": [
+        {
+          "itemId": null,
+          "names": {
+            "zh-CN": "米提亚"
+          },
+          "type": "character"
+        }
+      ],
+      "fourStar": [
+        {
+          "itemId": null,
+          "names": {
+            "zh-CN": "瓦列里"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000088",
+          "names": {
+            "zh-CN": "夏洛蒂"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000045",
+          "names": {
+            "zh-CN": "罗莎莉亚"
+          },
+          "type": "character"
+        }
+      ]
+    },
+    "regions": [
+      {
+        "server": "cn_official",
+        "startAt": null,
+        "endAt": "2026-11-24T18:00:00+08:00"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/79312623"
+      },
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/79287292"
+      }
+    ]
+  },
+  "timeEvidence": {
+    "versionMaintenanceStartAt": "2026-11-04T06:00:00+08:00",
+    "previewEndAt": "2026-11-24T17:59:00+08:00",
+    "ocrEndAt": "2026-11-24T17:59:00+08:00",
+    "ocrStatus": "recognized_conditional",
+    "endTimeSource": "ocr",
+    "manualFile": null,
+    "ocrImageSha256": "2bb7c0fdb5b32f577053c70f50bd9286e22fe3fc6199a9e98b54e05f881922e3",
+    "startRaw": "7.2版本更新后",
+    "endRaw": "2026/11/24 17:59",
+    "startCondition": "after_version_update",
+    "exclusiveEndPolicy": "原公告分钟结束时间 + 1 分钟；仅候选转换"
+  },
+  "provenance": {
+    "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
+    "versionUpdatePostId": "79322732",
+    "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
+    "previewPostId": "79312623",
+    "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287292.json",
+    "noticePostId": "79287292",
+    "noticeSourceKey": "79287292"
+  },
+  "warnings": [
+    "missing_item_ids",
+    "conditional_start_time"
+  ],
+  "manualAudit": {
+    "filled": [],
+    "matched": [],
+    "file": null,
+    "sources": []
+  },
+  "note": "离线候选；不自动确定版本更新后的精确开池时间，不自动分配内部 ID，不修改正式 v1"
+}
