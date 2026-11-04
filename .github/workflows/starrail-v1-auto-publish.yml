@@ -145,7 +145,8 @@ jobs:
         if: steps.publish.outputs.v1_changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh api --method POST -H 'X-GitHub-Api-Version: 2026-03-10' \
+        run: |
+          gh api --method POST -H 'X-GitHub-Api-Version: 2026-03-10' \
           "repos/$GITHUB_REPOSITORY/actions/workflows/refresh-v1-manifest.yml/dispatches" \
           -f ref=main -f "inputs[publisher_run_id]=$GITHUB_RUN_ID" \
           -F return_run_details=true --jq '.workflow_run_id'
