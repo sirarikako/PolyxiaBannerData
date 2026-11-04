@@ -1,6 +1,6 @@
 # 仅用于版本更新时人工启动；下游发布与 Manifest 由原工作流自动触发。
 # 此文件可在私有库开发审查，但仅允许公开生产库 main 执行。
-name: 5-1_版本更新手动顺序执行
+name: 0_版本更新手动顺序执行
 on:
   workflow_dispatch:
 
@@ -101,10 +101,10 @@ jobs:
             local publisher_id publish_status manifest_status manifest_id
             if [ "$game" = genshin ]; then
               publisher_file=genshin-v1-auto-publish.yml
-              publisher_title="2-2_原神发布 [upstream=$upstream_id]"
+              publisher_title="3-2_原神发布 [upstream=$upstream_id]"
             else
               publisher_file=starrail-v1-auto-publish.yml
-              publisher_title="3-2_星铁发布 [upstream=$upstream_id]"
+              publisher_title="4-2_星铁发布 [upstream=$upstream_id]"
             fi
             publisher_id="$(find_downstream "$publisher_file" "$publisher_title" workflow_run)"
             wait_run "$publisher_id" "$publisher_title"
@@ -123,11 +123,11 @@ jobs:
             case "$manifest_status" in
               success)
                 manifest_id="$(find_downstream refresh-v1-manifest.yml \
-                  "1-1_Manifest刷新 [publisher=$publisher_id]" workflow_dispatch)"
-                wait_run "$manifest_id" "1-1 Manifest ($game)"
+                  "2-1_Manifest刷新 [publisher=$publisher_id]" workflow_dispatch)"
+                wait_run "$manifest_id" "2-1 Manifest ($game)"
                 ;;
               skipped)
-                note "- v1 未发生变化；1-1 Manifest 未启动"
+                note "- v1 未发生变化；2-1 Manifest 未启动"
                 ;;
               *)
                 echo "::error::无法确认是否触发 Manifest（状态=$manifest_status）" >&2
@@ -137,11 +137,11 @@ jobs:
           }
 
           note "## 版本更新人工顺序运行"
-          note "只派发 0-1、2-1、3-1、4-1；2-2、3-2 和 1-1 仅等待自动链。"
-          run_entrance official-item-mappings-daily.yml "0-1 官方 ItemID"
-          run_entrance genshin-notices-zh-cn-daily-preview.yml "2-1 原神公告采集"
+          note "只派发 1-1、3-1、4-1、5-1；3-2、4-2 和 2-1 仅等待自动链。"
+          run_entrance official-item-mappings-daily.yml "1-1 官方 ItemID"
+          run_entrance genshin-notices-zh-cn-daily-preview.yml "3-1 原神公告采集"
           wait_auto_chain genshin "$ENTRANCE_ID"
-          run_entrance starrail-notices-zh-cn-daily-preview.yml "3-1 星铁公告采集"
+          run_entrance starrail-notices-zh-cn-daily-preview.yml "4-1 星铁公告采集"
           wait_auto_chain starrail "$ENTRANCE_ID"
-          run_entrance banner-status-report.yml "4-1 公告识别状态一览"
+          run_entrance banner-status-report.yml "5-1 公告识别状态一览"
           note "### 所有入口与自动下游已成功完成"
