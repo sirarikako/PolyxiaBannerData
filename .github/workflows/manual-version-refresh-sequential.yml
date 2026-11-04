@@ -1,0 +1,147 @@
+# 仅用于版本更新时人工启动；下游发布与 Manifest 由原工作流自动触发。
+# 此文件可在私有库开发审查，但仅允许公开生产库 main 执行。
+name: 5-1_版本更新手动顺序执行
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: manual-version-refresh-sequential-main
+  cancel-in-progress: false
+
+jobs:
+  sequence:
+    if: github.ref == 'refs/heads/main' && github.repository == 'sirarikako/PolyxiaBannerData'
+    runs-on: ubuntu-26.04
+    timeout-minutes: 300
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+    steps:
+      - name: 顺序启动入口并等待所有自动下游完成
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          note() {
+            echo "$1" | tee -a "$GITHUB_STEP_SUMMARY"
+          }
+
+          dispatch() {
+            local workflow="$1" run_id
+            run_id="$(gh api --method POST \
+              -H 'X-GitHub-Api-Version: 2026-03-10' \
+              "repos/$REPO/actions/workflows/$workflow/dispatches" \
+              -f ref=main -F return_run_details=true \
+              --jq '.workflow_run_id')"
+            if ! [[ "$run_id" =~ ^[0-9]+$ ]]; then
+              echo "::error::派发 $workflow 后没有取得确定的运行 ID（拒绝猜测）" >&2
+              exit 1
+            fi
+            echo "$run_id"
+          }
+
+          wait_run() {
+            local run_id="$1" label="$2" row status conclusion i
+            for ((i=0; i<720; i++)); do
+              row="$(gh api "repos/$REPO/actions/runs/$run_id" \
+                --jq '[.status, (.conclusion // "")] | @tsv')"
+              read -r status conclusion <<< "$row"
+              if [ "$status" = completed ]; then
+                note "- $label: $conclusion (run $run_id)"
+                if [ "$conclusion" != success ]; then
+                  echo "::error::$label 未成功，请打开 https://github.com/$REPO/actions/runs/$run_id" >&2
+                  exit 1
+                fi
+                return 0
+              fi
+              if (( i % 12 == 0 )); then
+                echo "等待 $label ($run_id): $status"
+              fi
+              sleep 15
+            done
+            echo "::error::等待 $label 超时 ($run_id)" >&2
+            exit 1
+          }
+
+          find_downstream() {
+            local workflow="$1" expected="$2" event="$3" run_id i
+            for ((i=0; i<120; i++)); do
+              run_id="$(gh api \
+                "repos/$REPO/actions/workflows/$workflow/runs?event=$event&per_page=100" \
+                --jq ".workflow_runs[] | select(.display_title == \"$expected\") | .id" \
+                | head -n 1)"
+              if [[ "$run_id" =~ ^[0-9]+$ ]]; then
+                echo "$run_id"
+                return 0
+              fi
+              if (( i % 12 == 0 )); then
+                echo "等待自动触发 $workflow [$expected]" >&2
+              fi
+              sleep 15
+            done
+            echo "::error::未找到与 $expected 关联的自动运行；拒绝把别的运行当成完成" >&2
+            exit 1
+          }
+
+          run_entrance() {
+            local workflow="$1" label="$2" run_id
+            note "### $label"
+            run_id="$(dispatch "$workflow")"
+            note "- 已启动: https://github.com/$REPO/actions/runs/$run_id"
+            wait_run "$run_id" "$label" 
+            ENTRANCE_ID="$run_id"
+          }
+
+          wait_auto_chain() {
+            local game="$1" upstream_id="$2" publisher_file publisher_title
+            local publisher_id publish_status manifest_status manifest_id
+            if [ "$game" = genshin ]; then
+              publisher_file=genshin-v1-auto-publish.yml
+              publisher_title="2-2_原神发布 [upstream=$upstream_id]"
+            else
+              publisher_file=starrail-v1-auto-publish.yml
+              publisher_title="3-2_星铁发布 [upstream=$upstream_id]"
+            fi
+            publisher_id="$(find_downstream "$publisher_file" "$publisher_title" workflow_run)"
+            wait_run "$publisher_id" "$publisher_title"
+            publish_status="$(gh api "repos/$REPO/actions/runs/$publisher_id/jobs?per_page=100" \
+              --jq '.jobs[] | select(.name == "publish") | .conclusion' | head -n 1)"
+            if [ "$publish_status" = skipped ]; then
+              note "- 自动发布作业跳过；无需等待 Manifest"
+              return 0
+            fi
+            if [ "$publish_status" != success ]; then
+              echo "::error::自动发布作业状态不正常: $publish_status" >&2
+              exit 1
+            fi
+            manifest_status="$(gh api "repos/$REPO/actions/runs/$publisher_id/jobs?per_page=100" \
+              --jq '.jobs[] | select(.name == "publish") | .steps[]? | select(.name | contains("Manifest")) | .conclusion' | head -n 1)"
+            case "$manifest_status" in
+              success)
+                manifest_id="$(find_downstream refresh-v1-manifest.yml \
+                  "1-1_Manifest刷新 [publisher=$publisher_id]" workflow_dispatch)"
+                wait_run "$manifest_id" "1-1 Manifest ($game)"
+                ;;
+              skipped)
+                note "- v1 未发生变化；1-1 Manifest 未启动"
+                ;;
+              *)
+                echo "::error::无法确认是否触发 Manifest（状态=$manifest_status）" >&2
+                exit 1
+                ;;
+            esac
+          }
+
+          note "## 版本更新人工顺序运行"
+          note "只派发 0-1、2-1、3-1、4-1；2-2、3-2 和 1-1 仅等待自动链。"
+          run_entrance official-item-mappings-daily.yml "0-1 官方 ItemID"
+          run_entrance genshin-notices-zh-cn-daily-preview.yml "2-1 原神公告采集"
+          wait_auto_chain genshin "$ENTRANCE_ID"
+          run_entrance starrail-notices-zh-cn-daily-preview.yml "3-1 星铁公告采集"
+          wait_auto_chain starrail "$ENTRANCE_ID"
+          run_entrance banner-status-report.yml "4-1 公告识别状态一览"
+          note "### 所有入口与自动下游已成功完成"

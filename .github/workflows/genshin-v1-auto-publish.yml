@@ -1,6 +1,7 @@
 # 正式发布入口：仅导入已经持久化的官方候选与人工配置，不联网抓公告或 OCR。
 # 失败由 GitHub 原生邮件通知；业务异常由 Issue 通知。v1 改动后显式 dispatch Manifest。
 name: 2-2_原神每日V1数据自动发布
+run-name: '2-2_原神发布 [upstream=${{ github.event.workflow_run.id }}]'
 on:
   workflow_run:
     workflows:
@@ -151,7 +152,10 @@ jobs:
         if: steps.publish.outputs.v1_changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh workflow run refresh-v1-manifest.yml --repo "$GITHUB_REPOSITORY" --ref main
+        run: gh api --method POST -H 'X-GitHub-Api-Version: 2026-03-10' \
+          "repos/$GITHUB_REPOSITORY/actions/workflows/refresh-v1-manifest.yml/dispatches" \
+          -f ref=main -f "inputs[publisher_run_id]=$GITHUB_RUN_ID" \
+          -F return_run_details=true --jq '.workflow_run_id'
       - name: 发布业务问题以 Issue 通知
         if: always()
         env:
