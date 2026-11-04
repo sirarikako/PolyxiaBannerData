@@ -10,6 +10,11 @@ on:
     paths:
       - 'manual/starrail_*.json'
   workflow_dispatch:
+    inputs:
+      upstream_run_id:
+        description: '由手动总控传入的已完成采集 Run ID；空值保留独立手动发布模式'
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -22,7 +27,7 @@ concurrency:
 
 jobs:
   verify-upstream:
-    name: 'verify-upstream [upstream=${{ github.event.workflow_run.id }}]'
+    name: 'verify-upstream [upstream=${{ inputs.upstream_run_id || github.event.workflow_run.id }}]'
     runs-on: ubuntu-26.04
     outputs:
       should_publish: ${{ steps.gate.outputs.should_publish }}
@@ -33,7 +38,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           EVENT_NAME: ${{ github.event_name }}
-          UPSTREAM_RUN_ID: ${{ github.event.workflow_run.id }}
+          UPSTREAM_RUN_ID: ${{ inputs.upstream_run_id || github.event.workflow_run.id }}
           UPSTREAM_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
           UPSTREAM_REPOSITORY: ${{ github.event.workflow_run.head_repository.full_name }}
           UPSTREAM_HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
@@ -49,7 +54,21 @@ jobs:
             echo 'should_publish=false' >> "$GITHUB_OUTPUT"
             exit 0
           esac
-          if [ "$EVENT_NAME" != 'workflow_run' ]; then
+          # 总控显式 workflow_dispatch：根据 Run ID 查询上游实际结果，而非绕过校验。
+          if [ "$EVENT_NAME" = 'workflow_dispatch' ] && [ -n "$UPSTREAM_RUN_ID" ]; then
+            if ! [[ "$UPSTREAM_RUN_ID" =~ ^[0-9]+$ ]]; then
+              echo "::error::上游 Run ID 必须是数字" >&2
+              exit 1
+            fi
+            upstream="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$UPSTREAM_RUN_ID" \
+              --jq '[.head_repository.full_name, .head_branch, (.conclusion // ""), .path, .status] | @tsv')"
+            read -r UPSTREAM_REPOSITORY UPSTREAM_HEAD_BRANCH UPSTREAM_CONCLUSION UPSTREAM_PATH UPSTREAM_STATUS <<< "$upstream"
+            if [ "$UPSTREAM_PATH" != '.github/workflows/starrail-notices-zh-cn-daily-preview.yml' ] || [ "$UPSTREAM_STATUS" != completed ]; then
+              echo "::error::上游不是已完成的星铁采集运行" >&2
+              exit 1
+            fi
+          fi
+          if [ "$EVENT_NAME" != 'workflow_run' ] && [ -z "$UPSTREAM_RUN_ID" ]; then
             echo 'should_publish=true' >> "$GITHUB_OUTPUT"
             echo '手动触发或星铁版本人工配置变更，允许执行发布检查。' >> "$GITHUB_STEP_SUMMARY"
             exit 0
