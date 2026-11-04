@@ -1,4 +1,4 @@
-# 仅用于版本更新时人工启动；下游发布与 Manifest 由原工作流自动触发。
+# 仅用于版本更新时人工启动；发布工作流在总控模式下显式触发，Manifest 继续由发布工作流派发。
 # 此文件可在私有库开发审查，但仅允许公开生产库 main 执行。
 name: 0_版本更新手动顺序执行
 on:
@@ -31,12 +31,15 @@ jobs:
           }
 
           dispatch() {
-            local workflow="$1" run_id
+            local workflow="$1" upstream_id="${2:-}" run_id
+            local args=(-f ref=main -F return_run_details=true)
+            if [ -n "$upstream_id" ]; then
+              args+=(-f "inputs[upstream_run_id]=$upstream_id")
+            fi
             run_id="$(gh api --method POST \
               -H 'X-GitHub-Api-Version: 2026-03-10' \
               "repos/$REPO/actions/workflows/$workflow/dispatches" \
-              -f ref=main -F return_run_details=true \
-              --jq '.workflow_run_id')"
+              "${args[@]}" --jq '.workflow_run_id')"
             if ! [[ "$run_id" =~ ^[0-9]+$ ]]; then
               echo "::error::派发 $workflow 后没有取得确定的运行 ID（拒绝猜测）" >&2
               exit 1
@@ -109,7 +112,10 @@ jobs:
               publisher_file=starrail-v1-auto-publish.yml
               publisher_title="verify-upstream [upstream=$upstream_id]"
             fi
-            publisher_id="$(find_downstream "$publisher_file" "$publisher_title" workflow_run)"
+            # 总控派发的 workflow_dispatch 不会可靠地产生后续 workflow_run；
+            # 直接以实际采集 Run ID 调用发布，日常独立运行仍走原来的自动触发。
+            publisher_id="$(dispatch "$publisher_file" "$upstream_id")"
+            note "- 已显式启动发布: https://github.com/$REPO/actions/runs/$publisher_id"
             wait_run "$publisher_id" "$publisher_title"
             publish_status="$(gh api "repos/$REPO/actions/runs/$publisher_id/jobs?per_page=100" \
               --jq '.jobs[] | select(.name == "publish") | .conclusion' | head -n 1)"
@@ -141,7 +147,7 @@ jobs:
 
           RUN_STARTED_AT="$(gh api "repos/$REPO/actions/runs/$GITHUB_RUN_ID" --jq '.created_at')"
           note "## 版本更新人工顺序运行"
-          note "只派发 1-1、3-1、4-1、5-1；3-2、4-2 和 2-1 仅等待自动链。"
+          note "总控派发 1-1、3-1、3-2、4-1、4-2、5-1；Manifest 2-1 仍由发布任务自动派发并等待。"
           run_entrance official-item-mappings-daily.yml "1-1 官方 ItemID"
           run_entrance genshin-notices-zh-cn-daily-preview.yml "3-1 原神公告采集"
           wait_auto_chain genshin "$ENTRANCE_ID"
