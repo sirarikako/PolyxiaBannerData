@@ -1,11 +1,11 @@
 # 正式发布入口：仅导入已经持久化的官方候选与人工配置，不联网抓公告或 OCR。
 # 失败由 GitHub 原生邮件通知；业务异常由 Issue 通知。v1 改动后显式 dispatch Manifest。
-name: 2-2_原神每日V1数据自动发布
-run-name: '2-2_原神发布 [upstream=${{ github.event.workflow_run.id }}]'
+name: 3-2_原神每日V1数据自动发布
+run-name: '3-2_原神发布 [upstream=${{ github.event.workflow_run.id }}]'
 on:
   workflow_run:
     workflows:
-      - '2-1_原神公告每日自动采集与解析'
+      - '3-1_原神公告每日自动采集与解析'
     types: [completed]
   push:
     branches: [main]
@@ -28,7 +28,7 @@ jobs:
     outputs:
       should_publish: ${{ steps.gate.outputs.should_publish }}
     steps:
-      - name: 确认 2-1 确实完成了公告处理
+      - name: 确认 3-1 确实完成了公告处理
         id: gate
         shell: bash
         env:
@@ -64,18 +64,18 @@ jobs:
           fi
           if [ "$UPSTREAM_CONCLUSION" != 'success' ]; then
             echo 'should_publish=false' >> "$GITHUB_OUTPUT"
-            echo '2-1 未成功完成，不执行 2-2。' >> "$GITHUB_STEP_SUMMARY"
+            echo '3-1 未成功完成，不执行 3-2。' >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
-          # 2-1 的 check-pending 成功不代表真正执行了 collect-and-preview。
+          # 3-1 的 check-pending 成功不代表真正执行了 collect-and-preview。
           # 仅当该作业确实成功，才允许执行 V1 发布；无 pending 时它会被跳过。
           jobs="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$UPSTREAM_RUN_ID/jobs?per_page=100" --paginate --jq '.jobs[] | select(.name == "collect-and-preview") | .conclusion')"
           if grep -Fxq 'success' <<< "$jobs"; then
             echo 'should_publish=true' >> "$GITHUB_OUTPUT"
-            echo '2-1 采集整合作业执行成功，允许 2-2。' >> "$GITHUB_STEP_SUMMARY"
+            echo '3-1 采集整合作业执行成功，允许 3-2。' >> "$GITHUB_STEP_SUMMARY"
           else
             echo 'should_publish=false' >> "$GITHUB_OUTPUT"
-            echo '2-1 没有成功的采集整合作业（通常为无 pending 而跳过），本轮无需发布。' >> "$GITHUB_STEP_SUMMARY"
+            echo '3-1 没有成功的采集整合作业（通常为无 pending 而跳过），本轮无需发布。' >> "$GITHUB_STEP_SUMMARY"
           fi
   publish:
     needs: verify-upstream
@@ -108,7 +108,7 @@ jobs:
             # 在 Runner 临时重算 Manifest，再进行完整合约/哈希验证。
             python -m scripts.release.refresh_v1_manifest > /tmp/genshin-manifest-validation-preview.log
             python -m scripts.release.validate_v1 --public
-            # 2-2 只提交 V1/人工状态；Manifest 的正式提交仍由 1-1 管理。
+            # 3-2 只提交 V1/人工状态；Manifest 的正式提交仍由 2-1 管理。
             git restore -- public/v1/manifest.json
 
             git add -A -- public/v1/genshin.json
