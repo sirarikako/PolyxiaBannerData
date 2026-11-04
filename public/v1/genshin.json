@@ -24182,7 +24182,7 @@
       "featured": {
         "fiveStar": [
           {
-            "itemId": null,
+            "itemId": "10000136",
             "names": {
               "zh-CN": "米提亚"
             },
@@ -24191,7 +24191,7 @@
         ],
         "fourStar": [
           {
-            "itemId": null,
+            "itemId": "10000137",
             "names": {
               "zh-CN": "瓦列里"
             },
@@ -24260,7 +24260,7 @@
         ],
         "fourStar": [
           {
-            "itemId": null,
+            "itemId": "10000137",
             "names": {
               "zh-CN": "瓦列里"
             },
@@ -24320,7 +24320,7 @@
       "featured": {
         "fiveStar": [
           {
-            "itemId": null,
+            "itemId": "14525",
             "names": {
               "zh-CN": "秘星典谕"
             },
@@ -24394,6 +24394,6 @@
     }
   ],
   "game": "genshin",
-  "generatedAt": "2026-11-04T11:22:57+08:00",
+  "generatedAt": "2026-11-04T22:37:27+08:00",
   "schemaVersion": 1
 }
