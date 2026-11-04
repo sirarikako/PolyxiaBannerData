@@ -1,7 +1,6 @@
 # 正式发布入口：仅导入已经持久化的官方候选与人工配置，不联网抓公告或 OCR。
 # 失败由 GitHub 原生邮件通知；业务异常由 Issue 通知。v1 改动后显式 dispatch Manifest。
 name: 3-2_原神每日V1数据自动发布
-run-name: '3-2_原神发布 [upstream=${{ github.event.workflow_run.id }}]'
 on:
   workflow_run:
     workflows:
@@ -24,6 +23,7 @@ concurrency:
 
 jobs:
   verify-upstream:
+    name: 'verify-upstream [upstream=${{ github.event.workflow_run.id }}]'
     runs-on: ubuntu-26.04
     outputs:
       should_publish: ${{ steps.gate.outputs.should_publish }}
