@@ -9,6 +9,7 @@ on:
     paths: ['.github/workflows/official-item-mappings-daily.yml']
 permissions:
   contents: write
+  actions: write
   issues: write
 concurrency:
   group: official-itemid-daily
@@ -73,6 +74,110 @@ jobs:
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m '自动补齐官方多语言 ItemID 对照表'
           git push origin HEAD:main
           echo 'changed=true' >> "$GITHUB_OUTPUT"
+      - name: 官方映射更新后回填已发布 v1 的空 ItemID
+        id: backfill
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python -m pip install -r requirements.txt
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python -m scripts.release.backfill_v1_null_item_ids --write --report /tmp/itemid-backfill-report.json
+            python -m scripts.release.validate_v1 --datasets-only
+            python -m scripts.release.refresh_v1_manifest > /tmp/itemid-backfill-manifest-preview.json
+            python -m scripts.release.validate_v1 --public
+            git restore -- public/v1/manifest.json
+            git diff --exit-code -- public/item-mappings schemas manual
+            git add -- public/v1/genshin.json public/v1/starrail.json
+            if git diff --cached --quiet; then
+              echo 'v1_changed=false' >> "$GITHUB_OUTPUT"
+              break
+            fi
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m '自动回填已发布 v1 中缺失的官方 ItemID'
+            if git push origin HEAD:main; then
+              echo 'v1_changed=true' >> "$GITHUB_OUTPUT"
+              break
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo "::error::回填并发提交连续三次失败；不会覆盖 main"
+              exit 1
+            fi
+          done
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          data = json.loads(Path("/tmp/itemid-backfill-report.json").read_text(encoding="utf-8"))
+          print("### 已发布卡池 ItemID 补全")
+          print(f"- 本次补全：{data['totalFilled']} 处")
+          for game, result in data["games"].items():
+              print(f"- {game}: 补全 {len(result['filled'])} 处；尚无映射 {len(result['unresolved'])} 处；冲突 {len(result['conflicts'])} 处")
+              for item in result["conflicts"]:
+                  print(f"  - 冲突：{item}")
+          PY
+      - name: 回填后显式更新 Manifest 并等待完成
+        if: steps.backfill.outputs.v1_changed == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          run_id="$(gh api --method POST -H 'X-GitHub-Api-Version: 2026-03-10' \
+            "repos/$GITHUB_REPOSITORY/actions/workflows/refresh-v1-manifest.yml/dispatches" \
+            -f ref=main -f "inputs[publisher_run_id]=$GITHUB_RUN_ID" \
+            -F return_run_details=true --jq '.workflow_run_id')"
+          if ! [[ "$run_id" =~ ^[0-9]+$ ]]; then
+            echo "::error::未获得 Manifest 的确定 Run ID"
+            exit 1
+          fi
+          echo "- Manifest: https://github.com/$GITHUB_REPOSITORY/actions/runs/$run_id" >> "$GITHUB_STEP_SUMMARY"
+          for ((i=0;i<120;i++)); do
+            state="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$run_id" --jq '[.status, (.conclusion // "")] | @tsv')"
+            read -r status conclusion <<< "$state"
+            if [ "$status" = completed ]; then
+              if [ "$conclusion" != success ]; then
+                echo "::error::Manifest 刷新失败：$conclusion"
+                exit 1
+              fi
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "::error::等待 Manifest 刷新超时"
+          exit 1
+      - name: 对照表与已发布卡池 ID 冲突告警
+        if: always() && steps.backfill.conclusion == 'success'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import subprocess
+          from pathlib import Path
+          data = json.loads(Path("/tmp/itemid-backfill-report.json").read_text(encoding="utf-8"))
+          if not data["totalConflicts"]:
+              raise SystemExit(0)
+          title = "[ItemID] 已发布 v1 与官方对照表存在冲突"
+          body = "仅跳过有冲突的空值回填；既有非空 ID 未被修改。\\n\\n"
+          for game, row in data["games"].items():
+              for item in row["conflicts"]:
+                  body += f"- {game}: {item}\\n"
+          print(f"::warning::{title} ({data['totalConflicts']} 处)")
+          repo = os.environ["GITHUB_REPOSITORY"]
+          old = subprocess.run(["gh", "issue", "list", "--repo", repo, "--state", "open",
+                                "--search", f"{title} in:title", "--json", "number", "--jq", ".[0].number // empty"],
+                               capture_output=True, text=True, check=True).stdout.strip()
+          if old:
+              subprocess.run(["gh", "issue", "comment", old, "--repo", repo, "--body", body], check=True)
+          else:
+              subprocess.run(["gh", "issue", "create", "--repo", repo, "--title", title,
+                              "--assignee", "sirarikako", "--body", body], check=True)
+          PY
       - name: 冲突 Issue 通知、自动指派和完整复核后自动关闭
         if: always()
         shell: bash
