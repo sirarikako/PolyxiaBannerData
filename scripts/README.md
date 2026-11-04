@@ -6,19 +6,20 @@
 
 | 编号 | `.github/workflows/` 文件 | 功能 |
 | --- | --- | --- |
-| 0-1 | `official-item-mappings-daily.yml` | 每日更新官方 ItemID |
-| 1-1 | `refresh-v1-manifest.yml` | 校验/刷新 v1 Manifest |
-| 2-1 | `genshin-notices-zh-cn-daily-preview.yml` | 原神公告扫描、OCR、候选和问题通知 |
-| 2-2 | `genshin-v1-auto-publish.yml` | 原神正式 v1 导入发布 |
-| 3-1 | `starrail-notices-zh-cn-daily-preview.yml` | 星铁公告扫描、候选和问题通知 |
-| 3-2 | `starrail-v1-auto-publish.yml` | 星铁正式 v1 导入发布 |
-| 4-1 | `banner-status-report.yml` | 独立汇总公开仓库结构化公告、预告、候选和 V1 至 `data/BANNER_STATUS.md` |
+| 0 | `manual-version-refresh-sequential.yml` | 版本更新时手动顺序执行 |
+| 1-1 | `official-item-mappings-daily.yml` | 每日更新官方 ItemID |
+| 2-1 | `refresh-v1-manifest.yml` | 校验/刷新 v1 Manifest |
+| 3-1 | `genshin-notices-zh-cn-daily-preview.yml` | 原神公告扫描、OCR、候选和问题通知 |
+| 3-2 | `genshin-v1-auto-publish.yml` | 原神正式 v1 导入发布 |
+| 4-1 | `starrail-notices-zh-cn-daily-preview.yml` | 星铁公告扫描、候选和问题通知 |
+| 4-2 | `starrail-v1-auto-publish.yml` | 星铁正式 v1 导入发布 |
+| 5-1 | `banner-status-report.yml` | 独立汇总公开仓库结构化公告、预告、候选和 V1 至 `data/BANNER_STATUS.md` |
 
-正式正常扫描时间按 UTC：0-1 为 05:17（UTC+8 13:17），原神 2-1 为 06:17、06:27/37/47/57（UTC+8 14:17 开始），星铁 3-1 为 07:17、07:27/37/47/57（UTC+8 15:17 开始）；以正式 workflow 的 cron 为准，GitHub 定时可能延迟。
+正式正常扫描时间按 UTC：1-1 为 05:17（UTC+8 13:17），原神 3-1 为 06:17、06:27/37/47/57（UTC+8 14:17 开始），星铁 4-1 为 07:17、07:27/37/47/57（UTC+8 15:17 开始）；以正式 workflow 的 cron 为准，GitHub 定时可能延迟。
 
-`4-1` 仅按时或手动汇总既有数据，不执行抓取、OCR、候选整合或 V1 发布，不与 `2-1/2-2/3-1/3-2` 强制关联；首轮部署脚本时也触发生成。
+`5-1` 仅按时或手动汇总既有数据，不执行抓取、OCR、候选整合或 V1 发布；首轮部署脚本时也触发生成。
 
-成功的上游采集可以通过 `workflow_run` 触发对应 2-2/3-2；v1 有真实变化时显式 `workflow_dispatch` 1-1。GitHub `GITHUB_TOKEN` 的防递归机制可能影响手动调度测试，不等同于自然上游触发。1-1 在本仓库内维护 Manifest。
+日常采集可通过 `workflow_run` 触发 `3-2/4-2`；手动总控 `0` 则直接顺序调用并等待发布任务。v1 有变化时，发布工作流显式触发 `2-1` 更新 Manifest。
 
 ## 数据生命周期
 
@@ -54,6 +55,6 @@ Public `main` 不包含 `tests/`、`requirements-dev.txt` 或测试用 Actions�
 - `python -m scripts.release.validate_v1 --datasets-only`：独立验证发布数据。
 - `python -m scripts.release.refresh_v1_manifest`：生成临时或正式 Manifest。
 - `python -m scripts.release.validate_v1 --public`：核对 Schema、Manifest 与数据哈希。
-- 发布范围、原神 2-1 保证 v1 不变、checkpoint/人工复核/Issue/Artifact 原文保护等生产守卫。
+- 发布范围、原神 3-1 保证 v1 不变、checkpoint/人工复核/Issue/Artifact 原文保护等生产守卫。
 
 代码或 Actions 变更先完成私有仓库中的开发与验证，再部署到本仓库；不应绕过验证直接修改正式运行逻辑。
