@@ -30,7 +30,7 @@ GitHub Raw 可直接读取：
 
 本仓库**独立运行**公告采集、解析、卡池数据发布、物品 ID 更新和 Manifest 校验，不依赖其他仓库同步生成的数据。
 
-- `.github/workflows/`：六份采集及发布 Actions（0-1、1-1、2-1/2-2、3-1/3-2）及独立状态总览 Action（4-1）。
+- `.github/workflows/`：`0` 版本更新手动总控，`1-1` ItemID，`2-1` Manifest，`3-1/3-2` 原神，`4-1/4-2` 星铁，`5-1` 状态总览。
 - `scripts/`：采集、OCR、候选整合、校验与发布代码；参见[生产脚本说明](scripts/README.md)。
 - `data/derived/`：结构化公告、增量 checkpoint、候选和诊断数据。
 - `manual/`：人工补充、核对及版本修正。
