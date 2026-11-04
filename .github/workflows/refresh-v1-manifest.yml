@@ -1,5 +1,5 @@
-name: 1-1_V1 Manifest自动更新
-run-name: '1-1_Manifest刷新 [publisher=${{ inputs.publisher_run_id }}]'
+name: 2-1_V1 Manifest自动更新
+run-name: '2-1_Manifest刷新 [publisher=${{ inputs.publisher_run_id }}]'
 on:
   push:
     branches: [main]

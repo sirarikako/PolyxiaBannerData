@@ -1,10 +1,10 @@
-# 3-2：只从 main 中已保存的逐池候选及版本人工 JSON 导入；不重复联网。
-name: 3-2_星铁每日V1数据自动发布
-run-name: '3-2_星铁发布 [upstream=${{ github.event.workflow_run.id }}]'
+# 4-2：只从 main 中已保存的逐池候选及版本人工 JSON 导入；不重复联网。
+name: 4-2_星铁每日V1数据自动发布
+run-name: '4-2_星铁发布 [upstream=${{ github.event.workflow_run.id }}]'
 on:
   workflow_run:
     workflows:
-      - '3-1_星铁公告每日自动采集与解析'
+      - '4-1_星铁公告每日自动采集与解析'
     types: [completed]
   push:
     branches: [main]
@@ -27,7 +27,7 @@ jobs:
     outputs:
       should_publish: ${{ steps.gate.outputs.should_publish }}
     steps:
-      - name: 仅在 3-1 确实执行了采集后启动 3-2
+      - name: 仅在 4-1 确实执行了采集后启动 4-2
         id: gate
         shell: bash
         env:
@@ -62,16 +62,16 @@ jobs:
           fi
           if [ "$UPSTREAM_CONCLUSION" != 'success' ]; then
             echo 'should_publish=false' >> "$GITHUB_OUTPUT"
-            echo '3-1 未成功完成，停止 3-2 发布。' >> "$GITHUB_STEP_SUMMARY"
+            echo '4-1 未成功完成，停止 4-2 发布。' >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
           jobs="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$UPSTREAM_RUN_ID/jobs?per_page=100" --paginate --jq '.jobs[] | select(.name == "collect-and-preview") | .conclusion')"
           if grep -Fxq 'success' <<< "$jobs"; then
             echo 'should_publish=true' >> "$GITHUB_OUTPUT"
-            echo '3-1 采集整合作业成功，执行星铁 V1 导入。' >> "$GITHUB_STEP_SUMMARY"
+            echo '4-1 采集整合作业成功，执行星铁 V1 导入。' >> "$GITHUB_STEP_SUMMARY"
           else
             echo 'should_publish=false' >> "$GITHUB_OUTPUT"
-            echo '3-1 仅检查 pending、跳过了采集整合；3-2 不再空跑。' >> "$GITHUB_STEP_SUMMARY"
+            echo '4-1 仅检查 pending、跳过了采集整合；4-2 不再空跑。' >> "$GITHUB_STEP_SUMMARY"
           fi
   publish:
     needs: verify-upstream
@@ -102,7 +102,7 @@ jobs:
             python -m scripts.release.validate_v1 --datasets-only
             python -m scripts.release.refresh_v1_manifest > /tmp/starrail-manifest-validation-preview.log
             python -m scripts.release.validate_v1 --public
-            # 3-2 只发布 V1 与人工完成状态；Manifest 正式更新仍由 1-1 单独执行。
+            # 4-2 只发布 V1 与人工完成状态；Manifest 正式更新仍由 2-1 单独执行。
             git restore -- public/v1/manifest.json
             git add -A -- public/v1/starrail.json
             while IFS= read -r -d '' file; do
@@ -141,7 +141,7 @@ jobs:
           for item in row["rejected"]:
               print("  - "+str(item))
           PY
-      - name: 显式触发1-1 Manifest自动更新
+      - name: 显式触发2-1 Manifest自动更新
         if: steps.publish.outputs.v1_changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
