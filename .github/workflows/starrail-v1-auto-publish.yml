@@ -1,6 +1,5 @@
 # 4-2：只从 main 中已保存的逐池候选及版本人工 JSON 导入；不重复联网。
 name: 4-2_星铁每日V1数据自动发布
-run-name: '4-2_星铁发布 [upstream=${{ github.event.workflow_run.id }}]'
 on:
   workflow_run:
     workflows:
@@ -23,6 +22,7 @@ concurrency:
 
 jobs:
   verify-upstream:
+    name: 'verify-upstream [upstream=${{ github.event.workflow_run.id }}]'
     runs-on: ubuntu-26.04
     outputs:
       should_publish: ${{ steps.gate.outputs.should_publish }}
