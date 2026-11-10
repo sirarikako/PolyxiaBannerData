@@ -132,6 +132,7 @@
 
 | 版本 | 期 | 版本更新公告 | 卡池预告 | 角色池公告 | 武器/光锥公告 | 候选 | V1 | 提示 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 4.7 | 1 | — | 不适用 | ✅ [1篇](../data/derived/starrail/warp-notices/warp-notice_zh-CN_79466344.json) · 星神★阿哈、火花、爻光 等4个 · 4池 | ✅ [1篇](../data/derived/starrail/warp-notices/warp-notice_zh-CN_79466344.json) · 当她决定看见、当第一声『阿哈』响起、欢迎来到银河城 等4个 · 4池 | ✅ [8池](../data/derived/starrail/v1-readiness/v1-readiness_zh-CN.json) | ✅ [8池](../public/v1/starrail.json) | — |
 | 4.6 | 2 | — | 不适用 | ✅ [1篇](../data/derived/starrail/warp-notices/warp-notice_zh-CN_79023863.json) · 千冶•刃 · 1池 | ✅ [1篇](../data/derived/starrail/warp-notices/warp-notice_zh-CN_79023863.json) · 灼尽炼狱的新骸 · 1池 | ✅ [2池](../data/derived/starrail/v1-readiness/v1-readiness_zh-CN.json) | ✅ [2池](../public/v1/starrail.json) | — |
 | 4.6 | 1 | — | 不适用 | ✅ [1篇](../data/derived/starrail/warp-notices/warp-notice_zh-CN_79023863.json) · 真珠 · 1池 | ✅ [1篇](../data/derived/starrail/warp-notices/warp-notice_zh-CN_79023863.json) · 献给明日的色彩 · 1池 | ✅ [2池](../data/derived/starrail/v1-readiness/v1-readiness_zh-CN.json) | ✅ [4池](../public/v1/starrail.json) | — |
 | 4.5 | 2 | — | 不适用 | — | — | — | ✅ [4池](../public/v1/starrail.json) | — |
@@ -151,13 +152,13 @@
 | 3.8 | 1 | — | 不适用 | — | — | — | ✅ [4池](../public/v1/starrail.json) | — |
 | 3.7 | 2 | — | 不适用 | — | — | — | ✅ [6池](../public/v1/starrail.json) | — |
 | 3.7 | 1 | — | 不适用 | — | — | — | ✅ [8池](../public/v1/starrail.json) | — |
-| 3.6 | 2 | — | 不适用 | — | — | — | ✅ [4池](../public/v1/starrail.json) | — |
-| 3.6 | 1 | — | 不适用 | — | — | — | ✅ [4池](../public/v1/starrail.json) | — |
 
-<details><summary>展开历史版本（另 21 个版本）</summary>
+<details><summary>展开历史版本（另 22 个版本）</summary>
 
 | 版本 | 期 | 版本更新公告 | 卡池预告 | 角色池公告 | 武器/光锥公告 | 候选 | V1 | 提示 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 3.6 | 2 | — | 不适用 | — | — | — | ✅ [4池](../public/v1/starrail.json) | — |
+| 3.6 | 1 | — | 不适用 | — | — | — | ✅ [4池](../public/v1/starrail.json) | — |
 | 3.5 | 2 | — | 不适用 | — | — | — | ✅ [4池](../public/v1/starrail.json) | — |
 | 3.5 | 1 | — | 不适用 | — | — | — | ✅ [4池](../public/v1/starrail.json) | — |
 | 3.4 | 2 | — | 不适用 | — | — | — | ✅ [6池](../public/v1/starrail.json) | — |
