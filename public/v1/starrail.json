@@ -20485,9 +20485,529 @@
         }
       ],
       "id": "hsr-000278"
+    },
+    {
+      "gameVersion": "4.7",
+      "phase": 1,
+      "category": "character",
+      "poolType": "character_event",
+      "names": {
+        "zh-CN": "愚戏众星"
+      },
+      "gachaTypes": {
+        "raw": [
+          "11"
+        ],
+        "uigf": [
+          "11"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": null,
+            "type": "character",
+            "names": {
+              "zh-CN": "星神★阿哈"
+            }
+          }
+        ],
+        "fourStar": [
+          {
+            "itemId": "1009",
+            "type": "character",
+            "names": {
+              "zh-CN": "艾丝妲"
+            }
+          },
+          {
+            "itemId": "1110",
+            "type": "character",
+            "names": {
+              "zh-CN": "玲可"
+            }
+          },
+          {
+            "itemId": "1207",
+            "type": "character",
+            "names": {
+              "zh-CN": "驭空"
+            }
+          }
+        ]
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-11-11T06:00:00+08:00",
+          "endAt": "2026-12-22T15:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/sr/article/79466344"
+        }
+      ],
+      "id": "hsr-000279"
+    },
+    {
+      "gameVersion": "4.7",
+      "phase": 1,
+      "category": "character",
+      "poolType": "character_event",
+      "names": {
+        "zh-CN": "铭心之萃•火花"
+      },
+      "gachaTypes": {
+        "raw": [
+          "11"
+        ],
+        "uigf": [
+          "11"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": "1501",
+            "type": "character",
+            "names": {
+              "zh-CN": "火花"
+            }
+          }
+        ],
+        "fourStar": [
+          {
+            "itemId": "1009",
+            "type": "character",
+            "names": {
+              "zh-CN": "艾丝妲"
+            }
+          },
+          {
+            "itemId": "1110",
+            "type": "character",
+            "names": {
+              "zh-CN": "玲可"
+            }
+          },
+          {
+            "itemId": "1207",
+            "type": "character",
+            "names": {
+              "zh-CN": "驭空"
+            }
+          }
+        ]
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-11-11T06:00:00+08:00",
+          "endAt": "2026-12-02T12:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/sr/article/79466344"
+        }
+      ],
+      "id": "hsr-000280"
+    },
+    {
+      "gameVersion": "4.7",
+      "phase": 1,
+      "category": "character",
+      "poolType": "character_event",
+      "names": {
+        "zh-CN": "铭心之萃•爻光"
+      },
+      "gachaTypes": {
+        "raw": [
+          "11"
+        ],
+        "uigf": [
+          "11"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": "1502",
+            "type": "character",
+            "names": {
+              "zh-CN": "爻光"
+            }
+          }
+        ],
+        "fourStar": [
+          {
+            "itemId": "1009",
+            "type": "character",
+            "names": {
+              "zh-CN": "艾丝妲"
+            }
+          },
+          {
+            "itemId": "1110",
+            "type": "character",
+            "names": {
+              "zh-CN": "玲可"
+            }
+          },
+          {
+            "itemId": "1207",
+            "type": "character",
+            "names": {
+              "zh-CN": "驭空"
+            }
+          }
+        ]
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-11-11T06:00:00+08:00",
+          "endAt": "2026-12-02T12:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/sr/article/79466344"
+        }
+      ],
+      "id": "hsr-000281"
+    },
+    {
+      "gameVersion": "4.7",
+      "phase": 1,
+      "category": "character",
+      "poolType": "character_event",
+      "names": {
+        "zh-CN": "铭心之萃•银狼LV.999"
+      },
+      "gachaTypes": {
+        "raw": [
+          "11"
+        ],
+        "uigf": [
+          "11"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": "1506",
+            "type": "character",
+            "names": {
+              "zh-CN": "银狼LV.999"
+            }
+          }
+        ],
+        "fourStar": [
+          {
+            "itemId": "1009",
+            "type": "character",
+            "names": {
+              "zh-CN": "艾丝妲"
+            }
+          },
+          {
+            "itemId": "1110",
+            "type": "character",
+            "names": {
+              "zh-CN": "玲可"
+            }
+          },
+          {
+            "itemId": "1207",
+            "type": "character",
+            "names": {
+              "zh-CN": "驭空"
+            }
+          }
+        ]
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-11-11T06:00:00+08:00",
+          "endAt": "2026-12-02T12:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/sr/article/79466344"
+        }
+      ],
+      "id": "hsr-000282"
+    },
+    {
+      "gameVersion": "4.7",
+      "phase": 1,
+      "category": "light_cone",
+      "poolType": "light_cone_event",
+      "names": {
+        "zh-CN": "流光定影•当第一声『阿哈』响起"
+      },
+      "gachaTypes": {
+        "raw": [
+          "12"
+        ],
+        "uigf": [
+          "12"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": null,
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "当第一声『阿哈』响起"
+            }
+          }
+        ],
+        "fourStar": [
+          {
+            "itemId": "21016",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "宇宙市场趋势"
+            }
+          },
+          {
+            "itemId": "21020",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "天才们的休憩"
+            }
+          },
+          {
+            "itemId": "21047",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "黑夜如影随行"
+            }
+          }
+        ]
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-11-11T06:00:00+08:00",
+          "endAt": "2026-12-22T15:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/sr/article/79466344"
+        }
+      ],
+      "id": "hsr-000283"
+    },
+    {
+      "gameVersion": "4.7",
+      "phase": 1,
+      "category": "light_cone",
+      "poolType": "light_cone_event",
+      "names": {
+        "zh-CN": "真意之汇•当她决定看见"
+      },
+      "gachaTypes": {
+        "raw": [
+          "12"
+        ],
+        "uigf": [
+          "12"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": "23054",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "当她决定看见"
+            }
+          }
+        ],
+        "fourStar": [
+          {
+            "itemId": "21016",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "宇宙市场趋势"
+            }
+          },
+          {
+            "itemId": "21020",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "天才们的休憩"
+            }
+          },
+          {
+            "itemId": "21047",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "黑夜如影随行"
+            }
+          }
+        ]
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-11-11T06:00:00+08:00",
+          "endAt": "2026-12-02T12:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/sr/article/79466344"
+        }
+      ],
+      "id": "hsr-000284"
+    },
+    {
+      "gameVersion": "4.7",
+      "phase": 1,
+      "category": "light_cone",
+      "poolType": "light_cone_event",
+      "names": {
+        "zh-CN": "真意之汇•欢迎来到银河城"
+      },
+      "gachaTypes": {
+        "raw": [
+          "12"
+        ],
+        "uigf": [
+          "12"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": "23057",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "欢迎来到银河城"
+            }
+          }
+        ],
+        "fourStar": [
+          {
+            "itemId": "21016",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "宇宙市场趋势"
+            }
+          },
+          {
+            "itemId": "21020",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "天才们的休憩"
+            }
+          },
+          {
+            "itemId": "21047",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "黑夜如影随行"
+            }
+          }
+        ]
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-11-11T06:00:00+08:00",
+          "endAt": "2026-12-02T12:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/sr/article/79466344"
+        }
+      ],
+      "id": "hsr-000285"
+    },
+    {
+      "gameVersion": "4.7",
+      "phase": 1,
+      "category": "light_cone",
+      "poolType": "light_cone_event",
+      "names": {
+        "zh-CN": "真意之汇•花花世界迷人眼"
+      },
+      "gachaTypes": {
+        "raw": [
+          "12"
+        ],
+        "uigf": [
+          "12"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": "23053",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "花花世界迷人眼"
+            }
+          }
+        ],
+        "fourStar": [
+          {
+            "itemId": "21016",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "宇宙市场趋势"
+            }
+          },
+          {
+            "itemId": "21020",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "天才们的休憩"
+            }
+          },
+          {
+            "itemId": "21047",
+            "type": "light_cone",
+            "names": {
+              "zh-CN": "黑夜如影随行"
+            }
+          }
+        ]
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-11-11T06:00:00+08:00",
+          "endAt": "2026-12-02T12:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/sr/article/79466344"
+        }
+      ],
+      "id": "hsr-000286"
     }
   ],
   "game": "starrail",
-  "generatedAt": "2026-10-21T06:45:35+08:00",
+  "generatedAt": "2026-11-10T23:38:44+08:00",
   "schemaVersion": 1
 }
