@@ -26,7 +26,7 @@
         "79286398",
         "79286397"
       ],
-      "lastCheckedAt": "2026-11-10T00:44:35+08:00",
+      "lastCheckedAt": "2026-11-10T22:57:43+08:00",
       "initializedOnly": false
     },
     "3": {
@@ -52,7 +52,7 @@
         "79232324",
         "79208053"
       ],
-      "lastCheckedAt": "2026-11-10T00:44:36+08:00",
+      "lastCheckedAt": "2026-11-10T22:57:45+08:00",
       "initializedOnly": false
     }
   },
@@ -627,7 +627,7 @@
       "completedAt": "2026-11-04T11:22:29+08:00"
     }
   },
-  "updatedAt": "2026-11-10T00:44:36+08:00",
+  "updatedAt": "2026-11-10T22:57:45+08:00",
   "unrecognized": {},
   "pairingSince": "2026-10-31"
 }
