@@ -20505,7 +20505,7 @@
       "featured": {
         "fiveStar": [
           {
-            "itemId": null,
+            "itemId": "1511",
             "type": "character",
             "names": {
               "zh-CN": "星神★阿哈"
@@ -21008,6 +21008,6 @@
     }
   ],
   "game": "starrail",
-  "generatedAt": "2026-11-10T23:38:44+08:00",
+  "generatedAt": "2026-11-11T16:34:13+08:00",
   "schemaVersion": 1
 }
