@@ -159,14 +159,18 @@ jobs:
           print("- 修订旧池："+str(len(row["updatedExistingIds"])))
           print("- 结清人工条目："+str(len(row["completedManual"])))
           print("- 待人工复核："+str(len(row["rejected"])))
-          print("- Dimbreath GachaBasicInfo 可用："+("是" if gacha["sourceAvailable"] else "否"))
-          print("- 已有 GachaID 核对："+str(gacha["verifiedExisting"]))
-          print("- 自动补全 GachaID："+str(len(gacha["filled"])))
-          print("- 无法唯一确认："+str(len(gacha["unresolved"])))
-          if not gacha["sourceAvailable"]:
-              print("- 上游异常："+str(gacha["sourceError"]))
-          for item in gacha["unresolved"]:
-              print("  - "+str(item))
+          if gacha["skipped"]:
+              print("- GachaID：没有缺失，已跳过 Dimbreath 请求")
+          else:
+              print("- Dimbreath GachaBasicInfo 可用："+("是" if gacha["sourceAvailable"] else "否"))
+              print("- 待补全 GachaID："+str(gacha["missingCount"]))
+              print("- 已有 GachaID 核对："+str(gacha["verifiedExisting"]))
+              print("- 自动补全 GachaID："+str(len(gacha["filled"])))
+              print("- 无法唯一确认："+str(len(gacha["unresolved"])))
+              if gacha["sourceAvailable"] is False:
+                  print("- 上游异常："+str(gacha["sourceError"]))
+              for item in gacha["unresolved"]:
+                  print("  - "+str(item))
           for item in row["rejected"]:
               print("  - "+str(item))
           PY
