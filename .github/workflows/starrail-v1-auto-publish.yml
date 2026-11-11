@@ -117,6 +117,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python -m scripts.release.import_starrail_v1_zh_cn --isolate-invalid --write > /tmp/starrail-v1-publish.json
+            python -m scripts.release.fill_starrail_gacha_ids --write --report /tmp/starrail-gachaids.json > /tmp/starrail-gachaids-stdout.json
             # 新池导入后旧 Manifest 尚未刷新：先校验完整数据集，再临时重算 Manifest 验证两者匹配。
             python -m scripts.release.validate_v1 --datasets-only
             python -m scripts.release.refresh_v1_manifest > /tmp/starrail-manifest-validation-preview.log
@@ -140,7 +141,7 @@ jobs:
             git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m '自动发布星铁有效卡池与人工补齐状态'
             if git push origin HEAD:main; then
               echo "v1_changed=$changed" >> "$GITHUB_OUTPUT"
-              echo "私有仓库星铁V1提交成功；公开发布需继续等待Manifest和同步" >> "$GITHUB_STEP_SUMMARY"
+              echo "星铁V1提交成功；后续由Manifest工作流执行发布校验" >> "$GITHUB_STEP_SUMMARY"
               break
             fi
             if [ "$attempt" = 3 ]; then
@@ -152,11 +153,20 @@ jobs:
           import json
           from pathlib import Path
           row=json.loads(Path("/tmp/starrail-v1-publish.json").read_text(encoding="utf-8"))
+          gacha=json.loads(Path("/tmp/starrail-gachaids.json").read_text(encoding="utf-8"))
           print("## 星铁自动发布")
           print("- 新增卡池："+str(len(row["appended"])))
           print("- 修订旧池："+str(len(row["updatedExistingIds"])))
           print("- 结清人工条目："+str(len(row["completedManual"])))
           print("- 待人工复核："+str(len(row["rejected"])))
+          print("- Dimbreath GachaBasicInfo 可用："+("是" if gacha["sourceAvailable"] else "否"))
+          print("- 已有 GachaID 核对："+str(gacha["verifiedExisting"]))
+          print("- 自动补全 GachaID："+str(len(gacha["filled"])))
+          print("- 无法唯一确认："+str(len(gacha["unresolved"])))
+          if not gacha["sourceAvailable"]:
+              print("- 上游异常："+str(gacha["sourceError"]))
+          for item in gacha["unresolved"]:
+              print("  - "+str(item))
           for item in row["rejected"]:
               print("  - "+str(item))
           PY
@@ -178,6 +188,8 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: starrail-v1-publish-report
-          path: /tmp/starrail-v1-publish.json
+          path: |
+            /tmp/starrail-v1-publish.json
+            /tmp/starrail-gachaids.json
           if-no-files-found: ignore
           retention-days: 30
