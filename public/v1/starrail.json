@@ -20419,7 +20419,10 @@
           "url": "https://www.miyoushe.com/sr/article/79023863"
         }
       ],
-      "id": "hsr-000277"
+      "id": "hsr-000277",
+      "gachaIds": [
+        "2141"
+      ]
     },
     {
       "gameVersion": "4.6",
@@ -20484,7 +20487,10 @@
           "url": "https://www.miyoushe.com/sr/article/79023863"
         }
       ],
-      "id": "hsr-000278"
+      "id": "hsr-000278",
+      "gachaIds": [
+        "3141"
+      ]
     },
     {
       "gameVersion": "4.7",
@@ -20549,7 +20555,10 @@
           "url": "https://www.miyoushe.com/sr/article/79466344"
         }
       ],
-      "id": "hsr-000279"
+      "id": "hsr-000279",
+      "gachaIds": [
+        "2142"
+      ]
     },
     {
       "gameVersion": "4.7",
@@ -20614,7 +20623,10 @@
           "url": "https://www.miyoushe.com/sr/article/79466344"
         }
       ],
-      "id": "hsr-000280"
+      "id": "hsr-000280",
+      "gachaIds": [
+        "2144"
+      ]
     },
     {
       "gameVersion": "4.7",
@@ -20679,7 +20691,10 @@
           "url": "https://www.miyoushe.com/sr/article/79466344"
         }
       ],
-      "id": "hsr-000281"
+      "id": "hsr-000281",
+      "gachaIds": [
+        "2145"
+      ]
     },
     {
       "gameVersion": "4.7",
@@ -20744,7 +20759,10 @@
           "url": "https://www.miyoushe.com/sr/article/79466344"
         }
       ],
-      "id": "hsr-000282"
+      "id": "hsr-000282",
+      "gachaIds": [
+        "2143"
+      ]
     },
     {
       "gameVersion": "4.7",
@@ -20874,7 +20892,10 @@
           "url": "https://www.miyoushe.com/sr/article/79466344"
         }
       ],
-      "id": "hsr-000284"
+      "id": "hsr-000284",
+      "gachaIds": [
+        "3145"
+      ]
     },
     {
       "gameVersion": "4.7",
@@ -20939,7 +20960,10 @@
           "url": "https://www.miyoushe.com/sr/article/79466344"
         }
       ],
-      "id": "hsr-000285"
+      "id": "hsr-000285",
+      "gachaIds": [
+        "3143"
+      ]
     },
     {
       "gameVersion": "4.7",
@@ -21004,10 +21028,13 @@
           "url": "https://www.miyoushe.com/sr/article/79466344"
         }
       ],
-      "id": "hsr-000286"
+      "id": "hsr-000286",
+      "gachaIds": [
+        "3144"
+      ]
     }
   ],
   "game": "starrail",
-  "generatedAt": "2026-11-11T16:34:13+08:00",
+  "generatedAt": "2026-11-11T22:31:18+08:00",
   "schemaVersion": 1
 }
