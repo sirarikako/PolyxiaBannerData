@@ -172,6 +172,14 @@ def run(v1_path, source_json=None, *, write=False, timeout=20):
     original = json.loads(Path(v1_path).read_text(encoding="utf-8"))
     if original.get("game") != "starrail" or not isinstance(original.get("banners"), list):
         raise ValueError("目标文件不是星铁 V1")
+    # 先检查本地数据；所有已知池都带有编号时，不请求第三方服务。
+    missing = [banner for banner in original["banners"]
+               if banner.get("poolType") in GACHA_TYPES and not banner.get("gachaIds")]
+    if not missing:
+        return {"source": str(source_json or SOURCE_URL), "sourceAvailable": None,
+                "skipped": True, "skipReason": "no_missing_gacha_ids",
+                "missingCount": 0, "verifiedExisting": 0,
+                "filled": [], "unresolved": [], "v1Changed": False, "written": False}
     result = deepcopy(original)
     try:
         source = load_upstream(source_json, timeout=timeout)
@@ -179,8 +187,9 @@ def run(v1_path, source_json=None, *, write=False, timeout=20):
     except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
         # 第三方数据不可用时不影响公告发布；也绝不清空已有 ID。
         return {"source": str(source_json or SOURCE_URL), "sourceAvailable": False,
-                "sourceError": str(exc), "verifiedExisting": 0,
-                "filled": [], "unresolved": [], "v1Changed": False}
+                "sourceError": str(exc), "skipped": False, "missingCount": len(missing),
+                "verifiedExisting": 0, "filled": [], "unresolved": [],
+                "v1Changed": False, "written": False}
     changed = result["banners"] != original["banners"]
     if changed:
         result["generatedAt"] = datetime.now(timezone(timedelta(hours=8))).isoformat(timespec="seconds")
@@ -188,7 +197,8 @@ def run(v1_path, source_json=None, *, write=False, timeout=20):
         if write:
             atomic_save(Path(v1_path), result)
     return {"source": str(source_json or SOURCE_URL), "sourceAvailable": True,
-            **report, "v1Changed": changed, "written": bool(changed and write)}
+            "skipped": False, "missingCount": len(missing), **report,
+            "v1Changed": changed, "written": bool(changed and write)}
 
 
 def main():
@@ -203,7 +213,9 @@ def main():
     if args.report:
         atomic_save(args.report, report)
     print(json.dumps(report, ensure_ascii=False, indent=2))
-    if not report["sourceAvailable"]:
+    if report["skipped"]:
+        print("星铁所有已知卡池均已有 GachaID，跳过 Dimbreath 请求。")
+    elif report["sourceAvailable"] is False:
         print("::warning::Dimbreath GachaBasicInfo 不可用，保留现有 gachaIds。")
 
 
