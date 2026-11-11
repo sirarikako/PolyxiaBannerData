@@ -1,0 +1,17 @@
+{
+  "format": "starrail-version-update-v1",
+  "game": "starrail",
+  "locale": "zh-CN",
+  "version": "4.7",
+  "maintenance": {
+    "startAt": "2026-11-11T06:00:00+08:00"
+  },
+  "source": {
+    "postId": "79482327",
+    "title": "4.7版本「此刻，将群星付之一笑」版本更新说明",
+    "url": "https://www.miyoushe.com/sr/article/79482327"
+  },
+  "review": {
+    "warnings": []
+  }
+}
