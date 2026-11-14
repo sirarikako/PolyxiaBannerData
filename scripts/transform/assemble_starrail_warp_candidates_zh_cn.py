@@ -6,6 +6,7 @@ import hashlib
 import json
 from pathlib import Path
 
+from scripts.release.starrail_item_id_lookup import resolve_starrail_item_id
 from scripts.transform.starrail_notice_manual_zh_cn import (
     compare_and_fill, identity, load_missing, load_real,
 )
@@ -48,7 +49,7 @@ def draft_for(row, mappings, source):
     cat, kind, code = TYPES[pool]
     up = row["featured"]
     def items(grade):
-        return [{"itemId": str(mappings[n]) if n in mappings else None,
+        return [{"itemId": str(found) if (found := resolve_starrail_item_id(mappings, n)[0]) is not None else None,
                  "type": kind, "names": {"zh-CN": n}} for n in up[grade]]
     t = row["time"]
     return {"gameVersion": row["version"], "phase": row["phase"], "category": cat,
