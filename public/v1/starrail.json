@@ -20783,7 +20783,7 @@
       "featured": {
         "fiveStar": [
           {
-            "itemId": null,
+            "itemId": "23065",
             "type": "light_cone",
             "names": {
               "zh-CN": "当第一声『阿哈』响起"
@@ -20827,7 +20827,10 @@
           "url": "https://www.miyoushe.com/sr/article/79466344"
         }
       ],
-      "id": "hsr-000283"
+      "id": "hsr-000283",
+      "gachaIds": [
+        "3142"
+      ]
     },
     {
       "gameVersion": "4.7",
@@ -21035,6 +21038,6 @@
     }
   ],
   "game": "starrail",
-  "generatedAt": "2026-11-11T22:31:18+08:00",
+  "generatedAt": "2026-11-15T00:08:47+08:00",
   "schemaVersion": 1
 }
