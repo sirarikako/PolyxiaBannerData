@@ -81,7 +81,7 @@ def require_private_archive_git_write() -> None:
 
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; CastoriceWishBannerData/1.0)",
+    "User-Agent": "Mozilla/5.0 (compatible; PolyxiaBannerData/1.0)",
     "Accept": "application/json",
     "Referer": "https://www.miyoushe.com/",
     "x-rpc-client_type": "4",

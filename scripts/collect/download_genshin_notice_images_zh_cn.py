@@ -103,7 +103,7 @@ def download_image(url: str) -> tuple[bytes, str, str]:
     validate_url(url)
     opener = build_opener(NoRedirect())
     request = Request(url, headers={
-        "User-Agent": "Mozilla/5.0 (compatible; CastoriceWishBannerData/1.0)",
+        "User-Agent": "Mozilla/5.0 (compatible; PolyxiaBannerData/1.0)",
         "Accept": "image/png,image/jpeg,image/webp,image/gif",
         "Referer": "https://www.miyoushe.com/",
     })
