@@ -44,7 +44,7 @@ GitHub Raw 可直接读取：
 
 本仓库并非 HoYoverse 官方项目。这里提供的是卡池元数据，不包含玩家个人抽卡记录或保底进度；UIGF 抽卡记录与本项目数据用途不同。
 
-本项目使用了 [Dimbreath](https://github.com/DimbreathBot/TurnBasedGameData) 提供的数据，特此感谢。
+本项目使用了 [Dimbreath](https://github.com/DimbreathBot/TurnBasedGameData) 的数据，并曾在初期卡池统计中参考 [Paimon.moe](https://github.com/MadeBaruna/paimon-moe) 和 [Firefly](https://github.com/Natrium0521/Firefly) 的数据，特此感谢。
 
 ## License
 
