@@ -114,7 +114,7 @@ def request_json(url: str, *, method: str = "GET", payload: dict | None = None,
     headers = {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "User-Agent": "CastoriceWishBannerData-ItemMappings/1.0 (+daily; no account data)",
+        "User-Agent": "PolyxiaBannerData-ItemMappings/1.0 (+daily; no account data)",
         "x-rpc-lang": lang,
         "Referer": ("https://act.hoyolab.com/" if is_international else
                     "https://act.mihoyo.com/"),
