@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 from collections import defaultdict
+from scripts.release.starrail_item_id_lookup import resolve_starrail_item_id
 from datetime import datetime, timedelta, timezone
 import json
 import os
@@ -35,7 +36,7 @@ def items_in(data: dict):
                         yield banner, item
 
 
-def fill_dataset(data: dict, mapping: dict) -> dict:
+def fill_dataset(data: dict, mapping: dict, *, game: str | None = None) -> dict:
     """原地仅回填 null；不确定名称/已有 ID 冲突只记录，不写入。"""
     known = defaultdict(set)
     for _, item in items_in(data):
@@ -50,10 +51,11 @@ def fill_dataset(data: dict, mapping: dict) -> dict:
             continue
         name = (item.get("names") or {}).get("zh-CN")
         key = (name, item.get("type"))
-        value = mapping.get(name) if isinstance(name, str) else None
+        value, lookup_status = (resolve_starrail_item_id(mapping, name) if game == "starrail"
+                                else (mapping.get(name) if isinstance(name, str) else None, "exact"))
         where = {"bannerId": banner.get("id"), "name": name, "type": item.get("type")}
         if type(value) is not int or value <= 0:
-            unresolved.append(where)
+            unresolved.append({**where, "reason": lookup_status})
             continue
         candidate = str(value)
         known_ids = known[key]
@@ -91,7 +93,7 @@ def run(root: Path, write: bool = False) -> dict:
         mapping = json.loads(map_path.read_text(encoding="utf-8"))
         if data.get("game") != game or not isinstance(mapping, dict):
             raise ValueError(f"{game}: v1/game 或物品映射格式不正确")
-        result = fill_dataset(data, mapping)
+        result = fill_dataset(data, mapping, game=game)
         report["games"][game] = result
         if write and result["filled"]:
             from scripts.release.validate_v1 import validate_publishable_dataset

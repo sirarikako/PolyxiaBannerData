@@ -86,6 +86,8 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python -m scripts.release.backfill_v1_null_item_ids --write --report /tmp/itemid-backfill-report.json
+            # 星铁五星 ItemID 回填后，同一轮尝试从 Dimbreath 补齐缺失的 GachaID。
+            python -m scripts.release.fill_starrail_gacha_ids --write --report /tmp/itemid-gachaid-backfill-report.json > /tmp/itemid-gachaid-backfill-stdout.json
             python -m scripts.release.validate_v1 --datasets-only
             python -m scripts.release.refresh_v1_manifest > /tmp/itemid-backfill-manifest-preview.json
             python -m scripts.release.validate_v1 --public
@@ -117,6 +119,9 @@ jobs:
               print(f"- {game}: 补全 {len(result['filled'])} 处；尚无映射 {len(result['unresolved'])} 处；冲突 {len(result['conflicts'])} 处")
               for item in result["conflicts"]:
                   print(f"  - 冲突：{item}")
+          gacha = json.loads(Path("/tmp/itemid-gachaid-backfill-report.json").read_text(encoding="utf-8"))
+          if not gacha["skipped"]:
+              print(f"- starrail GachaID: 补全 {len(gacha['filled'])} 处；待确认 {len(gacha['unresolved'])} 处；来源可用 {gacha['sourceAvailable']}")
           PY
       - name: 回填后显式更新 Manifest 并等待完成
         if: steps.backfill.outputs.v1_changed == 'true'
