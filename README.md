@@ -40,6 +40,12 @@ GitHub Raw 可直接读取：
 
 完整官方公告原文与 OCR 图片仅在当次 GitHub Actions Runner 临时使用，不提交本仓库，也不上传公开 Artifact。长期保留的中间结果位于 `data/derived/`。
 
+## 致谢 / Acknowledgements
+
+感谢 [Dimbreath](https://github.com/DimbreathBot/TurnBasedGameData) 公开并维护《崩坏：星穹铁道》游戏数据。本项目在星铁卡池缺少 `gachaIds` 时，使用其 [GachaBasicInfo.json](https://github.com/DimbreathBot/TurnBasedGameData/blob/main/ExcelOutput/GachaBasicInfo.json) 补全编号；卡池公告等主要信息仍以官方来源为准。
+
+Thanks to Dimbreath for sharing Honkai: Star Rail game data. We use `GachaBasicInfo.json` to fill in missing Star Rail `gachaIds`.
+
 ## 使用说明 / Notes
 
 本仓库并非 HoYoverse 官方项目。这里提供的是卡池元数据，不包含玩家个人抽卡记录或保底进度；UIGF 抽卡记录与本项目数据用途不同。
