@@ -45,3 +45,11 @@ GitHub Raw 可直接读取：
 本仓库并非 HoYoverse 官方项目。这里提供的是卡池元数据，不包含玩家个人抽卡记录或保底进度；UIGF 抽卡记录与本项目数据用途不同。
 
 本项目使用了 [Dimbreath](https://github.com/DimbreathBot/TurnBasedGameData) 提供的数据，特此感谢。
+
+## License
+
+Except for the [title image](assets/Polyxia_Color_500px.png), this project is released under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/).
+
+The title image is licensed under [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/). You may redistribute it unchanged with credit to [this repository](https://github.com/sirarikako/PolyxiaBannerData).
+
+Third-party content remains subject to the rights of its respective owners.
