@@ -22931,7 +22931,9 @@
         "fourStar": []
       },
       "gachaTypes": {
-        "raw": null,
+        "raw": [
+          "500"
+        ],
         "uigf": [
           "500"
         ]
@@ -24394,6 +24396,6 @@
     }
   ],
   "game": "genshin",
-  "generatedAt": "2026-11-04T22:37:27+08:00",
+  "generatedAt": "2026-11-15T01:03:45+08:00",
   "schemaVersion": 1
 }
