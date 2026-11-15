@@ -14,10 +14,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:69831610",
@@ -73,10 +73,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:69831610",
@@ -135,10 +135,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:69831610",
@@ -194,10 +194,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:69831610",
@@ -251,10 +251,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:69831610",
@@ -311,10 +311,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:69831610",
@@ -368,10 +368,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:71124325",
@@ -427,10 +427,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:71124325",
@@ -489,10 +489,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:71124325",
@@ -548,10 +548,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:71124325",
@@ -605,10 +605,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:71124325",
@@ -665,10 +665,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:71124325",
@@ -722,10 +722,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:72299859",
@@ -781,10 +781,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:72299859",
@@ -843,10 +843,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:72299859",
@@ -902,10 +902,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:72299859",
@@ -959,10 +959,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:72299859",
@@ -1019,10 +1019,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:72299859",
@@ -1076,10 +1076,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:73521381",
@@ -1135,10 +1135,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:73521381",
@@ -1197,10 +1197,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:73521381",
@@ -1259,10 +1259,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:chronicled"
         ],
         "gameVersion": [
           "miyoushe:73521381",
@@ -1321,10 +1321,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:73521381",
@@ -1378,10 +1378,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:73521381",
@@ -1438,10 +1438,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:73521381",
@@ -1495,10 +1495,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:74446206",
@@ -1554,10 +1554,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:74446206",
@@ -1616,10 +1616,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:74446206",
@@ -1675,10 +1675,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:75440954",
@@ -1734,10 +1734,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:75440954",
@@ -1796,10 +1796,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:75440954",
@@ -1855,10 +1855,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:75440954",
@@ -1912,10 +1912,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:75440954",
@@ -1972,10 +1972,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:75440954",
@@ -2029,10 +2029,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:76345546",
@@ -2088,10 +2088,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:76345546",
@@ -2150,10 +2150,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:76345546",
@@ -2212,10 +2212,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:chronicled"
         ],
         "gameVersion": [
           "miyoushe:76345546",
@@ -2274,10 +2274,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:76345546",
@@ -2331,10 +2331,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:76345546",
@@ -2391,10 +2391,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:76345546",
@@ -2448,10 +2448,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:77363392",
@@ -2507,10 +2507,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:77363392",
@@ -2569,10 +2569,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:77363392",
@@ -2628,10 +2628,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:77363392",
@@ -2685,10 +2685,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:77363392",
@@ -2745,10 +2745,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:77363392",
@@ -2802,10 +2802,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:78335167",
@@ -2861,10 +2861,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:78335167",
@@ -2923,10 +2923,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:78335167",
@@ -2982,10 +2982,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:78335167",
@@ -3039,10 +3039,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:78335167",
@@ -3099,10 +3099,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "awaiting-official-raw"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:78335167",
@@ -3156,10 +3156,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "webstatic:1cfa755cb07057ea689c6a96abb8ffad9c93c789"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event"
         ],
         "gameVersion": [
           "miyoushe:79322732",
@@ -3197,17 +3197,20 @@
         "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
         "previewPostId": "79312623",
         "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
-        "versionUpdatePostId": "79322732"
+        "versionUpdatePostId": "79322732",
+        "webstaticGachaId": "1cfa755cb07057ea689c6a96abb8ffad9c93c789"
       },
       "status": "published",
       "webstatic": {
-        "contributedFields": [],
+        "contributedFields": [
+          "gachaTypes.raw"
+        ],
         "detailsReadyAt": "2026-11-15T10:04:37+08:00",
         "firstSeenAt": "2026-11-15T10:04:37+08:00",
         "gachaIds": [
           "1cfa755cb07057ea689c6a96abb8ffad9c93c789"
         ],
-        "role": "independent_comparison_only",
+        "role": "used_in_candidate",
         "unique": true
       }
     },
@@ -3225,10 +3228,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "webstatic:b6652439025f43524b618c0b04db2dbdffa6dd8e"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:character_event_2"
         ],
         "gameVersion": [
           "miyoushe:79322732",
@@ -3266,17 +3269,20 @@
         "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
         "previewPostId": "79312623",
         "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
-        "versionUpdatePostId": "79322732"
+        "versionUpdatePostId": "79322732",
+        "webstaticGachaId": "b6652439025f43524b618c0b04db2dbdffa6dd8e"
       },
       "status": "published",
       "webstatic": {
-        "contributedFields": [],
+        "contributedFields": [
+          "gachaTypes.raw"
+        ],
         "detailsReadyAt": "2026-11-15T10:04:37+08:00",
         "firstSeenAt": "2026-11-15T10:04:37+08:00",
         "gachaIds": [
           "b6652439025f43524b618c0b04db2dbdffa6dd8e"
         ],
-        "role": "independent_comparison_only",
+        "role": "used_in_candidate",
         "unique": true
       }
     },
@@ -3297,10 +3303,10 @@
           "official-item-mapping"
         ],
         "gachaTypes.raw": [
-          "pool-type-rule"
+          "webstatic:b7a91fed34c3f23b6070c42517c21d1ed6d5c330"
         ],
         "gachaTypes.uigf": [
-          "uigf-rule"
+          "uigf-mapping:weapon_event"
         ],
         "gameVersion": [
           "miyoushe:79322732",
@@ -3338,17 +3344,20 @@
         "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
         "previewPostId": "79312623",
         "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
-        "versionUpdatePostId": "79322732"
+        "versionUpdatePostId": "79322732",
+        "webstaticGachaId": "b7a91fed34c3f23b6070c42517c21d1ed6d5c330"
       },
       "status": "published",
       "webstatic": {
-        "contributedFields": [],
+        "contributedFields": [
+          "gachaTypes.raw"
+        ],
         "detailsReadyAt": "2026-11-15T10:04:37+08:00",
         "firstSeenAt": "2026-11-15T10:04:37+08:00",
         "gachaIds": [
           "b7a91fed34c3f23b6070c42517c21d1ed6d5c330"
         ],
-        "role": "independent_comparison_only",
+        "role": "used_in_candidate",
         "unique": true
       }
     }
