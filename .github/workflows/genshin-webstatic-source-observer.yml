@@ -1,6 +1,6 @@
 # Production candidate. Private repo stays disabled; install this workflow
 # only in PolyxiaBannerData after tests in the private development repo pass.
-name: Genshin Webstatic source observer
+name: 1-2_原神官方卡池数据每日自动采集
 on:
   schedule:
     - cron: '17 22 * * *' # Beijing 06:17
@@ -34,7 +34,7 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
-      - name: Official list and details archive (partial errors allowed)
+      - name: 采集官方卡池列表与详情（允许部分详情失败）
         id: harvest
         shell: bash
         run: |
@@ -44,10 +44,10 @@ jobs:
           cat /tmp/webstatic-observation.json
           echo "code=$code" >> "$GITHUB_OUTPUT"
           exit 0
-      - name: Record first observations and source-by-field provenance
+      - name: 记录首次观测时间及字段来源
         shell: bash
         run: python -m scripts.release.generate_genshin_source_report
-      - name: Save official snapshots and source observations together
+      - name: 保存官方原始数据和来源追踪
         shell: bash
         run: |
           set -euo pipefail
@@ -62,7 +62,7 @@ jobs:
           git fetch origin main
           git rebase origin/main
           git push origin HEAD:main
-      - name: Record partial official API failure without disturbing V1
+      - name: 提示官方接口采集异常（不影响 V1）
         if: steps.harvest.outputs.code != '0'
         shell: bash
         run: |
