@@ -85,6 +85,33 @@ def record(root: Path, import_report: dict, *, observed_at: str | None = None) -
             })
             existing_keys.add(dedup)
             updated += 1
+    # Delayed official raw backfill is not a manual patch: retain precise
+    # Webstatic evidence and the independent verified UIGF mapping in journal.
+    for item in import_report.get("rawBackfilled", []):
+        bid, gid = item["id"], item["gachaId"]
+        if bid not in ids:
+            raise ValueError(f"Raw backfill absent from V1: {bid}")
+        actual = next(b for b in published["banners"] if b["id"] == bid)
+        if actual.get("gachaTypes", {}).get("raw") != [item["raw"]]:
+            raise ValueError(f"Raw backfill journal mismatch: {bid}")
+        key = ("raw_backfilled", bid, gid, str(generation))
+        if key in existing_keys:
+            continue
+        events.append({
+            "action": "raw_backfilled", "v1Id": bid, "recordedAt": observed_at,
+            "publishedV1GeneratedAt": generation, "candidateSourceKey": None,
+            "candidateFile": None, "fieldSources": {
+                "gachaTypes.raw": ["webstatic:" + gid],
+                "gachaTypes.uigf": ["uigf-rule"],
+            },
+            "attributionStatus": "verified_official",
+            "sourceRefs": {"webstaticGachaId": gid,
+                           "detailSha256": item["detailSha256"]},
+            "note": "Official raw backfill of previously null value",
+        })
+        existing_keys.add(key)
+        updated += 1
+
     if updated:
         _write_if_changed(root / OUTPUT, _encoded(journal))
     return {"recorded": updated, "total": len(events), "file": OUTPUT.as_posix()}

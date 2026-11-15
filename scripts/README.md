@@ -75,3 +75,11 @@ Public `main` 不包含 `tests/`、`requirements-dev.txt` 或测试用 Actions�
 实际补全字段会进入候选 webstaticAugmentation、来源追踪和发布审计；
 冲突仅记录在 v1-readiness 的 webstatic 状态与 warning 中，保留原发布规则。
 细节见 docs/GENSHIN_WEBSTATIC_SOURCES.md。
+
+
+### 1-2 官方卡池 raw 与 UIGF 验证
+
+3-1 使用 1-2 已归档的官方 gacha_type 核对 raw，UIGF 由已确认映射独立确定。
+官方数据尚未出现时，新候选 raw=null；未知新 raw、分类冲突、特殊子类型冲突则阻断**该候选**并发原有 Issue。
+3-2 允许仅对旧 V1 中 raw=null 且已充分核实的记录执行自动回填，回填来源与变更在 publication-events 记录。
+不覆盖已存在的非空 raw。详见 docs/GENSHIN_WEBSTATIC_SOURCES.md。

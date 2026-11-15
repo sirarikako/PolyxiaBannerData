@@ -105,6 +105,14 @@ def _actual_fields(candidate):
         "regions.startAt": start,
         "regions.endAt": end,
     }
+    evidence = candidate.get("gachaTypeEvidence")
+    if isinstance(evidence, dict):
+        fields["gachaTypes.raw"] = (
+            ["webstatic:" + evidence["gachaId"]]
+            if evidence.get("status") == "verified"
+            else ["awaiting-official-raw"]
+        )
+        fields["gachaTypes.uigf"] = ["uigf-mapping:" + str(draft.get("poolType"))]
     extra = candidate.get("webstaticAugmentation") or {}
     gid = extra.get("gachaId")
     if gid:

@@ -20,6 +20,7 @@ import re
 from scripts.transform.genshin_notice_manual_zh_cn import apply as apply_manual, index_additional
 from scripts.transform.genshin_missing_notices_zh_cn import read_missing, merge_missing
 from scripts.transform.augment_genshin_notice_webstatic import load_official, supplement
+from scripts.transform.verify_genshin_official_types import official_records, verify_notice
 
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE = Path('data/derived/genshin')
@@ -30,9 +31,9 @@ V1 = Path('public/v1/genshin.json')
 OCR_READY = {'recognized', 'recognized_conditional'}
 NORMAL = {'character_event', 'character_event_2', 'weapon_event'}
 SUPPORTED = NORMAL | {'chronicled'}
-TYPE = {'character_event': ('character', ['301'], ['301']),
-        'character_event_2': ('character', ['400'], ['301']),
-        'weapon_event': ('weapon', ['302'], ['302']),
+TYPE = {'character_event': ('character', None, ['301']),
+        'character_event_2': ('character', None, ['301']),
+        'weapon_event': ('weapon', None, ['302']),
         'chronicled': ('chronicled', None, ['500'])}
 
 
@@ -198,6 +199,7 @@ def assemble(root: Path = ROOT, post_id: str | None = None, write: bool = True) 
                 indexed_previews[key].append(row)
     mappings = read(root / MAPPINGS) if (root / MAPPINGS).exists() else {}
     official_details = load_official(root)
+    official_types = official_records(root)
     v1 = read(root / V1).get('banners', []) if (root / V1).exists() else []
     v1_by_notice: dict[str, list[dict]] = defaultdict(list)
     v1_by_slot: dict[tuple, list[dict]] = defaultdict(list)
@@ -335,6 +337,18 @@ def assemble(root: Path = ROOT, post_id: str | None = None, write: bool = True) 
                 row['webstatic'] = webstatic
             if webstatic.get('status') == 'conflict':
                 row['warnings'].append('webstatic_source_conflict')
+        # Raw is official evidence, not inferred from the banner label.
+        # UIGF comes from a separately verified mapping; unknown raw and
+        # pool-type conflicts prevent this candidate from being published.
+        type_info = verify_notice(
+            notice, official_types,
+            preferred_gacha_id=(row.get('webstatic') or {}).get('gachaId'))
+        row['officialGachaType'] = type_info
+        if type_info['status'] in (
+                'unknown_official_gacha_type', 'unknown_official_op_gacha_type',
+                'official_gacha_type_pool_conflict', 'official_special_variant_conflict',
+                'ambiguous'):
+            fail(type_info['status'], 'conflict')
         if preview.get('time', {}).get('startAt') and notice_time.get('startAt'):
             if minute(preview['time']['startAt']) != minute(notice_time['startAt']):
                 fail('start_time_conflict', 'conflict')
@@ -379,13 +393,23 @@ def assemble(root: Path = ROOT, post_id: str | None = None, write: bool = True) 
         if row['issues']:
             continue
         draft_data, unknown = draft(notice, preview, mappings)
+        # If official proof is not yet available, publish raw=null (never
+        # pretend that the old fixed mapping is official evidence).
+        draft_data['gachaTypes'] = {'raw': type_info['raw'], 'uigf': type_info['uigf']}
         used_webstatic = row.get('webstatic') if row.get('webstatic', {}).get('status') == 'filled' else None
-        if used_webstatic:
-            draft_data['sources'].append({
-                'provider': 'webstatic',
-                'externalId': used_webstatic['gachaId'],
-                'url': used_webstatic['url'],
-            })
+        used_fields = list(used_webstatic['usedFields']) if used_webstatic else []
+        field_modes = dict(used_webstatic['fieldModes']) if used_webstatic else {}
+        verified_raw = type_info['status'] == 'verified'
+        if verified_raw:
+            used_fields.append('gachaTypes.raw')
+            field_modes['gachaTypes.raw'] = 'webstatic_only'
+        web_id = type_info.get('gachaId') if verified_raw else (
+            used_webstatic['gachaId'] if used_webstatic else None)
+        if web_id:
+            web_url = type_info['url'] if verified_raw else used_webstatic['url']
+            source = {'provider': 'webstatic', 'externalId': web_id, 'url': web_url}
+            if source not in draft_data['sources']:
+                draft_data['sources'].append(source)
         if unknown:
             row['warnings'].append('missing_item_ids')
             row['missingItemNames'] = unknown
@@ -410,17 +434,18 @@ def assemble(root: Path = ROOT, post_id: str | None = None, write: bool = True) 
                              'endRaw': notice_time.get('endRaw'),
                              'startCondition': notice_time.get('startCondition'),
                              'exclusiveEndPolicy': '原公告分钟结束时间 + 1 分钟；仅候选转换'},
+            'gachaTypeEvidence': type_info,
             'webstaticAugmentation': ({
-                'gachaId': used_webstatic['gachaId'],
-                'detailSha256': used_webstatic['detailSha256'],
-                'detailUrl': used_webstatic['url'],
-                'usedFields': used_webstatic['usedFields'],
-                'fieldModes': used_webstatic['fieldModes'],
-            } if used_webstatic else None),
+                'gachaId': web_id,
+                'detailSha256': type_info['detailSha256'] if verified_raw else used_webstatic['detailSha256'],
+                'detailUrl': type_info['url'] if verified_raw else used_webstatic['url'],
+                'usedFields': sorted(set(used_fields)),
+                'fieldModes': field_modes,
+            } if web_id else None),
             'provenance': {'versionUpdateFile': row['versionUpdateFile'], 'versionUpdatePostId': upd['data']['source'].get('postId'),
                            'previewFile': row['previewFile'], 'previewPostId': preview['source'].get('postId'),
                            'noticeFile': row['noticeFile'], 'noticePostId': pid, 'noticeSourceKey': key,
-                           **({'webstaticGachaId': used_webstatic['gachaId']} if used_webstatic else {})},
+                           **({'webstaticGachaId': web_id} if web_id else {})},
             'warnings': list(row['warnings']),
             'manualAudit': {'filled': row['manualFilled'], 'matched': row['manualMatched'],
                             'file': row['manualFile'], 'sources': row.get('manualAudits', [])},
