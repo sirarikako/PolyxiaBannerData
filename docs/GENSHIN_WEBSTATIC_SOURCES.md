@@ -53,3 +53,22 @@ Webstatic 返回 JSON 归其权利人所有；即使保存在代码仓库，也*
 ## 测试
 
 python -m pytest -q tests/test_genshin_webstatic_source_observer.py
+
+
+## P3：将官方数据安全补齐到候选
+
+从 1-2 的本地存档读取 Webstatic 详情后，3-1 的候选整合器可在原有公告/预告/版本均已关联、
+OCR 时间证据有效的情况下，仅为普通角色池（301、400）与武器池（302）
+补足缺少的名称和五星、四星 UP。不开新网络请求，不改变现有公告采集量。
+
+安全前提：官方详情哈希验证通过；类型、结束时间相符；有开始时间时允许已知的
+一小时差；官方五星在对应预告名单中；同一类型和时间只能匹配一个 gacha_id；
+公告已有名单只能是官方列表的子集，冲突不覆盖。人工覆盖字段不自动补齐。
+
+P3 不填时间、版本、期数、itemId，也不处理类型 500 的集录／溯光池。
+没有单篇公告或 OCR 时间失败时仍按原流程等待；Webstatic API 失败/存档损坏不影响 3-1。
+
+成功补齐后，候选的 webstaticAugmentation 记录确切的官方 gachaId、
+SHA-256、补齐字段及单独/混合来源；V1 sources 才添加 provider=webstatic。
+若只是独立核对，不将其标为已参与生成。字段冲突写入 3-1 readiness
+的 webstatic 对照结果，并附非阻断警告 webstatic_source_conflict。

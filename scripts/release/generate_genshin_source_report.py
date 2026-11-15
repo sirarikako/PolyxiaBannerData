@@ -82,7 +82,7 @@ def _associate(v1, checkpoint, details_path):
 
 
 def _actual_fields(candidate):
-    """Current assembler's actual inputs; never attribute Webstatic before P3."""
+    """Attribute actual candidate input fields, including P3 Webstatic supplements."""
     p = candidate.get("provenance") or {}
     notice = "miyoushe:" + str(p.get("noticePostId") or "manual")
     preview = "miyoushe:" + str(p.get("previewPostId") or "manual")
@@ -105,6 +105,15 @@ def _actual_fields(candidate):
         "regions.startAt": start,
         "regions.endAt": end,
     }
+    extra = candidate.get("webstaticAugmentation") or {}
+    gid = extra.get("gachaId")
+    if gid:
+        official = "webstatic:" + str(gid)
+        for field in extra.get("usedFields", []):
+            if field not in ("names.zh-CN", "featured.fiveStar", "featured.fourStar"):
+                continue
+            mode = (extra.get("fieldModes") or {}).get(field)
+            fields[field] = ([notice, official] if mode == "mixed" else [official])
     if draft.get("variant"):
         fields["variant"] = [notice]
     if "fatePointLimit" in draft:
@@ -189,11 +198,16 @@ def generate(root=ROOT, *, observed_at=None):
     for bid, ids in matched.items():
         # Never silently attach multiple Webstatic configs to the same V1 pool.
         entry = banners.setdefault(bid, {"firstObservedAt": observed_at})
+        contributed = sorted(
+            field for field, origins in (entry.get("fieldSources") or {}).items()
+            if any("webstatic:" + gid in origins for gid in ids)
+        )
         entry["webstatic"] = {
             "gachaIds": ids, "unique": len(ids) == 1,
             "firstSeenAt": min(web["banners"][id]["firstSeenAt"] for id in ids),
             "detailsReadyAt": min(web["banners"][id]["detailReadyAt"] for id in ids),
-            "role": "independent_comparison_only",
+            "role": "used_in_candidate" if contributed else "independent_comparison_only",
+            "contributedFields": contributed,
         }
 
     _write_if_changed(path, _encoded(state))
