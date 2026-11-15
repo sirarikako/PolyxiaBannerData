@@ -16,6 +16,7 @@ Public, versioned gacha-banner metadata for Genshin Impact and Honkai: Star Rail
 | [原神 v1](public/v1/genshin.json) | 原神卡池 |
 | [星铁 v1](public/v1/starrail.json) | 星铁卡池 |
 | [公告识别状态一览](data/BANNER_STATUS.md) | 按版本查看抓取、解析与发布状态（独立每日更新） |
+| [原神数据来源追踪](data/BANNER_SOURCE_STATUS.md) | Webstatic 官方接口首次观测、公告来源与 V1 发布记录 |
 | [JSON Schema](schemas/public/v1/) | v1 数据格式 |
 | [物品 ID 对照表](public/item-mappings/README.md) | 按游戏与语言查询物品名称和 ID |
 
