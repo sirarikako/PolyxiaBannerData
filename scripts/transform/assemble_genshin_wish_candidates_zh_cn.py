@@ -19,6 +19,7 @@ import re
 
 from scripts.transform.genshin_notice_manual_zh_cn import apply as apply_manual, index_additional
 from scripts.transform.genshin_missing_notices_zh_cn import read_missing, merge_missing
+from scripts.transform.augment_genshin_notice_webstatic import load_official, supplement
 
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE = Path('data/derived/genshin')
@@ -196,6 +197,7 @@ def assemble(root: Path = ROOT, post_id: str | None = None, write: bool = True) 
             if key is not None:
                 indexed_previews[key].append(row)
     mappings = read(root / MAPPINGS) if (root / MAPPINGS).exists() else {}
+    official_details = load_official(root)
     v1 = read(root / V1).get('banners', []) if (root / V1).exists() else []
     v1_by_notice: dict[str, list[dict]] = defaultdict(list)
     v1_by_slot: dict[tuple, list[dict]] = defaultdict(list)
@@ -324,6 +326,15 @@ def assemble(root: Path = ROOT, post_id: str | None = None, write: bool = True) 
         if not minute((upd['data'].get('maintenance') or {}).get('startAt')):
             fail('invalid_version_update', 'conflict')
             continue
+        # P3: enrich only missing name/UP fields from a uniquely matched archived
+        # official detail. Time/OCR/manual decisions continue to use Miyoushe.
+        if official_details:
+            notice, webstatic = supplement(notice, preview, official_details,
+                                           manual_fields=manual_fields)
+            if webstatic.get('status') not in ('unavailable', 'no_match'):
+                row['webstatic'] = webstatic
+            if webstatic.get('status') == 'conflict':
+                row['warnings'].append('webstatic_source_conflict')
         if preview.get('time', {}).get('startAt') and notice_time.get('startAt'):
             if minute(preview['time']['startAt']) != minute(notice_time['startAt']):
                 fail('start_time_conflict', 'conflict')
@@ -368,6 +379,13 @@ def assemble(root: Path = ROOT, post_id: str | None = None, write: bool = True) 
         if row['issues']:
             continue
         draft_data, unknown = draft(notice, preview, mappings)
+        used_webstatic = row.get('webstatic') if row.get('webstatic', {}).get('status') == 'filled' else None
+        if used_webstatic:
+            draft_data['sources'].append({
+                'provider': 'webstatic',
+                'externalId': used_webstatic['gachaId'],
+                'url': used_webstatic['url'],
+            })
         if unknown:
             row['warnings'].append('missing_item_ids')
             row['missingItemNames'] = unknown
@@ -392,9 +410,17 @@ def assemble(root: Path = ROOT, post_id: str | None = None, write: bool = True) 
                              'endRaw': notice_time.get('endRaw'),
                              'startCondition': notice_time.get('startCondition'),
                              'exclusiveEndPolicy': '原公告分钟结束时间 + 1 分钟；仅候选转换'},
+            'webstaticAugmentation': ({
+                'gachaId': used_webstatic['gachaId'],
+                'detailSha256': used_webstatic['detailSha256'],
+                'detailUrl': used_webstatic['url'],
+                'usedFields': used_webstatic['usedFields'],
+                'fieldModes': used_webstatic['fieldModes'],
+            } if used_webstatic else None),
             'provenance': {'versionUpdateFile': row['versionUpdateFile'], 'versionUpdatePostId': upd['data']['source'].get('postId'),
                            'previewFile': row['previewFile'], 'previewPostId': preview['source'].get('postId'),
-                           'noticeFile': row['noticeFile'], 'noticePostId': pid, 'noticeSourceKey': key},
+                           'noticeFile': row['noticeFile'], 'noticePostId': pid, 'noticeSourceKey': key,
+                           **({'webstaticGachaId': used_webstatic['gachaId']} if used_webstatic else {})},
             'warnings': list(row['warnings']),
             'manualAudit': {'filled': row['manualFilled'], 'matched': row['manualMatched'],
                             'file': row['manualFile'], 'sources': row.get('manualAudits', [])},
