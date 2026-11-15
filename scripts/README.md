@@ -14,6 +14,7 @@
 | 4-1 | `starrail-notices-zh-cn-daily-preview.yml` | 星铁公告扫描、候选和问题通知 |
 | 4-2 | `starrail-v1-auto-publish.yml` | 星铁正式 v1 导入发布 |
 | 5-1 | `banner-status-report.yml` | 独立汇总公开仓库结构化公告、预告、候选和 V1 至 `data/BANNER_STATUS.md` |
+| 独立观察 | `genshin-webstatic-source-observer.yml` | 原神官方 Webstatic 原始 JSON 归档与数据来源追踪，不修改 V1 |
 
 正式正常扫描时间按 UTC：1-1 为 05:17（UTC+8 13:17），原神 3-1 为 06:17、06:27/37/47/57（UTC+8 14:17 开始），星铁 4-1 为 07:17、07:27/37/47/57（UTC+8 15:17 开始）；以正式 workflow 的 cron 为准，GitHub 定时可能延迟。
 
@@ -58,3 +59,9 @@ Public `main` 不包含 `tests/`、`requirements-dev.txt` 或测试用 Actions�
 - 发布范围、原神 3-1 保证 v1 不变、checkpoint/人工复核/Issue/Artifact 原文保护等生产守卫。
 
 代码或 Actions 变更先完成私有仓库中的开发与验证，再部署到本仓库；不应绕过验证直接修改正式运行逻辑。
+
+## 原神 Webstatic 独立观察（P1/P2）
+
+新 Action 不替代 3-1 公告扫描，也不参与 3-2 的 V1 数据组装。它保存 `data/official/genshin/webstatic/` 下的官方列表、简体中文详情及变更历史，并生成 `data/BANNER_SOURCE_STATUS.md` 和 `data/derived/genshin/source-traces/observations.json`。
+
+3-2 在新增／人工修订 V1 成功后，同一提交写入 `data/derived/genshin/source-traces/publication-events.json`，记录每个新卡池实际组装字段的来源（不将只参与比对的 Webstatic 标记成发布来源）。采集器的首次观测时间不代表官方发布时间。具体规则见 [Webstatic 来源追踪说明](../docs/GENSHIN_WEBSTATIC_SOURCES.md)。
