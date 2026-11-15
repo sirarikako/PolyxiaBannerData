@@ -122,16 +122,20 @@ jobs:
             git reset --hard origin/main
 
             python -m scripts.release.import_genshin_v1_zh_cn --isolate-invalid --write > /tmp/genshin-v1-publish.json
+            python -m scripts.release.record_genshin_publication_sources --report /tmp/genshin-v1-publish.json
             python -m scripts.release.validate_v1 --datasets-only
             # 发布中间态的新 V1 与旧 Manifest SHA 必然不相等。
             # 在 Runner 临时重算 Manifest，再进行完整合约/哈希验证。
             python -m scripts.release.refresh_v1_manifest > /tmp/genshin-manifest-validation-preview.log
             python -m scripts.release.validate_v1 --public
-            # 3-2 只提交 V1/人工状态；Manifest 的正式提交仍由 2-1 管理。
+            # 3-2 提交 V1/人工状态及来源审计日志；Manifest 仍由 2-1 管理。
             git restore -- public/v1/manifest.json
 
             git add -A -- public/v1/genshin.json
             git add -A -- 'manual/genshin_*.json'
+            if test -f data/derived/genshin/source-traces/publication-events.json; then
+              git add -A -- data/derived/genshin/source-traces/publication-events.json
+            fi
             if git diff --cached --quiet; then
               echo "v1_changed=false" >> "$GITHUB_OUTPUT"
               echo "没有新的合法发布变更。" >> "$GITHUB_STEP_SUMMARY"
