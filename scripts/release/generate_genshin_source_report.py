@@ -197,20 +197,25 @@ def generate(root=ROOT, *, observed_at=None):
         }
 
     _write_if_changed(path, _encoded(state))
-    _write_if_changed(root / REPORT, render(state).encode("utf-8"))
+    journal = _load(root / SOURCE / "source-traces/publication-events.json", {"events": []})
+    _write_if_changed(root / REPORT, render(state, journal).encode("utf-8"))
     return {"tracked": len(banners), "matchedWebstatic": len(matched),
             "sourcesObserved": len(source_seen), "report": REPORT.as_posix()}
 
 
-def render(state):
+def render(state, journal=None):
+    created_at = {}
+    for event in (journal or {}).get("events", []):
+        if event.get("action") == "created":
+            created_at.setdefault(event.get("v1Id"), event.get("recordedAt"))
     lines = [
         "# 原神来源追踪",
         "",
         "本报告是采集观测记录。首次观测不等于官方发布日期；旧候选首次扫描不代表历史首次可用。",
         "Webstatic 目前只独立校验，不参与 V1 组装。字段来源详见 observations.json。",
         "",
-        "| 卡池 | 状态 | 公告首次观测 | Webstatic 详情就绪 | 公告 postId |",
-        "| --- | --- | --- | --- | --- |",
+        "| 卡池 | 状态 | 公告首次观测 | Webstatic 详情就绪 | V1 新增记录 | 公告 postId |",
+        "| --- | --- | --- | --- | --- | --- |",
     ]
     count = 0
     for bid, record in sorted(state.get("banners", {}).items(), reverse=True):
@@ -219,12 +224,12 @@ def render(state):
         post = record.get("sourceRefs", {}).get("noticePostId", "—")
         first = record.get("sourceFirstObservedAt", {}).get("wish_notice", "—")
         ready = record.get("webstatic", {}).get("detailsReadyAt", "—")
-        lines.append(f"| {bid} | {record.get('status', 'observed')} | {first} | {ready} | {post} |")
+        lines.append(f"| {bid} | {record.get('status', 'observed')} | {first} | {ready} | {created_at.get(bid) or '—'} | {post} |")
         count += 1
         if count >= 30:
             break
     if not count:
-        lines.append("| — | 暂无新数据 | — | — | — |")
+        lines.append("| — | 暂无新数据 | — | — | — | — |")
     return "\n".join(lines) + "\n"
 
 
