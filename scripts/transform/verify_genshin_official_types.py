@@ -141,17 +141,12 @@ def verify_notice(notice: dict, records: list[dict], *, preferred_gacha_id: str 
     if not fallback:
         return {"status": "unsupported_pool_type", "raw": None, "uigf": None}
     time = notice.get("time") or {}
-    record = None
-    match_status = "unavailable"
-    if preferred_gacha_id:
-        found = [r for r in records if r["gachaId"] == preferred_gacha_id]
-        if len(found) == 1:
-            record, match_status = found[0], "matched"
-    if record is None:
-        record, match_status = find_match(
-            pool_type=pool, name=notice.get("bannerName") or "",
-            start=time.get("startAt"), end=time.get("endAt"),
-            five_names=_notice_five(notice), records=records)
+    record, match_status = find_match(
+        pool_type=pool, name=notice.get("bannerName") or "",
+        start=time.get("startAt"), end=time.get("endAt"),
+        five_names=_notice_five(notice), records=records)
+    if record is not None and preferred_gacha_id and record["gachaId"] != preferred_gacha_id:
+        match_status, record = "ambiguous", None
     if record is None:
         result["status"] = match_status
         return result
