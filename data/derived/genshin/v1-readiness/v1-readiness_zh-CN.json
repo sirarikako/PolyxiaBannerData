@@ -224,6 +224,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_69786044.json"
     },
     {
@@ -252,6 +259,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_69786045.json"
     },
     {
@@ -280,6 +294,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_69786055.json"
     },
     {
@@ -306,6 +327,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_70352225.json"
     },
     {
@@ -332,6 +360,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_70352227.json"
     },
     {
@@ -358,6 +393,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_70352228.json"
     },
     {
@@ -386,6 +428,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_71075615.json"
     },
     {
@@ -414,6 +463,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_71075617.json"
     },
     {
@@ -442,6 +498,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_71075619.json"
     },
     {
@@ -468,6 +531,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_71557457.json"
     },
     {
@@ -494,6 +564,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_71557460.json"
     },
     {
@@ -520,6 +597,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_71557463.json"
     },
     {
@@ -546,6 +630,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_72261667.json"
     },
     {
@@ -572,6 +663,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_72261668.json"
     },
     {
@@ -598,6 +696,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_72261669.json"
     },
     {
@@ -626,6 +731,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_72261670.json"
     },
     {
@@ -654,6 +766,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_72261671.json"
     },
     {
@@ -682,6 +801,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_72261672.json"
     },
     {
@@ -710,6 +836,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_73475916.json"
     },
     {
@@ -738,6 +871,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_73475917.json"
     },
     {
@@ -766,6 +906,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_73475918.json"
     },
     {
@@ -794,6 +941,19 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "webstatic": {
+        "status": "unsupported_pool_type",
+        "usedFields": [],
+        "fieldModes": {},
+        "conflicts": []
+      },
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "500"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_73475919.json"
     },
     {
@@ -820,6 +980,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_73885911.json"
     },
     {
@@ -846,6 +1013,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_73885912.json"
     },
     {
@@ -872,6 +1046,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_73885913.json"
     },
     {
@@ -900,6 +1081,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_74412291.json"
     },
     {
@@ -928,6 +1116,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_74412295.json"
     },
     {
@@ -956,6 +1151,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_74412299.json"
     },
     {
@@ -984,6 +1186,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_75443617.json"
     },
     {
@@ -1012,6 +1221,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_75443619.json"
     },
     {
@@ -1040,6 +1256,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_75443624.json"
     },
     {
@@ -1066,6 +1289,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_75781475.json"
     },
     {
@@ -1092,6 +1322,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_75781476.json"
     },
     {
@@ -1118,6 +1355,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_75781477.json"
     },
     {
@@ -1146,6 +1390,19 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "webstatic": {
+        "status": "unsupported_pool_type",
+        "usedFields": [],
+        "fieldModes": {},
+        "conflicts": []
+      },
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "500"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_76308871.json"
     },
     {
@@ -1174,6 +1431,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_76308874.json"
     },
     {
@@ -1202,6 +1466,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_76308876.json"
     },
     {
@@ -1230,6 +1501,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_76308879.json"
     },
     {
@@ -1256,6 +1534,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_76723985.json"
     },
     {
@@ -1282,6 +1567,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_76723988.json"
     },
     {
@@ -1308,6 +1600,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_76723989.json"
     },
     {
@@ -1336,6 +1635,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_77322269.json"
     },
     {
@@ -1364,6 +1670,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_77322273.json"
     },
     {
@@ -1392,6 +1705,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_77322275.json"
     },
     {
@@ -1418,6 +1738,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_77797176.json"
     },
     {
@@ -1444,6 +1771,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_77797177.json"
     },
     {
@@ -1470,6 +1804,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_77797178.json"
     },
     {
@@ -1498,6 +1839,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_78299708.json"
     },
     {
@@ -1526,6 +1874,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_78299709.json"
     },
     {
@@ -1554,6 +1909,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_78299710.json"
     },
     {
@@ -1580,6 +1942,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_78782589.json"
     },
     {
@@ -1606,6 +1975,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "301"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_78782590.json"
     },
     {
@@ -1632,6 +2008,13 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "officialGachaType": {
+        "status": "unavailable",
+        "raw": null,
+        "uigf": [
+          "302"
+        ]
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_78782593.json"
     },
     {
@@ -1660,6 +2043,29 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "webstatic": {
+        "status": "matched",
+        "usedFields": [],
+        "fieldModes": {},
+        "conflicts": [],
+        "gachaId": "b7a91fed34c3f23b6070c42517c21d1ed6d5c330",
+        "detailSha256": "dd8d793cca3d8738dc86ee6bf8177782ffe394101b1eda360be1fdd2f80f61d8",
+        "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/b7a91fed34c3f23b6070c42517c21d1ed6d5c330/zh-cn.json"
+      },
+      "officialGachaType": {
+        "status": "verified",
+        "raw": [
+          "302"
+        ],
+        "uigf": [
+          "302"
+        ],
+        "gachaId": "b7a91fed34c3f23b6070c42517c21d1ed6d5c330",
+        "detailSha256": "dd8d793cca3d8738dc86ee6bf8177782ffe394101b1eda360be1fdd2f80f61d8",
+        "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/b7a91fed34c3f23b6070c42517c21d1ed6d5c330/zh-cn.json",
+        "officialRaw": 302,
+        "opGachaType": 302
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_79287289.json"
     },
     {
@@ -1688,6 +2094,29 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "webstatic": {
+        "status": "matched",
+        "usedFields": [],
+        "fieldModes": {},
+        "conflicts": [],
+        "gachaId": "b6652439025f43524b618c0b04db2dbdffa6dd8e",
+        "detailSha256": "aa2956136b74d6056fa935fa0424978c0218e29d05497bb28235751445d406f7",
+        "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/b6652439025f43524b618c0b04db2dbdffa6dd8e/zh-cn.json"
+      },
+      "officialGachaType": {
+        "status": "verified",
+        "raw": [
+          "400"
+        ],
+        "uigf": [
+          "301"
+        ],
+        "gachaId": "b6652439025f43524b618c0b04db2dbdffa6dd8e",
+        "detailSha256": "aa2956136b74d6056fa935fa0424978c0218e29d05497bb28235751445d406f7",
+        "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/b6652439025f43524b618c0b04db2dbdffa6dd8e/zh-cn.json",
+        "officialRaw": 400,
+        "opGachaType": 400
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_79287291.json"
     },
     {
@@ -1716,6 +2145,29 @@
       "recoveredFromRaw": false,
       "endTimeEvidence": "ocr",
       "manualAudits": [],
+      "webstatic": {
+        "status": "matched",
+        "usedFields": [],
+        "fieldModes": {},
+        "conflicts": [],
+        "gachaId": "1cfa755cb07057ea689c6a96abb8ffad9c93c789",
+        "detailSha256": "0a3c7c5938d37a036ff16597273a56335869e626be0cb8554bd07896e5cbec63",
+        "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/1cfa755cb07057ea689c6a96abb8ffad9c93c789/zh-cn.json"
+      },
+      "officialGachaType": {
+        "status": "verified",
+        "raw": [
+          "301"
+        ],
+        "uigf": [
+          "301"
+        ],
+        "gachaId": "1cfa755cb07057ea689c6a96abb8ffad9c93c789",
+        "detailSha256": "0a3c7c5938d37a036ff16597273a56335869e626be0cb8554bd07896e5cbec63",
+        "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/1cfa755cb07057ea689c6a96abb8ffad9c93c789/zh-cn.json",
+        "officialRaw": 301,
+        "opGachaType": 301
+      },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_79287292.json"
     }
   ]

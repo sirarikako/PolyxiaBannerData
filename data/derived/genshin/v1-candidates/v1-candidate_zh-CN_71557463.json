@@ -20,9 +20,7 @@
       "zh-CN": "饫宴角戏"
     },
     "gachaTypes": {
-      "raw": [
-        "301"
-      ],
+      "raw": null,
       "uigf": [
         "301"
       ]
@@ -92,6 +90,14 @@
     "startCondition": null,
     "exclusiveEndPolicy": "原公告分钟结束时间 + 1 分钟；仅候选转换"
   },
+  "gachaTypeEvidence": {
+    "status": "unavailable",
+    "raw": null,
+    "uigf": [
+      "301"
+    ]
+  },
+  "webstaticAugmentation": null,
   "provenance": {
     "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之三.json",
     "versionUpdatePostId": "71124325",

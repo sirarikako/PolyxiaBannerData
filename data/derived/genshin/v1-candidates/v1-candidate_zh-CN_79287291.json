@@ -76,6 +76,11 @@
       {
         "provider": "miyoushe",
         "url": "https://www.miyoushe.com/ys/article/79287291"
+      },
+      {
+        "provider": "webstatic",
+        "externalId": "b6652439025f43524b618c0b04db2dbdffa6dd8e",
+        "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/b6652439025f43524b618c0b04db2dbdffa6dd8e/zh-cn.json"
       }
     ]
   },
@@ -92,6 +97,31 @@
     "startCondition": "after_version_update",
     "exclusiveEndPolicy": "原公告分钟结束时间 + 1 分钟；仅候选转换"
   },
+  "gachaTypeEvidence": {
+    "status": "verified",
+    "raw": [
+      "400"
+    ],
+    "uigf": [
+      "301"
+    ],
+    "gachaId": "b6652439025f43524b618c0b04db2dbdffa6dd8e",
+    "detailSha256": "aa2956136b74d6056fa935fa0424978c0218e29d05497bb28235751445d406f7",
+    "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/b6652439025f43524b618c0b04db2dbdffa6dd8e/zh-cn.json",
+    "officialRaw": 400,
+    "opGachaType": 400
+  },
+  "webstaticAugmentation": {
+    "gachaId": "b6652439025f43524b618c0b04db2dbdffa6dd8e",
+    "detailSha256": "aa2956136b74d6056fa935fa0424978c0218e29d05497bb28235751445d406f7",
+    "detailUrl": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/b6652439025f43524b618c0b04db2dbdffa6dd8e/zh-cn.json",
+    "usedFields": [
+      "gachaTypes.raw"
+    ],
+    "fieldModes": {
+      "gachaTypes.raw": "webstatic_only"
+    }
+  },
   "provenance": {
     "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
     "versionUpdatePostId": "79322732",
@@ -99,7 +129,8 @@
     "previewPostId": "79312623",
     "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287291.json",
     "noticePostId": "79287291",
-    "noticeSourceKey": "79287291"
+    "noticeSourceKey": "79287291",
+    "webstaticGachaId": "b6652439025f43524b618c0b04db2dbdffa6dd8e"
   },
   "warnings": [
     "conditional_start_time"

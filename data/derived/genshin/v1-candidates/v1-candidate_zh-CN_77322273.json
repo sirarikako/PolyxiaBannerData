@@ -20,9 +20,7 @@
       "zh-CN": "炉边烬影"
     },
     "gachaTypes": {
-      "raw": [
-        "400"
-      ],
+      "raw": null,
       "uigf": [
         "301"
       ]
@@ -92,6 +90,14 @@
     "startCondition": "after_version_update",
     "exclusiveEndPolicy": "原公告分钟结束时间 + 1 分钟；仅候选转换"
   },
+  "gachaTypeEvidence": {
+    "status": "unavailable",
+    "raw": null,
+    "uigf": [
+      "301"
+    ]
+  },
+  "webstaticAugmentation": null,
   "provenance": {
     "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.0.json",
     "versionUpdatePostId": "77363392",
