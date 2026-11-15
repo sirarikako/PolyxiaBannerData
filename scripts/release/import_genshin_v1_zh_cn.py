@@ -21,6 +21,7 @@ import tempfile
 
 from scripts.release.validate_v1 import validate_publishable_dataset
 from scripts.release.genshin_manual_versions import load_manual_versions, is_pending, complete
+from scripts.transform.verify_genshin_official_types import official_records, backfill_raw
 
 ROOT = Path(__file__).resolve().parents[2]
 CANDIDATES = Path("data/derived/genshin/v1-candidates")
@@ -357,7 +358,10 @@ def import_v1(root: Path = ROOT, *, write: bool = False,
             pending.append({"file": ref["file"].name, "index": ref["index"],
                             "match": ref["match"], "reason": "waiting_for_new_candidate"})
 
-    changed = bool(actions or updates)
+    # Fill only still-null raw using uniquely matched, SHA-verified official evidence.
+    # Never change an existing non-null raw or derive raw from a pool label.
+    raw_backfilled, raw_conflicts = backfill_raw(banners, official_records(root))
+    changed = bool(actions or updates or raw_backfilled)
     if changed:
         validate_publishable_dataset(result)
     # 默认预览不改 v1，也不改人工设定状态。
@@ -383,6 +387,7 @@ def import_v1(root: Path = ROOT, *, write: bool = False,
         "completedManual": [{"file": ref["file"].name, "group": ref["group"],
                              "index": ref["index"], "id": bid} for ref, bid in completed_refs],
         "appended": actions, "updatedExistingIds": updates,
+        "rawBackfilled": raw_backfilled, "rawConflicts": raw_conflicts,
         "skippedExisting": skip, "unmatchedUpcoming": pending,
         "rejected": rejected,
         "totalBanners": len(banners), "target": str(v1_path),
