@@ -72,3 +72,14 @@ P3 不填时间、版本、期数、itemId，也不处理类型 500 的集录／
 SHA-256、补齐字段及单独/混合来源；V1 sources 才添加 provider=webstatic。
 若只是独立核对，不将其标为已参与生成。字段冲突写入 3-1 readiness
 的 webstatic 对照结果，并附非阻断警告 webstatic_source_conflict。
+
+
+## P3 后续：官方 raw 与独立 UIGF
+
+- 全部新原神普通活动池和集录／溯光池，先与 1-2 存档的官方 Webstatic 详情按卡池名、时间唯一匹配，并校验详情 SHA-256。
+- raw 仅从匹配的官方 gacha_type 生成；未取得官方确证时保持 null。op_gacha_type 只用于特殊池子类型检查，不能当 raw。
+- UIGF 按独立确认的映射：官方 301→UIGF 301、400→301、302→302、500→500。没有官方 raw 时，也按已知 poolType 的 UIGF 分类规则保留规范值。
+- 如果官方出现未知 raw（如 501）、未知特殊 op_gacha_type，或官方类型与公告分类矛盾，**仅阻断该候选**并记录 readiness 冲突，通过现有 3-1 问题通知机制报告；不得擅自套用 500。
+- 若候选在 Webstatic 更新前就已发布，其 raw 可以先为 null。以后 1-2 采集到验证通过的官方资料时，3-2 仅回填以前为 null 的正式 V1 raw，并要求标题、起止时间、分类、UIGF 和普通池五星名单一致；已非 null 的 raw 永不覆盖。
+- 具体来源记录在候选 gachaTypeEvidence、webstaticAugmentation、P2 fieldSources、3-2 rawBackfilled/rawConflicts 及 publication-events 的 raw_backfilled 事件中。
+- 原有版本、期数、公告采集、图片 OCR、特殊池角色/武器可选名单都不改变。
