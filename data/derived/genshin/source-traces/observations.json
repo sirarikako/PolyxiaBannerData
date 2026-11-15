@@ -1,0 +1,4475 @@
+{
+  "banners": {
+    "gi-000245": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_69786044.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:69786044"
+        ],
+        "featured.fourStar": [
+          "miyoushe:69786044"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:69831610",
+          "miyoushe:69784376"
+        ],
+        "names.zh-CN": [
+          "miyoushe:69786044"
+        ],
+        "phase": [
+          "miyoushe:69784376"
+        ],
+        "poolType": [
+          "miyoushe:69786044"
+        ],
+        "regions.endAt": [
+          "miyoushe:69786044:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:69831610",
+          "miyoushe:69784376",
+          "miyoushe:69786044"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000245",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_69786044.json",
+        "noticePostId": "69786044",
+        "noticeSourceKey": "69786044",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之二-phase-1.json",
+        "previewPostId": "69784376",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之二.json",
+        "versionUpdatePostId": "69831610"
+      },
+      "status": "published"
+    },
+    "gi-000246": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_69786045.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:69786045"
+        ],
+        "featured.fourStar": [
+          "miyoushe:69786045"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:69831610",
+          "miyoushe:69784376"
+        ],
+        "names.zh-CN": [
+          "miyoushe:69786045"
+        ],
+        "phase": [
+          "miyoushe:69784376"
+        ],
+        "poolType": [
+          "miyoushe:69786045"
+        ],
+        "regions.endAt": [
+          "miyoushe:69786045:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:69831610",
+          "miyoushe:69784376",
+          "miyoushe:69786045"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000246",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_69786045.json",
+        "noticePostId": "69786045",
+        "noticeSourceKey": "69786045",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之二-phase-1.json",
+        "previewPostId": "69784376",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之二.json",
+        "versionUpdatePostId": "69831610"
+      },
+      "status": "published"
+    },
+    "gi-000247": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_69786055.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:69786055"
+        ],
+        "featured.fourStar": [
+          "miyoushe:69786055"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:69831610",
+          "miyoushe:69784376"
+        ],
+        "names.zh-CN": [
+          "miyoushe:69786055"
+        ],
+        "phase": [
+          "miyoushe:69784376"
+        ],
+        "poolType": [
+          "miyoushe:69786055"
+        ],
+        "regions.endAt": [
+          "miyoushe:69786055:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:69831610",
+          "miyoushe:69784376",
+          "miyoushe:69786055"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000247",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_69786055.json",
+        "noticePostId": "69786055",
+        "noticeSourceKey": "69786055",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之二-phase-1.json",
+        "previewPostId": "69784376",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之二.json",
+        "versionUpdatePostId": "69831610"
+      },
+      "status": "published"
+    },
+    "gi-000248": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_70352225.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:70352225"
+        ],
+        "featured.fourStar": [
+          "miyoushe:70352225"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:69831610",
+          "miyoushe:70352230"
+        ],
+        "names.zh-CN": [
+          "miyoushe:70352225"
+        ],
+        "phase": [
+          "miyoushe:70352230"
+        ],
+        "poolType": [
+          "miyoushe:70352225"
+        ],
+        "regions.endAt": [
+          "miyoushe:70352225:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:70352225"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000248",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_70352225.json",
+        "noticePostId": "70352225",
+        "noticeSourceKey": "70352225",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之二-phase-2.json",
+        "previewPostId": "70352230",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之二.json",
+        "versionUpdatePostId": "69831610"
+      },
+      "status": "published"
+    },
+    "gi-000249": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_70352227.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:70352227"
+        ],
+        "featured.fourStar": [
+          "miyoushe:70352227"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:69831610",
+          "miyoushe:70352230"
+        ],
+        "names.zh-CN": [
+          "miyoushe:70352227"
+        ],
+        "phase": [
+          "miyoushe:70352230"
+        ],
+        "poolType": [
+          "miyoushe:70352227"
+        ],
+        "regions.endAt": [
+          "miyoushe:70352227:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:70352227"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000249",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_70352227.json",
+        "noticePostId": "70352227",
+        "noticeSourceKey": "70352227",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之二-phase-2.json",
+        "previewPostId": "70352230",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之二.json",
+        "versionUpdatePostId": "69831610"
+      },
+      "status": "published"
+    },
+    "gi-000250": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_70352228.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:70352228"
+        ],
+        "featured.fourStar": [
+          "miyoushe:70352228"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:69831610",
+          "miyoushe:70352230"
+        ],
+        "names.zh-CN": [
+          "miyoushe:70352228"
+        ],
+        "phase": [
+          "miyoushe:70352230"
+        ],
+        "poolType": [
+          "miyoushe:70352228"
+        ],
+        "regions.endAt": [
+          "miyoushe:70352228:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:70352228"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000250",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_70352228.json",
+        "noticePostId": "70352228",
+        "noticeSourceKey": "70352228",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之二-phase-2.json",
+        "previewPostId": "70352230",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之二.json",
+        "versionUpdatePostId": "69831610"
+      },
+      "status": "published"
+    },
+    "gi-000251": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_71075617.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:71075617"
+        ],
+        "featured.fourStar": [
+          "miyoushe:71075617"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:71124325",
+          "miyoushe:71075621"
+        ],
+        "names.zh-CN": [
+          "miyoushe:71075617"
+        ],
+        "phase": [
+          "miyoushe:71075621"
+        ],
+        "poolType": [
+          "miyoushe:71075617"
+        ],
+        "regions.endAt": [
+          "miyoushe:71075617:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:71124325",
+          "miyoushe:71075621",
+          "miyoushe:71075617"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000251",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71075617.json",
+        "noticePostId": "71075617",
+        "noticeSourceKey": "71075617",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之三-phase-1.json",
+        "previewPostId": "71075621",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之三.json",
+        "versionUpdatePostId": "71124325"
+      },
+      "status": "published"
+    },
+    "gi-000252": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_71075619.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:71075619"
+        ],
+        "featured.fourStar": [
+          "miyoushe:71075619"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:71124325",
+          "miyoushe:71075621"
+        ],
+        "names.zh-CN": [
+          "miyoushe:71075619"
+        ],
+        "phase": [
+          "miyoushe:71075621"
+        ],
+        "poolType": [
+          "miyoushe:71075619"
+        ],
+        "regions.endAt": [
+          "miyoushe:71075619:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:71124325",
+          "miyoushe:71075621",
+          "miyoushe:71075619"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000252",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71075619.json",
+        "noticePostId": "71075619",
+        "noticeSourceKey": "71075619",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之三-phase-1.json",
+        "previewPostId": "71075621",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之三.json",
+        "versionUpdatePostId": "71124325"
+      },
+      "status": "published"
+    },
+    "gi-000253": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_71075615.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:71075615"
+        ],
+        "featured.fourStar": [
+          "miyoushe:71075615"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:71124325",
+          "miyoushe:71075621"
+        ],
+        "names.zh-CN": [
+          "miyoushe:71075615"
+        ],
+        "phase": [
+          "miyoushe:71075621"
+        ],
+        "poolType": [
+          "miyoushe:71075615"
+        ],
+        "regions.endAt": [
+          "miyoushe:71075615:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:71124325",
+          "miyoushe:71075621",
+          "miyoushe:71075615"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000253",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71075615.json",
+        "noticePostId": "71075615",
+        "noticeSourceKey": "71075615",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之三-phase-1.json",
+        "previewPostId": "71075621",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之三.json",
+        "versionUpdatePostId": "71124325"
+      },
+      "status": "published"
+    },
+    "gi-000254": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_71557460.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:71557460"
+        ],
+        "featured.fourStar": [
+          "miyoushe:71557460"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:71124325",
+          "miyoushe:71557465"
+        ],
+        "names.zh-CN": [
+          "miyoushe:71557460"
+        ],
+        "phase": [
+          "miyoushe:71557465"
+        ],
+        "poolType": [
+          "miyoushe:71557460"
+        ],
+        "regions.endAt": [
+          "miyoushe:71557460:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:71557460"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000254",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71557460.json",
+        "noticePostId": "71557460",
+        "noticeSourceKey": "71557460",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之三-phase-2.json",
+        "previewPostId": "71557465",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之三.json",
+        "versionUpdatePostId": "71124325"
+      },
+      "status": "published"
+    },
+    "gi-000255": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_71557463.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:71557463"
+        ],
+        "featured.fourStar": [
+          "miyoushe:71557463"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:71124325",
+          "miyoushe:71557465"
+        ],
+        "names.zh-CN": [
+          "miyoushe:71557463"
+        ],
+        "phase": [
+          "miyoushe:71557465"
+        ],
+        "poolType": [
+          "miyoushe:71557463"
+        ],
+        "regions.endAt": [
+          "miyoushe:71557463:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:71557463"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000255",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71557463.json",
+        "noticePostId": "71557463",
+        "noticeSourceKey": "71557463",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之三-phase-2.json",
+        "previewPostId": "71557465",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之三.json",
+        "versionUpdatePostId": "71124325"
+      },
+      "status": "published"
+    },
+    "gi-000256": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_71557457.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:71557457"
+        ],
+        "featured.fourStar": [
+          "miyoushe:71557457"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:71124325",
+          "miyoushe:71557465"
+        ],
+        "names.zh-CN": [
+          "miyoushe:71557457"
+        ],
+        "phase": [
+          "miyoushe:71557465"
+        ],
+        "poolType": [
+          "miyoushe:71557457"
+        ],
+        "regions.endAt": [
+          "miyoushe:71557457:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:71557457"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000256",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71557457.json",
+        "noticePostId": "71557457",
+        "noticeSourceKey": "71557457",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之三-phase-2.json",
+        "previewPostId": "71557465",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之三.json",
+        "versionUpdatePostId": "71124325"
+      },
+      "status": "published"
+    },
+    "gi-000257": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_72261671.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:72261671"
+        ],
+        "featured.fourStar": [
+          "miyoushe:72261671"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:72299859",
+          "miyoushe:72287317"
+        ],
+        "names.zh-CN": [
+          "miyoushe:72261671"
+        ],
+        "phase": [
+          "miyoushe:72287317"
+        ],
+        "poolType": [
+          "miyoushe:72261671"
+        ],
+        "regions.endAt": [
+          "miyoushe:72261671:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:72299859",
+          "miyoushe:72287317",
+          "miyoushe:72261671"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000257",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261671.json",
+        "noticePostId": "72261671",
+        "noticeSourceKey": "72261671",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之四-phase-1.json",
+        "previewPostId": "72287317",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之四.json",
+        "versionUpdatePostId": "72299859"
+      },
+      "status": "published"
+    },
+    "gi-000258": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_72261672.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:72261672"
+        ],
+        "featured.fourStar": [
+          "miyoushe:72261672"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:72299859",
+          "miyoushe:72287317"
+        ],
+        "names.zh-CN": [
+          "miyoushe:72261672"
+        ],
+        "phase": [
+          "miyoushe:72287317"
+        ],
+        "poolType": [
+          "miyoushe:72261672"
+        ],
+        "regions.endAt": [
+          "miyoushe:72261672:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:72299859",
+          "miyoushe:72287317",
+          "miyoushe:72261672"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000258",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261672.json",
+        "noticePostId": "72261672",
+        "noticeSourceKey": "72261672",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之四-phase-1.json",
+        "previewPostId": "72287317",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之四.json",
+        "versionUpdatePostId": "72299859"
+      },
+      "status": "published"
+    },
+    "gi-000259": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_72261670.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:72261670"
+        ],
+        "featured.fourStar": [
+          "miyoushe:72261670"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:72299859",
+          "miyoushe:72287317"
+        ],
+        "names.zh-CN": [
+          "miyoushe:72261670"
+        ],
+        "phase": [
+          "miyoushe:72287317"
+        ],
+        "poolType": [
+          "miyoushe:72261670"
+        ],
+        "regions.endAt": [
+          "miyoushe:72261670:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:72299859",
+          "miyoushe:72287317",
+          "miyoushe:72261670"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000259",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261670.json",
+        "noticePostId": "72261670",
+        "noticeSourceKey": "72261670",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之四-phase-1.json",
+        "previewPostId": "72287317",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之四.json",
+        "versionUpdatePostId": "72299859"
+      },
+      "status": "published"
+    },
+    "gi-000260": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_72261668.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:72261668"
+        ],
+        "featured.fourStar": [
+          "miyoushe:72261668"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:72299859",
+          "miyoushe:72868817"
+        ],
+        "names.zh-CN": [
+          "miyoushe:72261668"
+        ],
+        "phase": [
+          "miyoushe:72868817"
+        ],
+        "poolType": [
+          "miyoushe:72261668"
+        ],
+        "regions.endAt": [
+          "miyoushe:72261668:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:72261668"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000260",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261668.json",
+        "noticePostId": "72261668",
+        "noticeSourceKey": "72261668",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之四-phase-2.json",
+        "previewPostId": "72868817",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之四.json",
+        "versionUpdatePostId": "72299859"
+      },
+      "status": "published"
+    },
+    "gi-000261": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_72261669.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:72261669"
+        ],
+        "featured.fourStar": [
+          "miyoushe:72261669"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:72299859",
+          "miyoushe:72868817"
+        ],
+        "names.zh-CN": [
+          "miyoushe:72261669"
+        ],
+        "phase": [
+          "miyoushe:72868817"
+        ],
+        "poolType": [
+          "miyoushe:72261669"
+        ],
+        "regions.endAt": [
+          "miyoushe:72261669:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:72261669"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000261",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261669.json",
+        "noticePostId": "72261669",
+        "noticeSourceKey": "72261669",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之四-phase-2.json",
+        "previewPostId": "72868817",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之四.json",
+        "versionUpdatePostId": "72299859"
+      },
+      "status": "published"
+    },
+    "gi-000262": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_72261667.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:72261667"
+        ],
+        "featured.fourStar": [
+          "miyoushe:72261667"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:72299859",
+          "miyoushe:72868817"
+        ],
+        "names.zh-CN": [
+          "miyoushe:72261667"
+        ],
+        "phase": [
+          "miyoushe:72868817"
+        ],
+        "poolType": [
+          "miyoushe:72261667"
+        ],
+        "regions.endAt": [
+          "miyoushe:72261667:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:72261667"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000262",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261667.json",
+        "noticePostId": "72261667",
+        "noticeSourceKey": "72261667",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之四-phase-2.json",
+        "previewPostId": "72868817",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之四.json",
+        "versionUpdatePostId": "72299859"
+      },
+      "status": "published"
+    },
+    "gi-000263": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_73475916.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:73475916"
+        ],
+        "featured.fourStar": [
+          "miyoushe:73475916"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:73521381",
+          "miyoushe:73483205"
+        ],
+        "names.zh-CN": [
+          "miyoushe:73475916"
+        ],
+        "phase": [
+          "miyoushe:73483205"
+        ],
+        "poolType": [
+          "miyoushe:73475916"
+        ],
+        "regions.endAt": [
+          "miyoushe:73475916:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:73521381",
+          "miyoushe:73483205",
+          "miyoushe:73475916"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000263",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73475916.json",
+        "noticePostId": "73475916",
+        "noticeSourceKey": "73475916",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之五-phase-1.json",
+        "previewPostId": "73483205",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之五.json",
+        "versionUpdatePostId": "73521381"
+      },
+      "status": "published"
+    },
+    "gi-000264": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_73475917.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:73475917"
+        ],
+        "featured.fourStar": [
+          "miyoushe:73475917"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:73521381",
+          "miyoushe:73483205"
+        ],
+        "names.zh-CN": [
+          "miyoushe:73475917"
+        ],
+        "phase": [
+          "miyoushe:73483205"
+        ],
+        "poolType": [
+          "miyoushe:73475917"
+        ],
+        "regions.endAt": [
+          "miyoushe:73475917:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:73521381",
+          "miyoushe:73483205",
+          "miyoushe:73475917"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000264",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73475917.json",
+        "noticePostId": "73475917",
+        "noticeSourceKey": "73475917",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之五-phase-1.json",
+        "previewPostId": "73483205",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之五.json",
+        "versionUpdatePostId": "73521381"
+      },
+      "status": "published"
+    },
+    "gi-000265": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_73475918.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:73475918"
+        ],
+        "featured.fourStar": [
+          "miyoushe:73475918"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:73521381",
+          "miyoushe:73483205"
+        ],
+        "names.zh-CN": [
+          "miyoushe:73475918"
+        ],
+        "phase": [
+          "miyoushe:73483205"
+        ],
+        "poolType": [
+          "miyoushe:73475918"
+        ],
+        "regions.endAt": [
+          "miyoushe:73475918:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:73521381",
+          "miyoushe:73483205",
+          "miyoushe:73475918"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000265",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73475918.json",
+        "noticePostId": "73475918",
+        "noticeSourceKey": "73475918",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之五-phase-1.json",
+        "previewPostId": "73483205",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之五.json",
+        "versionUpdatePostId": "73521381"
+      },
+      "status": "published"
+    },
+    "gi-000266": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_73475919.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:73475919"
+        ],
+        "featured.fourStar": [
+          "miyoushe:73475919"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:73521381",
+          "miyoushe:73483205"
+        ],
+        "names.zh-CN": [
+          "miyoushe:73475919"
+        ],
+        "phase": [
+          "miyoushe:73483205"
+        ],
+        "poolType": [
+          "miyoushe:73475919"
+        ],
+        "regions.endAt": [
+          "miyoushe:73475919:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:73521381",
+          "miyoushe:73483205",
+          "miyoushe:73475919"
+        ],
+        "variant": [
+          "miyoushe:73475919"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000266",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73475919.json",
+        "noticePostId": "73475919",
+        "noticeSourceKey": "73475919",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之五-phase-1.json",
+        "previewPostId": "73483205",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之五.json",
+        "versionUpdatePostId": "73521381"
+      },
+      "status": "published"
+    },
+    "gi-000267": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_73885912.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:73885912"
+        ],
+        "featured.fourStar": [
+          "miyoushe:73885912"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:73521381",
+          "miyoushe:73969586"
+        ],
+        "names.zh-CN": [
+          "miyoushe:73885912"
+        ],
+        "phase": [
+          "miyoushe:73969586"
+        ],
+        "poolType": [
+          "miyoushe:73885912"
+        ],
+        "regions.endAt": [
+          "miyoushe:73885912:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:73885912"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000267",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73885912.json",
+        "noticePostId": "73885912",
+        "noticeSourceKey": "73885912",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之五-phase-2.json",
+        "previewPostId": "73969586",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之五.json",
+        "versionUpdatePostId": "73521381"
+      },
+      "status": "published"
+    },
+    "gi-000268": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_73885913.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:73885913"
+        ],
+        "featured.fourStar": [
+          "miyoushe:73885913"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:73521381",
+          "miyoushe:73969586"
+        ],
+        "names.zh-CN": [
+          "miyoushe:73885913"
+        ],
+        "phase": [
+          "miyoushe:73969586"
+        ],
+        "poolType": [
+          "miyoushe:73885913"
+        ],
+        "regions.endAt": [
+          "miyoushe:73885913:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:73885913"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000268",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73885913.json",
+        "noticePostId": "73885913",
+        "noticeSourceKey": "73885913",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之五-phase-2.json",
+        "previewPostId": "73969586",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之五.json",
+        "versionUpdatePostId": "73521381"
+      },
+      "status": "published"
+    },
+    "gi-000269": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_73885911.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:73885911"
+        ],
+        "featured.fourStar": [
+          "miyoushe:73885911"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:73521381",
+          "miyoushe:73969586"
+        ],
+        "names.zh-CN": [
+          "miyoushe:73885911"
+        ],
+        "phase": [
+          "miyoushe:73969586"
+        ],
+        "poolType": [
+          "miyoushe:73885911"
+        ],
+        "regions.endAt": [
+          "miyoushe:73885911:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:73885911"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000269",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73885911.json",
+        "noticePostId": "73885911",
+        "noticeSourceKey": "73885911",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之五-phase-2.json",
+        "previewPostId": "73969586",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之五.json",
+        "versionUpdatePostId": "73521381"
+      },
+      "status": "published"
+    },
+    "gi-000270": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_74412291.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:74412291"
+        ],
+        "featured.fourStar": [
+          "miyoushe:74412291"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:74446206",
+          "miyoushe:74418358"
+        ],
+        "names.zh-CN": [
+          "miyoushe:74412291"
+        ],
+        "phase": [
+          "miyoushe:74418358"
+        ],
+        "poolType": [
+          "miyoushe:74412291"
+        ],
+        "regions.endAt": [
+          "miyoushe:74412291:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:74446206",
+          "miyoushe:74418358",
+          "miyoushe:74412291"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000270",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_74412291.json",
+        "noticePostId": "74412291",
+        "noticeSourceKey": "74412291",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之六-phase-1.json",
+        "previewPostId": "74418358",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之六.json",
+        "versionUpdatePostId": "74446206"
+      },
+      "status": "published"
+    },
+    "gi-000271": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_74412295.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:74412295"
+        ],
+        "featured.fourStar": [
+          "miyoushe:74412295"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:74446206",
+          "miyoushe:74418358"
+        ],
+        "names.zh-CN": [
+          "miyoushe:74412295"
+        ],
+        "phase": [
+          "miyoushe:74418358"
+        ],
+        "poolType": [
+          "miyoushe:74412295"
+        ],
+        "regions.endAt": [
+          "miyoushe:74412295:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:74446206",
+          "miyoushe:74418358",
+          "miyoushe:74412295"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000271",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_74412295.json",
+        "noticePostId": "74412295",
+        "noticeSourceKey": "74412295",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之六-phase-1.json",
+        "previewPostId": "74418358",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之六.json",
+        "versionUpdatePostId": "74446206"
+      },
+      "status": "published"
+    },
+    "gi-000272": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_74412299.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:74412299"
+        ],
+        "featured.fourStar": [
+          "miyoushe:74412299"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:74446206",
+          "miyoushe:74418358"
+        ],
+        "names.zh-CN": [
+          "miyoushe:74412299"
+        ],
+        "phase": [
+          "miyoushe:74418358"
+        ],
+        "poolType": [
+          "miyoushe:74412299"
+        ],
+        "regions.endAt": [
+          "miyoushe:74412299:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:74446206",
+          "miyoushe:74418358",
+          "miyoushe:74412299"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000272",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_74412299.json",
+        "noticePostId": "74412299",
+        "noticeSourceKey": "74412299",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之六-phase-1.json",
+        "previewPostId": "74418358",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之六.json",
+        "versionUpdatePostId": "74446206"
+      },
+      "status": "published"
+    },
+    "gi-000277": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_75443617.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:75443617"
+        ],
+        "featured.fourStar": [
+          "miyoushe:75443617"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:75440954",
+          "miyoushe:75425444"
+        ],
+        "names.zh-CN": [
+          "miyoushe:75443617"
+        ],
+        "phase": [
+          "miyoushe:75425444"
+        ],
+        "poolType": [
+          "miyoushe:75443617"
+        ],
+        "regions.endAt": [
+          "miyoushe:75443617:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:75440954",
+          "miyoushe:75425444",
+          "miyoushe:75443617"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000277",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75443617.json",
+        "noticePostId": "75443617",
+        "noticeSourceKey": "75443617",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之七-phase-1.json",
+        "previewPostId": "75425444",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之七.json",
+        "versionUpdatePostId": "75440954"
+      },
+      "status": "published"
+    },
+    "gi-000278": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_75443619.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:75443619"
+        ],
+        "featured.fourStar": [
+          "miyoushe:75443619"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:75440954",
+          "miyoushe:75425444"
+        ],
+        "names.zh-CN": [
+          "miyoushe:75443619"
+        ],
+        "phase": [
+          "miyoushe:75425444"
+        ],
+        "poolType": [
+          "miyoushe:75443619"
+        ],
+        "regions.endAt": [
+          "miyoushe:75443619:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:75440954",
+          "miyoushe:75425444",
+          "miyoushe:75443619"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000278",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75443619.json",
+        "noticePostId": "75443619",
+        "noticeSourceKey": "75443619",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之七-phase-1.json",
+        "previewPostId": "75425444",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之七.json",
+        "versionUpdatePostId": "75440954"
+      },
+      "status": "published"
+    },
+    "gi-000279": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_75443624.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:75443624"
+        ],
+        "featured.fourStar": [
+          "miyoushe:75443624"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:75440954",
+          "miyoushe:75425444"
+        ],
+        "names.zh-CN": [
+          "miyoushe:75443624"
+        ],
+        "phase": [
+          "miyoushe:75425444"
+        ],
+        "poolType": [
+          "miyoushe:75443624"
+        ],
+        "regions.endAt": [
+          "miyoushe:75443624:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:75440954",
+          "miyoushe:75425444",
+          "miyoushe:75443624"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000279",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75443624.json",
+        "noticePostId": "75443624",
+        "noticeSourceKey": "75443624",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之七-phase-1.json",
+        "previewPostId": "75425444",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之七.json",
+        "versionUpdatePostId": "75440954"
+      },
+      "status": "published"
+    },
+    "gi-000280": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_75781475.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:75781475"
+        ],
+        "featured.fourStar": [
+          "miyoushe:75781475"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:75440954",
+          "miyoushe:75880451"
+        ],
+        "names.zh-CN": [
+          "miyoushe:75781475"
+        ],
+        "phase": [
+          "miyoushe:75880451"
+        ],
+        "poolType": [
+          "miyoushe:75781475"
+        ],
+        "regions.endAt": [
+          "miyoushe:75781475:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:75781475"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000280",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75781475.json",
+        "noticePostId": "75781475",
+        "noticeSourceKey": "75781475",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之七-phase-2.json",
+        "previewPostId": "75880451",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之七.json",
+        "versionUpdatePostId": "75440954"
+      },
+      "status": "published"
+    },
+    "gi-000281": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_75781476.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:75781476"
+        ],
+        "featured.fourStar": [
+          "miyoushe:75781476"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:75440954",
+          "miyoushe:75880451"
+        ],
+        "names.zh-CN": [
+          "miyoushe:75781476"
+        ],
+        "phase": [
+          "miyoushe:75880451"
+        ],
+        "poolType": [
+          "miyoushe:75781476"
+        ],
+        "regions.endAt": [
+          "miyoushe:75781476:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:75781476"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000281",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75781476.json",
+        "noticePostId": "75781476",
+        "noticeSourceKey": "75781476",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之七-phase-2.json",
+        "previewPostId": "75880451",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之七.json",
+        "versionUpdatePostId": "75440954"
+      },
+      "status": "published"
+    },
+    "gi-000282": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_75781477.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:75781477"
+        ],
+        "featured.fourStar": [
+          "miyoushe:75781477"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:75440954",
+          "miyoushe:75880451"
+        ],
+        "names.zh-CN": [
+          "miyoushe:75781477"
+        ],
+        "phase": [
+          "miyoushe:75880451"
+        ],
+        "poolType": [
+          "miyoushe:75781477"
+        ],
+        "regions.endAt": [
+          "miyoushe:75781477:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:75781477"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000282",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75781477.json",
+        "noticePostId": "75781477",
+        "noticeSourceKey": "75781477",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之七-phase-2.json",
+        "previewPostId": "75880451",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之七.json",
+        "versionUpdatePostId": "75440954"
+      },
+      "status": "published"
+    },
+    "gi-000283": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_76308879.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:76308879"
+        ],
+        "featured.fourStar": [
+          "miyoushe:76308879"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:76345546",
+          "miyoushe:76328614"
+        ],
+        "names.zh-CN": [
+          "miyoushe:76308879"
+        ],
+        "phase": [
+          "miyoushe:76328614"
+        ],
+        "poolType": [
+          "miyoushe:76308879"
+        ],
+        "regions.endAt": [
+          "miyoushe:76308879:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:76345546",
+          "miyoushe:76328614",
+          "miyoushe:76308879"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000283",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76308879.json",
+        "noticePostId": "76308879",
+        "noticeSourceKey": "76308879",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之八-phase-1.json",
+        "previewPostId": "76328614",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之八.json",
+        "versionUpdatePostId": "76345546"
+      },
+      "status": "published"
+    },
+    "gi-000284": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_76308876.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:76308876"
+        ],
+        "featured.fourStar": [
+          "miyoushe:76308876"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:76345546",
+          "miyoushe:76328614"
+        ],
+        "names.zh-CN": [
+          "miyoushe:76308876"
+        ],
+        "phase": [
+          "miyoushe:76328614"
+        ],
+        "poolType": [
+          "miyoushe:76308876"
+        ],
+        "regions.endAt": [
+          "miyoushe:76308876:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:76345546",
+          "miyoushe:76328614",
+          "miyoushe:76308876"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000284",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76308876.json",
+        "noticePostId": "76308876",
+        "noticeSourceKey": "76308876",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之八-phase-1.json",
+        "previewPostId": "76328614",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之八.json",
+        "versionUpdatePostId": "76345546"
+      },
+      "status": "published"
+    },
+    "gi-000285": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_76308874.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:76308874"
+        ],
+        "featured.fourStar": [
+          "miyoushe:76308874"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:76345546",
+          "miyoushe:76328614"
+        ],
+        "names.zh-CN": [
+          "miyoushe:76308874"
+        ],
+        "phase": [
+          "miyoushe:76328614"
+        ],
+        "poolType": [
+          "miyoushe:76308874"
+        ],
+        "regions.endAt": [
+          "miyoushe:76308874:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:76345546",
+          "miyoushe:76328614",
+          "miyoushe:76308874"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000285",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76308874.json",
+        "noticePostId": "76308874",
+        "noticeSourceKey": "76308874",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之八-phase-1.json",
+        "previewPostId": "76328614",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之八.json",
+        "versionUpdatePostId": "76345546"
+      },
+      "status": "published"
+    },
+    "gi-000286": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_76308871.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:76308871"
+        ],
+        "featured.fourStar": [
+          "miyoushe:76308871"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:76345546",
+          "miyoushe:76328614"
+        ],
+        "names.zh-CN": [
+          "miyoushe:76308871"
+        ],
+        "phase": [
+          "miyoushe:76328614"
+        ],
+        "poolType": [
+          "miyoushe:76308871"
+        ],
+        "regions.endAt": [
+          "miyoushe:76308871:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:76345546",
+          "miyoushe:76328614",
+          "miyoushe:76308871"
+        ],
+        "variant": [
+          "miyoushe:76308871"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000286",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76308871.json",
+        "noticePostId": "76308871",
+        "noticeSourceKey": "76308871",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之八-phase-1.json",
+        "previewPostId": "76328614",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之八.json",
+        "versionUpdatePostId": "76345546"
+      },
+      "status": "published"
+    },
+    "gi-000287": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_76723989.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:76723989"
+        ],
+        "featured.fourStar": [
+          "miyoushe:76723989"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:76345546",
+          "miyoushe:76834102"
+        ],
+        "names.zh-CN": [
+          "miyoushe:76723989"
+        ],
+        "phase": [
+          "miyoushe:76834102"
+        ],
+        "poolType": [
+          "miyoushe:76723989"
+        ],
+        "regions.endAt": [
+          "miyoushe:76723989:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:76723989"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000287",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76723989.json",
+        "noticePostId": "76723989",
+        "noticeSourceKey": "76723989",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之八-phase-2.json",
+        "previewPostId": "76834102",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之八.json",
+        "versionUpdatePostId": "76345546"
+      },
+      "status": "published"
+    },
+    "gi-000288": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_76723988.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:76723988"
+        ],
+        "featured.fourStar": [
+          "miyoushe:76723988"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:76345546",
+          "miyoushe:76834102"
+        ],
+        "names.zh-CN": [
+          "miyoushe:76723988"
+        ],
+        "phase": [
+          "miyoushe:76834102"
+        ],
+        "poolType": [
+          "miyoushe:76723988"
+        ],
+        "regions.endAt": [
+          "miyoushe:76723988:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:76723988"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000288",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76723988.json",
+        "noticePostId": "76723988",
+        "noticeSourceKey": "76723988",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之八-phase-2.json",
+        "previewPostId": "76834102",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之八.json",
+        "versionUpdatePostId": "76345546"
+      },
+      "status": "published"
+    },
+    "gi-000289": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_76723985.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:76723985"
+        ],
+        "featured.fourStar": [
+          "miyoushe:76723985"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:76345546",
+          "miyoushe:76834102"
+        ],
+        "names.zh-CN": [
+          "miyoushe:76723985"
+        ],
+        "phase": [
+          "miyoushe:76834102"
+        ],
+        "poolType": [
+          "miyoushe:76723985"
+        ],
+        "regions.endAt": [
+          "miyoushe:76723985:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:76723985"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000289",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76723985.json",
+        "noticePostId": "76723985",
+        "noticeSourceKey": "76723985",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之八-phase-2.json",
+        "previewPostId": "76834102",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_月之八.json",
+        "versionUpdatePostId": "76345546"
+      },
+      "status": "published"
+    },
+    "gi-000290": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_77322269.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:77322269"
+        ],
+        "featured.fourStar": [
+          "miyoushe:77322269"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:77363392",
+          "miyoushe:77350703"
+        ],
+        "names.zh-CN": [
+          "miyoushe:77322269"
+        ],
+        "phase": [
+          "miyoushe:77350703"
+        ],
+        "poolType": [
+          "miyoushe:77322269"
+        ],
+        "regions.endAt": [
+          "miyoushe:77322269:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:77363392",
+          "miyoushe:77350703",
+          "miyoushe:77322269"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000290",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77322269.json",
+        "noticePostId": "77322269",
+        "noticeSourceKey": "77322269",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.0-phase-1.json",
+        "previewPostId": "77350703",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.0.json",
+        "versionUpdatePostId": "77363392"
+      },
+      "status": "published"
+    },
+    "gi-000291": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_77322273.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:77322273"
+        ],
+        "featured.fourStar": [
+          "miyoushe:77322273"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:77363392",
+          "miyoushe:77350703"
+        ],
+        "names.zh-CN": [
+          "miyoushe:77322273"
+        ],
+        "phase": [
+          "miyoushe:77350703"
+        ],
+        "poolType": [
+          "miyoushe:77322273"
+        ],
+        "regions.endAt": [
+          "miyoushe:77322273:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:77363392",
+          "miyoushe:77350703",
+          "miyoushe:77322273"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000291",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77322273.json",
+        "noticePostId": "77322273",
+        "noticeSourceKey": "77322273",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.0-phase-1.json",
+        "previewPostId": "77350703",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.0.json",
+        "versionUpdatePostId": "77363392"
+      },
+      "status": "published"
+    },
+    "gi-000292": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_77322275.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:77322275"
+        ],
+        "featured.fourStar": [
+          "miyoushe:77322275"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:77363392",
+          "miyoushe:77350703"
+        ],
+        "names.zh-CN": [
+          "miyoushe:77322275"
+        ],
+        "phase": [
+          "miyoushe:77350703"
+        ],
+        "poolType": [
+          "miyoushe:77322275"
+        ],
+        "regions.endAt": [
+          "miyoushe:77322275:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:77363392",
+          "miyoushe:77350703",
+          "miyoushe:77322275"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000292",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77322275.json",
+        "noticePostId": "77322275",
+        "noticeSourceKey": "77322275",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.0-phase-1.json",
+        "previewPostId": "77350703",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.0.json",
+        "versionUpdatePostId": "77363392"
+      },
+      "status": "published"
+    },
+    "gi-000293": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_77797176.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:77797176"
+        ],
+        "featured.fourStar": [
+          "miyoushe:77797176"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:77363392",
+          "miyoushe:77910704"
+        ],
+        "names.zh-CN": [
+          "miyoushe:77797176"
+        ],
+        "phase": [
+          "miyoushe:77910704"
+        ],
+        "poolType": [
+          "miyoushe:77797176"
+        ],
+        "regions.endAt": [
+          "miyoushe:77797176:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:77797176"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000293",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77797176.json",
+        "noticePostId": "77797176",
+        "noticeSourceKey": "77797176",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.0-phase-2.json",
+        "previewPostId": "77910704",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.0.json",
+        "versionUpdatePostId": "77363392"
+      },
+      "status": "published"
+    },
+    "gi-000294": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_77797177.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:77797177"
+        ],
+        "featured.fourStar": [
+          "miyoushe:77797177"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:77363392",
+          "miyoushe:77910704"
+        ],
+        "names.zh-CN": [
+          "miyoushe:77797177"
+        ],
+        "phase": [
+          "miyoushe:77910704"
+        ],
+        "poolType": [
+          "miyoushe:77797177"
+        ],
+        "regions.endAt": [
+          "miyoushe:77797177:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:77797177"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000294",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77797177.json",
+        "noticePostId": "77797177",
+        "noticeSourceKey": "77797177",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.0-phase-2.json",
+        "previewPostId": "77910704",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.0.json",
+        "versionUpdatePostId": "77363392"
+      },
+      "status": "published"
+    },
+    "gi-000295": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_77797178.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:77797178"
+        ],
+        "featured.fourStar": [
+          "miyoushe:77797178"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:77363392",
+          "miyoushe:77910704"
+        ],
+        "names.zh-CN": [
+          "miyoushe:77797178"
+        ],
+        "phase": [
+          "miyoushe:77910704"
+        ],
+        "poolType": [
+          "miyoushe:77797178"
+        ],
+        "regions.endAt": [
+          "miyoushe:77797178:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:77797178"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000295",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77797178.json",
+        "noticePostId": "77797178",
+        "noticeSourceKey": "77797178",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.0-phase-2.json",
+        "previewPostId": "77910704",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.0.json",
+        "versionUpdatePostId": "77363392"
+      },
+      "status": "published"
+    },
+    "gi-000296": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_78299710.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:78299710"
+        ],
+        "featured.fourStar": [
+          "miyoushe:78299710"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:78335167",
+          "miyoushe:78324485"
+        ],
+        "names.zh-CN": [
+          "miyoushe:78299710"
+        ],
+        "phase": [
+          "miyoushe:78324485"
+        ],
+        "poolType": [
+          "miyoushe:78299710"
+        ],
+        "regions.endAt": [
+          "miyoushe:78299710:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:78335167",
+          "miyoushe:78324485",
+          "miyoushe:78299710"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000296",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78299710.json",
+        "noticePostId": "78299710",
+        "noticeSourceKey": "78299710",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.1-phase-1.json",
+        "previewPostId": "78324485",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.1.json",
+        "versionUpdatePostId": "78335167"
+      },
+      "status": "published"
+    },
+    "gi-000297": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_78299709.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:78299709"
+        ],
+        "featured.fourStar": [
+          "miyoushe:78299709"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:78335167",
+          "miyoushe:78324485"
+        ],
+        "names.zh-CN": [
+          "miyoushe:78299709"
+        ],
+        "phase": [
+          "miyoushe:78324485"
+        ],
+        "poolType": [
+          "miyoushe:78299709"
+        ],
+        "regions.endAt": [
+          "miyoushe:78299709:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:78335167",
+          "miyoushe:78324485",
+          "miyoushe:78299709"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000297",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78299709.json",
+        "noticePostId": "78299709",
+        "noticeSourceKey": "78299709",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.1-phase-1.json",
+        "previewPostId": "78324485",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.1.json",
+        "versionUpdatePostId": "78335167"
+      },
+      "status": "published"
+    },
+    "gi-000298": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_78299708.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:78299708"
+        ],
+        "featured.fourStar": [
+          "miyoushe:78299708"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:78335167",
+          "miyoushe:78324485"
+        ],
+        "names.zh-CN": [
+          "miyoushe:78299708"
+        ],
+        "phase": [
+          "miyoushe:78324485"
+        ],
+        "poolType": [
+          "miyoushe:78299708"
+        ],
+        "regions.endAt": [
+          "miyoushe:78299708:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:78335167",
+          "miyoushe:78324485",
+          "miyoushe:78299708"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000298",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78299708.json",
+        "noticePostId": "78299708",
+        "noticeSourceKey": "78299708",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.1-phase-1.json",
+        "previewPostId": "78324485",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.1.json",
+        "versionUpdatePostId": "78335167"
+      },
+      "status": "published"
+    },
+    "gi-000299": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_78782589.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:78782589"
+        ],
+        "featured.fourStar": [
+          "miyoushe:78782589"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:78335167",
+          "miyoushe:78879329"
+        ],
+        "names.zh-CN": [
+          "miyoushe:78782589"
+        ],
+        "phase": [
+          "miyoushe:78879329"
+        ],
+        "poolType": [
+          "miyoushe:78782589"
+        ],
+        "regions.endAt": [
+          "miyoushe:78782589:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:78782589"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000299",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78782589.json",
+        "noticePostId": "78782589",
+        "noticeSourceKey": "78782589",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.1-phase-2.json",
+        "previewPostId": "78879329",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.1.json",
+        "versionUpdatePostId": "78335167"
+      },
+      "status": "published"
+    },
+    "gi-000300": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_78782590.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:78782590"
+        ],
+        "featured.fourStar": [
+          "miyoushe:78782590"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:78335167",
+          "miyoushe:78879329"
+        ],
+        "names.zh-CN": [
+          "miyoushe:78782590"
+        ],
+        "phase": [
+          "miyoushe:78879329"
+        ],
+        "poolType": [
+          "miyoushe:78782590"
+        ],
+        "regions.endAt": [
+          "miyoushe:78782590:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:78782590"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000300",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78782590.json",
+        "noticePostId": "78782590",
+        "noticeSourceKey": "78782590",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.1-phase-2.json",
+        "previewPostId": "78879329",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.1.json",
+        "versionUpdatePostId": "78335167"
+      },
+      "status": "published"
+    },
+    "gi-000301": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_78782593.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:78782593"
+        ],
+        "featured.fourStar": [
+          "miyoushe:78782593"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:78335167",
+          "miyoushe:78879329"
+        ],
+        "names.zh-CN": [
+          "miyoushe:78782593"
+        ],
+        "phase": [
+          "miyoushe:78879329"
+        ],
+        "poolType": [
+          "miyoushe:78782593"
+        ],
+        "regions.endAt": [
+          "miyoushe:78782593:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:78782593"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000301",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78782593.json",
+        "noticePostId": "78782593",
+        "noticeSourceKey": "78782593",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.1-phase-2.json",
+        "previewPostId": "78879329",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.1.json",
+        "versionUpdatePostId": "78335167"
+      },
+      "status": "published"
+    },
+    "gi-000302": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_79287292.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:79287292"
+        ],
+        "featured.fourStar": [
+          "miyoushe:79287292"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:79322732",
+          "miyoushe:79312623"
+        ],
+        "names.zh-CN": [
+          "miyoushe:79287292"
+        ],
+        "phase": [
+          "miyoushe:79312623"
+        ],
+        "poolType": [
+          "miyoushe:79287292"
+        ],
+        "regions.endAt": [
+          "miyoushe:79287292:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:79322732",
+          "miyoushe:79312623",
+          "miyoushe:79287292"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000302",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287292.json",
+        "noticePostId": "79287292",
+        "noticeSourceKey": "79287292",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
+        "previewPostId": "79312623",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
+        "versionUpdatePostId": "79322732"
+      },
+      "status": "published",
+      "webstatic": {
+        "detailsReadyAt": "2026-11-15T10:04:37+08:00",
+        "firstSeenAt": "2026-11-15T10:04:37+08:00",
+        "gachaIds": [
+          "1cfa755cb07057ea689c6a96abb8ffad9c93c789"
+        ],
+        "role": "independent_comparison_only",
+        "unique": true
+      }
+    },
+    "gi-000303": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_79287291.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "featured.fiveStar": [
+          "miyoushe:79287291"
+        ],
+        "featured.fourStar": [
+          "miyoushe:79287291"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:79322732",
+          "miyoushe:79312623"
+        ],
+        "names.zh-CN": [
+          "miyoushe:79287291"
+        ],
+        "phase": [
+          "miyoushe:79312623"
+        ],
+        "poolType": [
+          "miyoushe:79287291"
+        ],
+        "regions.endAt": [
+          "miyoushe:79287291:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:79322732",
+          "miyoushe:79312623",
+          "miyoushe:79287291"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000303",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287291.json",
+        "noticePostId": "79287291",
+        "noticeSourceKey": "79287291",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
+        "previewPostId": "79312623",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
+        "versionUpdatePostId": "79322732"
+      },
+      "status": "published",
+      "webstatic": {
+        "detailsReadyAt": "2026-11-15T10:04:37+08:00",
+        "firstSeenAt": "2026-11-15T10:04:37+08:00",
+        "gachaIds": [
+          "b6652439025f43524b618c0b04db2dbdffa6dd8e"
+        ],
+        "role": "independent_comparison_only",
+        "unique": true
+      }
+    },
+    "gi-000304": {
+      "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_79287289.json",
+      "candidateReadyObservedAt": "2026-11-15T10:04:40+08:00",
+      "fieldSources": {
+        "fatePointLimit": [
+          "verified-current-project-rule"
+        ],
+        "featured.fiveStar": [
+          "miyoushe:79287289"
+        ],
+        "featured.fourStar": [
+          "miyoushe:79287289"
+        ],
+        "featured.itemId": [
+          "official-item-mapping"
+        ],
+        "gachaTypes.raw": [
+          "pool-type-rule"
+        ],
+        "gachaTypes.uigf": [
+          "uigf-rule"
+        ],
+        "gameVersion": [
+          "miyoushe:79322732",
+          "miyoushe:79312623"
+        ],
+        "names.zh-CN": [
+          "miyoushe:79287289"
+        ],
+        "phase": [
+          "miyoushe:79312623"
+        ],
+        "poolType": [
+          "miyoushe:79287289"
+        ],
+        "regions.endAt": [
+          "miyoushe:79287289:image-ocr"
+        ],
+        "regions.startAt": [
+          "miyoushe:79322732",
+          "miyoushe:79312623",
+          "miyoushe:79287289"
+        ]
+      },
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "linkedV1Id": "gi-000304",
+      "sourceFirstObservedAt": {
+        "version_update": "2026-11-15T10:04:40+08:00",
+        "wish_notice": "2026-11-15T10:04:40+08:00",
+        "wish_preview": "2026-11-15T10:04:40+08:00"
+      },
+      "sourceRefs": {
+        "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287289.json",
+        "noticePostId": "79287289",
+        "noticeSourceKey": "79287289",
+        "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
+        "previewPostId": "79312623",
+        "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
+        "versionUpdatePostId": "79322732"
+      },
+      "status": "published",
+      "webstatic": {
+        "detailsReadyAt": "2026-11-15T10:04:37+08:00",
+        "firstSeenAt": "2026-11-15T10:04:37+08:00",
+        "gachaIds": [
+          "b7a91fed34c3f23b6070c42517c21d1ed6d5c330"
+        ],
+        "role": "independent_comparison_only",
+        "unique": true
+      }
+    }
+  },
+  "format": "genshin-source-observations-v1",
+  "sources": {
+    "miyoushe:68312649": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_68312649.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-09-08T12:00:16+08:00"
+    },
+    "miyoushe:68312650": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_68312650.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-09-08T12:00:17+08:00"
+    },
+    "miyoushe:68312651": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_68312651.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-09-08T12:00:18+08:00"
+    },
+    "miyoushe:68312655": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "selectable",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_68312655.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-09-08T12:00:20+08:00"
+    },
+    "miyoushe:68360721": {
+      "availableFields": [
+        "maintenance",
+        "newCharacters",
+        "newWeapons",
+        "version"
+      ],
+      "file": "data/derived/genshin/version-updates/version-update_zh-CN_月之一.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "version_update",
+      "sourcePublishedAt": "2025-09-10T07:00:16+08:00"
+    },
+    "miyoushe:68917810": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_68917810.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-09-25T16:00:16+08:00"
+    },
+    "miyoushe:68917811": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_68917811.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-09-25T16:00:17+08:00"
+    },
+    "miyoushe:68917812": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_68917812.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-09-25T16:00:18+08:00"
+    },
+    "miyoushe:69784376": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之二-phase-1.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2025-10-20T10:30:24+08:00"
+    },
+    "miyoushe:69786044": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_69786044.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-10-20T12:00:16+08:00"
+    },
+    "miyoushe:69786045": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_69786045.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-10-20T12:00:18+08:00"
+    },
+    "miyoushe:69786055": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_69786055.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-10-20T12:00:25+08:00"
+    },
+    "miyoushe:69831610": {
+      "availableFields": [
+        "maintenance",
+        "newCharacters",
+        "newWeapons",
+        "version"
+      ],
+      "file": "data/derived/genshin/version-updates/version-update_zh-CN_月之二.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "version_update",
+      "sourcePublishedAt": "2025-10-22T07:00:18+08:00"
+    },
+    "miyoushe:70352225": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_70352225.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-11-06T16:00:19+08:00"
+    },
+    "miyoushe:70352227": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_70352227.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-11-06T16:00:20+08:00"
+    },
+    "miyoushe:70352228": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_70352228.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-11-06T16:00:21+08:00"
+    },
+    "miyoushe:70352230": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之二-phase-2.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2025-11-06T16:00:22+08:00"
+    },
+    "miyoushe:71075615": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71075615.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-12-01T12:00:24+08:00"
+    },
+    "miyoushe:71075617": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71075617.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-12-01T12:00:26+08:00"
+    },
+    "miyoushe:71075619": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71075619.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-12-01T12:00:27+08:00"
+    },
+    "miyoushe:71075621": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之三-phase-1.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2025-12-01T12:00:29+08:00"
+    },
+    "miyoushe:71124325": {
+      "availableFields": [
+        "maintenance",
+        "newCharacters",
+        "newWeapons",
+        "version"
+      ],
+      "file": "data/derived/genshin/version-updates/version-update_zh-CN_月之三.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "version_update",
+      "sourcePublishedAt": "2025-12-03T07:00:15+08:00"
+    },
+    "miyoushe:71557457": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71557457.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-12-18T16:00:18+08:00"
+    },
+    "miyoushe:71557460": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71557460.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-12-18T16:00:19+08:00"
+    },
+    "miyoushe:71557463": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_71557463.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2025-12-18T16:00:21+08:00"
+    },
+    "miyoushe:71557465": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之三-phase-2.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2025-12-18T16:00:22+08:00"
+    },
+    "miyoushe:72261667": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261667.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-01-12T12:00:23+08:00"
+    },
+    "miyoushe:72261668": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261668.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-01-12T12:00:24+08:00"
+    },
+    "miyoushe:72261669": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261669.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-01-12T12:00:25+08:00"
+    },
+    "miyoushe:72261670": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261670.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-01-12T12:00:26+08:00"
+    },
+    "miyoushe:72261671": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261671.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-01-12T12:00:27+08:00"
+    },
+    "miyoushe:72261672": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_72261672.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-01-12T12:00:29+08:00"
+    },
+    "miyoushe:72287317": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之四-phase-1.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2026-01-13T18:00:11+08:00"
+    },
+    "miyoushe:72299859": {
+      "availableFields": [
+        "maintenance",
+        "newCharacters",
+        "newWeapons",
+        "version"
+      ],
+      "file": "data/derived/genshin/version-updates/version-update_zh-CN_月之四.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "version_update",
+      "sourcePublishedAt": "2026-01-14T07:00:20+08:00"
+    },
+    "miyoushe:72868817": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之四-phase-2.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2026-02-02T12:05:10+08:00"
+    },
+    "miyoushe:73475916": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73475916.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-02-23T12:00:11+08:00"
+    },
+    "miyoushe:73475917": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73475917.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-02-23T12:00:13+08:00"
+    },
+    "miyoushe:73475918": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73475918.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-02-23T12:00:14+08:00"
+    },
+    "miyoushe:73475919": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "selectable",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73475919.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-02-23T12:00:15+08:00"
+    },
+    "miyoushe:73483205": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之五-phase-1.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2026-02-23T18:05:09+08:00"
+    },
+    "miyoushe:73521381": {
+      "availableFields": [
+        "maintenance",
+        "newCharacters",
+        "newWeapons",
+        "version"
+      ],
+      "file": "data/derived/genshin/version-updates/version-update_zh-CN_月之五.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "version_update",
+      "sourcePublishedAt": "2026-02-25T07:00:12+08:00"
+    },
+    "miyoushe:73885911": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73885911.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-03-12T16:00:14+08:00"
+    },
+    "miyoushe:73885912": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73885912.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-03-12T16:00:15+08:00"
+    },
+    "miyoushe:73885913": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_73885913.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-03-12T16:00:17+08:00"
+    },
+    "miyoushe:73969586": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之五-phase-2.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2026-03-16T12:05:10+08:00"
+    },
+    "miyoushe:74412291": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_74412291.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-04-06T12:00:13+08:00"
+    },
+    "miyoushe:74412295": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_74412295.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-04-06T12:00:14+08:00"
+    },
+    "miyoushe:74412299": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_74412299.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-04-06T12:00:15+08:00"
+    },
+    "miyoushe:74418358": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之六-phase-1.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2026-04-06T18:00:12+08:00"
+    },
+    "miyoushe:74446206": {
+      "availableFields": [
+        "maintenance",
+        "newCharacters",
+        "newWeapons",
+        "version"
+      ],
+      "file": "data/derived/genshin/version-updates/version-update_zh-CN_月之六.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "version_update",
+      "sourcePublishedAt": "2026-04-08T07:00:12+08:00"
+    },
+    "miyoushe:74965073": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之六-phase-2.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2026-04-27T12:00:11+08:00"
+    },
+    "miyoushe:75425444": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之七-phase-1.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2026-05-19T12:05:11+08:00"
+    },
+    "miyoushe:75440954": {
+      "availableFields": [
+        "maintenance",
+        "newCharacters",
+        "newWeapons",
+        "version"
+      ],
+      "file": "data/derived/genshin/version-updates/version-update_zh-CN_月之七.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "version_update",
+      "sourcePublishedAt": "2026-05-20T07:00:12+08:00"
+    },
+    "miyoushe:75443617": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75443617.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-05-20T10:17:31+08:00"
+    },
+    "miyoushe:75443619": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75443619.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-05-20T10:17:40+08:00"
+    },
+    "miyoushe:75443624": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75443624.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-05-20T10:17:54+08:00"
+    },
+    "miyoushe:75781475": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75781475.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-06-03T12:01:11+08:00"
+    },
+    "miyoushe:75781476": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75781476.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-06-03T12:01:12+08:00"
+    },
+    "miyoushe:75781477": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_75781477.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-06-03T12:01:13+08:00"
+    },
+    "miyoushe:75880451": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之七-phase-2.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2026-06-08T12:05:11+08:00"
+    },
+    "miyoushe:76308871": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "selectable",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76308871.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-06-29T12:00:21+08:00"
+    },
+    "miyoushe:76308874": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76308874.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-06-29T12:00:22+08:00"
+    },
+    "miyoushe:76308876": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76308876.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-06-29T12:00:23+08:00"
+    },
+    "miyoushe:76308879": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76308879.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-06-29T12:00:24+08:00"
+    },
+    "miyoushe:76328614": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之八-phase-1.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2026-06-30T12:05:09+08:00"
+    },
+    "miyoushe:76345546": {
+      "availableFields": [
+        "maintenance",
+        "newCharacters",
+        "newWeapons",
+        "version"
+      ],
+      "file": "data/derived/genshin/version-updates/version-update_zh-CN_月之八.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "version_update",
+      "sourcePublishedAt": "2026-07-01T07:00:10+08:00"
+    },
+    "miyoushe:76723985": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76723985.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-07-16T16:00:10+08:00"
+    },
+    "miyoushe:76723988": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76723988.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-07-16T16:00:12+08:00"
+    },
+    "miyoushe:76723989": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_76723989.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-07-16T16:00:13+08:00"
+    },
+    "miyoushe:76834102": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_月之八-phase-2.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2026-07-20T18:00:15+08:00"
+    },
+    "miyoushe:77322269": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77322269.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-08-10T12:00:12+08:00"
+    },
+    "miyoushe:77322273": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77322273.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-08-10T12:00:14+08:00"
+    },
+    "miyoushe:77322275": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77322275.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-08-10T12:00:15+08:00"
+    },
+    "miyoushe:77350703": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.0-phase-1.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2026-08-11T18:00:11+08:00"
+    },
+    "miyoushe:77363392": {
+      "availableFields": [
+        "maintenance",
+        "newCharacters",
+        "newWeapons",
+        "version"
+      ],
+      "file": "data/derived/genshin/version-updates/version-update_zh-CN_7.0.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "version_update",
+      "sourcePublishedAt": "2026-08-12T07:00:16+08:00"
+    },
+    "miyoushe:77797176": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77797176.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-08-27T16:00:12+08:00"
+    },
+    "miyoushe:77797177": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77797177.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-08-27T16:00:13+08:00"
+    },
+    "miyoushe:77797178": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_77797178.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-08-27T16:00:15+08:00"
+    },
+    "miyoushe:77910704": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.0-phase-2.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2026-09-01T12:00:13+08:00"
+    },
+    "miyoushe:78299708": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78299708.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-09-21T12:00:25+08:00"
+    },
+    "miyoushe:78299709": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78299709.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-09-21T12:00:26+08:00"
+    },
+    "miyoushe:78299710": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78299710.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-09-21T12:00:27+08:00"
+    },
+    "miyoushe:78324485": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.1-phase-1.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2026-09-22T18:00:12+08:00"
+    },
+    "miyoushe:78335167": {
+      "availableFields": [
+        "maintenance",
+        "newCharacters",
+        "newWeapons",
+        "version"
+      ],
+      "file": "data/derived/genshin/version-updates/version-update_zh-CN_7.1.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "version_update",
+      "sourcePublishedAt": "2026-09-23T07:00:18+08:00"
+    },
+    "miyoushe:78782589": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78782589.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-10-08T16:00:12+08:00"
+    },
+    "miyoushe:78782590": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78782590.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-10-08T16:00:13+08:00"
+    },
+    "miyoushe:78782593": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_78782593.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-10-08T16:00:14+08:00"
+    },
+    "miyoushe:78879329": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.1-phase-2.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2026-10-13T12:05:09+08:00"
+    },
+    "miyoushe:79287289": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287289.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-11-02T12:00:23+08:00"
+    },
+    "miyoushe:79287291": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287291.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-11-02T12:00:25+08:00"
+    },
+    "miyoushe:79287292": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79287292.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-11-02T12:00:26+08:00"
+    },
+    "miyoushe:79312623": {
+      "availableFields": [
+        "phase",
+        "time",
+        "up",
+        "version"
+      ],
+      "file": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-1.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "wish_preview",
+      "sourcePublishedAt": "2026-11-03T18:00:11+08:00"
+    },
+    "miyoushe:79322732": {
+      "availableFields": [
+        "maintenance",
+        "newCharacters",
+        "newWeapons",
+        "version"
+      ],
+      "file": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
+      "firstObservedAt": "2026-11-15T10:04:40+08:00",
+      "kind": "version_update",
+      "sourcePublishedAt": "2026-11-04T07:00:11+08:00"
+    }
+  }
+}

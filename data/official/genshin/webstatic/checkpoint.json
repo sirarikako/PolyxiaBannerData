@@ -1,0 +1,67 @@
+{
+  "banners": {
+    "0741a5b638d326614555c5538323b70e2a1c8d28": {
+      "beginTime": "2026-11-04 07:00:00",
+      "detailChangedAt": "2026-11-15T10:04:37+08:00",
+      "detailFirstSeenAt": "2026-11-15T10:04:37+08:00",
+      "detailPath": "data/official/genshin/webstatic/details/0741a5b638d326614555c5538323b70e2a1c8d28.json",
+      "detailReadyAt": "2026-11-15T10:04:37+08:00",
+      "detailSha256": "24f1fe34221182dd821de8e292ca7531a6bc9a3c452835df6bf3d85d5008d4b1",
+      "detailUrl": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/0741a5b638d326614555c5538323b70e2a1c8d28/zh-cn.json",
+      "endTime": "2027-12-15 15:59:59",
+      "firstSeenAt": "2026-11-15T10:04:37+08:00",
+      "gachaType": 200,
+      "opGachaType": 200,
+      "title": "「奔行<color=#757acdFF>世间</color>」常驻祈愿"
+    },
+    "1cfa755cb07057ea689c6a96abb8ffad9c93c789": {
+      "beginTime": "2026-11-04 07:00:00",
+      "detailChangedAt": "2026-11-15T10:04:37+08:00",
+      "detailFirstSeenAt": "2026-11-15T10:04:37+08:00",
+      "detailPath": "data/official/genshin/webstatic/details/1cfa755cb07057ea689c6a96abb8ffad9c93c789.json",
+      "detailReadyAt": "2026-11-15T10:04:37+08:00",
+      "detailSha256": "0a3c7c5938d37a036ff16597273a56335869e626be0cb8554bd07896e5cbec63",
+      "detailUrl": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/1cfa755cb07057ea689c6a96abb8ffad9c93c789/zh-cn.json",
+      "endTime": "2026-11-24 17:59:00",
+      "firstSeenAt": "2026-11-15T10:04:37+08:00",
+      "gachaType": 301,
+      "opGachaType": 301,
+      "title": "「<color=#6957C2FF>万序</color>衍盈」活动祈愿"
+    },
+    "b6652439025f43524b618c0b04db2dbdffa6dd8e": {
+      "beginTime": "2026-11-04 07:00:00",
+      "detailChangedAt": "2026-11-15T10:04:37+08:00",
+      "detailFirstSeenAt": "2026-11-15T10:04:37+08:00",
+      "detailPath": "data/official/genshin/webstatic/details/b6652439025f43524b618c0b04db2dbdffa6dd8e.json",
+      "detailReadyAt": "2026-11-15T10:04:37+08:00",
+      "detailSha256": "aa2956136b74d6056fa935fa0424978c0218e29d05497bb28235751445d406f7",
+      "detailUrl": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/b6652439025f43524b618c0b04db2dbdffa6dd8e/zh-cn.json",
+      "endTime": "2026-11-24 17:59:00",
+      "firstSeenAt": "2026-11-15T10:04:37+08:00",
+      "gachaType": 400,
+      "opGachaType": 400,
+      "title": "「<color=#498fccFF>众水</color>的颂诗」活动祈愿"
+    },
+    "b7a91fed34c3f23b6070c42517c21d1ed6d5c330": {
+      "beginTime": "2026-11-04 07:00:00",
+      "detailChangedAt": "2026-11-15T10:04:37+08:00",
+      "detailFirstSeenAt": "2026-11-15T10:04:37+08:00",
+      "detailPath": "data/official/genshin/webstatic/details/b7a91fed34c3f23b6070c42517c21d1ed6d5c330.json",
+      "detailReadyAt": "2026-11-15T10:04:37+08:00",
+      "detailSha256": "dd8d793cca3d8738dc86ee6bf8177782ffe394101b1eda360be1fdd2f80f61d8",
+      "detailUrl": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/b7a91fed34c3f23b6070c42517c21d1ed6d5c330/zh-cn.json",
+      "endTime": "2026-11-24 17:59:00",
+      "firstSeenAt": "2026-11-15T10:04:37+08:00",
+      "gachaType": 302,
+      "opGachaType": 302,
+      "title": "「<color=#EF7C1AFF>神铸</color>赋形」活动祈愿"
+    }
+  },
+  "format": "genshin-webstatic-checkpoint-v1",
+  "list": {
+    "changedAt": "2026-11-15T10:04:37+08:00",
+    "firstSeenAt": "2026-11-15T10:04:37+08:00",
+    "sha256": "21c6def60c03e34ca825a1901528eca036701e5f2cae7d4c399adeb3c5edc924",
+    "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/gacha/list.json"
+  }
+}

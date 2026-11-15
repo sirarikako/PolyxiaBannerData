@@ -1,0 +1,40 @@
+{
+  "data": {
+    "list": [
+      {
+        "begin_time": "2026-11-04 07:00:00",
+        "end_time": "2027-12-15 15:59:59",
+        "gacha_id": "0741a5b638d326614555c5538323b70e2a1c8d28",
+        "gacha_name": "常驻",
+        "gacha_type": 200,
+        "op_gacha_type": 200
+      },
+      {
+        "begin_time": "2026-11-04 07:00:00",
+        "end_time": "2026-11-24 17:59:00",
+        "gacha_id": "1cfa755cb07057ea689c6a96abb8ffad9c93c789",
+        "gacha_name": "角色活动",
+        "gacha_type": 301,
+        "op_gacha_type": 301
+      },
+      {
+        "begin_time": "2026-11-04 07:00:00",
+        "end_time": "2026-11-24 17:59:00",
+        "gacha_id": "b6652439025f43524b618c0b04db2dbdffa6dd8e",
+        "gacha_name": "角色活动-2",
+        "gacha_type": 400,
+        "op_gacha_type": 400
+      },
+      {
+        "begin_time": "2026-11-04 07:00:00",
+        "end_time": "2026-11-24 17:59:00",
+        "gacha_id": "b7a91fed34c3f23b6070c42517c21d1ed6d5c330",
+        "gacha_name": "武器活动",
+        "gacha_type": 302,
+        "op_gacha_type": 302
+      }
+    ]
+  },
+  "message": "ok",
+  "retcode": 0
+}
