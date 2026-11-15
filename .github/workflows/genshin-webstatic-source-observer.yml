@@ -1,0 +1,70 @@
+# Production candidate. Private repo stays disabled; install this workflow
+# only in PolyxiaBannerData after tests in the private development repo pass.
+name: Genshin Webstatic source observer
+on:
+  schedule:
+    - cron: '17 22 * * *' # Beijing 06:17
+    - cron: '7 6 * * *'   # Beijing 14:07
+    - cron: '7 10 * * *'  # Beijing 18:07
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - '3-2_原神每日V1数据自动发布'
+    types: [completed]
+permissions:
+  contents: write
+concurrency:
+  group: genshin-webstatic-source-observer-main
+  cancel-in-progress: false
+jobs:
+  observe:
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      (github.event_name != 'workflow_run' ||
+       (github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.head_branch == 'main' &&
+        github.event.workflow_run.head_repository.full_name == github.repository))
+    runs-on: ubuntu-26.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Official list and details archive (partial errors allowed)
+        id: harvest
+        shell: bash
+        run: |
+          set +e
+          python -m scripts.collect.collect_genshin_webstatic > /tmp/webstatic-observation.json
+          code=$?
+          cat /tmp/webstatic-observation.json
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Record first observations and source-by-field provenance
+        shell: bash
+        run: python -m scripts.release.generate_genshin_source_report
+      - name: Save official snapshots and source observations together
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -A -- data/
+          if git diff --cached --quiet; then
+            echo 'No official data or observation changes.' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m 'Record Webstatic official snapshot and source observations'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
+      - name: Record partial official API failure without disturbing V1
+        if: steps.harvest.outputs.code != '0'
+        shell: bash
+        run: |
+          echo "::warning::Webstatic detail collection was incomplete; snapshots were preserved."
+          exit 1
