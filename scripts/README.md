@@ -65,3 +65,13 @@ Public `main` 不包含 `tests/`、`requirements-dev.txt` 或测试用 Actions�
 新 Action 不替代 3-1 公告扫描，也不参与 3-2 的 V1 数据组装。它保存 `data/official/genshin/webstatic/` 下的官方列表、简体中文详情及变更历史，并生成 `data/BANNER_SOURCE_STATUS.md` 和 `data/derived/genshin/source-traces/observations.json`。
 
 3-2 在新增／人工修订 V1 成功后，同一提交写入 `data/derived/genshin/source-traces/publication-events.json`，记录每个新卡池实际组装字段的来源（不将只参与比对的 Webstatic 标记成发布来源）。采集器的首次观测时间不代表官方发布时间。具体规则见 [Webstatic 来源追踪说明](../docs/GENSHIN_WEBSTATIC_SOURCES.md)。
+
+
+## P3 原神官方 Webstatic 参与候选补全
+
+3-1 在现有公告、预告、版本和时间证据已经关联后，读取 1-2 已归档的官方详情。
+仅对能够唯一匹配、完整且无冲突的普通角色/武器池补全缺失的池名或 UP 名单。
+不额外请求 API，不跳过 OCR/人工复核，不处理特殊池/版本/时间，已有公告值不覆盖。
+实际补全字段会进入候选 webstaticAugmentation、来源追踪和发布审计；
+冲突仅记录在 v1-readiness 的 webstatic 状态与 warning 中，保留原发布规则。
+细节见 docs/GENSHIN_WEBSTATIC_SOURCES.md。
