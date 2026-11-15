@@ -1,0 +1,70 @@
+# 私有开发仓库中的生产候选，不放在 .github/workflows 下执行。
+# 已确认基础路径与提供的官方列表/详情 URL 对应；上线前仍需真实联网采集校验内容。
+name: 1-3_星铁官方卡池数据每日自动采集
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '27 22 * * *' # 北京 06:27
+    - cron: '17 6 * * *'  # 北京 14:17
+    - cron: '17 10 * * *' # 北京 18:17
+  workflow_run:
+    workflows:
+      - '4-2_星铁每日V1数据自动发布'
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: starrail-webstatic-source-observer-main
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      github.repository == 'sirarikako/PolyxiaBannerData' &&
+      (github.event_name != 'workflow_run' ||
+       (github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.head_branch == 'main' &&
+        github.event.workflow_run.head_repository.full_name == github.repository))
+    runs-on: ubuntu-26.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: 获取官方卡池信息（部分详情失败仍保留有效快照）
+        id: collect
+        shell: bash
+        run: |
+          set +e
+          python -m scripts.collect.collect_starrail_webstatic > /tmp/starrail-webstatic-report.json
+          rc=$?
+          cat /tmp/starrail-webstatic-report.json
+          echo "code=$rc" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: 提交官方快照与首次观测数据
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -A -- data/official/starrail/webstatic/
+          if git diff --cached --quiet; then
+            echo "本次官方数据无变化。" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m '更新星铁官方卡池快照和观测记录'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
+      - name: 采集异常通知（不影响 V1）
+        if: steps.collect.outputs.code != '0'
+        run: |
+          echo "::warning::部分或全部星铁官方卡池详情获取失败；已尽可能保留旧快照。"
+          exit 1
