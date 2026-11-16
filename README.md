@@ -10,36 +10,25 @@ Public, versioned gacha-banner metadata for Genshin Impact and Honkai: Star Rail
 
 ## 数据接口 / Public data
 
-| 数据 | 用途 |
-| --- | --- |
-| [Manifest](public/v1/manifest.json) | 文件清单与校验信息 |
-| [原神 v1](public/v1/genshin.json) | 原神卡池 |
-| [星铁 v1](public/v1/starrail.json) | 星铁卡池 |
-| [公告识别状态一览](data/BANNER_STATUS.md) | 按版本查看抓取、解析与发布状态（独立每日更新） |
-| [原神数据来源追踪](data/BANNER_SOURCE_STATUS.md) | Webstatic 官方接口首次观测、公告来源与 V1 发布记录 |
-| [JSON Schema](schemas/public/v1/) | v1 数据格式 |
-| [物品 ID 对照表](public/item-mappings/README.md) | 按游戏与语言查询物品名称和 ID |
+以下为对外提供的正式数据。卡池接口版本为 `v1`，客户端可通过 GitHub Raw 直接读取 JSON。
 
-GitHub Raw 可直接读取：
-- [Manifest](https://raw.githubusercontent.com/sirarikako/PolyxiaBannerData/main/public/v1/manifest.json)
-- [Genshin](https://raw.githubusercontent.com/sirarikako/PolyxiaBannerData/main/public/v1/genshin.json)
-- [Star Rail](https://raw.githubusercontent.com/sirarikako/PolyxiaBannerData/main/public/v1/starrail.json)
+| 数据 | 接口或文档 | 用途 |
+| --- | --- | --- |
+| 发布清单（Manifest） | [manifest.json](https://raw.githubusercontent.com/sirarikako/PolyxiaBannerData/main/public/v1/manifest.json) | 数据生成时间、游戏文件路径及 SHA-256 校验信息 |
+| 原神卡池 | [genshin.json](https://raw.githubusercontent.com/sirarikako/PolyxiaBannerData/main/public/v1/genshin.json) | 原神祈愿卡池的类型、UP、开放时间等元数据 |
+| 星铁卡池 | [starrail.json](https://raw.githubusercontent.com/sirarikako/PolyxiaBannerData/main/public/v1/starrail.json) | 星铁跃迁卡池的类型、UP、开放时间等元数据 |
+| 物品 ID 对照表 | [文件列表与格式说明](public/item-mappings/README.md) | 原神／星铁物品名称与 ItemID 的对应关系，支持简中、繁中、英文、日文 |
+| JSON Schema | [卡池数据](schemas/public/v1/banner-data.schema.json) · [Manifest](schemas/public/v1/manifest.schema.json) | 对接时校验 JSON 数据格式 |
 
-客户端应固定支持的 API 版本（如 `v1`），并按 Manifest 的记录使用文件。
+完整字段、卡池类型与空值含义参见 [v1 数据使用说明](public/v1/README.md)。
 
-## 生产与维护 / Production
+客户端建议固定使用所需版本（例如 `v1`），先读取 Manifest，再按其 `games.*.path` 获取对应游戏文件，并通过 `sha256` 判断数据是否发生变化。
 
-本仓库**独立运行**公告采集、解析、卡池数据发布、物品 ID 更新和 Manifest 校验，不依赖其他仓库同步生成的数据。
+## 数据更新 / Maintenance
 
-- `.github/workflows/`：`0` 版本更新手动总控，`1-1` ItemID，`1-2/1-3` 原神／星铁官方卡池数据独立采集，`2-1` Manifest，`3-1/3-2` 原神，`4-1/4-2` 星铁，`5-1` 状态总览。
-- `scripts/`：采集、OCR、候选整合、校验与发布代码；参见[生产脚本说明](scripts/README.md)。
-- `data/derived/`：结构化公告、增量 checkpoint、候选和诊断数据。
-- `manual/`：人工补充、核对及版本修正。
-- `public/` 与 `schemas/public/`：供客户端使用的正式数据及其格式定义。
+本仓库使用 GitHub Actions 采集、校验并发布正式数据。对外服务以 `public/` 目录中的文件及 `schemas/public/` 中的格式定义为准；其余处理过程数据不作为稳定接口。
 
-**开发与回归测试在私有仓库进行；验证通过后将代码和工作流变更部署到本仓库。** 本仓库的生产 Actions 仍会执行正式数据校验和发布安全检查。
-
-完整官方公告原文与 OCR 图片仅在当次 GitHub Actions Runner 临时使用，不提交本仓库，也不上传公开 Artifact。长期保留的中间结果位于 `data/derived/`。
+开发与回归测试在私有仓库进行，验证通过后再部署至本公开仓库。
 
 ## 使用说明 / Notes
 
