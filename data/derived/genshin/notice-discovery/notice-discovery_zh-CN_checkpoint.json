@@ -5,6 +5,11 @@
   "feeds": {
     "1": {
       "anchors": [
+        "79660855",
+        "79660853",
+        "79660850",
+        "79660849",
+        "79658241",
         "79640409",
         "79448861",
         "79324664",
@@ -19,18 +24,15 @@
         "79287288",
         "79287287",
         "79287286",
-        "79287284",
-        "79287283",
-        "79287282",
-        "79287281",
-        "79287279",
-        "79286398"
+        "79287284"
       ],
-      "lastCheckedAt": "2026-11-18T23:53:57+08:00",
+      "lastCheckedAt": "2026-11-19T23:48:53+08:00",
       "initializedOnly": false
     },
     "3": {
       "anchors": [
+        "79660959",
+        "79658234",
         "79603552",
         "79582708",
         "79582598",
@@ -48,11 +50,9 @@
         "79401976",
         "79385031",
         "79378404",
-        "79355054",
-        "79336092",
-        "79312623"
+        "79355054"
       ],
-      "lastCheckedAt": "2026-11-18T23:53:59+08:00",
+      "lastCheckedAt": "2026-11-19T23:48:54+08:00",
       "initializedOnly": false
     }
   },
@@ -625,9 +625,33 @@
       "title": "「坏灭肇始之时」7.2版本更新说明",
       "outputFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
       "completedAt": "2026-11-04T11:22:29+08:00"
+    },
+    "79660849": {
+      "kind": "wish_notice",
+      "title": "「华黍由仪」祈愿：「驹隙隐泉·兹白(岩)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79660849.json",
+      "completedAt": "2026-11-19T23:49:03+08:00"
+    },
+    "79660850": {
+      "kind": "wish_notice",
+      "title": "「呀吼吼博物志」祈愿：「博闻异旅·莉奈娅(岩)」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79660850.json",
+      "completedAt": "2026-11-19T23:49:11+08:00"
+    },
+    "79660853": {
+      "kind": "wish_notice",
+      "title": "神铸赋形：「单手剑·朏魄含光」「弓·霜结的誓金枝」概率UP！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79660853.json",
+      "completedAt": "2026-11-19T23:49:19+08:00"
+    },
+    "79660855": {
+      "kind": "wish_notice",
+      "title": "「炎天铸名」祈愿：集录祈愿开启！",
+      "outputFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79660855.json",
+      "completedAt": "2026-11-19T23:49:27+08:00"
     }
   },
-  "updatedAt": "2026-11-18T23:53:59+08:00",
+  "updatedAt": "2026-11-19T23:49:27+08:00",
   "unrecognized": {},
   "pairingSince": "2026-10-31"
 }

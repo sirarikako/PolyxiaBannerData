@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "华黍由仪",
+  "officialWishType": "角色活动祈愿",
+  "poolType": "character_event",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "兹白",
+        "title": "驹隙隐泉",
+        "element": "岩",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "叶洛亚",
+        "title": "魇夜燃芯",
+        "element": "岩",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "爱诺",
+        "title": "妙械咣咣铛",
+        "element": "水",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "凝光",
+        "title": "掩月天权",
+        "element": "岩",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "2026/11/24 18:00",
+    "endRaw": "2026/12/15 14:59",
+    "startAt": "2026-11-24T18:00:00+08:00",
+    "endAt": "2026-12-15T14:59:00+08:00",
+    "startCondition": null
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/11/18/75276539/66a768ec13aeaae39744a0e826ee6677_1814485906032116611.png",
+    "https://upload-bbs.miyoushe.com/upload/2026/11/18/75276539/9ff641aaf3fab5f060cbf10a9aff7f21_596093637918567636.png"
+  ],
+  "source": {
+    "postId": "79660849",
+    "title": "「华黍由仪」祈愿：「驹隙隐泉·兹白(岩)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/79660849",
+    "publishedAt": "2026-11-19T16:00:11+08:00",
+    "updatedAt": "2026-11-19T23:42:56+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/79660849.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized",
+    "times": {
+      "startRaw": "2026/11/24 18:00",
+      "endRaw": "2026/12/15 14:59",
+      "startAt": "2026-11-24T18:00:00+08:00",
+      "endAt": "2026-12-15T14:59:00+08:00",
+      "startCondition": null,
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/11/18/75276539/9ff641aaf3fab5f060cbf10a9aff7f21_596093637918567636.png",
+      "imageSha256": "a9a23067b77370458886f58e918ed1edd7a5e6bd851481fc559c971a684fb733",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

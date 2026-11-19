@@ -6,11 +6,11 @@
   "counts": {
     "versionUpdateFiles": 11,
     "previewFiles": 19,
-    "noticeFiles": 63,
-    "evaluatedNotices": 63,
+    "noticeFiles": 67,
+    "evaluatedNotices": 67,
     "statuses": {
       "ready_candidate": 56,
-      "waiting": 7
+      "waiting": 11
     }
   },
   "sourceErrors": [],
@@ -2169,6 +2169,110 @@
         "opGachaType": 301
       },
       "candidateFile": "data/derived/genshin/v1-candidates/v1-candidate_zh-CN_79287292.json"
+    },
+    {
+      "postId": "79660849",
+      "sourceKey": "79660849",
+      "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79660849.json",
+      "status": "waiting",
+      "issues": [
+        "unmatched_end_time"
+      ],
+      "warnings": [],
+      "version": null,
+      "phase": null,
+      "previewFile": null,
+      "versionUpdateFile": null,
+      "existingV1Id": null,
+      "manualDifferences": [],
+      "blockingDifferences": [],
+      "warningDifferences": [],
+      "manualFilled": [],
+      "manualMatched": [],
+      "manualFile": null,
+      "manualSourceKey": null,
+      "manualIdentity": null,
+      "manualEvidence": null,
+      "recoveredFromRaw": false,
+      "endTimeEvidence": "ocr"
+    },
+    {
+      "postId": "79660850",
+      "sourceKey": "79660850",
+      "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79660850.json",
+      "status": "waiting",
+      "issues": [
+        "unmatched_end_time"
+      ],
+      "warnings": [],
+      "version": null,
+      "phase": null,
+      "previewFile": null,
+      "versionUpdateFile": null,
+      "existingV1Id": null,
+      "manualDifferences": [],
+      "blockingDifferences": [],
+      "warningDifferences": [],
+      "manualFilled": [],
+      "manualMatched": [],
+      "manualFile": null,
+      "manualSourceKey": null,
+      "manualIdentity": null,
+      "manualEvidence": null,
+      "recoveredFromRaw": false,
+      "endTimeEvidence": "ocr"
+    },
+    {
+      "postId": "79660853",
+      "sourceKey": "79660853",
+      "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79660853.json",
+      "status": "waiting",
+      "issues": [
+        "unmatched_end_time"
+      ],
+      "warnings": [],
+      "version": null,
+      "phase": null,
+      "previewFile": null,
+      "versionUpdateFile": null,
+      "existingV1Id": null,
+      "manualDifferences": [],
+      "blockingDifferences": [],
+      "warningDifferences": [],
+      "manualFilled": [],
+      "manualMatched": [],
+      "manualFile": null,
+      "manualSourceKey": null,
+      "manualIdentity": null,
+      "manualEvidence": null,
+      "recoveredFromRaw": false,
+      "endTimeEvidence": "ocr"
+    },
+    {
+      "postId": "79660855",
+      "sourceKey": "79660855",
+      "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79660855.json",
+      "status": "waiting",
+      "issues": [
+        "unmatched_end_time"
+      ],
+      "warnings": [],
+      "version": null,
+      "phase": null,
+      "previewFile": null,
+      "versionUpdateFile": null,
+      "existingV1Id": null,
+      "manualDifferences": [],
+      "blockingDifferences": [],
+      "warningDifferences": [],
+      "manualFilled": [],
+      "manualMatched": [],
+      "manualFile": null,
+      "manualSourceKey": null,
+      "manualIdentity": null,
+      "manualEvidence": null,
+      "recoveredFromRaw": false,
+      "endTimeEvidence": "ocr"
     }
   ]
 }

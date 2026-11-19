@@ -1,0 +1,95 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "呀吼吼博物志",
+  "officialWishType": "角色活动祈愿-2",
+  "poolType": "character_event_2",
+  "version": null,
+  "phase": null,
+  "variant": null,
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "莉奈娅",
+        "title": "博闻异旅",
+        "element": "岩",
+        "rarity": 5,
+        "limited": true
+      }
+    ],
+    "fourStarCharacters": [
+      {
+        "name": "叶洛亚",
+        "title": "魇夜燃芯",
+        "element": "岩",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "爱诺",
+        "title": "妙械咣咣铛",
+        "element": "水",
+        "rarity": 4,
+        "limited": null
+      },
+      {
+        "name": "凝光",
+        "title": "掩月天权",
+        "element": "岩",
+        "rarity": 4,
+        "limited": null
+      }
+    ],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": null,
+  "time": {
+    "startRaw": "2026/11/24 18:00",
+    "endRaw": "2026/12/15 14:59",
+    "startAt": "2026-11-24T18:00:00+08:00",
+    "endAt": "2026-12-15T14:59:00+08:00",
+    "startCondition": null
+  },
+  "rules": {
+    "limitedNotInStandard": true,
+    "characterEventPityShared": true,
+    "characterTrial": true
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/11/18/75276539/9479993e2a49d13cac70e1d824434f89_7027780927877350308.png",
+    "https://upload-bbs.miyoushe.com/upload/2026/11/18/75276539/f9f6e4ee53659072d8d6ff805fed04ae_5031658653383554275.png"
+  ],
+  "source": {
+    "postId": "79660850",
+    "title": "「呀吼吼博物志」祈愿：「博闻异旅·莉奈娅(岩)」概率UP！",
+    "url": "https://www.miyoushe.com/ys/article/79660850",
+    "publishedAt": "2026-11-19T16:00:12+08:00",
+    "updatedAt": "2026-11-19T23:42:51+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/79660850.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized",
+    "times": {
+      "startRaw": "2026/11/24 18:00",
+      "endRaw": "2026/12/15 14:59",
+      "startAt": "2026-11-24T18:00:00+08:00",
+      "endAt": "2026-12-15T14:59:00+08:00",
+      "startCondition": null,
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/11/18/75276539/f9f6e4ee53659072d8d6ff805fed04ae_5031658653383554275.png",
+      "imageSha256": "24ebfdc0f03ef2bf69557bcaff95d5078714042219da37a86a3e741e50457b5d",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}

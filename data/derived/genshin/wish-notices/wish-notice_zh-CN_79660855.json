@@ -1,0 +1,111 @@
+{
+  "format": "genshin-wish-notice-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_notice",
+  "bannerName": "炎天铸名",
+  "officialWishType": "集录祈愿",
+  "poolType": "chronicled",
+  "version": null,
+  "phase": null,
+  "variant": "chronicled",
+  "up": {
+    "fiveStarCharacters": [],
+    "fourStarCharacters": [],
+    "fiveStarWeapons": [],
+    "fourStarWeapons": []
+  },
+  "selectable": {
+    "fiveStarCharacters": [
+      "瓦雷莎",
+      "恰斯卡",
+      "希诺宁",
+      "玛拉妮",
+      "基尼奇"
+    ],
+    "fourStarCharacters": [
+      "伊法",
+      "伊安珊",
+      "欧洛伦",
+      "卡齐娜"
+    ],
+    "fiveStarWeapons": [
+      "溢彩心念",
+      "星鹫赤羽",
+      "岩峰巡歌",
+      "冲浪时光",
+      "山王长牙"
+    ],
+    "fourStarWeapons": [
+      "缀花之翎",
+      "乘浪的回旋",
+      "镇山之钉",
+      "硕果钩",
+      "弥坚骨",
+      "弓藏",
+      "祭礼弓",
+      "绝弦",
+      "西风猎弓",
+      "昭心",
+      "祭礼残章",
+      "流浪乐章",
+      "西风秘典",
+      "西风长枪",
+      "匣里灭辰",
+      "雨裁",
+      "祭礼大剑",
+      "钟剑",
+      "西风大剑",
+      "匣里龙吟",
+      "祭礼剑",
+      "笛剑",
+      "西风剑"
+    ]
+  },
+  "time": {
+    "startRaw": "2026/11/24 18:00",
+    "endRaw": "2026/12/15 14:59",
+    "startAt": "2026-11-24T18:00:00+08:00",
+    "endAt": "2026-12-15T14:59:00+08:00",
+    "startCondition": null
+  },
+  "rules": {
+    "limitedNotInStandard": null,
+    "characterEventPityShared": true,
+    "characterTrial": null
+  },
+  "imageUrls": [
+    "https://upload-bbs.miyoushe.com/upload/2026/11/18/75276539/409211c8c97c5ce9612cd6edd13216e3_6490159877357675458.png",
+    "https://upload-bbs.miyoushe.com/upload/2026/11/18/75276539/ed7c70c9a0ff457bc28fd11d92516132_710905379726632647.png"
+  ],
+  "source": {
+    "postId": "79660855",
+    "title": "「炎天铸名」祈愿：集录祈愿开启！",
+    "url": "https://www.miyoushe.com/ys/article/79660855",
+    "publishedAt": "2026-11-19T16:00:14+08:00",
+    "updatedAt": "2026-11-19T23:42:42+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/79660855.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "仅处理指定单篇祈愿公告；若提供临时图片目录则执行本地 OCR，并保留图片 SHA-256 作为证据；未访问其他文章、未匹配 itemId 或推断版本期数，不得直接发布到 v1"
+  },
+  "imageTimeRecognition": {
+    "status": "recognized",
+    "times": {
+      "startRaw": "2026/11/24 18:00",
+      "endRaw": "2026/12/15 14:59",
+      "startAt": "2026-11-24T18:00:00+08:00",
+      "endAt": "2026-12-15T14:59:00+08:00",
+      "startCondition": null,
+      "imageUrl": "https://upload-bbs.miyoushe.com/upload/2026/11/18/75276539/ed7c70c9a0ff457bc28fd11d92516132_710905379726632647.png",
+      "imageSha256": "d206fd0396b9388a93d1a62ea78248ee7f321eaaaa496b13ad1e19aac6e2141a",
+      "imageOrdinal": 2,
+      "method": "tesseract-chi_sim+eng"
+    },
+    "imageCount": 2,
+    "warnings": []
+  }
+}
