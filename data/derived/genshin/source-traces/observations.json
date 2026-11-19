@@ -4482,6 +4482,55 @@
       "firstObservedAt": "2026-11-15T10:04:40+08:00",
       "kind": "version_update",
       "sourcePublishedAt": "2026-11-04T07:00:11+08:00"
+    },
+    "miyoushe:79660849": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79660849.json",
+      "firstObservedAt": "2026-11-19T23:50:19+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-11-19T16:00:11+08:00"
+    },
+    "miyoushe:79660850": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79660850.json",
+      "firstObservedAt": "2026-11-19T23:50:19+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-11-19T16:00:12+08:00"
+    },
+    "miyoushe:79660853": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79660853.json",
+      "firstObservedAt": "2026-11-19T23:50:19+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-11-19T16:00:13+08:00"
+    },
+    "miyoushe:79660855": {
+      "availableFields": [
+        "bannerName",
+        "poolType",
+        "selectable",
+        "time",
+        "up"
+      ],
+      "file": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79660855.json",
+      "firstObservedAt": "2026-11-19T23:50:19+08:00",
+      "kind": "wish_notice",
+      "sourcePublishedAt": "2026-11-19T16:00:14+08:00"
     }
   }
 }
