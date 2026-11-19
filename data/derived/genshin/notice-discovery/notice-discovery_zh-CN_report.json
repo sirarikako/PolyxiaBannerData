@@ -2,32 +2,27 @@
   "format": "genshin-notice-discovery-report-v1",
   "game": "genshin",
   "locale": "zh-CN",
-  "startedAt": "2026-11-19T23:48:48+08:00",
+  "startedAt": "2026-11-19T23:57:49+08:00",
   "feeds": {
     "1": {
       "initialized": false,
       "pages": 1,
-      "newPosts": 5,
-      "matched": 4
+      "newPosts": 0,
+      "matched": 0
     },
     "3": {
       "initialized": false,
       "pages": 1,
-      "newPosts": 2,
+      "newPosts": 0,
       "matched": 0
     }
   },
-  "enqueued": 4,
-  "succeeded": [
-    "79660849",
-    "79660850",
-    "79660853",
-    "79660855"
-  ],
+  "enqueued": 0,
+  "succeeded": [],
   "failed": [],
   "reviewNeeded": [],
   "pendingCount": 0,
   "manualReviewCount": 0,
   "unrecognizedCount": 0,
-  "finishedAt": "2026-11-19T23:49:27+08:00"
+  "finishedAt": "2026-11-19T23:57:53+08:00"
 }
