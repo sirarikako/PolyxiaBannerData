@@ -1,9 +1,9 @@
 {
   "games": {
     "genshin": {
-      "bannerCount": 306,
+      "bannerCount": 310,
       "path": "genshin.json",
-      "sha256": "981b1c4a31f88404027eb06458eb0d20285d7d3f3ee733eb5cf6ed0c0a1240d3"
+      "sha256": "a7ba923135a619131f0afc8ef9637931661ca8b2ab0d7bb6821272505e5a4969"
     },
     "starrail": {
       "bannerCount": 296,
@@ -11,6 +11,6 @@
       "sha256": "0eaf06d41595f62b8b59050ed3b7f84e585303d806ebd421238962d0ab20fcff"
     }
   },
-  "generatedAt": "2026-11-15T01:03:45+08:00",
+  "generatedAt": "2026-11-24T02:17:23+08:00",
   "schemaVersion": 1
 }
