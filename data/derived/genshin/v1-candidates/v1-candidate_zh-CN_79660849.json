@@ -10,7 +10,7 @@
   "bannerName": "华黍由仪",
   "poolType": "character_event",
   "variant": null,
-  "existingV1Id": null,
+  "existingV1Id": "gi-000305",
   "v1Draft": {
     "gameVersion": "7.2",
     "phase": 2,

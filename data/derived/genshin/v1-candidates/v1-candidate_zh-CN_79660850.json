@@ -10,7 +10,7 @@
   "bannerName": "呀吼吼博物志",
   "poolType": "character_event_2",
   "variant": null,
-  "existingV1Id": null,
+  "existingV1Id": "gi-000306",
   "v1Draft": {
     "gameVersion": "7.2",
     "phase": 2,

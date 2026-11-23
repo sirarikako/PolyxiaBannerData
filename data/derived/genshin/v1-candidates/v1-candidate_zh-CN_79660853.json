@@ -10,7 +10,7 @@
   "bannerName": "神铸赋形",
   "poolType": "weapon_event",
   "variant": null,
-  "existingV1Id": null,
+  "existingV1Id": "gi-000307",
   "v1Draft": {
     "gameVersion": "7.2",
     "phase": 2,
