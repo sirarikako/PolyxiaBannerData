@@ -1,0 +1,143 @@
+{
+  "format": "genshin-v1-candidate-zh-CN-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "status": "ready_candidate",
+  "postId": "79660849",
+  "sourceKey": "79660849",
+  "version": "7.2",
+  "phase": 2,
+  "bannerName": "华黍由仪",
+  "poolType": "character_event",
+  "variant": null,
+  "existingV1Id": null,
+  "v1Draft": {
+    "gameVersion": "7.2",
+    "phase": 2,
+    "category": "character",
+    "poolType": "character_event",
+    "names": {
+      "zh-CN": "华黍由仪"
+    },
+    "gachaTypes": {
+      "raw": [
+        "301"
+      ],
+      "uigf": [
+        "301"
+      ]
+    },
+    "featured": {
+      "fiveStar": [
+        {
+          "itemId": "10000126",
+          "names": {
+            "zh-CN": "兹白"
+          },
+          "type": "character"
+        }
+      ],
+      "fourStar": [
+        {
+          "itemId": "10000127",
+          "names": {
+            "zh-CN": "叶洛亚"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000121",
+          "names": {
+            "zh-CN": "爱诺"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000027",
+          "names": {
+            "zh-CN": "凝光"
+          },
+          "type": "character"
+        }
+      ]
+    },
+    "regions": [
+      {
+        "server": "cn_official",
+        "startAt": "2026-11-24T18:00:00+08:00",
+        "endAt": "2026-12-15T15:00:00+08:00"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/79735862"
+      },
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/79660849"
+      },
+      {
+        "provider": "webstatic",
+        "externalId": "63b9ded06306324b49d66968ca2f4b17d87f9b6a",
+        "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/63b9ded06306324b49d66968ca2f4b17d87f9b6a/zh-cn.json"
+      }
+    ]
+  },
+  "timeEvidence": {
+    "versionMaintenanceStartAt": "2026-11-04T06:00:00+08:00",
+    "previewEndAt": "2026-12-15T14:59:00+08:00",
+    "ocrEndAt": "2026-12-15T14:59:00+08:00",
+    "ocrStatus": "recognized",
+    "endTimeSource": "ocr",
+    "manualFile": null,
+    "ocrImageSha256": "a9a23067b77370458886f58e918ed1edd7a5e6bd851481fc559c971a684fb733",
+    "startRaw": "2026/11/24 18:00",
+    "endRaw": "2026/12/15 14:59",
+    "startCondition": null,
+    "exclusiveEndPolicy": "原公告分钟结束时间 + 1 分钟；仅候选转换"
+  },
+  "gachaTypeEvidence": {
+    "status": "verified",
+    "raw": [
+      "301"
+    ],
+    "uigf": [
+      "301"
+    ],
+    "gachaId": "63b9ded06306324b49d66968ca2f4b17d87f9b6a",
+    "detailSha256": "14b9853cbd0a9cc37958f6d1dc7484174b69b0c7fe29971419521ccaff0d0414",
+    "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/63b9ded06306324b49d66968ca2f4b17d87f9b6a/zh-cn.json",
+    "officialRaw": 301,
+    "opGachaType": 301
+  },
+  "webstaticAugmentation": {
+    "gachaId": "63b9ded06306324b49d66968ca2f4b17d87f9b6a",
+    "detailSha256": "14b9853cbd0a9cc37958f6d1dc7484174b69b0c7fe29971419521ccaff0d0414",
+    "detailUrl": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/63b9ded06306324b49d66968ca2f4b17d87f9b6a/zh-cn.json",
+    "usedFields": [
+      "gachaTypes.raw"
+    ],
+    "fieldModes": {
+      "gachaTypes.raw": "webstatic_only"
+    }
+  },
+  "provenance": {
+    "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
+    "versionUpdatePostId": "79322732",
+    "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-2.json",
+    "previewPostId": "79735862",
+    "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79660849.json",
+    "noticePostId": "79660849",
+    "noticeSourceKey": "79660849",
+    "webstaticGachaId": "63b9ded06306324b49d66968ca2f4b17d87f9b6a"
+  },
+  "warnings": [],
+  "manualAudit": {
+    "filled": [],
+    "matched": [],
+    "file": null,
+    "sources": []
+  },
+  "note": "离线候选；不自动确定版本更新后的精确开池时间，不自动分配内部 ID，不修改正式 v1"
+}

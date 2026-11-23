@@ -1,0 +1,186 @@
+{
+  "format": "genshin-v1-candidate-zh-CN-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "status": "ready_candidate",
+  "postId": "79660855",
+  "sourceKey": "79660855",
+  "version": "7.2",
+  "phase": 2,
+  "bannerName": "炎天铸名",
+  "poolType": "chronicled",
+  "variant": "chronicled",
+  "existingV1Id": null,
+  "v1Draft": {
+    "gameVersion": "7.2",
+    "phase": 2,
+    "category": "chronicled",
+    "poolType": "chronicled",
+    "names": {
+      "zh-CN": "炎天铸名"
+    },
+    "gachaTypes": {
+      "raw": [
+        "500"
+      ],
+      "uigf": [
+        "500"
+      ]
+    },
+    "featured": {
+      "fiveStar": [
+        {
+          "itemId": "10000111",
+          "names": {
+            "zh-CN": "瓦雷莎"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000104",
+          "names": {
+            "zh-CN": "恰斯卡"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000103",
+          "names": {
+            "zh-CN": "希诺宁"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000102",
+          "names": {
+            "zh-CN": "玛拉妮"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000101",
+          "names": {
+            "zh-CN": "基尼奇"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "14519",
+          "names": {
+            "zh-CN": "溢彩心念"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "15514",
+          "names": {
+            "zh-CN": "星鹫赤羽"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "11516",
+          "names": {
+            "zh-CN": "岩峰巡歌"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "14516",
+          "names": {
+            "zh-CN": "冲浪时光"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "12513",
+          "names": {
+            "zh-CN": "山王长牙"
+          },
+          "type": "weapon"
+        }
+      ],
+      "fourStar": []
+    },
+    "regions": [
+      {
+        "server": "cn_official",
+        "startAt": "2026-11-24T18:00:00+08:00",
+        "endAt": "2026-12-15T15:00:00+08:00"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/79735862"
+      },
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/79660855"
+      },
+      {
+        "provider": "webstatic",
+        "externalId": "bb58564131a42b9736d3e2910325003f972784d8",
+        "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/bb58564131a42b9736d3e2910325003f972784d8/zh-cn.json"
+      }
+    ],
+    "variant": "chronicled",
+    "fatePointLimit": 1
+  },
+  "timeEvidence": {
+    "versionMaintenanceStartAt": "2026-11-04T06:00:00+08:00",
+    "previewEndAt": "2026-12-15T14:59:00+08:00",
+    "ocrEndAt": "2026-12-15T14:59:00+08:00",
+    "ocrStatus": "recognized",
+    "endTimeSource": "ocr",
+    "manualFile": null,
+    "ocrImageSha256": "d206fd0396b9388a93d1a62ea78248ee7f321eaaaa496b13ad1e19aac6e2141a",
+    "startRaw": "2026/11/24 18:00",
+    "endRaw": "2026/12/15 14:59",
+    "startCondition": null,
+    "exclusiveEndPolicy": "原公告分钟结束时间 + 1 分钟；仅候选转换"
+  },
+  "gachaTypeEvidence": {
+    "status": "verified",
+    "raw": [
+      "500"
+    ],
+    "uigf": [
+      "500"
+    ],
+    "gachaId": "bb58564131a42b9736d3e2910325003f972784d8",
+    "detailSha256": "61171b9b635d0f5518ff2afa1bc01448c801a6dfc74b569e660ee78396c9876b",
+    "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/bb58564131a42b9736d3e2910325003f972784d8/zh-cn.json",
+    "officialRaw": 500,
+    "opGachaType": 500
+  },
+  "webstaticAugmentation": {
+    "gachaId": "bb58564131a42b9736d3e2910325003f972784d8",
+    "detailSha256": "61171b9b635d0f5518ff2afa1bc01448c801a6dfc74b569e660ee78396c9876b",
+    "detailUrl": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/bb58564131a42b9736d3e2910325003f972784d8/zh-cn.json",
+    "usedFields": [
+      "gachaTypes.raw"
+    ],
+    "fieldModes": {
+      "gachaTypes.raw": "webstatic_only"
+    }
+  },
+  "provenance": {
+    "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
+    "versionUpdatePostId": "79322732",
+    "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-2.json",
+    "previewPostId": "79735862",
+    "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79660855.json",
+    "noticePostId": "79660855",
+    "noticeSourceKey": "79660855",
+    "webstaticGachaId": "bb58564131a42b9736d3e2910325003f972784d8"
+  },
+  "warnings": [],
+  "manualAudit": {
+    "filled": [],
+    "matched": [],
+    "file": null,
+    "sources": []
+  },
+  "note": "离线候选；不自动确定版本更新后的精确开池时间，不自动分配内部 ID，不修改正式 v1"
+}

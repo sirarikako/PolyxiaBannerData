@@ -1,0 +1,165 @@
+{
+  "format": "genshin-v1-candidate-zh-CN-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "status": "ready_candidate",
+  "postId": "79660853",
+  "sourceKey": "79660853",
+  "version": "7.2",
+  "phase": 2,
+  "bannerName": "神铸赋形",
+  "poolType": "weapon_event",
+  "variant": null,
+  "existingV1Id": null,
+  "v1Draft": {
+    "gameVersion": "7.2",
+    "phase": 2,
+    "category": "weapon",
+    "poolType": "weapon_event",
+    "names": {
+      "zh-CN": "神铸赋形"
+    },
+    "gachaTypes": {
+      "raw": [
+        "302"
+      ],
+      "uigf": [
+        "302"
+      ]
+    },
+    "featured": {
+      "fiveStar": [
+        {
+          "itemId": "11519",
+          "names": {
+            "zh-CN": "朏魄含光"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "15516",
+          "names": {
+            "zh-CN": "霜结的誓金枝"
+          },
+          "type": "weapon"
+        }
+      ],
+      "fourStar": [
+        {
+          "itemId": "12427",
+          "names": {
+            "zh-CN": "便携动力锯"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "15427",
+          "names": {
+            "zh-CN": "测距规"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "11403",
+          "names": {
+            "zh-CN": "祭礼剑"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "13407",
+          "names": {
+            "zh-CN": "西风长枪"
+          },
+          "type": "weapon"
+        },
+        {
+          "itemId": "14409",
+          "names": {
+            "zh-CN": "昭心"
+          },
+          "type": "weapon"
+        }
+      ]
+    },
+    "regions": [
+      {
+        "server": "cn_official",
+        "startAt": "2026-11-24T18:00:00+08:00",
+        "endAt": "2026-12-15T15:00:00+08:00"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/79735862"
+      },
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/79660853"
+      },
+      {
+        "provider": "webstatic",
+        "externalId": "624e0f154803ba6e4639fd4a73261c45b7ebfab3",
+        "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/624e0f154803ba6e4639fd4a73261c45b7ebfab3/zh-cn.json"
+      }
+    ],
+    "fatePointLimit": 1
+  },
+  "timeEvidence": {
+    "versionMaintenanceStartAt": "2026-11-04T06:00:00+08:00",
+    "previewEndAt": "2026-12-15T14:59:00+08:00",
+    "ocrEndAt": "2026-12-15T14:59:00+08:00",
+    "ocrStatus": "recognized",
+    "endTimeSource": "ocr",
+    "manualFile": null,
+    "ocrImageSha256": "3e069e0bdcc5a591439fe570ca8a086c4053e6938dd1405a1d2c939ca19ba9c8",
+    "startRaw": "2026/11/24 18:00",
+    "endRaw": "2026/12/15 14:59",
+    "startCondition": null,
+    "exclusiveEndPolicy": "原公告分钟结束时间 + 1 分钟；仅候选转换"
+  },
+  "gachaTypeEvidence": {
+    "status": "verified",
+    "raw": [
+      "302"
+    ],
+    "uigf": [
+      "302"
+    ],
+    "gachaId": "624e0f154803ba6e4639fd4a73261c45b7ebfab3",
+    "detailSha256": "3071b2246ea81bc87f2bede4e54b564ed24c7b3610001656c5684b287ee044a8",
+    "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/624e0f154803ba6e4639fd4a73261c45b7ebfab3/zh-cn.json",
+    "officialRaw": 302,
+    "opGachaType": 302
+  },
+  "webstaticAugmentation": {
+    "gachaId": "624e0f154803ba6e4639fd4a73261c45b7ebfab3",
+    "detailSha256": "3071b2246ea81bc87f2bede4e54b564ed24c7b3610001656c5684b287ee044a8",
+    "detailUrl": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/624e0f154803ba6e4639fd4a73261c45b7ebfab3/zh-cn.json",
+    "usedFields": [
+      "gachaTypes.raw"
+    ],
+    "fieldModes": {
+      "gachaTypes.raw": "webstatic_only"
+    }
+  },
+  "provenance": {
+    "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
+    "versionUpdatePostId": "79322732",
+    "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-2.json",
+    "previewPostId": "79735862",
+    "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79660853.json",
+    "noticePostId": "79660853",
+    "noticeSourceKey": "79660853",
+    "webstaticGachaId": "624e0f154803ba6e4639fd4a73261c45b7ebfab3"
+  },
+  "warnings": [],
+  "manualAudit": {
+    "filled": [],
+    "matched": [],
+    "file": null,
+    "sources": []
+  },
+  "note": "离线候选；不自动确定版本更新后的精确开池时间，不自动分配内部 ID，不修改正式 v1"
+}

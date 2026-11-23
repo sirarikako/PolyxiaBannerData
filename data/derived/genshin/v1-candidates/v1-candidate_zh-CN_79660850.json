@@ -1,0 +1,143 @@
+{
+  "format": "genshin-v1-candidate-zh-CN-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "status": "ready_candidate",
+  "postId": "79660850",
+  "sourceKey": "79660850",
+  "version": "7.2",
+  "phase": 2,
+  "bannerName": "呀吼吼博物志",
+  "poolType": "character_event_2",
+  "variant": null,
+  "existingV1Id": null,
+  "v1Draft": {
+    "gameVersion": "7.2",
+    "phase": 2,
+    "category": "character",
+    "poolType": "character_event_2",
+    "names": {
+      "zh-CN": "呀吼吼博物志"
+    },
+    "gachaTypes": {
+      "raw": [
+        "400"
+      ],
+      "uigf": [
+        "301"
+      ]
+    },
+    "featured": {
+      "fiveStar": [
+        {
+          "itemId": "10000130",
+          "names": {
+            "zh-CN": "莉奈娅"
+          },
+          "type": "character"
+        }
+      ],
+      "fourStar": [
+        {
+          "itemId": "10000127",
+          "names": {
+            "zh-CN": "叶洛亚"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000121",
+          "names": {
+            "zh-CN": "爱诺"
+          },
+          "type": "character"
+        },
+        {
+          "itemId": "10000027",
+          "names": {
+            "zh-CN": "凝光"
+          },
+          "type": "character"
+        }
+      ]
+    },
+    "regions": [
+      {
+        "server": "cn_official",
+        "startAt": "2026-11-24T18:00:00+08:00",
+        "endAt": "2026-12-15T15:00:00+08:00"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/79735862"
+      },
+      {
+        "provider": "miyoushe",
+        "url": "https://www.miyoushe.com/ys/article/79660850"
+      },
+      {
+        "provider": "webstatic",
+        "externalId": "3c090a50c162c12ba757a85dcbf149f77fb8f975",
+        "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/3c090a50c162c12ba757a85dcbf149f77fb8f975/zh-cn.json"
+      }
+    ]
+  },
+  "timeEvidence": {
+    "versionMaintenanceStartAt": "2026-11-04T06:00:00+08:00",
+    "previewEndAt": "2026-12-15T14:59:00+08:00",
+    "ocrEndAt": "2026-12-15T14:59:00+08:00",
+    "ocrStatus": "recognized",
+    "endTimeSource": "ocr",
+    "manualFile": null,
+    "ocrImageSha256": "24ebfdc0f03ef2bf69557bcaff95d5078714042219da37a86a3e741e50457b5d",
+    "startRaw": "2026/11/24 18:00",
+    "endRaw": "2026/12/15 14:59",
+    "startCondition": null,
+    "exclusiveEndPolicy": "原公告分钟结束时间 + 1 分钟；仅候选转换"
+  },
+  "gachaTypeEvidence": {
+    "status": "verified",
+    "raw": [
+      "400"
+    ],
+    "uigf": [
+      "301"
+    ],
+    "gachaId": "3c090a50c162c12ba757a85dcbf149f77fb8f975",
+    "detailSha256": "eaf6ec540229d7faed6570a2243ce2cfc106d4b72eabf78322aa2e280a6c5e4a",
+    "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/3c090a50c162c12ba757a85dcbf149f77fb8f975/zh-cn.json",
+    "officialRaw": 400,
+    "opGachaType": 400
+  },
+  "webstaticAugmentation": {
+    "gachaId": "3c090a50c162c12ba757a85dcbf149f77fb8f975",
+    "detailSha256": "eaf6ec540229d7faed6570a2243ce2cfc106d4b72eabf78322aa2e280a6c5e4a",
+    "detailUrl": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/3c090a50c162c12ba757a85dcbf149f77fb8f975/zh-cn.json",
+    "usedFields": [
+      "gachaTypes.raw"
+    ],
+    "fieldModes": {
+      "gachaTypes.raw": "webstatic_only"
+    }
+  },
+  "provenance": {
+    "versionUpdateFile": "data/derived/genshin/version-updates/version-update_zh-CN_7.2.json",
+    "versionUpdatePostId": "79322732",
+    "previewFile": "data/derived/genshin/wish-previews/wish-preview_zh-CN_7.2-phase-2.json",
+    "previewPostId": "79735862",
+    "noticeFile": "data/derived/genshin/wish-notices/wish-notice_zh-CN_79660850.json",
+    "noticePostId": "79660850",
+    "noticeSourceKey": "79660850",
+    "webstaticGachaId": "3c090a50c162c12ba757a85dcbf149f77fb8f975"
+  },
+  "warnings": [],
+  "manualAudit": {
+    "filled": [],
+    "matched": [],
+    "file": null,
+    "sources": []
+  },
+  "note": "离线候选；不自动确定版本更新后的精确开池时间，不自动分配内部 ID，不修改正式 v1"
+}

@@ -1,0 +1,63 @@
+{
+  "format": "genshin-wish-preview-v1",
+  "game": "genshin",
+  "locale": "zh-CN",
+  "noticeType": "wish_preview",
+  "version": "7.2",
+  "phase": 2,
+  "time": {
+    "startRaw": "2026/11/24 18:00",
+    "endRaw": "2026/12/15 14:59",
+    "startAt": "2026-11-24T18:00:00+08:00",
+    "endAt": "2026-12-15T14:59:00+08:00",
+    "startCondition": null
+  },
+  "up": {
+    "fiveStarCharacters": [
+      {
+        "name": "兹白",
+        "title": "驹隙隐泉",
+        "element": "岩"
+      },
+      {
+        "name": "莉奈娅",
+        "title": "博闻异旅",
+        "element": "岩"
+      }
+    ],
+    "fourStarCharacters": [],
+    "fiveStarWeapons": [
+      {
+        "name": "朏魄含光",
+        "weaponType": null
+      },
+      {
+        "name": "霜结的誓金枝",
+        "weaponType": null
+      }
+    ],
+    "fourStarWeapons": []
+  },
+  "additionalWishes": [
+    {
+      "name": "炎天铸名",
+      "kind": "chronicled",
+      "noticeType": "集录祈愿"
+    }
+  ],
+  "source": {
+    "postId": "79735862",
+    "title": "7.2版本活动祈愿预告第二期",
+    "url": "https://www.miyoushe.com/ys/article/79735862",
+    "listUrl": "https://www.miyoushe.com/ys/home/28?type=3",
+    "publishedAt": "2026-11-23T18:00:12+08:00",
+    "updatedAt": "2026-11-24T02:11:27+08:00",
+    "rawFile": "data/announcements/genshin/zh-cn/miyoushe/posts/79735862.json",
+    "textSource": "html"
+  },
+  "review": {
+    "status": "pending_manual_review",
+    "warnings": [],
+    "note": "预告是整期汇总，不含可靠的单独祈愿池名称、角色武器配对或 itemId；不得直接发布到 v1"
+  }
+}

@@ -5,18 +5,43 @@
   "publicationEnabled": false,
   "blockingNotifications": [],
   "counts": {
-    "ready": 56,
-    "waiting": 11,
+    "ready": 60,
+    "waiting": 7,
     "conflict": 0,
     "requiresAttention": 0,
     "blocking": 0,
     "warnings": 0,
-    "wouldAppend": 0,
+    "wouldAppend": 4,
     "wouldUpdateExisting": 0
   },
   "preview": {
     "mode": "dry-run",
-    "appended": [],
+    "appended": [
+      {
+        "id": "gi-000305",
+        "postId": "79660849",
+        "name": "华黍由仪",
+        "manual": false
+      },
+      {
+        "id": "gi-000306",
+        "postId": "79660850",
+        "name": "呀吼吼博物志",
+        "manual": false
+      },
+      {
+        "id": "gi-000307",
+        "postId": "79660853",
+        "name": "神铸赋形",
+        "manual": false
+      },
+      {
+        "id": "gi-000308",
+        "postId": "79660855",
+        "name": "炎天铸名",
+        "manual": false
+      }
+    ],
     "updatedExistingIds": []
   },
   "notifications": {}
