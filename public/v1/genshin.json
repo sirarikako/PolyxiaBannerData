@@ -24393,9 +24393,370 @@
       ],
       "fatePointLimit": 1,
       "id": "gi-000304"
+    },
+    {
+      "gameVersion": "7.2",
+      "phase": 2,
+      "category": "character",
+      "poolType": "character_event",
+      "names": {
+        "zh-CN": "华黍由仪"
+      },
+      "gachaTypes": {
+        "raw": [
+          "301"
+        ],
+        "uigf": [
+          "301"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": "10000126",
+            "names": {
+              "zh-CN": "兹白"
+            },
+            "type": "character"
+          }
+        ],
+        "fourStar": [
+          {
+            "itemId": "10000127",
+            "names": {
+              "zh-CN": "叶洛亚"
+            },
+            "type": "character"
+          },
+          {
+            "itemId": "10000121",
+            "names": {
+              "zh-CN": "爱诺"
+            },
+            "type": "character"
+          },
+          {
+            "itemId": "10000027",
+            "names": {
+              "zh-CN": "凝光"
+            },
+            "type": "character"
+          }
+        ]
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-11-24T18:00:00+08:00",
+          "endAt": "2026-12-15T15:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/ys/article/79735862"
+        },
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/ys/article/79660849"
+        },
+        {
+          "provider": "webstatic",
+          "externalId": "63b9ded06306324b49d66968ca2f4b17d87f9b6a",
+          "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/63b9ded06306324b49d66968ca2f4b17d87f9b6a/zh-cn.json"
+        }
+      ],
+      "id": "gi-000305"
+    },
+    {
+      "gameVersion": "7.2",
+      "phase": 2,
+      "category": "character",
+      "poolType": "character_event_2",
+      "names": {
+        "zh-CN": "呀吼吼博物志"
+      },
+      "gachaTypes": {
+        "raw": [
+          "400"
+        ],
+        "uigf": [
+          "301"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": "10000130",
+            "names": {
+              "zh-CN": "莉奈娅"
+            },
+            "type": "character"
+          }
+        ],
+        "fourStar": [
+          {
+            "itemId": "10000127",
+            "names": {
+              "zh-CN": "叶洛亚"
+            },
+            "type": "character"
+          },
+          {
+            "itemId": "10000121",
+            "names": {
+              "zh-CN": "爱诺"
+            },
+            "type": "character"
+          },
+          {
+            "itemId": "10000027",
+            "names": {
+              "zh-CN": "凝光"
+            },
+            "type": "character"
+          }
+        ]
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-11-24T18:00:00+08:00",
+          "endAt": "2026-12-15T15:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/ys/article/79735862"
+        },
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/ys/article/79660850"
+        },
+        {
+          "provider": "webstatic",
+          "externalId": "3c090a50c162c12ba757a85dcbf149f77fb8f975",
+          "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/3c090a50c162c12ba757a85dcbf149f77fb8f975/zh-cn.json"
+        }
+      ],
+      "id": "gi-000306"
+    },
+    {
+      "gameVersion": "7.2",
+      "phase": 2,
+      "category": "weapon",
+      "poolType": "weapon_event",
+      "names": {
+        "zh-CN": "神铸赋形"
+      },
+      "gachaTypes": {
+        "raw": [
+          "302"
+        ],
+        "uigf": [
+          "302"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": "11519",
+            "names": {
+              "zh-CN": "朏魄含光"
+            },
+            "type": "weapon"
+          },
+          {
+            "itemId": "15516",
+            "names": {
+              "zh-CN": "霜结的誓金枝"
+            },
+            "type": "weapon"
+          }
+        ],
+        "fourStar": [
+          {
+            "itemId": "12427",
+            "names": {
+              "zh-CN": "便携动力锯"
+            },
+            "type": "weapon"
+          },
+          {
+            "itemId": "15427",
+            "names": {
+              "zh-CN": "测距规"
+            },
+            "type": "weapon"
+          },
+          {
+            "itemId": "11403",
+            "names": {
+              "zh-CN": "祭礼剑"
+            },
+            "type": "weapon"
+          },
+          {
+            "itemId": "13407",
+            "names": {
+              "zh-CN": "西风长枪"
+            },
+            "type": "weapon"
+          },
+          {
+            "itemId": "14409",
+            "names": {
+              "zh-CN": "昭心"
+            },
+            "type": "weapon"
+          }
+        ]
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-11-24T18:00:00+08:00",
+          "endAt": "2026-12-15T15:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/ys/article/79735862"
+        },
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/ys/article/79660853"
+        },
+        {
+          "provider": "webstatic",
+          "externalId": "624e0f154803ba6e4639fd4a73261c45b7ebfab3",
+          "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/624e0f154803ba6e4639fd4a73261c45b7ebfab3/zh-cn.json"
+        }
+      ],
+      "fatePointLimit": 1,
+      "id": "gi-000307"
+    },
+    {
+      "gameVersion": "7.2",
+      "phase": 2,
+      "category": "chronicled",
+      "poolType": "chronicled",
+      "names": {
+        "zh-CN": "炎天铸名"
+      },
+      "gachaTypes": {
+        "raw": [
+          "500"
+        ],
+        "uigf": [
+          "500"
+        ]
+      },
+      "featured": {
+        "fiveStar": [
+          {
+            "itemId": "10000111",
+            "names": {
+              "zh-CN": "瓦雷莎"
+            },
+            "type": "character"
+          },
+          {
+            "itemId": "10000104",
+            "names": {
+              "zh-CN": "恰斯卡"
+            },
+            "type": "character"
+          },
+          {
+            "itemId": "10000103",
+            "names": {
+              "zh-CN": "希诺宁"
+            },
+            "type": "character"
+          },
+          {
+            "itemId": "10000102",
+            "names": {
+              "zh-CN": "玛拉妮"
+            },
+            "type": "character"
+          },
+          {
+            "itemId": "10000101",
+            "names": {
+              "zh-CN": "基尼奇"
+            },
+            "type": "character"
+          },
+          {
+            "itemId": "14519",
+            "names": {
+              "zh-CN": "溢彩心念"
+            },
+            "type": "weapon"
+          },
+          {
+            "itemId": "15514",
+            "names": {
+              "zh-CN": "星鹫赤羽"
+            },
+            "type": "weapon"
+          },
+          {
+            "itemId": "11516",
+            "names": {
+              "zh-CN": "岩峰巡歌"
+            },
+            "type": "weapon"
+          },
+          {
+            "itemId": "14516",
+            "names": {
+              "zh-CN": "冲浪时光"
+            },
+            "type": "weapon"
+          },
+          {
+            "itemId": "12513",
+            "names": {
+              "zh-CN": "山王长牙"
+            },
+            "type": "weapon"
+          }
+        ],
+        "fourStar": []
+      },
+      "regions": [
+        {
+          "server": "cn_official",
+          "startAt": "2026-11-24T18:00:00+08:00",
+          "endAt": "2026-12-15T15:00:00+08:00"
+        }
+      ],
+      "sources": [
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/ys/article/79735862"
+        },
+        {
+          "provider": "miyoushe",
+          "url": "https://www.miyoushe.com/ys/article/79660855"
+        },
+        {
+          "provider": "webstatic",
+          "externalId": "bb58564131a42b9736d3e2910325003f972784d8",
+          "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/bb58564131a42b9736d3e2910325003f972784d8/zh-cn.json"
+        }
+      ],
+      "variant": "chronicled",
+      "fatePointLimit": 1,
+      "id": "gi-000308"
     }
   ],
   "game": "genshin",
-  "generatedAt": "2026-11-15T01:03:45+08:00",
+  "generatedAt": "2026-11-24T02:16:49+08:00",
   "schemaVersion": 1
 }
