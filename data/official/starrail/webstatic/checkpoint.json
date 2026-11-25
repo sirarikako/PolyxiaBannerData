@@ -76,6 +76,7 @@
       "endTime": "2026-12-02 11:59:00",
       "firstSeenAt": "2026-11-15T12:37:24+08:00",
       "gachaType": 11,
+      "lastError": "'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte",
       "title": "铭心之萃 • 火花"
     },
     "92d9ade0ec396252823b0ac911fd9e583ec162d0": {
