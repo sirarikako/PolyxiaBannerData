@@ -115,9 +115,9 @@
   },
   "format": "genshin-webstatic-checkpoint-v1",
   "list": {
-    "changedAt": "2026-11-24T01:53:07+08:00",
+    "changedAt": "2026-11-26T01:01:52+08:00",
     "firstSeenAt": "2026-11-15T10:04:37+08:00",
-    "sha256": "3e239c3b6c47c23c3c68a29eb36a90644b9253e99ea193aca11e0a856cd91587",
+    "sha256": "52adee194e464b6466ca00cc334f252a55dd1cb97100326103b8d69e08b459ad",
     "url": "https://operation-webstatic.mihoyo.com/gacha_info/hk4e/cn_gf01/gacha/list.json"
   }
 }
